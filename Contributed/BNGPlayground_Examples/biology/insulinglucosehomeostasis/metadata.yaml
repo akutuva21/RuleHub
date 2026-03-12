@@ -1,0 +1,24 @@
+id: "insulin-glucose-homeostasis"
+name: "insulin glucose homeostasis"
+description: "Insulin-Glucose: Compartmentalized transport."
+contributors:
+  - name: "Achyudhan"
+tags: ["insulin", "glucose", "homeostasis", "ir", "glut4", "pancreas"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/insulin-glucose-homeostasis.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

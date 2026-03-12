@@ -1,0 +1,22 @@
+id: "ChylekTCR_2014"
+name: "Chylek 2014 (TCR)"
+description: "TCR signaling"
+tags: ["published", "immunology", "chylektcr", "2014", "lig1", "lig2", "lig3", "tcr", "cd28", "lck", "itk", "zap70"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/ChylekTCR_2014.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

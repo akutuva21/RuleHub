@@ -1,0 +1,24 @@
+id: "feature_symmetry_factors_cyclic"
+name: "feature symmetry factors cyclic"
+description: "Model: feature_symmetry_factors_cyclic.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["feature", "symmetry", "factors", "cyclic", "x", "generate_network", "simulate"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/feature_symmetry_factors_cyclic.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "translateSBML"
+name: "translateSBML"
+description: "title: translateSBML.bngl"
+tags: ["translatesbml", "generate_network", "simulate"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/SBML/translateSBML.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

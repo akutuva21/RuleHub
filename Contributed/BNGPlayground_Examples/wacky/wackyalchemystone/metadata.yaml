@@ -1,0 +1,24 @@
+id: "wacky_alchemy_stone"
+name: "wacky alchemy stone"
+description: "Model: wacky_alchemy_stone.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["wacky", "alchemy", "stone", "lead", "gold"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/wacky_alchemy_stone.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

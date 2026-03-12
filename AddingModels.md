@@ -4,9 +4,12 @@
 2. Name is determined by either first author or the contributor, followed by the year of publication or contribution. If there is already a model in either section with that name, add another descriptive keyword (must start with a letter not a number) to the name, e.g., Blinov2006EGFR.
 3. Make a directory with the name of the model in the corresponding section.
 4. Put all model files and (optionally) associated scripts in this directory.
-5. Create a README.md file in the directory based on the template provided in the corresponding model section (Published or Contributed).
-6. If there are multiple model files/scripts, provide a table in the README.md file that gives a brief description of each. 
-7. (optional) Provide additional annotation in each model file based on the annotation keywords provided in ...
+5. Create a metadata.yaml file in the directory following the field names documented in metadata-schema.yaml.
+6. Create a README.md file in the directory based on the template provided in the corresponding model section (Published or Contributed).
+7. If there are multiple model files/scripts, provide a table in the README.md file that gives a brief description of each.
+8. If there are multiple BNGL model files in a single directory, include a collection section in metadata.yaml describing the variant type and count.
+9. Run node scripts/validate-metadata.js and node scripts/generate-manifest.js --root . --output manifest.json before opening a pull request.
+10. (optional) Provide additional annotation in each model file based on the annotation keywords provided in ...
 
 ## Guidelines for journal articles linking to RuleHub
 

@@ -1,0 +1,22 @@
+id: "simple_nf_seed"
+name: "simple nf seed"
+description: "BioNetGen model: simple nf seed"
+tags: ["simple", "nf", "seed", "a", "b", "function1", "simulate"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/tests/bngl_files/errors/simple_nf_seed.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

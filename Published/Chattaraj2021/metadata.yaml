@@ -1,0 +1,22 @@
+id: "Chattaraj_2021"
+name: "Chattaraj 2021"
+description: "NFkB oscillations"
+tags: ["published", "chattaraj", "2021", "nephrin", "nck", "nwasp", "writexml"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Chattaraj_2021.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "smad-tgf-beta-signaling"
+name: "smad tgf beta signaling"
+description: "BioNetGen model: smad tgf beta signaling"
+contributors:
+  - name: "Achyudhan"
+tags: ["smad", "tgf", "beta", "signaling", "tgfb", "tgfbr", "smad2", "smad4"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/smad-tgf-beta-signaling.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

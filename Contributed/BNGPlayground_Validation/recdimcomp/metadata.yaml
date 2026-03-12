@@ -1,0 +1,22 @@
+id: "rec_dim_comp"
+name: "rec_dim_comp"
+description: "name dimension volume contained_by"
+tags: ["validation", "rec", "dim", "comp", "kp1", "kp2", "lig", "writemdl", "generate_network", "simulate"]
+category: "validation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/rec_dim_comp.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

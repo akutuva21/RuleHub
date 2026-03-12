@@ -1,0 +1,22 @@
+id: "egfr_ground"
+name: "egfr ground"
+description: "Blinov et al. 2006. Biosystems, 83:136"
+tags: ["egfr", "ground", "egf", "grb2", "shc", "sos"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/egfr_benchmark/egfr_ground.bngl"
+playground:
+  visible: true
+  gallery_category: "other"
+  featured: false
+  difficulty: "intermediate"

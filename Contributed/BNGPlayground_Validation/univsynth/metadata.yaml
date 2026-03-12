@@ -1,0 +1,22 @@
+id: "univ_synth"
+name: "univ_synth"
+description: "example of universal synthesis"
+tags: ["validation", "univ", "synth", "a", "b", "c", "generate_network", "simulate_ode"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/univ_synth.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "Blinov_egfr"
+name: "Blinov egfr"
+description: "EGFR signaling model"
+tags: ["published", "nfsim", "blinov", "egfr", "egf", "grb2", "shc", "simulate_nf"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["nf"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/growth-factor-signaling/Blinov_egfr.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

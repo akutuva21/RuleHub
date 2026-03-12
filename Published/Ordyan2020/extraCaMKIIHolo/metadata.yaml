@@ -1,0 +1,22 @@
+id: "extra_CaMKII_Holo"
+name: "Ordyan 2020: extra CaMKII holo"
+description: "Extra CaMKII holo (supplement)"
+tags: ["published", "neuroscience", "extra", "camkii", "holo", "t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/Ordyan_2020/extra_CaMKII_Holo.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "hematopoietic-growth-factor"
+name: "hematopoietic growth factor"
+description: "Kinetic Parameters"
+contributors:
+  - name: "Achyudhan"
+tags: ["hematopoietic", "growth", "factor", "epo", "epor", "jak2", "stat5"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/hematopoietic-growth-factor.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

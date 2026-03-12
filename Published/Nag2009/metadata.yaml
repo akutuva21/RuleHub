@@ -1,0 +1,22 @@
+id: "Nag_2009"
+name: "Nag 2009"
+description: "LAT-Grb2-SOS1 signaling"
+tags: ["published", "nag", "2009", "lig", "lyn", "syk", "rec", "lat", "grb", "sos"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Nag_2009.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

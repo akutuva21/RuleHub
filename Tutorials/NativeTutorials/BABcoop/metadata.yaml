@@ -1,0 +1,22 @@
+id: "BAB_coop"
+name: "BAB coop"
+description: "Simple binding model with a bivalent A molecule that has two identical sites"
+tags: ["bab", "coop", "a", "b", "simulate"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/BAB/BAB_coop.bngl"
+playground:
+  visible: true
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "intermediate"

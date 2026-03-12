@@ -1,0 +1,24 @@
+id: "ml_hopfield"
+name: "ml hopfield"
+description: "Model: ml_hopfield.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["ml", "hopfield", "neuron", "net1", "net2", "net3", "target1"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/ml_hopfield.bngl"
+playground:
+  visible: false
+  gallery_category: "computer-science"
+  featured: false
+  difficulty: "advanced"

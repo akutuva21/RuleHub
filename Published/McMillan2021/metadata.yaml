@@ -1,0 +1,22 @@
+id: "McMillan_2021"
+name: "McMillan 2021"
+description: "TNF signaling"
+tags: ["published", "nfsim", "mcmillan", "2021", "r0_tot", "t0_tot", "r", "t", "generate_network", "simulate_ode"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/McMillan_2021.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

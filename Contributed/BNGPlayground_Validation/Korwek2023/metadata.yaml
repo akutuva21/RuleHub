@@ -1,0 +1,22 @@
+id: "Korwek_2023"
+name: "Korwek_2023"
+description: "This BioNetGen file features the article:"
+tags: ["validation", "korwek", "2023", "polyic", "rigi", "mavs", "pkr", "oas3", "rnasel", "eif2a", "rigi_mrna"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/Korwek_2023.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

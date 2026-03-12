@@ -1,0 +1,22 @@
+id: "Blinov_2006"
+name: "Blinov 2006"
+description: "Phosphotyrosine signaling"
+tags: ["published", "blinov", "2006", "egf", "egfr", "shc", "grb2", "sos"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Blinov_2006.bngl"
+playground:
+  visible: true
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "intermediate"

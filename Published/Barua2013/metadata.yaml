@@ -1,0 +1,22 @@
+id: "Barua_2013"
+name: "Barua 2013"
+description: "Beta-catenin destruction"
+tags: ["published", "barua", "2013", "axin", "gsk3b", "apc", "bcat", "ck1a"]
+category: "regulation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/cell-regulation/Barua_2013.bngl"
+playground:
+  visible: true
+  gallery_category: "regulation"
+  featured: false
+  difficulty: "intermediate"

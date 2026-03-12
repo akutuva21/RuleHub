@@ -1,0 +1,22 @@
+id: "Faeder_2003"
+name: "Faeder 2003"
+description: "FceRI signaling"
+tags: ["published", "immunology", "faeder", "2003", "lig", "lyn", "syk", "rec"]
+category: "immunology"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/Faeder_2003.bngl"
+playground:
+  visible: true
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

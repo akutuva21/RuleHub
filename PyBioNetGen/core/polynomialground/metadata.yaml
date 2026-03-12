@@ -1,0 +1,22 @@
+id: "polynomial_ground"
+name: "polynomial ground"
+description: "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1"
+tags: ["polynomial", "ground", "counter", "y1", "y2", "generate_network", "simulate", "setparameter", "resetconcentrations"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/constraint_advanced/polynomial_ground.bngl"
+playground:
+  visible: true
+  gallery_category: "other"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "NFmodel"
+name: "NFmodel"
+description: "BioNetGen model: NFmodel"
+tags: ["nfmodel", "ag", "ab", "simulate"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/tests/bngl_files/NFmodel.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,25 @@
+id: "Miller2022_NavajoNation"
+name: "Miller 2022 - Navajo Nation Models"
+description: "COVID-19 epidemiological models fit to Navajo Nation regional data."
+tags: ["covid-19", "epidemiology", "pybionetgen"]
+category: "epidemiology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_repository: "bionetgen-web-simulator"
+collection:
+  type: "geographic-variants"
+  parent_model: "Miller2022_template"
+  variant_key: "region"
+  count: 5
+playground:
+  visible: false
+  gallery_category: "epidemiology"
+  featured: false
+  difficulty: "advanced"

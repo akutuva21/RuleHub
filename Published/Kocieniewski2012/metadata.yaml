@@ -1,0 +1,22 @@
+id: "Kocieniewski_2012"
+name: "Kocieniewski 2012"
+description: "Actin dynamics"
+tags: ["published", "kocieniewski", "2012", "map3k", "map2k", "mapk", "scaff"]
+category: "regulation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/cell-regulation/Kocieniewski_2012.bngl"
+playground:
+  visible: false
+  gallery_category: "regulation"
+  featured: false
+  difficulty: "advanced"

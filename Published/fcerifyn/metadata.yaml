@@ -1,0 +1,22 @@
+id: "fceri_fyn"
+name: "FceRI Fyn"
+description: "FceRI signaling"
+tags: ["published", "immunology", "fceri", "fyn", "lig", "lyn", "syk", "rec"]
+category: "immunology"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/fceri_fyn.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

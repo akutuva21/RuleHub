@@ -1,0 +1,21 @@
+# egfr simple
+
+This is a demo model of EGFR signaling.
+
+## Citation
+
+Citation pending manual curation in tools/migration/doi-database.csv.
+
+## Compatibility
+
+- BNG2 compatible: yes
+- Simulation methods: ode
+- Imported from: tutorial
+
+## Files
+
+- egfr_simple.bngl
+
+## Tags
+
+egfr, simple, egf, grb2, sos1

@@ -1,0 +1,22 @@
+id: "heise"
+name: "heise"
+description: "Validate state inheritance in a symmetric context"
+tags: ["validation", "heise", "a", "b", "generate_network", "simulate_ode", "setparameter"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/heise.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

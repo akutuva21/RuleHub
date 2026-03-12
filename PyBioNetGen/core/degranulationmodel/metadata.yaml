@@ -1,0 +1,22 @@
+id: "degranulation_model"
+name: "PyBNG: Degranulation model"
+description: "Degranulation model"
+tags: ["published", "pybng", "degranulation", "model", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/degranulation_model.bngl"
+playground:
+  visible: true
+  gallery_category: "other"
+  featured: false
+  difficulty: "intermediate"

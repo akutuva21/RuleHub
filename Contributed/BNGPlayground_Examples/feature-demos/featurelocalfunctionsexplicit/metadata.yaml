@@ -1,0 +1,24 @@
+id: "feature_local_functions_explicit"
+name: "feature local functions explicit"
+description: "Model: feature_local_functions_explicit.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["feature", "local", "functions", "explicit", "s", "p", "e", "mm_rate", "ratelaw"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/feature_local_functions_explicit.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

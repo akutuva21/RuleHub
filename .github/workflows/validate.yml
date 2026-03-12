@@ -1,0 +1,30 @@
+name: Validate RuleHub Metadata
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate metadata
+        run: node scripts/validate-metadata.js
+
+      - name: Regenerate manifest
+        run: node scripts/generate-manifest.js --root . --output manifest.generated.json
+
+      - name: Check manifest is up to date
+        run: diff -u manifest.json manifest.generated.json

@@ -1,0 +1,22 @@
+id: "polymer_draft"
+name: "polymer draft"
+description: "Polymerization (draft)"
+tags: ["published", "tutorials", "nfsim", "polymer", "draft", "a", "b", "c", "simulate_nf"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["nf"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/tutorials/polymer_draft.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

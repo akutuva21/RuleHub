@@ -1,0 +1,22 @@
+id: "BaruaBCR_2012"
+name: "Barua 2012"
+description: "BCR signaling"
+tags: ["published", "immunology", "baruabcr", "2012", "bcr", "lyn", "fyn", "csk", "pag", "syk"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/BaruaBCR_2012.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

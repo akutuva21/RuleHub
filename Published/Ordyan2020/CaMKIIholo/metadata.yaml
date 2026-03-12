@@ -1,0 +1,22 @@
+id: "CaMKII_holo"
+name: "Ordyan 2020: CaMKII holo"
+description: "CaMKII holo"
+tags: ["published", "neuroscience", "camkii", "holo", "ca", "cam", "ng", "pp1", "time_counter"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/Ordyan_2020/CaMKII_holo.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

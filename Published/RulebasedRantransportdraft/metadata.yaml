@@ -1,0 +1,22 @@
+id: "Rule_based_Ran_transport_draft"
+name: "Rule based Ran transport draft"
+description: "Ran transport (draft)"
+tags: ["published", "rule", "based", "ran", "transport", "draft", "c", "rcc1", "generate_network"]
+category: "regulation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/cell-regulation/Rule_based_Ran_transport_draft.bngl"
+playground:
+  visible: false
+  gallery_category: "regulation"
+  featured: false
+  difficulty: "advanced"

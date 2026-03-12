@@ -1,0 +1,56 @@
+# RuleHub Model Metadata Standard v1.0
+
+id: string
+name: string
+description: string
+
+authors:
+  - name: string
+    orcid: string
+
+contributors:
+  - name: string
+
+citation:
+  doi: string
+  pmid: string
+  reference: string
+
+date:
+  created: YYYY-MM-DD
+  modified: YYYY-MM-DD
+  published: YYYY-MM-DD
+
+tags: string[]
+category: enum(signaling, regulation, metabolism, gene-expression, epidemiology, immunology, tutorial, validation, showcase, synthetic-biology, ecology, physics, computer-science, other)
+
+compatibility:
+  bng2_compatible: boolean
+  min_bng_version: string
+  simulation_methods:
+    - ode
+    - ssa
+    - nf
+  uses_compartments: boolean
+  uses_energy: boolean
+  uses_functions: boolean
+  nfsim_compatible: boolean
+
+source:
+  origin: enum(published, contributed, ai-generated, ported-from-sbml, tutorial, test-case)
+  original_format: string
+  original_repository: string
+  biomodels_id: string
+  source_path: string
+
+collection:
+  type: enum(parameter-fit-variants, sensitivity-analysis, geographic-variants, patient-specific)
+  parent_model: string
+  variant_key: string
+  count: integer
+
+playground:
+  visible: boolean
+  gallery_category: string
+  featured: boolean
+  difficulty: enum(beginner, intermediate, advanced)

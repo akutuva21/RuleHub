@@ -1,0 +1,24 @@
+id: "e2f-rb-cell-cycle-switch"
+name: "e2f rb cell cycle switch"
+description: "E2F/Rb Switch: The G1/S transition gate."
+contributors:
+  - name: "Achyudhan"
+tags: ["e2f", "rb", "cell", "cycle", "switch", "mitogen", "cycd", "cyce", "p27"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/e2f-rb-cell-cycle-switch.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

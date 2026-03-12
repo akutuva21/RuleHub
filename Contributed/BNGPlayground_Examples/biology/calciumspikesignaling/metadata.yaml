@@ -1,0 +1,24 @@
+id: "calcium-spike-signaling"
+name: "calcium spike signaling"
+description: "Calcium spikes: Oscillations driven by IP3R and CICR feedback."
+contributors:
+  - name: "Achyudhan"
+tags: ["calcium", "spike", "signaling", "plc", "ip3", "ca", "stim1"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/calcium-spike-signaling.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

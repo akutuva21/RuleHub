@@ -1,0 +1,24 @@
+id: "energy_catalysis_mm"
+name: "energy catalysis mm"
+description: "Model: energy_catalysis_mm.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["energy", "catalysis", "mm", "e", "s", "p"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: true
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/energy_catalysis_mm.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

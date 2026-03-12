@@ -1,0 +1,25 @@
+id: "Mallela2021_States"
+name: "Mallela 2021 - COVID-19 State-Level Models"
+description: "Parameter-fit COVID-19 epidemiological models for all 50 US states."
+tags: ["covid-19", "epidemiology", "parameter-estimation", "pybionetgen"]
+category: "epidemiology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_repository: "bionetgen-web-simulator"
+collection:
+  type: "geographic-variants"
+  parent_model: "Mallela2021_template"
+  variant_key: "us_state"
+  count: 50
+playground:
+  visible: false
+  gallery_category: "epidemiology"
+  featured: false
+  difficulty: "advanced"

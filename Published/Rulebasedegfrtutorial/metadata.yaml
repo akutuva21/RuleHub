@@ -1,0 +1,22 @@
+id: "Rule_based_egfr_tutorial"
+name: "Faeder 2009"
+description: "EGFR signaling"
+tags: ["published", "rule", "based", "egfr", "tutorial", "egf", "grb2", "shc", "generate_network"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/growth-factor-signaling/Rule_based_egfr_tutorial.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

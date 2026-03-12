@@ -1,0 +1,22 @@
+id: "no_frees"
+name: "no frees"
+description: "Original values used to generate parabola.exp"
+tags: ["no", "frees", "counter", "y", "generate_network", "simulate"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/tests/bngl_files/errors/no_frees.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,24 @@
+id: "compartment_membrane_bound"
+name: "compartment membrane bound"
+description: "Model: compartment_membrane_bound.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["compartment", "membrane", "bound", "p", "lipid", "generate_network", "simulate"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/compartment_membrane_bound.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

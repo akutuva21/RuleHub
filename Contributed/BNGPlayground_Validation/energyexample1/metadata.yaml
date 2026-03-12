@@ -1,0 +1,22 @@
+id: "energy_example1"
+name: "energy_example1"
+description: "Illustration of energy modeling approach w/ a simple protein scaffold model"
+tags: ["validation", "energy", "example1", "version", "setoption", "s", "a", "b", "c"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: true
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/energy_example1.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

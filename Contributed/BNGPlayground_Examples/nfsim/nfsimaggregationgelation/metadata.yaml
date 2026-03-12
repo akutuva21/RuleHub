@@ -1,0 +1,24 @@
+id: "nfsim_aggregation_gelation"
+name: "nfsim aggregation gelation"
+description: "Model: nfsim_aggregation_gelation.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["nfsim", "aggregation", "gelation", "m"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/nfsim_aggregation_gelation.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

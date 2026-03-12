@@ -1,0 +1,24 @@
+id: "feature_global_functions_scan"
+name: "feature global functions scan"
+description: "Model: feature_global_functions_scan.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["feature", "global", "functions", "scan", "signal", "response", "stimulus"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/feature_global_functions_scan.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "nfkb_illustrating_protocols"
+name: "nfkb_illustrating_protocols"
+description: "NF-kB signaling pathway"
+tags: ["validation", "nfkb", "illustrating", "protocols", "tnfr", "ikkk", "tnf", "ikk", "ikba", "a20", "competitor"]
+category: "validation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/nfkb_illustrating_protocols.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

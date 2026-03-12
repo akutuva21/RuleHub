@@ -1,0 +1,22 @@
+id: "tlbr"
+name: "TLBR Tutorial"
+description: "Ligand binding"
+tags: ["published", "immunology", "tlbr", "l", "r", "simulate_rm"]
+category: "immunology"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/tlbr.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

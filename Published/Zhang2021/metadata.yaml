@@ -1,0 +1,22 @@
+id: "Zhang_2021"
+name: "Zhang 2021"
+description: "CAR-T signaling"
+tags: ["published", "zhang", "2021", "tie2", "tie1", "ang1_4", "ang2_2", "ang2_3", "ang2_4", "veptp", "pten"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Zhang_2021.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

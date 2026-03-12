@@ -1,0 +1,22 @@
+id: "Motivating_example"
+name: "Motivating_example"
+description: "Signal Transduction with receptor internalization"
+tags: ["validation", "motivating", "example", "l", "r", "tf", "dna", "mrna1", "mrna2", "p1", "p2"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/Motivating_example.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "Rule_based_egfr_compart"
+name: "Rule based egfr compart"
+description: "Compartmental EGFR model"
+tags: ["published", "rule", "based", "egfr", "compart", "egf", "grb2", "shc", "generate_network"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/growth-factor-signaling/Rule_based_egfr_compart.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

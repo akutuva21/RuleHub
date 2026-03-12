@@ -1,0 +1,22 @@
+id: "Dushek_2014"
+name: "Dushek 2014"
+description: "TCR signaling dynamics"
+tags: ["published", "dushek", "2014", "e", "f", "b"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Dushek_2014.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "Mertins_2023"
+name: "Mertins 2023"
+description: "DNA damage response"
+tags: ["published", "mertins", "2023", "dnadsb", "p53", "mrna_bax", "bax", "bclxl", "bad", "fourteen_3_3", "caspase"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/growth-factor-signaling/Mertins_2023.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

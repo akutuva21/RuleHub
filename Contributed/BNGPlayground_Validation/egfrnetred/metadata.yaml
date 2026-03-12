@@ -1,0 +1,22 @@
+id: "egfr_net_red"
+name: "egfr_net_red"
+description: "Reduced state-space version of EGFR_NET.BNGL with equivalent ODE dynamics"
+tags: ["validation", "egfr", "net", "red", "egf", "egfr_1", "egfr_2", "egfr_3", "grb2", "shc", "sos"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/egfr_net_red.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "mwc"
+name: "mwc"
+description: "Monod-Wyman-Changeux model"
+tags: ["validation", "mwc", "setoption", "h", "ox", "b"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: true
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/mwc.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

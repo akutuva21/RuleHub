@@ -1,0 +1,24 @@
+id: "mt_music_sequencer"
+name: "mt music sequencer"
+description: "Music Sequencer / Chord Synthesizer in BNGL"
+contributors:
+  - name: "Achyudhan"
+tags: ["mt", "music", "sequencer", "v1s", "v1c", "v2s", "v2c", "v3s", "v3c", "mix", "chordphase"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/mt_music_sequencer.bngl"
+playground:
+  visible: false
+  gallery_category: "computer-science"
+  featured: false
+  difficulty: "advanced"

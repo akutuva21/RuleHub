@@ -1,0 +1,22 @@
+id: "fceri_gamma2_ground_truth"
+name: "fceri gamma2 ground truth"
+description: "BioNetGen model: fceri gamma2 ground truth"
+tags: ["fceri", "gamma2", "ground", "truth", "lig", "lyn", "syk", "rec"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/fceri_gamma/fceri_gamma2_ground_truth.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

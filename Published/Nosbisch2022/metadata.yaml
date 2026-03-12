@@ -1,0 +1,22 @@
+id: "Nosbisch_2022"
+name: "Nosbisch 2022"
+description: "RTK-PLCgamma1 signaling"
+tags: ["published", "nosbisch", "2022", "rtk", "plcgamma1", "generate_network"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Nosbisch_2022.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

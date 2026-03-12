@@ -1,0 +1,22 @@
+id: "Lin_ERK_2019"
+name: "Lin 2019"
+description: "ERK signaling"
+tags: ["published", "literature", "signaling", "lin", "erk", "2019", "egfr", "sos", "ras", "rasgap", "raf", "mek", "ekar3"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode", "ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/literature/Lin_ERK_2019.bngl"
+playground:
+  visible: true
+  gallery_category: "other"
+  featured: false
+  difficulty: "intermediate"

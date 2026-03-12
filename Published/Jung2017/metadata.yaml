@@ -1,0 +1,22 @@
+id: "Jung_2017"
+name: "Jung 2017"
+description: "M1 receptor signaling"
+tags: ["published", "jung", "2017", "m1r", "oxo", "arrestin", "mek", "erk", "perk", "oxo_ec", "pp2a"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Jung_2017.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

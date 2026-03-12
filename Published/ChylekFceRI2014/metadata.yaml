@@ -1,0 +1,22 @@
+id: "ChylekFceRI_2014"
+name: "Chylek 2014 (FceRI)"
+description: "FceRI signaling"
+tags: ["published", "immunology", "chylekfceri", "2014", "lig", "rec", "lyn", "fyn", "syk", "pag1", "csk", "lat"]
+category: "immunology"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/ChylekFceRI_2014.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

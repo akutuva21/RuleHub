@@ -1,0 +1,22 @@
+id: "innate_immunity"
+name: "Korwek 2023"
+description: "Immune response"
+tags: ["published", "immunology", "innate", "immunity", "polyic", "rigi", "mavs", "pkr", "oas3", "rnasel", "eif2a", "rigi_mrna"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/innate_immunity.bngl"
+playground:
+  visible: true
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "FceRI_viz"
+name: "FceRI Viz"
+description: "FcÃƒÅ½Ã‚ÂµRI (viz)"
+tags: ["published", "tutorial", "native", "fceri", "viz", "fcr", "ige", "lat", "lyn", "syk", "pb", "pg", "sykp"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/Viz/FceRI_viz.bngl"
+playground:
+  visible: true
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "intermediate"

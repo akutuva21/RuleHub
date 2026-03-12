@@ -1,0 +1,25 @@
+id: "Mallela2022_MSAs"
+name: "Mallela 2022 - COVID-19 MSA Models"
+description: "Parameter-fit COVID-19 epidemiological models for US metropolitan statistical areas."
+tags: ["covid-19", "epidemiology", "parameter-estimation", "pybionetgen"]
+category: "epidemiology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_repository: "bionetgen-web-simulator"
+collection:
+  type: "geographic-variants"
+  parent_model: "Mallela2022_template"
+  variant_key: "metropolitan_area"
+  count: 281
+playground:
+  visible: false
+  gallery_category: "epidemiology"
+  featured: false
+  difficulty: "advanced"

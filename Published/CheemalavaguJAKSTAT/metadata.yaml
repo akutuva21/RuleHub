@@ -1,0 +1,22 @@
+id: "Cheemalavagu_JAK_STAT"
+name: "Cheemalavagu 2024"
+description: "JAK-STAT signaling"
+tags: ["published", "literature", "signaling", "cheemalavagu", "jak", "stat", "l1", "il6r", "gp130", "l2", "il10r1", "il10r2", "jak1", "jak2"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/literature/Cheemalavagu_JAK_STAT.bngl"
+playground:
+  visible: true
+  gallery_category: "other"
+  featured: false
+  difficulty: "intermediate"

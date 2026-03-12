@@ -1,0 +1,22 @@
+id: "simple"
+name: "simple"
+description: "Simple binding model"
+tags: ["published", "tutorials", "simple", "s", "t", "dnat", "trash"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/tutorials/simple.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

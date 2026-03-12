@@ -1,0 +1,22 @@
+id: "Alabama"
+name: "Alabama"
+description: "reporting period (1 d)"
+tags: ["alabama", "fdcs", "counter", "s", "e1", "e2", "e3", "e4", "e5"]
+category: "epidemiology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/Mallela_2022/Alabama.bngl"
+playground:
+  visible: false
+  gallery_category: "epidemiology"
+  featured: false
+  difficulty: "advanced"

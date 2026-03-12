@@ -1,0 +1,24 @@
+id: "tnf-induced-apoptosis"
+name: "tnf induced apoptosis"
+description: "BioNetGen model: tnf induced apoptosis"
+contributors:
+  - name: "Achyudhan"
+tags: ["tnf", "induced", "apoptosis", "tnfr", "caspase8", "bid", "caspase3"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/tnf-induced-apoptosis.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

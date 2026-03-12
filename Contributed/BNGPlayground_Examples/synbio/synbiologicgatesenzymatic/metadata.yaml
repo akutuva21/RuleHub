@@ -1,0 +1,24 @@
+id: "synbio_logic_gates_enzymatic"
+name: "synbio logic gates enzymatic"
+description: "Model: synbio_logic_gates_enzymatic.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["synbio", "logic", "gates", "enzymatic", "i1", "i2", "gateand", "gateor", "outand", "outor"]
+category: "synthetic-biology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/synbio_logic_gates_enzymatic.bngl"
+playground:
+  visible: false
+  gallery_category: "synthetic-biology"
+  featured: false
+  difficulty: "advanced"

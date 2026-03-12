@@ -1,0 +1,22 @@
+id: "toggle"
+name: "Toggle"
+description: "Toggle switch"
+tags: ["published", "tutorial", "native", "toggle", "x", "y", "generate_network", "writemfile", "setconcentration"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/SynDeg/toggle.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"
