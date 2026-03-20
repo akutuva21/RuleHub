@@ -1,0 +1,22 @@
+id: "polymer_fixed"
+name: "polymer_fixed"
+description: "Runtime-only BNGL model migrated from public/models: polymer_fixed"
+tags: ["polymer", "fixed"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "contributed"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "public/models/polymer_fixed.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

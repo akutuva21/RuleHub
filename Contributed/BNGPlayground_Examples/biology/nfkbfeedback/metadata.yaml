@@ -1,0 +1,24 @@
+id: "nfkb-feedback"
+name: "nfkb feedback"
+description: "TNFalpha-induced NF-kB signaling with IkappaB-alpha feedback."
+contributors:
+  - name: "Achyudhan"
+tags: ["nfkb", "feedback", "ikb", "ikk", "a20"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/nfkb-feedback.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "Zhang_2023"
+name: "Zhang 2023"
+description: "VEGF signaling"
+tags: ["published", "zhang", "2023", "vegf", "vegfr2", "vegfr1", "nrp1", "pi", "plcgamma", "dag", "ip3_cyto"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Zhang_2023.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

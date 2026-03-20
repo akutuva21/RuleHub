@@ -1,0 +1,24 @@
+id: "genetic_goodwin_oscillator"
+name: "genetic goodwin oscillator"
+description: "Model: genetic_goodwin_oscillator.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["genetic", "goodwin", "oscillator", "gene", "mrna", "protein", "repressor"]
+category: "gene-expression"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/genetic_goodwin_oscillator.bngl"
+playground:
+  visible: false
+  gallery_category: "gene-expression"
+  featured: false
+  difficulty: "advanced"

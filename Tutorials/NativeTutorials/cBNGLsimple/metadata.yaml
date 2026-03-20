@@ -1,0 +1,22 @@
+id: "cBNGL_simple"
+name: "cBNGL simple"
+description: "A simplified signal transduction model including the following processes:"
+tags: ["cbngl", "simple", "l", "r", "tf", "dna", "mrna", "p"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/CBNGL/cBNGL_simple.bngl"
+playground:
+  visible: true
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "intermediate"

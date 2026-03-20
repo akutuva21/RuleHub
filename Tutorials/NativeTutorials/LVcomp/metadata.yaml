@@ -1,0 +1,22 @@
+id: "LV_comp"
+name: "LV comp"
+description: "title: LV_comp.bgl"
+tags: ["lv", "comp", "k2", "s", "w"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode", "ssa"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/CBNGL/LV_comp.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

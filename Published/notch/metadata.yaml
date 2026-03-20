@@ -1,0 +1,22 @@
+id: "notch"
+name: "Notch"
+description: "Notch signaling"
+tags: ["published", "notch", "icn", "ofut1", "fringe", "furin", "dsl", "csl", "maml"]
+category: "regulation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/cell-regulation/notch.bngl"
+playground:
+  visible: false
+  gallery_category: "regulation"
+  featured: false
+  difficulty: "advanced"

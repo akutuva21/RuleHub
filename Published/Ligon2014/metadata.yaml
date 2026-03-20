@@ -1,0 +1,22 @@
+id: "Ligon_2014"
+name: "Ligon 2014"
+description: "Lipoplex delivery"
+tags: ["published", "nfsim", "ligon", "2014", "lext", "pit", "lint"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/growth-factor-signaling/Ligon_2014.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

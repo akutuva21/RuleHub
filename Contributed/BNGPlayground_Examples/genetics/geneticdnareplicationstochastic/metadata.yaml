@@ -1,0 +1,24 @@
+id: "genetic_dna_replication_stochastic"
+name: "genetic dna replication stochastic"
+description: "Model: genetic_dna_replication_stochastic.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["genetic", "dna", "replication", "stochastic", "pol", "n", "generate_network"]
+category: "gene-expression"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/genetic_dna_replication_stochastic.bngl"
+playground:
+  visible: false
+  gallery_category: "gene-expression"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "no_suffix"
+name: "no suffix"
+description: "Original values used to generate parabola.exp"
+tags: ["no", "suffix", "counter", "y", "generate_network", "simulate"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/tests/bngl_files/errors/no_suffix.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

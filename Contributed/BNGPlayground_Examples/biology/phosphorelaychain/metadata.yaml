@@ -1,0 +1,24 @@
+id: "phosphorelay-chain"
+name: "phosphorelay chain"
+description: "BioNetGen model: phosphorelay chain"
+contributors:
+  - name: "Achyudhan"
+tags: ["phosphorelay", "chain", "sensor", "relay", "output"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/phosphorelay-chain.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

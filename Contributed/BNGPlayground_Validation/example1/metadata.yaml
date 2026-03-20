@@ -1,0 +1,22 @@
+id: "example1"
+name: "example1"
+description: "Example file for BNG2 tutorial."
+tags: ["validation", "example1", "version", "generate_network", "simulate_ode"]
+category: "validation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/example1.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,24 @@
+id: "parp1-mediated-dna-repair"
+name: "parp1 mediated dna repair"
+description: "PARP1-mediated DNA damage sensing and repair."
+contributors:
+  - name: "Achyudhan"
+tags: ["parp1", "mediated", "dna", "repair", "par", "nad", "v_parylate"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/parp1-mediated-dna-repair.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "Barua_2007"
+name: "Barua 2007"
+description: "Model from Haugh (2006)"
+tags: ["published", "barua", "2007", "version", "r", "s"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Barua_2007.bngl"
+playground:
+  visible: true
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "intermediate"

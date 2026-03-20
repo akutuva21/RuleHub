@@ -1,0 +1,22 @@
+id: "BAB_scan"
+name: "BAB scan"
+description: "Simple binding model with a bivalent A molecule that has two identical sites"
+tags: ["bab", "scan", "a", "b", "generate_network", "parameter_scan"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/BAB/BAB_scan.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "genetic_bistability_energy"
+name: "genetic bistability energy"
+description: "Model: genetic_bistability_energy.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["genetic", "bistability", "energy", "genea", "geneb", "prota", "protb"]
+category: "gene-expression"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: true
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/genetic_bistability_energy.bngl"
+playground:
+  visible: false
+  gallery_category: "gene-expression"
+  featured: false
+  difficulty: "advanced"

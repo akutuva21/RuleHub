@@ -1,0 +1,22 @@
+id: "mapk-dimers"
+name: "MAPK Dimers"
+description: "MAPK dimerization"
+tags: ["published", "mapk", "dimers", "ste5", "ste11", "ste7", "fus3"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/mapk-dimers.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "egfr_simple"
+name: "egfr simple"
+description: "This is a demo model of EGFR signaling."
+tags: ["egfr", "simple", "egf", "grb2", "sos1"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/LargerModels/egfr_simple.bngl"
+playground:
+  visible: true
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "intermediate"

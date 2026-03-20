@@ -1,0 +1,22 @@
+id: "An_2009"
+name: "An 2009"
+description: "TLR4 signaling"
+tags: ["published", "immunology", "an", "2009", "cd14", "md2", "tlr4", "tram", "trif", "sarm", "traf4", "irak1"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/An_2009.bngl"
+playground:
+  visible: true
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "intermediate"

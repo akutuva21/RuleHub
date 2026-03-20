@@ -1,0 +1,22 @@
+id: "SIR"
+name: "SIR"
+description: "BioNetGen model: SIR"
+tags: ["sir", "saveconcentrations", "simulate"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode", "ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/ABC/SIR.bngl"
+playground:
+  visible: true
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "intermediate"

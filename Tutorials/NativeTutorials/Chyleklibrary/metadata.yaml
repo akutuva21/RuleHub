@@ -1,0 +1,22 @@
+id: "Chylek_library"
+name: "Chylek library"
+description: "Created by BioNetGen 2.2.6"
+tags: ["chylek", "library", "kflatplcg", "kfgrb2gab2", "kflcp2plcg1", "kd1", "kd2", "sink", "pre", "pag1"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/LargerModels/Chylek_library.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "SHP2_base_model"
+name: "SHP2_base_model"
+description: "Base model of Shp2 regulation"
+tags: ["validation", "shp2", "base", "model", "r", "s", "exclude_reactants"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/SHP2_base_model.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "Houston"
+name: "Houston"
+description: "- This model is intended to be consistent with the compartmental model"
+tags: ["houston", "counter", "fdcs", "s", "sv", "e", "a", "i", "v"]
+category: "epidemiology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/Vax_and_Variants/Houston/Houston.bngl"
+playground:
+  visible: false
+  gallery_category: "epidemiology"
+  featured: false
+  difficulty: "advanced"

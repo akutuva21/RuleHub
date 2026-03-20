@@ -1,0 +1,22 @@
+id: "test_synthesis_complex_source_cBNGL"
+name: "test_synthesis_complex_source_cBNGL"
+description: "volume-surface"
+tags: ["validation", "test", "synthesis", "complex", "source", "cbngl", "volume_molecule1", "volume_molecule2", "surface_molecule1", "surface_molecule2", "volume_molecule3", "volume_molecule4", "volume_receptor", "surface_receptor"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/test_synthesis_complex_source_cBNGL.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

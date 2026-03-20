@@ -1,0 +1,22 @@
+id: "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC"
+name: "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC"
+description: "Runtime-only BNGL model migrated from public/models: Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC"
+tags: ["myrtle", "beach", "conway", "north", "sc", "nc"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "contributed"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "public/models/Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

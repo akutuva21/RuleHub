@@ -1,0 +1,22 @@
+id: "Creamer_2012"
+name: "Creamer 2012"
+description: "Initial values"
+tags: ["creamer", "2012", "egf", "hrg", "egfr", "erbb2", "erbb3", "erbb4", "p52shc1", "grb2"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/LargerModels/Creamer_2012.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

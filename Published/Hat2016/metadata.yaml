@@ -1,0 +1,22 @@
+id: "Hat_2016"
+name: "Hat 2016"
+description: "Nuclear transport"
+tags: ["published", "hat", "2016", "dna_dsb", "atm", "siah1", "hipk2", "wip1", "gene_wip1", "mrna_wip1", "p53"]
+category: "regulation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode", "ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/cell-regulation/Hat_2016.bngl"
+playground:
+  visible: true
+  gallery_category: "regulation"
+  featured: false
+  difficulty: "intermediate"

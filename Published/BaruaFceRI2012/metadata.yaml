@@ -1,0 +1,22 @@
+id: "BaruaFceRI_2012"
+name: "BaruaFceRI 2012"
+description: "FcÃƒÅ½Ã‚ÂµRI signaling"
+tags: ["published", "immunology", "baruafceri", "2012", "r_o", "rdimer_o", "l_o", "t_o", "l", "fcr", "lyn", "syk"]
+category: "immunology"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/BaruaFceRI_2012.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

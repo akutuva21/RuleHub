@@ -1,0 +1,22 @@
+id: "Erdem_2021"
+name: "Erdem 2021"
+description: "InsR/IGF1R signaling"
+tags: ["published", "erdem", "2021", "igf1", "ins", "igf1r", "insr", "irs", "sos", "ras", "raf"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Erdem_2021.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

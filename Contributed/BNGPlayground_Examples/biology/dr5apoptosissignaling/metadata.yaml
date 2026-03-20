@@ -1,0 +1,24 @@
+id: "dr5-apoptosis-signaling"
+name: "dr5 apoptosis signaling"
+description: "DR5 (TRAIL) Signaling: Extrinsic apoptosis and DISC formation."
+contributors:
+  - name: "Achyudhan"
+tags: ["dr5", "apoptosis", "signaling", "trail", "fadd", "caspase8", "flip", "death_signal"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/dr5-apoptosis-signaling.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

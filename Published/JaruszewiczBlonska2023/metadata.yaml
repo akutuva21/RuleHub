@@ -1,0 +1,22 @@
+id: "Jaruszewicz-Blonska_2023"
+name: "Jaruszewicz 2023"
+description: "T-cell discrimination"
+tags: ["published", "immunology", "jaruszewicz", "blonska", "2023", "ikk", "ikba", "ikba_mrna", "a20", "nfkb"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/Jaruszewicz-Blonska_2023.bngl"
+playground:
+  visible: true
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "intermediate"

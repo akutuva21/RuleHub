@@ -1,0 +1,22 @@
+id: "IGF1R_Model_receptor_activation_bnf"
+name: "IGF1R Model receptor activation bnf"
+description: "Author: William S. Hlavacek"
+tags: ["igf1r", "model", "receptor", "activation", "bnf", "igf1"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/igf1r/IGF1R_Model_receptor_activation_bnf.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

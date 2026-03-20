@@ -1,0 +1,22 @@
+id: "test_synthesis_complex"
+name: "test_synthesis_complex"
+description: "Complex synthesis test"
+tags: ["validation", "test", "synthesis", "complex", "a", "b", "c", "receptor", "source", "source2"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/test_synthesis_complex.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

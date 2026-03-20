@@ -1,0 +1,24 @@
+id: "bistable-toggle-switch"
+name: "bistable toggle switch"
+description: "Genetic Toggle Switch: Mutual repression circuit."
+contributors:
+  - name: "Achyudhan"
+tags: ["bistable", "toggle", "switch", "proml", "promr", "tf_l", "tf_r", "ind_l", "ind_r"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/bistable-toggle-switch.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "Kesseler_2013"
+name: "Kesseler 2013"
+description: "G2/Mitosis transition"
+tags: ["published", "kesseler", "2013", "mpf", "cdc25", "wee1", "myt1", "pin1", "pp2a", "prox", "e33"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Kesseler_2013.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

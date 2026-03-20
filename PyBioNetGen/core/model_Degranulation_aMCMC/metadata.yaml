@@ -1,0 +1,22 @@
+id: "model"
+name: "model"
+description: "A model of IgE receptor signaling"
+tags: ["model", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/Degranulation_aMCMC/model.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

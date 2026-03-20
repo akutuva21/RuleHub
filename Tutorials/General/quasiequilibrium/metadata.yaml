@@ -1,0 +1,22 @@
+id: "quasi_equilibrium"
+name: "quasi equilibrium"
+description: "Quasi-equilibrium approximation"
+tags: ["published", "toy models", "quasi", "equilibrium", "a", "b", "c"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/toy-models/quasi_equilibrium.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "egfr_nf"
+name: "egfr nf"
+description: "Filename: example2_starting_point.bngl"
+tags: ["egfr", "nf", "egf", "clusters", "pre1_dose", "pre2_time"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/egfr_nf/egfr_nf.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

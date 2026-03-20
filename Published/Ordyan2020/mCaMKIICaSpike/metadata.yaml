@@ -1,0 +1,22 @@
+id: "mCaMKII_Ca_Spike"
+name: "Ordyan 2020: mCaMKII Ca Spike"
+description: "mCaMKII Ca Spike model"
+tags: ["published", "neuroscience", "mcamkii", "ca", "spike", "cam", "ng", "camkii", "pp1", "time_counter"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/Ordyan_2020/mCaMKII_Ca_Spike.bngl"
+playground:
+  visible: true
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "intermediate"

@@ -1,0 +1,22 @@
+id: "fceri_ji_comp"
+name: "fceri_ji_comp"
+description: "Ligand-receptor binding"
+tags: ["validation", "fceri", "ji", "comp", "lig", "lyn", "syk", "rec"]
+category: "validation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/fceri_ji_comp.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "Barua_2009"
+name: "Barua 2009"
+description: "JAK2-SH2B signaling"
+tags: ["published", "barua", "2009", "s", "j"]
+category: "signaling"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/complex-models/Barua_2009.bngl"
+playground:
+  visible: true
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "intermediate"

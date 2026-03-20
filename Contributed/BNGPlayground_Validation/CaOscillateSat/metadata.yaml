@@ -1,0 +1,22 @@
+id: "CaOscillate_Sat"
+name: "CaOscillate_Sat"
+description: "Calcium oscillations (sat)"
+tags: ["validation", "caoscillate", "sat", "null", "ga", "plc", "ca"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode", "ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/CaOscillate_Sat.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

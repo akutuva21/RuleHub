@@ -1,0 +1,22 @@
+id: "Mukhopadhyay_2013"
+name: "Mukhopadhyay 2013"
+description: "FceRI signaling"
+tags: ["published", "immunology", "mukhopadhyay", "2013", "s", "e", "f", "z"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/immune-signaling/Mukhopadhyay_2013.bngl"
+playground:
+  visible: false
+  gallery_category: "immunology"
+  featured: false
+  difficulty: "advanced"

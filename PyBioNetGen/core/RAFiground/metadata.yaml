@@ -1,0 +1,22 @@
+id: "RAFi_ground"
+name: "RAFi ground"
+description: "BioNetGen model: RAFi ground"
+tags: ["rafi", "ground", "r", "i", "ybar", "activity"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/constraint_raf/RAFi_ground.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

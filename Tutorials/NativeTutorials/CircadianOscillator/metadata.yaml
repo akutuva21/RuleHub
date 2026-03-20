@@ -1,0 +1,22 @@
+id: "CircadianOscillator"
+name: "CircadianOscillator"
+description: "Circadian rhythm"
+tags: ["published", "tutorial", "native", "circadianoscillator", "a", "r", "pa", "pr", "mrna_a", "mrna_r"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/SynDeg/CircadianOscillator.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

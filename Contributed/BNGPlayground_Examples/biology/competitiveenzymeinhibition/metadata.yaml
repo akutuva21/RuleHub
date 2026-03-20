@@ -1,0 +1,24 @@
+id: "competitive-enzyme-inhibition"
+name: "competitive enzyme inhibition"
+description: "Competitive inhibition: Inhibitor (I) and Substrate (S) compete for the same"
+contributors:
+  - name: "Achyudhan"
+tags: ["competitive", "enzyme", "inhibition", "substrate1", "substrate2", "inhibitor", "product"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/competitive-enzyme-inhibition.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

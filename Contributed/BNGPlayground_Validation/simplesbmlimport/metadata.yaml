@@ -1,0 +1,22 @@
+id: "simple_sbml_import"
+name: "simple_sbml_import"
+description: "SBML import test"
+tags: ["validation", "simple", "sbml", "import", "readfile", "generate_network", "simulate"]
+category: "validation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/simple_sbml_import.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

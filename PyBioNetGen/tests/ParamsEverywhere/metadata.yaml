@@ -1,0 +1,22 @@
+id: "ParamsEverywhere"
+name: "ParamsEverywhere"
+description: "An example from a real application"
+tags: ["paramseverywhere", "ag", "r", "h"]
+category: "validation"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/tests/bngl_files/ParamsEverywhere.bngl"
+playground:
+  visible: false
+  gallery_category: "validation"
+  featured: false
+  difficulty: "advanced"

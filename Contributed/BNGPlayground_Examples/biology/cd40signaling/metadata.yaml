@@ -1,0 +1,24 @@
+id: "cd40-signaling"
+name: "cd40 signaling"
+description: "CD40 Signaling: B-cell activation and TRAF-mediated relay."
+contributors:
+  - name: "Achyudhan"
+tags: ["cd40", "signaling", "cd40l", "traf", "ikk", "nik", "nfkb", "relb"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/cd40-signaling.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

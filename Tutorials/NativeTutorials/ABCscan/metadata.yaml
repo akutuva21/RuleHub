@@ -1,0 +1,22 @@
+id: "ABC_scan"
+name: "ABC scan"
+description: "BioNetGen model: ABC scan"
+tags: ["abc", "scan", "a", "generate_network", "parameter_scan"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/ABC/ABC_scan.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

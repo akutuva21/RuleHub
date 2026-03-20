@@ -1,0 +1,24 @@
+id: "process_quorum_sensing_switch"
+name: "process quorum sensing switch"
+description: "Model: process_quorum_sensing_switch.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["process", "quorum", "sensing", "switch", "gene_ai", "ai", "r", "gene_light"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/process_quorum_sensing_switch.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

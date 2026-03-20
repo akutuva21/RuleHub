@@ -1,0 +1,25 @@
+id: "Miller2025_MEK"
+name: "Miller 2025 - MEK Isoform Models"
+description: "MEK isoform variant models curated for PyBioNetGen."
+tags: ["mek", "isoforms", "signaling", "pybionetgen"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_repository: "bionetgen-web-simulator"
+collection:
+  type: "parameter-fit-variants"
+  parent_model: "Miller2025_MEK_template"
+  variant_key: "isoform"
+  count: 10
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

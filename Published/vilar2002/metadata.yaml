@@ -1,0 +1,22 @@
+id: "vilar_2002"
+name: "Vilar 2002"
+description: "Genetic oscillator"
+tags: ["published", "vilar", "2002", "dna", "a", "r"]
+category: "regulation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/cell-regulation/vilar_2002.bngl"
+playground:
+  visible: false
+  gallery_category: "regulation"
+  featured: false
+  difficulty: "advanced"

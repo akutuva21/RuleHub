@@ -1,0 +1,22 @@
+id: "pt409"
+name: "pt409"
+description: "c = 0.39 /d t_1/2 = 1.8 d (inferred)"
+tags: ["pt409", "counter", "v", "lnv", "s", "c", "half_life", "lnv_tangent"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/HIVdynamics_aMCMC/pt409/pt409.bngl"
+playground:
+  visible: false
+  gallery_category: "other"
+  featured: false
+  difficulty: "advanced"

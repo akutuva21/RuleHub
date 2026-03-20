@@ -1,0 +1,24 @@
+id: "l-type-calcium-channel-dynamics"
+name: "l type calcium channel dynamics"
+description: "L-type Calcium Channel: Voltage gating and CDI (Calcium-dependent inactivation)."
+contributors:
+  - name: "Achyudhan"
+tags: ["l", "type", "calcium", "channel", "dynamics", "ltcc", "voltage", "v_open", "v_inact"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/l-type-calcium-channel-dynamics.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

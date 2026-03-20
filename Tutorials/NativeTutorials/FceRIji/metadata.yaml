@@ -1,0 +1,22 @@
+id: "FceRI_ji"
+name: "FceRI ji"
+description: "title: FceRI_ji.bngl"
+tags: ["fceri", "ji", "lig", "lyn", "syk", "rec"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/native-tutorials/LargerModels/FceRI_ji.bngl"
+playground:
+  visible: true
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "intermediate"

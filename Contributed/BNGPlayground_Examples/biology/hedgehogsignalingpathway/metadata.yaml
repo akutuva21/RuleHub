@@ -1,0 +1,24 @@
+id: "hedgehog-signaling-pathway"
+name: "hedgehog signaling pathway"
+description: "Hedgehog (Hh) Signaling: Ciliary translocation and Gli processing."
+contributors:
+  - name: "Achyudhan"
+tags: ["hedgehog", "signaling", "pathway", "hh", "ptch", "smo", "gli", "sufu"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/hedgehog-signaling-pathway.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

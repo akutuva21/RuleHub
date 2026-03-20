@@ -1,0 +1,22 @@
+id: "toy2"
+name: "toy2"
+description: "Enzymatic reaction toy"
+tags: ["published", "tutorials", "toy2", "l", "r", "a", "k"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/tutorials/toy2.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"

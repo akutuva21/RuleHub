@@ -1,0 +1,24 @@
+id: "lipid-mediated-pip3-signaling"
+name: "lipid mediated pip3 signaling"
+description: "Kinetic Parameters"
+contributors:
+  - name: "Achyudhan"
+tags: ["lipid", "mediated", "pip3", "signaling", "pi3k", "pip2", "pten", "pdk1"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/lipid-mediated-pip3-signaling.bngl"
+playground:
+  visible: false
+  gallery_category: "signaling"
+  featured: false
+  difficulty: "advanced"

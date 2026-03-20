@@ -1,0 +1,22 @@
+id: "test_network_gen"
+name: "test_network_gen"
+description: "fceri model with network generation"
+tags: ["validation", "test", "network", "gen", "lig", "lyn", "syk", "rec"]
+category: "validation"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "test-case"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/validation/test_network_gen.bngl"
+playground:
+  visible: true
+  gallery_category: "validation"
+  featured: false
+  difficulty: "intermediate"

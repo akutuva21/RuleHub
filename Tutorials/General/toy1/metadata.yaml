@@ -1,0 +1,22 @@
+id: "toy1"
+name: "toy1"
+description: "Basic signaling toy"
+tags: ["published", "tutorials", "toy1", "l", "r", "a", "generate_network", "writesbml", "simulate_ode"]
+category: "tutorial"
+compatibility:
+  bng2_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "tutorial"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/tutorials/toy1.bngl"
+playground:
+  visible: false
+  gallery_category: "tutorial"
+  featured: false
+  difficulty: "advanced"
