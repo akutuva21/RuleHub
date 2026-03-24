@@ -190,6 +190,6 @@ begin observables
 end observables
 begin actions
 generate_network({overwrite=>1});
-#simulate_ode({t_end=>500000,n_steps=>30,sparse=>1,steady_state=>1});
+simulate_ode({t_end=>500000,n_steps=>30,sparse=>1,steady_state=>1});
 #writeMfile({});
 end actions

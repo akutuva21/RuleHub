@@ -38,5 +38,5 @@ end model
 
 #generate_network()
 #writeSBML()
-#simulate({method=>"ode",t_end=>0.001,n_steps=>1000})
+simulate({method=>"ode",t_end=>0.001,n_steps=>1000})
 #simulate({method=>"ssa",t_end=>0.001,n_steps=>1000})
