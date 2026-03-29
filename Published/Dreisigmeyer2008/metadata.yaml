@@ -1,0 +1,18 @@
+id: "Dreisigmeyer_2008"
+name: "Dreisigmeyer 2008"
+description: "Lac operon"
+tags: ["published", "genetics", "dreisigmeyer", "2008"]
+category: "genetics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "genetics"

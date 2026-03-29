@@ -1,0 +1,18 @@
+id: "Yang_2008"
+name: "Yang 2008"
+description: "TLBR yang 2008"
+tags: ["published", "biophysics", "yang", "2008"]
+category: "biophysics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "biophysics"

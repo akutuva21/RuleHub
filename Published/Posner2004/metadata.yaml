@@ -1,0 +1,18 @@
+id: "Posner_2004"
+name: "Posner 2004"
+description: "BLBR cooperativity"
+tags: ["published", "biophysics", "posner", "2004"]
+category: "biophysics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "biophysics"

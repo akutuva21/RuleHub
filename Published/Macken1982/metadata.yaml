@@ -1,0 +1,18 @@
+id: "Macken_1982"
+name: "Macken 1982"
+description: "TLBR solution macken 1982"
+tags: ["published", "biophysics", "macken", "1982"]
+category: "biophysics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "biophysics"

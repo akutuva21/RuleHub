@@ -1,0 +1,18 @@
+id: "Hlavacek_1999"
+name: "Hlavacek 1999"
+description: "Steric effects"
+tags: ["published", "biophysics", "hlavacek", "1999"]
+category: "biophysics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "biophysics"

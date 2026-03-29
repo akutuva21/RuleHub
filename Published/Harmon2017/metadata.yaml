@@ -1,0 +1,18 @@
+id: "Harmon_2017"
+name: "Harmon 2017"
+description: "Antigen pulses"
+tags: ["published", "immunology", "harmon", "2017"]
+category: "immunology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "immunology"

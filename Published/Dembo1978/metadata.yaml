@@ -1,0 +1,18 @@
+id: "Dembo_1978"
+name: "Dembo 1978"
+description: "BLBR dembo 1978"
+tags: ["published", "biophysics", "dembo", "1978"]
+category: "biophysics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "biophysics"

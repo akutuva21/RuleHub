@@ -1,0 +1,18 @@
+id: "Hlavacek_2001"
+name: "Hlavacek 2001"
+description: "Kinetic proofreading"
+tags: ["published", "biophysics", "hlavacek", "2001"]
+category: "biophysics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+playground:
+  visible: true
+  gallery_category: "biophysics"
