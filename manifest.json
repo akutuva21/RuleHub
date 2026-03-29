@@ -3020,11 +3020,11 @@
     "file": "blbr_dembo1978.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "dembo",
       "1978"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -3265,11 +3265,11 @@
     "file": "lac_operon_dreisigmeyer2008.bngl",
     "tags": [
       "published",
-      "genetics",
+      "gene-expression",
       "dreisigmeyer",
       "2008"
     ],
-    "category": "genetics",
+    "category": "gene-expression",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -4768,11 +4768,11 @@
     "file": "genetic_switch_gardner2000.bngl",
     "tags": [
       "published",
-      "synthetic biology",
+      "synthetic-biology",
       "gardner",
       "2000"
     ],
-    "category": "synthetic biology",
+    "category": "synthetic-biology",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -5067,11 +5067,11 @@
     "file": "blbr_heterogeneity_goldstein1980.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "goldstein",
       "1980"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -5576,11 +5576,11 @@
     "file": "steric_effects_hlavacek1999.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "hlavacek",
       "1999"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -5594,11 +5594,11 @@
     "file": "kinetic_proofreading_hlavacek2001.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "hlavacek",
       "2001"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -7254,11 +7254,11 @@
     "file": "tlbr_solution_macken1982.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "macken",
       "1982"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -10103,11 +10103,11 @@
     "file": "blbr_rings_posner1995.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "posner",
       "1995"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -10121,11 +10121,11 @@
     "file": "blbr_cooperativity_posner2004.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "posner",
       "2004"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
@@ -14708,11 +14708,11 @@
     "file": "tlbr_yang2008.bngl",
     "tags": [
       "published",
-      "biophysics",
+      "physics",
       "yang",
       "2008"
     ],
-    "category": "biophysics",
+    "category": "physics",
     "bng2_compatible": true,
     "origin": "published",
     "visible": true,
