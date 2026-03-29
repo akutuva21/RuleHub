@@ -13,6 +13,9 @@ compatibility:
 source:
   origin: "published"
   original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
 playground:
   visible: true
   gallery_category: "immunology"
+  featured: false
+  difficulty: "intermediate"

@@ -1,8 +1,8 @@
 id: "Gardner_2000"
 name: "Gardner 2000"
 description: "Genetic toggle switch"
-tags: ["published", "synthetic biology", "gardner", "2000"]
-category: "synthetic biology"
+tags: ["published", "synthetic-biology", "gardner", "2000"]
+category: "synthetic-biology"
 compatibility:
   bng2_compatible: true
   simulation_methods: ["ode"]
@@ -13,6 +13,9 @@ compatibility:
 source:
   origin: "published"
   original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
 playground:
   visible: true
-  gallery_category: "synthetic biology"
+  gallery_category: "synthetic-biology"
+  featured: false
+  difficulty: "intermediate"

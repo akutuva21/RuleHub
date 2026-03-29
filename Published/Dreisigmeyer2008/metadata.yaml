@@ -1,8 +1,8 @@
 id: "Dreisigmeyer_2008"
 name: "Dreisigmeyer 2008"
 description: "Lac operon"
-tags: ["published", "genetics", "dreisigmeyer", "2008"]
-category: "genetics"
+tags: ["published", "gene-expression", "dreisigmeyer", "2008"]
+category: "gene-expression"
 compatibility:
   bng2_compatible: true
   simulation_methods: ["ode"]
@@ -13,6 +13,9 @@ compatibility:
 source:
   origin: "published"
   original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
 playground:
   visible: true
-  gallery_category: "genetics"
+  gallery_category: "gene-expression"
+  featured: false
+  difficulty: "intermediate"

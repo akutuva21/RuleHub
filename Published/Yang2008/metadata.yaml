@@ -1,8 +1,8 @@
 id: "Yang_2008"
 name: "Yang 2008"
 description: "TLBR yang 2008"
-tags: ["published", "biophysics", "yang", "2008"]
-category: "biophysics"
+tags: ["published", "physics", "yang", "2008"]
+category: "physics"
 compatibility:
   bng2_compatible: true
   simulation_methods: ["ode"]
@@ -13,6 +13,9 @@ compatibility:
 source:
   origin: "published"
   original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
 playground:
   visible: true
-  gallery_category: "biophysics"
+  gallery_category: "physics"
+  featured: false
+  difficulty: "intermediate"
