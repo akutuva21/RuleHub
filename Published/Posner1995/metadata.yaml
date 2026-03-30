@@ -1,0 +1,21 @@
+id: "Posner_1995"
+name: "Posner 1995"
+description: "BLBR rings"
+tags: ["published", "physics", "posner", "1995"]
+category: "physics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
+playground:
+  visible: true
+  gallery_category: "physics"
+  featured: false
+  difficulty: "intermediate"

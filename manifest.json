@@ -3013,6 +3013,24 @@
     "collectionId": "Mallela2022_MSAs"
   },
   {
+    "id": "Dembo_1978",
+    "name": "Dembo 1978",
+    "description": "BLBR dembo 1978",
+    "path": "Published/Dembo1978/blbr_dembo1978.bngl",
+    "file": "blbr_dembo1978.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "dembo",
+      "1978"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
+  },
+  {
     "id": "Denver-Aurora-Lakewood_CO_Denver-Aurora-Lakewood_CO",
     "name": "Mallela 2022 - COVID-19 MSA Models - Denver-Aurora-Lakewood_CO_Denver-Aurora-Lakewood_CO",
     "description": "Parameter-fit COVID-19 epidemiological models for US metropolitan statistical areas.",
@@ -3237,6 +3255,24 @@
     "bng2_compatible": true,
     "origin": "ai-generated",
     "visible": false,
+    "collectionId": null
+  },
+  {
+    "id": "Dreisigmeyer_2008",
+    "name": "Dreisigmeyer 2008",
+    "description": "Lac operon",
+    "path": "Published/Dreisigmeyer2008/lac_operon_dreisigmeyer2008.bngl",
+    "file": "lac_operon_dreisigmeyer2008.bngl",
+    "tags": [
+      "published",
+      "gene-expression",
+      "dreisigmeyer",
+      "2008"
+    ],
+    "category": "gene-expression",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
     "collectionId": null
   },
   {
@@ -4725,6 +4761,24 @@
     "collectionId": "Mallela2022_MSAs"
   },
   {
+    "id": "Gardner_2000",
+    "name": "Gardner 2000",
+    "description": "Genetic toggle switch",
+    "path": "Published/Gardner2000/genetic_switch_gardner2000.bngl",
+    "file": "genetic_switch_gardner2000.bngl",
+    "tags": [
+      "published",
+      "synthetic-biology",
+      "gardner",
+      "2000"
+    ],
+    "category": "synthetic-biology",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
+  },
+  {
     "id": "gas6-axl-signaling",
     "name": "gas6 axl signaling",
     "description": "GAS6/AXL Signaling: AKT activation and SOCS feedback.",
@@ -5006,6 +5060,24 @@
     "collectionId": "Mallela2022_MSAs"
   },
   {
+    "id": "Goldstein_1980",
+    "name": "Goldstein 1980",
+    "description": "BLBR heterogeneity",
+    "path": "Published/Goldstein1980/blbr_heterogeneity_goldstein1980.bngl",
+    "file": "blbr_heterogeneity_goldstein1980.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "goldstein",
+      "1980"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
+  },
+  {
     "id": "gpcr-desensitization-arrestin",
     "name": "gpcr desensitization arrestin",
     "description": "GPCR Desensitization: Arrestin-mediated spatial sequestration.",
@@ -5239,6 +5311,24 @@
     "origin": "published",
     "visible": false,
     "collectionId": "Mallela2022_MSAs"
+  },
+  {
+    "id": "Harmon_2017",
+    "name": "Harmon 2017",
+    "description": "Antigen pulses",
+    "path": "Published/Harmon2017/antigen_pulses_harmon2017.bngl",
+    "file": "antigen_pulses_harmon2017.bngl",
+    "tags": [
+      "published",
+      "immunology",
+      "harmon",
+      "2017"
+    ],
+    "category": "immunology",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
   },
   {
     "id": "Harrisburg-Carlisle_PA_Harrisburg-Carlisle_PA",
@@ -5477,6 +5567,42 @@
     "origin": "published",
     "visible": false,
     "collectionId": "Mallela2022_MSAs"
+  },
+  {
+    "id": "Hlavacek_1999",
+    "name": "Hlavacek 1999",
+    "description": "Steric effects",
+    "path": "Published/Hlavacek1999/steric_effects_hlavacek1999.bngl",
+    "file": "steric_effects_hlavacek1999.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "hlavacek",
+      "1999"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
+  },
+  {
+    "id": "Hlavacek_2001",
+    "name": "Hlavacek 2001",
+    "description": "Kinetic proofreading",
+    "path": "Published/Hlavacek2001/kinetic_proofreading_hlavacek2001.bngl",
+    "file": "kinetic_proofreading_hlavacek2001.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "hlavacek",
+      "2001"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
   },
   {
     "id": "Hotlanta_m9",
@@ -7118,6 +7244,24 @@
     "bng2_compatible": true,
     "origin": "tutorial",
     "visible": false,
+    "collectionId": null
+  },
+  {
+    "id": "Macken_1982",
+    "name": "Macken 1982",
+    "description": "TLBR solution macken 1982",
+    "path": "Published/Macken1982/tlbr_solution_macken1982.bngl",
+    "file": "tlbr_solution_macken1982.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "macken",
+      "1982"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
     "collectionId": null
   },
   {
@@ -9950,6 +10094,42 @@
     "origin": "published",
     "visible": false,
     "collectionId": "Mallela2022_MSAs"
+  },
+  {
+    "id": "Posner_1995",
+    "name": "Posner 1995",
+    "description": "BLBR rings",
+    "path": "Published/Posner1995/blbr_rings_posner1995.bngl",
+    "file": "blbr_rings_posner1995.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "posner",
+      "1995"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
+  },
+  {
+    "id": "Posner_2004",
+    "name": "Posner 2004",
+    "description": "BLBR cooperativity",
+    "path": "Published/Posner2004/blbr_cooperativity_posner2004.bngl",
+    "file": "blbr_cooperativity_posner2004.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "posner",
+      "2004"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
   },
   {
     "id": "Poughkeepsie-Newburgh-Middletown_NY_Poughkeepsie-Newburgh-Middletown_NY",
@@ -14519,6 +14699,24 @@
     "origin": "published",
     "visible": false,
     "collectionId": "Mallela2022_MSAs"
+  },
+  {
+    "id": "Yang_2008",
+    "name": "Yang 2008",
+    "description": "TLBR yang 2008",
+    "path": "Published/Yang2008/tlbr_yang2008.bngl",
+    "file": "tlbr_yang2008.bngl",
+    "tags": [
+      "published",
+      "physics",
+      "yang",
+      "2008"
+    ],
+    "category": "physics",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": true,
+    "collectionId": null
   },
   {
     "id": "York-Hanover_PA_York-Hanover_PA",

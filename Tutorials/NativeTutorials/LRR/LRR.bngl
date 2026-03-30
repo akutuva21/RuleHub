@@ -45,7 +45,7 @@ Dimer:  R(l) + L(r,r!1).R(l!1) <-> R(l!2).L(r!2,r!1).R(l!1) kp1/(Acell*d_pm), km
 end reaction rules
 end model
 
-#simulate({method=>"ode",t_end=>300,n_steps=>500})
+simulate({method=>"ode",t_end=>300,n_steps=>500})
 
 #parameter_scan({method=>"ode",parameter=>"lig_conc",par_min=>1e-12,par_max=>1e-6,\
 #                n_scan_pts=>50,log_scale=>1,t_end=>1000,n_steps=>2})

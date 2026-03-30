@@ -1,0 +1,21 @@
+id: "Posner_2004"
+name: "Posner 2004"
+description: "BLBR cooperativity"
+tags: ["published", "physics", "posner", "2004"]
+category: "physics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
+playground:
+  visible: true
+  gallery_category: "physics"
+  featured: false
+  difficulty: "intermediate"

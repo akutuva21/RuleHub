@@ -1,0 +1,21 @@
+id: "Hlavacek_1999"
+name: "Hlavacek 1999"
+description: "Steric effects"
+tags: ["published", "physics", "hlavacek", "1999"]
+category: "physics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
+playground:
+  visible: true
+  gallery_category: "physics"
+  featured: false
+  difficulty: "intermediate"

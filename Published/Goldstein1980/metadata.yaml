@@ -1,0 +1,21 @@
+id: "Goldstein_1980"
+name: "Goldstein 1980"
+description: "BLBR heterogeneity"
+tags: ["published", "physics", "goldstein", "1980"]
+category: "physics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen/BNGL-Models"
+playground:
+  visible: true
+  gallery_category: "physics"
+  featured: false
+  difficulty: "intermediate"
