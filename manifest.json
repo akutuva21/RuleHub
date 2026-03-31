@@ -131,7 +131,7 @@
     "id": "actions_syntax",
     "name": "actions syntax",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/actionssyntax/actions_syntax.bngl",
+    "path": "Published/PyBioNetGen/tests/actionssyntax/actions_syntax.bngl",
     "file": "actions_syntax.bngl",
     "tags": [
       "actions",
@@ -169,7 +169,7 @@
     "id": "akt-signaling",
     "name": "akt signaling",
     "description": "Signaling rates",
-    "path": "Contributed/BNGPlayground_Examples/biology/aktsignaling/akt-signaling.bngl",
+    "path": "Examples/biology/aktsignaling/akt-signaling.bngl",
     "file": "akt-signaling.bngl",
     "tags": [
       "akt",
@@ -304,7 +304,7 @@
     "id": "allosteric-activation",
     "name": "allosteric activation",
     "description": "Binding constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/allostericactivation/allosteric-activation.bngl",
+    "path": "Examples/biology/allostericactivation/allosteric-activation.bngl",
     "file": "allosteric-activation.bngl",
     "tags": [
       "allosteric",
@@ -342,7 +342,7 @@
     "id": "ampk-signaling",
     "name": "ampk signaling",
     "description": "AMPK signaling: The cellular energy sensor.",
-    "path": "Contributed/BNGPlayground_Examples/biology/ampksignaling/ampk-signaling.bngl",
+    "path": "Examples/biology/ampksignaling/ampk-signaling.bngl",
     "file": "ampk-signaling.bngl",
     "tags": [
       "ampk",
@@ -425,7 +425,7 @@
     "id": "apoptosis-cascade",
     "name": "apoptosis cascade",
     "description": "Apoptosis cascade: Integrated extrinsic and intrinsic death signaling.",
-    "path": "Contributed/BNGPlayground_Examples/biology/apoptosiscascade/apoptosis-cascade.bngl",
+    "path": "Examples/biology/apoptosiscascade/apoptosis-cascade.bngl",
     "file": "apoptosis-cascade.bngl",
     "tags": [
       "apoptosis",
@@ -593,7 +593,7 @@
     "id": "auto-activation-loop",
     "name": "auto activation loop",
     "description": "Auto-activation loop: A positive feedback circuit.",
-    "path": "Contributed/BNGPlayground_Examples/biology/autoactivationloop/auto-activation-loop.bngl",
+    "path": "Examples/biology/autoactivationloop/auto-activation-loop.bngl",
     "file": "auto-activation-loop.bngl",
     "tags": [
       "auto",
@@ -614,7 +614,7 @@
     "id": "autophagy-regulation",
     "name": "autophagy regulation",
     "description": "Autophagy regulation: mTOR and AMPK competition on the ULK1 switch.",
-    "path": "Contributed/BNGPlayground_Examples/biology/autophagyregulation/autophagy-regulation.bngl",
+    "path": "Examples/biology/autophagyregulation/autophagy-regulation.bngl",
     "file": "autophagy-regulation.bngl",
     "tags": [
       "autophagy",
@@ -911,7 +911,7 @@
     "id": "bcr-signaling",
     "name": "bcr signaling",
     "description": "BCR signaling: The B-cell antigen receptor cascade.",
-    "path": "Contributed/BNGPlayground_Examples/biology/bcrsignaling/bcr-signaling.bngl",
+    "path": "Examples/biology/bcrsignaling/bcr-signaling.bngl",
     "file": "bcr-signaling.bngl",
     "tags": [
       "bcr",
@@ -987,7 +987,7 @@
     "id": "beta-adrenergic-response",
     "name": "beta adrenergic response",
     "description": "Beta-adrenergic signaling: GPCR pathway and desensitization.",
-    "path": "Contributed/BNGPlayground_Examples/biology/betaadrenergicresponse/beta-adrenergic-response.bngl",
+    "path": "Examples/biology/betaadrenergicresponse/beta-adrenergic-response.bngl",
     "file": "beta-adrenergic-response.bngl",
     "tags": [
       "beta",
@@ -1105,7 +1105,7 @@
     "id": "bistable-toggle-switch",
     "name": "bistable toggle switch",
     "description": "Genetic Toggle Switch: Mutual repression circuit.",
-    "path": "Contributed/BNGPlayground_Examples/biology/bistabletoggleswitch/bistable-toggle-switch.bngl",
+    "path": "Examples/biology/bistabletoggleswitch/bistable-toggle-switch.bngl",
     "file": "bistable-toggle-switch.bngl",
     "tags": [
       "bistable",
@@ -1212,7 +1212,7 @@
     "id": "blood-coagulation-thrombin",
     "name": "blood coagulation thrombin",
     "description": "Blood coagulation: Thrombin burst and feedback propagation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/bloodcoagulationthrombin/blood-coagulation-thrombin.bngl",
+    "path": "Examples/biology/bloodcoagulationthrombin/blood-coagulation-thrombin.bngl",
     "file": "blood-coagulation-thrombin.bngl",
     "tags": [
       "blood",
@@ -1271,7 +1271,7 @@
     "id": "bmp-signaling",
     "name": "bmp signaling",
     "description": "BMP-Smad signaling: Developmental gradient relay.",
-    "path": "Contributed/BNGPlayground_Examples/biology/bmpsignaling/bmp-signaling.bngl",
+    "path": "Examples/biology/bmpsignaling/bmp-signaling.bngl",
     "file": "bmp-signaling.bngl",
     "tags": [
       "bmp",
@@ -1293,7 +1293,7 @@
     "id": "bng_error",
     "name": "bng error",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/bngerror/bng_error.bngl",
+    "path": "Published/PyBioNetGen/tests/bngerror/bng_error.bngl",
     "file": "bng_error.bngl",
     "tags": [
       "bng",
@@ -1439,7 +1439,7 @@
     "id": "brusselator-oscillator",
     "name": "brusselator oscillator",
     "description": "The Brusselator: Auto-catalytic chemical oscillator.",
-    "path": "Contributed/BNGPlayground_Examples/biology/brusselatoroscillator/brusselator-oscillator.bngl",
+    "path": "Examples/biology/brusselatoroscillator/brusselator-oscillator.bngl",
     "file": "brusselator-oscillator.bngl",
     "tags": [
       "brusselator",
@@ -1513,7 +1513,7 @@
     "id": "calcineurin-nfat-pathway",
     "name": "calcineurin nfat pathway",
     "description": "NFAT Signaling: Calcium-dependent nuclear translocation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/calcineurinnfatpathway/calcineurin-nfat-pathway.bngl",
+    "path": "Examples/biology/calcineurinnfatpathway/calcineurin-nfat-pathway.bngl",
     "file": "calcineurin-nfat-pathway.bngl",
     "tags": [
       "calcineurin",
@@ -1534,7 +1534,7 @@
     "id": "calcium-spike-signaling",
     "name": "calcium spike signaling",
     "description": "Calcium spikes: Oscillations driven by IP3R and CICR feedback.",
-    "path": "Contributed/BNGPlayground_Examples/biology/calciumspikesignaling/calcium-spike-signaling.bngl",
+    "path": "Examples/biology/calciumspikesignaling/calcium-spike-signaling.bngl",
     "file": "calcium-spike-signaling.bngl",
     "tags": [
       "calcium",
@@ -1614,7 +1614,7 @@
     "id": "CaOscillate_Func",
     "name": "CaOscillate_Func",
     "description": "Calcium oscillations (func)",
-    "path": "Contributed/BNGPlayground_Validation/CaOscillateFunc/CaOscillate_Func.bngl",
+    "path": "Tutorials/CaOscillateFunc/CaOscillate_Func.bngl",
     "file": "CaOscillate_Func.bngl",
     "tags": [
       "validation",
@@ -1635,7 +1635,7 @@
     "id": "CaOscillate_Sat",
     "name": "CaOscillate_Sat",
     "description": "Calcium oscillations (sat)",
-    "path": "Contributed/BNGPlayground_Validation/CaOscillateSat/CaOscillate_Sat.bngl",
+    "path": "Tutorials/CaOscillateSat/CaOscillate_Sat.bngl",
     "file": "CaOscillate_Sat.bngl",
     "tags": [
       "validation",
@@ -1692,7 +1692,7 @@
     "id": "caspase-activation-loop",
     "name": "caspase activation loop",
     "description": "Caspase activation loop: The executioner feedback system.",
-    "path": "Contributed/BNGPlayground_Examples/biology/caspaseactivationloop/caspase-activation-loop.bngl",
+    "path": "Examples/biology/caspaseactivationloop/caspase-activation-loop.bngl",
     "file": "caspase-activation-loop.bngl",
     "tags": [
       "caspase",
@@ -1714,7 +1714,7 @@
     "id": "catalysis",
     "name": "catalysis",
     "description": "Catalysis in energy BNG",
-    "path": "Contributed/BNGPlayground_Validation/catalysis/catalysis.bngl",
+    "path": "Tutorials/catalysis/catalysis.bngl",
     "file": "catalysis.bngl",
     "tags": [
       "validation",
@@ -1759,7 +1759,7 @@
     "id": "cd40-signaling",
     "name": "cd40 signaling",
     "description": "CD40 Signaling: B-cell activation and TRAF-mediated relay.",
-    "path": "Contributed/BNGPlayground_Examples/biology/cd40signaling/cd40-signaling.bngl",
+    "path": "Examples/biology/cd40signaling/cd40-signaling.bngl",
     "file": "cd40-signaling.bngl",
     "tags": [
       "cd40",
@@ -1799,7 +1799,7 @@
     "id": "cell-cycle-checkpoint",
     "name": "cell cycle checkpoint",
     "description": "Cell cycle checkpoint: Mitotic entry switch (CDK1).",
-    "path": "Contributed/BNGPlayground_Examples/biology/cellcyclecheckpoint/cell-cycle-checkpoint.bngl",
+    "path": "Examples/biology/cellcyclecheckpoint/cell-cycle-checkpoint.bngl",
     "file": "cell-cycle-checkpoint.bngl",
     "tags": [
       "cell",
@@ -1969,7 +1969,7 @@
     "id": "checkpoint-kinase-signaling",
     "name": "checkpoint kinase signaling",
     "description": "DNA Checkpoint: ATM/ATR mediated damage sensing.",
-    "path": "Contributed/BNGPlayground_Examples/biology/checkpointkinasesignaling/checkpoint-kinase-signaling.bngl",
+    "path": "Examples/biology/checkpointkinasesignaling/checkpoint-kinase-signaling.bngl",
     "file": "checkpoint-kinase-signaling.bngl",
     "tags": [
       "checkpoint",
@@ -2043,7 +2043,7 @@
     "id": "chemotaxis-signal-transduction",
     "name": "chemotaxis signal transduction",
     "description": "Bacterial Chemotaxis: Adaptation through methylation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/chemotaxissignaltransduction/chemotaxis-signal-transduction.bngl",
+    "path": "Examples/biology/chemotaxissignaltransduction/chemotaxis-signal-transduction.bngl",
     "file": "chemotaxis-signal-transduction.bngl",
     "tags": [
       "chemotaxis",
@@ -2178,7 +2178,7 @@
     "id": "circadian-oscillator",
     "name": "circadian oscillator",
     "description": "title: Vilar Circadian Oscillator Model",
-    "path": "Contributed/BNGPlayground_Examples/biology/circadianoscillator/circadian-oscillator.bngl",
+    "path": "Examples/biology/circadianoscillator/circadian-oscillator.bngl",
     "file": "circadian-oscillator.bngl",
     "tags": [
       "circadian",
@@ -2260,7 +2260,7 @@
     "id": "clock-bmal1-gene-circuit",
     "name": "clock bmal1 gene circuit",
     "description": "BMAL1-CLOCK: The master activator of the circadian circuit.",
-    "path": "Contributed/BNGPlayground_Examples/biology/clockbmal1genecircuit/clock-bmal1-gene-circuit.bngl",
+    "path": "Examples/biology/clockbmal1genecircuit/clock-bmal1-gene-circuit.bngl",
     "file": "clock-bmal1-gene-circuit.bngl",
     "tags": [
       "clock",
@@ -2389,7 +2389,7 @@
     "id": "compartment_endocytosis",
     "name": "compartment endocytosis",
     "description": "Model: compartment_endocytosis.bngl",
-    "path": "Contributed/BNGPlayground_Examples/compartments/compartmentendocytosis/compartment_endocytosis.bngl",
+    "path": "Examples/compartments/compartmentendocytosis/compartment_endocytosis.bngl",
     "file": "compartment_endocytosis.bngl",
     "tags": [
       "compartment",
@@ -2408,7 +2408,7 @@
     "id": "compartment_membrane_bound",
     "name": "compartment membrane bound",
     "description": "Model: compartment_membrane_bound.bngl",
-    "path": "Contributed/BNGPlayground_Examples/compartments/compartmentmembranebound/compartment_membrane_bound.bngl",
+    "path": "Examples/compartments/compartmentmembranebound/compartment_membrane_bound.bngl",
     "file": "compartment_membrane_bound.bngl",
     "tags": [
       "compartment",
@@ -2429,7 +2429,7 @@
     "id": "compartment_nested_transport",
     "name": "compartment nested transport",
     "description": "Model: compartment_nested_transport.bngl",
-    "path": "Contributed/BNGPlayground_Examples/compartments/compartmentnestedtransport/compartment_nested_transport.bngl",
+    "path": "Examples/compartments/compartmentnestedtransport/compartment_nested_transport.bngl",
     "file": "compartment_nested_transport.bngl",
     "tags": [
       "compartment",
@@ -2449,7 +2449,7 @@
     "id": "compartment_nuclear_transport",
     "name": "compartment nuclear transport",
     "description": "Model: compartment_nuclear_transport.bngl",
-    "path": "Contributed/BNGPlayground_Examples/compartments/compartmentnucleartransport/compartment_nuclear_transport.bngl",
+    "path": "Examples/compartments/compartmentnucleartransport/compartment_nuclear_transport.bngl",
     "file": "compartment_nuclear_transport.bngl",
     "tags": [
       "compartment",
@@ -2469,7 +2469,7 @@
     "id": "compartment_organelle_exchange",
     "name": "compartment organelle exchange",
     "description": "Model: compartment_organelle_exchange.bngl",
-    "path": "Contributed/BNGPlayground_Examples/compartments/compartmentorganelleexchange/compartment_organelle_exchange.bngl",
+    "path": "Examples/compartments/compartmentorganelleexchange/compartment_organelle_exchange.bngl",
     "file": "compartment_organelle_exchange.bngl",
     "tags": [
       "compartment",
@@ -2489,7 +2489,7 @@
     "id": "competitive-enzyme-inhibition",
     "name": "competitive enzyme inhibition",
     "description": "Competitive inhibition: Inhibitor (I) and Substrate (S) compete for the same",
-    "path": "Contributed/BNGPlayground_Examples/biology/competitiveenzymeinhibition/competitive-enzyme-inhibition.bngl",
+    "path": "Examples/biology/competitiveenzymeinhibition/competitive-enzyme-inhibition.bngl",
     "file": "competitive-enzyme-inhibition.bngl",
     "tags": [
       "competitive",
@@ -2510,7 +2510,7 @@
     "id": "complement-activation-cascade",
     "name": "complement activation cascade",
     "description": "Complement System: Pathogen opsonization and the Alternative Pathway.",
-    "path": "Contributed/BNGPlayground_Examples/biology/complementactivationcascade/complement-activation-cascade.bngl",
+    "path": "Examples/biology/complementactivationcascade/complement-activation-cascade.bngl",
     "file": "complement-activation-cascade.bngl",
     "tags": [
       "complement",
@@ -2554,7 +2554,7 @@
     "id": "contact-inhibition-hippo-yap",
     "name": "contact inhibition hippo yap",
     "description": "Hippo Pathway: Contact inhibition and YAP regulation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/contactinhibitionhippoyap/contact-inhibition-hippo-yap.bngl",
+    "path": "Examples/biology/contactinhibitionhippoyap/contact-inhibition-hippo-yap.bngl",
     "file": "contact-inhibition-hippo-yap.bngl",
     "tags": [
       "contact",
@@ -2575,7 +2575,7 @@
     "id": "continue",
     "name": "continue",
     "description": "Test trajectory continuation",
-    "path": "Contributed/BNGPlayground_Validation/continue/continue.bngl",
+    "path": "Tutorials/continue/continue.bngl",
     "file": "continue.bngl",
     "tags": [
       "validation",
@@ -2595,7 +2595,7 @@
     "id": "cooperative-binding",
     "name": "cooperative binding",
     "description": "Cooperative binding: The binding of the first ligand molecule increases",
-    "path": "Contributed/BNGPlayground_Examples/biology/cooperativebinding/cooperative-binding.bngl",
+    "path": "Examples/biology/cooperativebinding/cooperative-binding.bngl",
     "file": "cooperative-binding.bngl",
     "tags": [
       "cooperative",
@@ -2674,7 +2674,7 @@
     "id": "cs_diffie_hellman",
     "name": "cs diffie hellman",
     "description": "Model: cs_diffie_hellman.bngl",
-    "path": "Contributed/BNGPlayground_Examples/cs/csdiffiehellman/cs_diffie_hellman.bngl",
+    "path": "Examples/cs/csdiffiehellman/cs_diffie_hellman.bngl",
     "file": "cs_diffie_hellman.bngl",
     "tags": [
       "cs",
@@ -2695,7 +2695,7 @@
     "id": "cs_hash_function",
     "name": "cs hash function",
     "description": "Cryptographic Hash Function in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/cs/cshashfunction/cs_hash_function.bngl",
+    "path": "Examples/cs/cshashfunction/cs_hash_function.bngl",
     "file": "cs_hash_function.bngl",
     "tags": [
       "cs",
@@ -2720,7 +2720,7 @@
     "id": "cs_huffman",
     "name": "cs huffman",
     "description": "Model: cs_huffman.bngl",
-    "path": "Contributed/BNGPlayground_Examples/cs/cshuffman/cs_huffman.bngl",
+    "path": "Examples/cs/cshuffman/cs_huffman.bngl",
     "file": "cs_huffman.bngl",
     "tags": [
       "cs",
@@ -2740,7 +2740,7 @@
     "id": "cs_monte_carlo_pi",
     "name": "cs monte carlo pi",
     "description": "Model: cs_monte_carlo_pi.bngl",
-    "path": "Contributed/BNGPlayground_Examples/cs/csmontecarlopi/cs_monte_carlo_pi.bngl",
+    "path": "Examples/cs/csmontecarlopi/cs_monte_carlo_pi.bngl",
     "file": "cs_monte_carlo_pi.bngl",
     "tags": [
       "cs",
@@ -2762,7 +2762,7 @@
     "id": "cs_pagerank",
     "name": "cs pagerank",
     "description": "Model: cs_pagerank.bngl",
-    "path": "Contributed/BNGPlayground_Examples/cs/cspagerank/cs_pagerank.bngl",
+    "path": "Examples/cs/cspagerank/cs_pagerank.bngl",
     "file": "cs_pagerank.bngl",
     "tags": [
       "cs",
@@ -2780,7 +2780,7 @@
     "id": "cs_pid_controller",
     "name": "cs pid controller",
     "description": "PID Controller in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/cs/cspidcontroller/cs_pid_controller.bngl",
+    "path": "Examples/cs/cspidcontroller/cs_pid_controller.bngl",
     "file": "cs_pid_controller.bngl",
     "tags": [
       "cs",
@@ -2802,7 +2802,7 @@
     "id": "cs_regex_nfa",
     "name": "cs regex nfa",
     "description": "Model: cs_regex_nfa.bngl",
-    "path": "Contributed/BNGPlayground_Examples/cs/csregexnfa/cs_regex_nfa.bngl",
+    "path": "Examples/cs/csregexnfa/cs_regex_nfa.bngl",
     "file": "cs_regex_nfa.bngl",
     "tags": [
       "cs",
@@ -2973,7 +2973,7 @@
     "id": "degranulation_model",
     "name": "PyBNG: Degranulation model",
     "description": "Degranulation model",
-    "path": "PyBioNetGen/core/degranulationmodel/degranulation_model.bngl",
+    "path": "Published/PyBioNetGen/core/degranulationmodel/degranulation_model.bngl",
     "file": "degranulation_model.bngl",
     "tags": [
       "published",
@@ -3106,7 +3106,7 @@
     "id": "dna-damage-repair",
     "name": "dna damage repair",
     "description": "DNA damage sensing and repair pathway (ATM-CHK2-p53 axis)",
-    "path": "Contributed/BNGPlayground_Examples/biology/dnadamagerepair/dna-damage-repair.bngl",
+    "path": "Examples/biology/dnadamagerepair/dna-damage-repair.bngl",
     "file": "dna-damage-repair.bngl",
     "tags": [
       "dna",
@@ -3127,7 +3127,7 @@
     "id": "dna-methylation-dynamics",
     "name": "dna methylation dynamics",
     "description": "DNA Methylation: Maintenance and de novo dynamics.",
-    "path": "Contributed/BNGPlayground_Examples/biology/dnamethylationdynamics/dna-methylation-dynamics.bngl",
+    "path": "Examples/biology/dnamethylationdynamics/dna-methylation-dynamics.bngl",
     "file": "dna-methylation-dynamics.bngl",
     "tags": [
       "dna",
@@ -3239,7 +3239,7 @@
     "id": "dr5-apoptosis-signaling",
     "name": "dr5 apoptosis signaling",
     "description": "DR5 (TRAIL) Signaling: Extrinsic apoptosis and DISC formation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/dr5apoptosissignaling/dr5-apoptosis-signaling.bngl",
+    "path": "Examples/biology/dr5apoptosissignaling/dr5-apoptosis-signaling.bngl",
     "file": "dr5-apoptosis-signaling.bngl",
     "tags": [
       "dr5",
@@ -3279,7 +3279,7 @@
     "id": "dual-site-phosphorylation",
     "name": "dual site phosphorylation",
     "description": "Dual-site phosphorylation: Requires two sequential modifications for activity.",
-    "path": "Contributed/BNGPlayground_Examples/biology/dualsitephosphorylation/dual-site-phosphorylation.bngl",
+    "path": "Examples/biology/dualsitephosphorylation/dual-site-phosphorylation.bngl",
     "file": "dual-site-phosphorylation.bngl",
     "tags": [
       "dual",
@@ -3373,7 +3373,7 @@
     "id": "e2f-rb-cell-cycle-switch",
     "name": "e2f rb cell cycle switch",
     "description": "E2F/Rb Switch: The G1/S transition gate.",
-    "path": "Contributed/BNGPlayground_Examples/biology/e2frbcellcycleswitch/e2f-rb-cell-cycle-switch.bngl",
+    "path": "Examples/biology/e2frbcellcycleswitch/e2f-rb-cell-cycle-switch.bngl",
     "file": "e2f-rb-cell-cycle-switch.bngl",
     "tags": [
       "e2f",
@@ -3414,7 +3414,7 @@
     "id": "eco_coevolution_host_parasite",
     "name": "eco coevolution host parasite",
     "description": "Model: eco_coevolution_host_parasite.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ecology/ecocoevolutionhostparasite/eco_coevolution_host_parasite.bngl",
+    "path": "Examples/ecology/ecocoevolutionhostparasite/eco_coevolution_host_parasite.bngl",
     "file": "eco_coevolution_host_parasite.bngl",
     "tags": [
       "eco",
@@ -3432,7 +3432,7 @@
     "id": "eco_food_web_chaos_3sp",
     "name": "eco food web chaos 3sp",
     "description": "Model: eco_food_web_chaos_3sp.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ecology/ecofoodwebchaos3sp/eco_food_web_chaos_3sp.bngl",
+    "path": "Examples/ecology/ecofoodwebchaos3sp/eco_food_web_chaos_3sp.bngl",
     "file": "eco_food_web_chaos_3sp.bngl",
     "tags": [
       "eco",
@@ -3456,7 +3456,7 @@
     "id": "eco_lotka_volterra_grid",
     "name": "eco lotka volterra grid",
     "description": "Model: eco_lotka_volterra_grid.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ecology/ecolotkavolterragrid/eco_lotka_volterra_grid.bngl",
+    "path": "Examples/ecology/ecolotkavolterragrid/eco_lotka_volterra_grid.bngl",
     "file": "eco_lotka_volterra_grid.bngl",
     "tags": [
       "eco",
@@ -3476,7 +3476,7 @@
     "id": "eco_mutualism_obligate",
     "name": "eco mutualism obligate",
     "description": "Model: eco_mutualism_obligate.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ecology/ecomutualismobligate/eco_mutualism_obligate.bngl",
+    "path": "Examples/ecology/ecomutualismobligate/eco_mutualism_obligate.bngl",
     "file": "eco_mutualism_obligate.bngl",
     "tags": [
       "eco",
@@ -3495,7 +3495,7 @@
     "id": "eco_rock_paper_scissors_spatial",
     "name": "eco rock paper scissors spatial",
     "description": "Model: eco_rock_paper_scissors_spatial.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ecology/ecorockpaperscissorsspatial/eco_rock_paper_scissors_spatial.bngl",
+    "path": "Examples/ecology/ecorockpaperscissorsspatial/eco_rock_paper_scissors_spatial.bngl",
     "file": "eco_rock_paper_scissors_spatial.bngl",
     "tags": [
       "eco",
@@ -3516,7 +3516,7 @@
     "id": "egfr",
     "name": "egfr",
     "description": "Blinov et al. 2006. Biosystems, 83:136",
-    "path": "PyBioNetGen/core/egfr/egfr.bngl",
+    "path": "Published/PyBioNetGen/core/egfr/egfr.bngl",
     "file": "egfr.bngl",
     "tags": [
       "egfr",
@@ -3535,7 +3535,7 @@
     "id": "egfr_ground",
     "name": "egfr ground",
     "description": "Blinov et al. 2006. Biosystems, 83:136",
-    "path": "PyBioNetGen/core/egfrground/egfr_ground.bngl",
+    "path": "Published/PyBioNetGen/core/egfrground/egfr_ground.bngl",
     "file": "egfr_ground.bngl",
     "tags": [
       "egfr",
@@ -3555,7 +3555,7 @@
     "id": "egfr_net",
     "name": "egfr_net",
     "description": "check detailed balanced",
-    "path": "Contributed/BNGPlayground_Validation/egfrnet/egfr_net.bngl",
+    "path": "Tutorials/egfrnet/egfr_net.bngl",
     "file": "egfr_net.bngl",
     "tags": [
       "validation",
@@ -3576,7 +3576,7 @@
     "id": "egfr_net_red",
     "name": "egfr_net_red",
     "description": "Reduced state-space version of EGFR_NET.BNGL with equivalent ODE dynamics",
-    "path": "Contributed/BNGPlayground_Validation/egfrnetred/egfr_net_red.bngl",
+    "path": "Tutorials/egfrnetred/egfr_net_red.bngl",
     "file": "egfr_net_red.bngl",
     "tags": [
       "validation",
@@ -3601,7 +3601,7 @@
     "id": "egfr_nf",
     "name": "egfr nf",
     "description": "Filename: example2_starting_point.bngl",
-    "path": "PyBioNetGen/core/egfrnf/egfr_nf.bngl",
+    "path": "Published/PyBioNetGen/core/egfrnf/egfr_nf.bngl",
     "file": "egfr_nf.bngl",
     "tags": [
       "egfr",
@@ -3621,7 +3621,7 @@
     "id": "egfr_ode",
     "name": "egfr ode",
     "description": "Filename: example1.bngl",
-    "path": "PyBioNetGen/core/egfrode/egfr_ode.bngl",
+    "path": "Published/PyBioNetGen/core/egfrode/egfr_ode.bngl",
     "file": "egfr_ode.bngl",
     "tags": [
       "egfr",
@@ -3641,7 +3641,7 @@
     "id": "egfr_ode",
     "name": "PyBNG: EGFR ODE",
     "description": "EGFR ODE",
-    "path": "PyBioNetGen/core/egfrode_published-models_PyBNG/egfr_ode.bngl",
+    "path": "Published/PyBioNetGen/core/egfrode_published-models_PyBNG/egfr_ode.bngl",
     "file": "egfr_ode.bngl",
     "tags": [
       "published",
@@ -3663,7 +3663,7 @@
     "id": "egfr_path",
     "name": "egfr_path",
     "description": "The primary focus of the model developed by Kholodenko",
-    "path": "Contributed/BNGPlayground_Validation/egfrpath/egfr_path.bngl",
+    "path": "Tutorials/egfrpath/egfr_path.bngl",
     "file": "egfr_path.bngl",
     "tags": [
       "validation",
@@ -3702,7 +3702,7 @@
     "id": "egfr-signaling-pathway",
     "name": "egfr signaling pathway",
     "description": "Enhanced EGFR Signaling: Combinatorial complexity with multiple phosphorylation sites.",
-    "path": "Contributed/BNGPlayground_Examples/biology/egfrsignalingpathway/egfr-signaling-pathway.bngl",
+    "path": "Examples/biology/egfrsignalingpathway/egfr-signaling-pathway.bngl",
     "file": "egfr-signaling-pathway.bngl",
     "tags": [
       "egfr",
@@ -3722,7 +3722,7 @@
     "id": "egg",
     "name": "egg",
     "description": "BioNetGen model: egg",
-    "path": "PyBioNetGen/tests/egg/egg.bngl",
+    "path": "Published/PyBioNetGen/tests/egg/egg.bngl",
     "file": "egg.bngl",
     "tags": [
       "egg",
@@ -3741,7 +3741,7 @@
     "id": "eif2a-stress-response",
     "name": "eif2a stress response",
     "description": "Integrated Stress Response: eIF2alpha and the translational gate.",
-    "path": "Contributed/BNGPlayground_Examples/biology/eif2astressresponse/eif2a-stress-response.bngl",
+    "path": "Examples/biology/eif2astressresponse/eif2a-stress-response.bngl",
     "file": "eif2a-stress-response.bngl",
     "tags": [
       "eif2a",
@@ -3833,7 +3833,7 @@
     "id": "endosomal-sorting-rab",
     "name": "endosomal sorting rab",
     "description": "Endosomal Sorting: Rab GTPase conversion and effector recruitment.",
-    "path": "Contributed/BNGPlayground_Examples/biology/endosomalsortingrab/endosomal-sorting-rab.bngl",
+    "path": "Examples/biology/endosomalsortingrab/endosomal-sorting-rab.bngl",
     "file": "endosomal-sorting-rab.bngl",
     "tags": [
       "endosomal",
@@ -3855,7 +3855,7 @@
     "id": "energy_allostery_mwc",
     "name": "energy allostery mwc",
     "description": "Model: energy_allostery_mwc.bngl",
-    "path": "Contributed/BNGPlayground_Examples/energy/energyallosterymwc/energy_allostery_mwc.bngl",
+    "path": "Examples/energy/energyallosterymwc/energy_allostery_mwc.bngl",
     "file": "energy_allostery_mwc.bngl",
     "tags": [
       "energy",
@@ -3874,7 +3874,7 @@
     "id": "energy_catalysis_mm",
     "name": "energy catalysis mm",
     "description": "Model: energy_catalysis_mm.bngl",
-    "path": "Contributed/BNGPlayground_Examples/energy/energycatalysismm/energy_catalysis_mm.bngl",
+    "path": "Examples/energy/energycatalysismm/energy_catalysis_mm.bngl",
     "file": "energy_catalysis_mm.bngl",
     "tags": [
       "energy",
@@ -3894,7 +3894,7 @@
     "id": "energy_cooperativity_adh",
     "name": "energy cooperativity adh",
     "description": "Model: energy_cooperativity_adh.bngl",
-    "path": "Contributed/BNGPlayground_Examples/energy/energycooperativityadh/energy_cooperativity_adh.bngl",
+    "path": "Examples/energy/energycooperativityadh/energy_cooperativity_adh.bngl",
     "file": "energy_cooperativity_adh.bngl",
     "tags": [
       "energy",
@@ -3913,7 +3913,7 @@
     "id": "energy_example1",
     "name": "energy_example1",
     "description": "Illustration of energy modeling approach w/ a simple protein scaffold model",
-    "path": "Contributed/BNGPlayground_Validation/energyexample1/energy_example1.bngl",
+    "path": "Tutorials/energyexample1/energy_example1.bngl",
     "file": "energy_example1.bngl",
     "tags": [
       "validation",
@@ -3936,7 +3936,7 @@
     "id": "energy_linear_chain",
     "name": "energy linear chain",
     "description": "Model: energy_linear_chain.bngl",
-    "path": "Contributed/BNGPlayground_Examples/energy/energylinearchain/energy_linear_chain.bngl",
+    "path": "Examples/energy/energylinearchain/energy_linear_chain.bngl",
     "file": "energy_linear_chain.bngl",
     "tags": [
       "energy",
@@ -3955,7 +3955,7 @@
     "id": "energy_transport_pump",
     "name": "energy transport pump",
     "description": "Model: energy_transport_pump.bngl",
-    "path": "Contributed/BNGPlayground_Examples/energy/energytransportpump/energy_transport_pump.bngl",
+    "path": "Examples/energy/energytransportpump/energy_transport_pump.bngl",
     "file": "energy_transport_pump.bngl",
     "tags": [
       "energy",
@@ -3977,7 +3977,7 @@
     "id": "er-stress-response",
     "name": "er stress response",
     "description": "Rate Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/erstressresponse/er-stress-response.bngl",
+    "path": "Examples/biology/erstressresponse/er-stress-response.bngl",
     "file": "er-stress-response.bngl",
     "tags": [
       "er",
@@ -4023,7 +4023,7 @@
     "id": "erk-nuclear-translocation",
     "name": "erk nuclear translocation",
     "description": "ERK Translocation: Spatial signaling and transcriptional assembly.",
-    "path": "Contributed/BNGPlayground_Examples/biology/erknucleartranslocation/erk-nuclear-translocation.bngl",
+    "path": "Examples/biology/erknucleartranslocation/erk-nuclear-translocation.bngl",
     "file": "erk-nuclear-translocation.bngl",
     "tags": [
       "erk",
@@ -4044,7 +4044,7 @@
     "id": "ErrNoFrees",
     "name": "ErrNoFrees",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/ErrNoFrees/ErrNoFrees.bngl",
+    "path": "Published/PyBioNetGen/tests/ErrNoFrees/ErrNoFrees.bngl",
     "file": "ErrNoFrees.bngl",
     "tags": [
       "errnofrees",
@@ -4079,27 +4079,8 @@
   {
     "id": "example1",
     "name": "example1",
-    "description": "Example file for BNG2 tutorial.",
-    "path": "Contributed/BNGPlayground_Validation/example1/example1.bngl",
-    "file": "example1.bngl",
-    "tags": [
-      "validation",
-      "example1",
-      "version",
-      "generate_network",
-      "simulate_ode"
-    ],
-    "category": "validation",
-    "bng2_compatible": false,
-    "origin": "test-case",
-    "visible": true,
-    "collectionId": null
-  },
-  {
-    "id": "example1",
-    "name": "example1",
     "description": "Filename: example1.bngl",
-    "path": "PyBioNetGen/core/example1/example1.bngl",
+    "path": "Published/PyBioNetGen/core/example1/example1.bngl",
     "file": "example1.bngl",
     "tags": [
       "example1",
@@ -4116,10 +4097,29 @@
     "collectionId": null
   },
   {
+    "id": "example1",
+    "name": "example1",
+    "description": "Example file for BNG2 tutorial.",
+    "path": "Tutorials/example1/example1.bngl",
+    "file": "example1.bngl",
+    "tags": [
+      "validation",
+      "example1",
+      "version",
+      "generate_network",
+      "simulate_ode"
+    ],
+    "category": "validation",
+    "bng2_compatible": false,
+    "origin": "test-case",
+    "visible": true,
+    "collectionId": null
+  },
+  {
     "id": "example2_starting_point",
     "name": "example2 starting point",
     "description": "Filename: example2_starting_point.bngl",
-    "path": "PyBioNetGen/core/example2startingpoint/example2_starting_point.bngl",
+    "path": "Published/PyBioNetGen/core/example2startingpoint/example2_starting_point.bngl",
     "file": "example2_starting_point.bngl",
     "tags": [
       "example2",
@@ -4284,7 +4284,7 @@
     "id": "fceri_gamma2",
     "name": "fceri gamma2",
     "description": "BioNetGen model: fceri gamma2",
-    "path": "PyBioNetGen/core/fcerigamma2/fceri_gamma2.bngl",
+    "path": "Published/PyBioNetGen/core/fcerigamma2/fceri_gamma2.bngl",
     "file": "fceri_gamma2.bngl",
     "tags": [
       "fceri",
@@ -4304,7 +4304,7 @@
     "id": "fceri_gamma2_ground_truth",
     "name": "fceri gamma2 ground truth",
     "description": "BioNetGen model: fceri gamma2 ground truth",
-    "path": "PyBioNetGen/core/fcerigamma2groundtruth/fceri_gamma2_ground_truth.bngl",
+    "path": "Published/PyBioNetGen/core/fcerigamma2groundtruth/fceri_gamma2_ground_truth.bngl",
     "file": "fceri_gamma2_ground_truth.bngl",
     "tags": [
       "fceri",
@@ -4368,7 +4368,7 @@
     "id": "fceri_ji_comp",
     "name": "fceri_ji_comp",
     "description": "Ligand-receptor binding",
-    "path": "Contributed/BNGPlayground_Validation/fcerijicomp/fceri_ji_comp.bngl",
+    "path": "Tutorials/fcerijicomp/fceri_ji_comp.bngl",
     "file": "fceri_ji_comp.bngl",
     "tags": [
       "validation",
@@ -4417,7 +4417,7 @@
     "id": "feature_functional_rates_volume",
     "name": "feature functional rates volume",
     "description": "Model: feature_functional_rates_volume.bngl",
-    "path": "Contributed/BNGPlayground_Examples/feature-demos/featurefunctionalratesvolume/feature_functional_rates_volume.bngl",
+    "path": "Examples/feature-demos/featurefunctionalratesvolume/feature_functional_rates_volume.bngl",
     "file": "feature_functional_rates_volume.bngl",
     "tags": [
       "feature",
@@ -4438,7 +4438,7 @@
     "id": "feature_global_functions_scan",
     "name": "feature global functions scan",
     "description": "Model: feature_global_functions_scan.bngl",
-    "path": "Contributed/BNGPlayground_Examples/feature-demos/featureglobalfunctionsscan/feature_global_functions_scan.bngl",
+    "path": "Examples/feature-demos/featureglobalfunctionsscan/feature_global_functions_scan.bngl",
     "file": "feature_global_functions_scan.bngl",
     "tags": [
       "feature",
@@ -4459,7 +4459,7 @@
     "id": "feature_local_functions_explicit",
     "name": "feature local functions explicit",
     "description": "Model: feature_local_functions_explicit.bngl",
-    "path": "Contributed/BNGPlayground_Examples/feature-demos/featurelocalfunctionsexplicit/feature_local_functions_explicit.bngl",
+    "path": "Examples/feature-demos/featurelocalfunctionsexplicit/feature_local_functions_explicit.bngl",
     "file": "feature_local_functions_explicit.bngl",
     "tags": [
       "feature",
@@ -4482,7 +4482,7 @@
     "id": "feature_symmetry_factors_cyclic",
     "name": "feature symmetry factors cyclic",
     "description": "Model: feature_symmetry_factors_cyclic.bngl",
-    "path": "Contributed/BNGPlayground_Examples/feature-demos/featuresymmetryfactorscyclic/feature_symmetry_factors_cyclic.bngl",
+    "path": "Examples/feature-demos/featuresymmetryfactorscyclic/feature_symmetry_factors_cyclic.bngl",
     "file": "feature_symmetry_factors_cyclic.bngl",
     "tags": [
       "feature",
@@ -4503,7 +4503,7 @@
     "id": "feature_synthesis_degradation_ss",
     "name": "feature synthesis degradation ss",
     "description": "Model: feature_synthesis_degradation_ss.bngl",
-    "path": "Contributed/BNGPlayground_Examples/feature-demos/featuresynthesisdegradationss/feature_synthesis_degradation_ss.bngl",
+    "path": "Examples/feature-demos/featuresynthesisdegradationss/feature_synthesis_degradation_ss.bngl",
     "file": "feature_synthesis_degradation_ss.bngl",
     "tags": [
       "feature",
@@ -4524,7 +4524,7 @@
     "id": "fgf-signaling-pathway",
     "name": "fgf signaling pathway",
     "description": "FGF Signaling: FGFR dimerization and FRS2-Ras/PI3K relay.",
-    "path": "Contributed/BNGPlayground_Examples/biology/fgfsignalingpathway/fgf-signaling-pathway.bngl",
+    "path": "Examples/biology/fgfsignalingpathway/fgf-signaling-pathway.bngl",
     "file": "fgf-signaling-pathway.bngl",
     "tags": [
       "fgf",
@@ -4654,7 +4654,7 @@
     "id": "free_missing",
     "name": "free missing",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/freemissing/free_missing.bngl",
+    "path": "Published/PyBioNetGen/tests/freemissing/free_missing.bngl",
     "file": "free_missing.bngl",
     "tags": [
       "free",
@@ -4782,7 +4782,7 @@
     "id": "gas6-axl-signaling",
     "name": "gas6 axl signaling",
     "description": "GAS6/AXL Signaling: AKT activation and SOCS feedback.",
-    "path": "Contributed/BNGPlayground_Examples/biology/gas6axlsignaling/gas6-axl-signaling.bngl",
+    "path": "Examples/biology/gas6axlsignaling/gas6-axl-signaling.bngl",
     "file": "gas6-axl-signaling.bngl",
     "tags": [
       "gas6",
@@ -4803,7 +4803,7 @@
     "id": "gene-expression-toggle",
     "name": "gene expression toggle",
     "description": "Kinetic Parameters",
-    "path": "Contributed/BNGPlayground_Examples/biology/geneexpressiontoggle/gene-expression-toggle.bngl",
+    "path": "Examples/biology/geneexpressiontoggle/gene-expression-toggle.bngl",
     "file": "gene-expression-toggle.bngl",
     "tags": [
       "gene",
@@ -4822,7 +4822,7 @@
     "id": "genetic_bistability_energy",
     "name": "genetic bistability energy",
     "description": "Model: genetic_bistability_energy.bngl",
-    "path": "Contributed/BNGPlayground_Examples/genetics/geneticbistabilityenergy/genetic_bistability_energy.bngl",
+    "path": "Examples/genetics/geneticbistabilityenergy/genetic_bistability_energy.bngl",
     "file": "genetic_bistability_energy.bngl",
     "tags": [
       "genetic",
@@ -4843,7 +4843,7 @@
     "id": "genetic_dna_replication_stochastic",
     "name": "genetic dna replication stochastic",
     "description": "Model: genetic_dna_replication_stochastic.bngl",
-    "path": "Contributed/BNGPlayground_Examples/genetics/geneticdnareplicationstochastic/genetic_dna_replication_stochastic.bngl",
+    "path": "Examples/genetics/geneticdnareplicationstochastic/genetic_dna_replication_stochastic.bngl",
     "file": "genetic_dna_replication_stochastic.bngl",
     "tags": [
       "genetic",
@@ -4864,7 +4864,7 @@
     "id": "genetic_goodwin_oscillator",
     "name": "genetic goodwin oscillator",
     "description": "Model: genetic_goodwin_oscillator.bngl",
-    "path": "Contributed/BNGPlayground_Examples/genetics/geneticgoodwinoscillator/genetic_goodwin_oscillator.bngl",
+    "path": "Examples/genetics/geneticgoodwinoscillator/genetic_goodwin_oscillator.bngl",
     "file": "genetic_goodwin_oscillator.bngl",
     "tags": [
       "genetic",
@@ -4885,7 +4885,7 @@
     "id": "genetic_translation_kinetics",
     "name": "genetic translation kinetics",
     "description": "Model: genetic_translation_kinetics.bngl",
-    "path": "Contributed/BNGPlayground_Examples/genetics/genetictranslationkinetics/genetic_translation_kinetics.bngl",
+    "path": "Examples/genetics/genetictranslationkinetics/genetic_translation_kinetics.bngl",
     "file": "genetic_translation_kinetics.bngl",
     "tags": [
       "genetic",
@@ -4905,7 +4905,7 @@
     "id": "genetic_turing_pattern_1d",
     "name": "genetic turing pattern 1d",
     "description": "Model: genetic_turing_pattern_1d.bngl",
-    "path": "Contributed/BNGPlayground_Examples/genetics/geneticturingpattern1d/genetic_turing_pattern_1d.bngl",
+    "path": "Examples/genetics/geneticturingpattern1d/genetic_turing_pattern_1d.bngl",
     "file": "genetic_turing_pattern_1d.bngl",
     "tags": [
       "genetic",
@@ -4960,7 +4960,7 @@
     "id": "glioblastoma-egfrviii-signaling",
     "name": "glioblastoma egfrviii signaling",
     "description": "EGFRvIII in Glioblastoma: Constitutive AKT drive and escape from decay.",
-    "path": "Contributed/BNGPlayground_Examples/biology/glioblastomaegfrviiisignaling/glioblastoma-egfrviii-signaling.bngl",
+    "path": "Examples/biology/glioblastomaegfrviiisignaling/glioblastoma-egfrviii-signaling.bngl",
     "file": "glioblastoma-egfrviii-signaling.bngl",
     "tags": [
       "glioblastoma",
@@ -4981,7 +4981,7 @@
     "id": "glycolysis-branch-point",
     "name": "glycolysis branch point",
     "description": "BioNetGen model: glycolysis branch point",
-    "path": "Contributed/BNGPlayground_Examples/biology/glycolysisbranchpoint/glycolysis-branch-point.bngl",
+    "path": "Examples/biology/glycolysisbranchpoint/glycolysis-branch-point.bngl",
     "file": "glycolysis-branch-point.bngl",
     "tags": [
       "glycolysis",
@@ -5001,7 +5001,7 @@
     "id": "gm_game_of_life",
     "name": "gm game of life",
     "description": "Model: gm_game_of_life.bngl",
-    "path": "Contributed/BNGPlayground_Examples/generative/gmgameoflife/gm_game_of_life.bngl",
+    "path": "Examples/generative/gmgameoflife/gm_game_of_life.bngl",
     "file": "gm_game_of_life.bngl",
     "tags": [
       "gm",
@@ -5020,7 +5020,7 @@
     "id": "gm_ray_marcher",
     "name": "gm ray marcher",
     "description": "Ray Marching Renderer in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/generative/gmraymarcher/gm_ray_marcher.bngl",
+    "path": "Examples/generative/gmraymarcher/gm_ray_marcher.bngl",
     "file": "gm_ray_marcher.bngl",
     "tags": [
       "gm",
@@ -5081,7 +5081,7 @@
     "id": "gpcr-desensitization-arrestin",
     "name": "gpcr desensitization arrestin",
     "description": "GPCR Desensitization: Arrestin-mediated spatial sequestration.",
-    "path": "Contributed/BNGPlayground_Examples/biology/gpcrdesensitizationarrestin/gpcr-desensitization-arrestin.bngl",
+    "path": "Examples/biology/gpcrdesensitizationarrestin/gpcr-desensitization-arrestin.bngl",
     "file": "gpcr-desensitization-arrestin.bngl",
     "tags": [
       "gpcr",
@@ -5431,7 +5431,7 @@
     "id": "Haugh2b",
     "name": "Haugh2b",
     "description": "R(KD,Y1~U,Y2~U) 1.00",
-    "path": "Contributed/BNGPlayground_Validation/Haugh2b/Haugh2b.bngl",
+    "path": "Tutorials/Haugh2b/Haugh2b.bngl",
     "file": "Haugh2b.bngl",
     "tags": [
       "validation",
@@ -5452,7 +5452,7 @@
     "id": "hedgehog-signaling-pathway",
     "name": "hedgehog signaling pathway",
     "description": "Hedgehog (Hh) Signaling: Ciliary translocation and Gli processing.",
-    "path": "Contributed/BNGPlayground_Examples/biology/hedgehogsignalingpathway/hedgehog-signaling-pathway.bngl",
+    "path": "Examples/biology/hedgehogsignalingpathway/hedgehog-signaling-pathway.bngl",
     "file": "hedgehog-signaling-pathway.bngl",
     "tags": [
       "hedgehog",
@@ -5474,7 +5474,7 @@
     "id": "heise",
     "name": "heise",
     "description": "Validate state inheritance in a symmetric context",
-    "path": "Contributed/BNGPlayground_Validation/heise/heise.bngl",
+    "path": "Tutorials/heise/heise.bngl",
     "file": "heise.bngl",
     "tags": [
       "validation",
@@ -5495,7 +5495,7 @@
     "id": "hematopoietic-growth-factor",
     "name": "hematopoietic growth factor",
     "description": "Kinetic Parameters",
-    "path": "Contributed/BNGPlayground_Examples/biology/hematopoieticgrowthfactor/hematopoietic-growth-factor.bngl",
+    "path": "Examples/biology/hematopoieticgrowthfactor/hematopoietic-growth-factor.bngl",
     "file": "hematopoietic-growth-factor.bngl",
     "tags": [
       "hematopoietic",
@@ -5534,7 +5534,7 @@
     "id": "hif1a_degradation_loop",
     "name": "hif1a degradation loop",
     "description": "HIF-1alpha Oxygen Sensing: Hydroxylation and VHL-mediated decay.",
-    "path": "Contributed/BNGPlayground_Examples/biology/hif1adegradationloop/hif1a_degradation_loop.bngl",
+    "path": "Examples/biology/hif1adegradationloop/hif1a_degradation_loop.bngl",
     "file": "hif1a_degradation_loop.bngl",
     "tags": [
       "hif1a",
@@ -5739,7 +5739,7 @@
     "id": "hypoxia-response-signaling",
     "name": "hypoxia response signaling",
     "description": "Rate Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/hypoxiaresponsesignaling/hypoxia-response-signaling.bngl",
+    "path": "Examples/biology/hypoxiaresponsesignaling/hypoxia-response-signaling.bngl",
     "file": "hypoxia-response-signaling.bngl",
     "tags": [
       "hypoxia",
@@ -5759,7 +5759,7 @@
     "id": "IGF1R_Model_receptor_activation_bnf",
     "name": "IGF1R Model receptor activation bnf",
     "description": "Author: William S. Hlavacek",
-    "path": "PyBioNetGen/core/IGF1RModelreceptoractivationbnf/IGF1R_Model_receptor_activation_bnf.bngl",
+    "path": "Published/PyBioNetGen/core/IGF1RModelreceptoractivationbnf/IGF1R_Model_receptor_activation_bnf.bngl",
     "file": "IGF1R_Model_receptor_activation_bnf.bngl",
     "tags": [
       "igf1r",
@@ -5779,7 +5779,7 @@
     "id": "il1b-signaling",
     "name": "il1b signaling",
     "description": "IL-1beta Signaling: MyD88/IRAK assembly and NF-kB translocation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/il1bsignaling/il1b-signaling.bngl",
+    "path": "Examples/biology/il1bsignaling/il1b-signaling.bngl",
     "file": "il1b-signaling.bngl",
     "tags": [
       "il1b",
@@ -5799,7 +5799,7 @@
     "id": "il6-jak-stat-pathway",
     "name": "il6 jak stat pathway",
     "description": "IL-6 Signaling: gp130 hexamerization and pSTAT3 import.",
-    "path": "Contributed/BNGPlayground_Examples/biology/il6jakstatpathway/il6-jak-stat-pathway.bngl",
+    "path": "Examples/biology/il6jakstatpathway/il6-jak-stat-pathway.bngl",
     "file": "il6-jak-stat-pathway.bngl",
     "tags": [
       "il6",
@@ -5820,7 +5820,7 @@
     "id": "immune-synapse-formation",
     "name": "immune synapse formation",
     "description": "Kinetic Parameters",
-    "path": "Contributed/BNGPlayground_Examples/biology/immunesynapseformation/immune-synapse-formation.bngl",
+    "path": "Examples/biology/immunesynapseformation/immune-synapse-formation.bngl",
     "file": "immune-synapse-formation.bngl",
     "tags": [
       "immune",
@@ -5859,7 +5859,7 @@
     "id": "inflammasome-activation",
     "name": "inflammasome activation",
     "description": "Rate Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/inflammasomeactivation/inflammasome-activation.bngl",
+    "path": "Examples/biology/inflammasomeactivation/inflammasome-activation.bngl",
     "file": "inflammasome-activation.bngl",
     "tags": [
       "inflammasome",
@@ -5923,7 +5923,7 @@
     "id": "inositol-phosphate-metabolism",
     "name": "inositol phosphate metabolism",
     "description": "Inositol Phosphate (IP) Metabolism: PLC signaling and branch points.",
-    "path": "Contributed/BNGPlayground_Examples/biology/inositolphosphatemetabolism/inositol-phosphate-metabolism.bngl",
+    "path": "Examples/biology/inositolphosphatemetabolism/inositol-phosphate-metabolism.bngl",
     "file": "inositol-phosphate-metabolism.bngl",
     "tags": [
       "inositol",
@@ -5945,7 +5945,7 @@
     "id": "insulin-glucose-homeostasis",
     "name": "insulin glucose homeostasis",
     "description": "Insulin-Glucose: Compartmentalized transport.",
-    "path": "Contributed/BNGPlayground_Examples/biology/insulinglucosehomeostasis/insulin-glucose-homeostasis.bngl",
+    "path": "Examples/biology/insulinglucosehomeostasis/insulin-glucose-homeostasis.bngl",
     "file": "insulin-glucose-homeostasis.bngl",
     "tags": [
       "insulin",
@@ -5965,7 +5965,7 @@
     "id": "interferon-signaling",
     "name": "interferon signaling",
     "description": "Rate Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/interferonsignaling/interferon-signaling.bngl",
+    "path": "Examples/biology/interferonsignaling/interferon-signaling.bngl",
     "file": "interferon-signaling.bngl",
     "tags": [
       "interferon",
@@ -6003,7 +6003,7 @@
     "id": "ire1a-xbp1-er-stress",
     "name": "ire1a xbp1 er stress",
     "description": "IRE1a/XBP1 ER Stress: Chaperone buffering and mRNA decay (RIDD).",
-    "path": "Contributed/BNGPlayground_Examples/biology/ire1axbp1erstress/ire1a-xbp1-er-stress.bngl",
+    "path": "Examples/biology/ire1axbp1erstress/ire1a-xbp1-er-stress.bngl",
     "file": "ire1a-xbp1-er-stress.bngl",
     "tags": [
       "ire1a",
@@ -6025,7 +6025,7 @@
     "id": "issue_198_short",
     "name": "issue_198_short",
     "description": "No description available",
-    "path": "Contributed/BNGPlayground_Validation/issue198short/issue_198_short.bngl",
+    "path": "Tutorials/issue198short/issue_198_short.bngl",
     "file": "issue_198_short.bngl",
     "tags": [
       "validation",
@@ -6102,7 +6102,7 @@
     "id": "jak-stat-cytokine-signaling",
     "name": "jak stat cytokine signaling",
     "description": "Rate Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/jakstatcytokinesignaling/jak-stat-cytokine-signaling.bngl",
+    "path": "Examples/biology/jakstatcytokinesignaling/jak-stat-cytokine-signaling.bngl",
     "file": "jak-stat-cytokine-signaling.bngl",
     "tags": [
       "jak",
@@ -6163,7 +6163,7 @@
     "id": "jnk-mapk-signaling",
     "name": "jnk mapk signaling",
     "description": "JNK MAPK Signaling: Scaffold-mediated activation and feedback.",
-    "path": "Contributed/BNGPlayground_Examples/biology/jnkmapksignaling/jnk-mapk-signaling.bngl",
+    "path": "Examples/biology/jnkmapksignaling/jnk-mapk-signaling.bngl",
     "file": "jnk-mapk-signaling.bngl",
     "tags": [
       "jnk",
@@ -6305,7 +6305,7 @@
     "id": "Kiefhaber_emodel",
     "name": "Kiefhaber_emodel",
     "description": "Allow molar units to be used for bimolecular rate constants",
-    "path": "Contributed/BNGPlayground_Validation/Kiefhaberemodel/Kiefhaber_emodel.bngl",
+    "path": "Tutorials/Kiefhaberemodel/Kiefhaber_emodel.bngl",
     "file": "Kiefhaber_emodel.bngl",
     "tags": [
       "validation",
@@ -6363,7 +6363,7 @@
     "id": "kir-channel-regulation",
     "name": "kir channel regulation",
     "description": "Kir Channel Regulation: PIP2 modulation and G-protein potentiation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/kirchannelregulation/kir-channel-regulation.bngl",
+    "path": "Examples/biology/kirchannelregulation/kir-channel-regulation.bngl",
     "file": "kir-channel-regulation.bngl",
     "tags": [
       "kir",
@@ -6441,7 +6441,7 @@
     "id": "Korwek_2023",
     "name": "Korwek_2023",
     "description": "This BioNetGen file features the article:",
-    "path": "Contributed/BNGPlayground_Validation/Korwek2023/Korwek_2023.bngl",
+    "path": "Published/Korwek2023/Korwek_2023.bngl",
     "file": "Korwek_2023.bngl",
     "tags": [
       "validation",
@@ -6505,7 +6505,7 @@
     "id": "l-type-calcium-channel-dynamics",
     "name": "l type calcium channel dynamics",
     "description": "L-type Calcium Channel: Voltage gating and CDI (Calcium-dependent inactivation).",
-    "path": "Contributed/BNGPlayground_Examples/biology/ltypecalciumchanneldynamics/l-type-calcium-channel-dynamics.bngl",
+    "path": "Examples/biology/ltypecalciumchanneldynamics/l-type-calcium-channel-dynamics.bngl",
     "file": "l-type-calcium-channel-dynamics.bngl",
     "tags": [
       "l",
@@ -6528,7 +6528,7 @@
     "id": "lac-operon-regulation",
     "name": "lac operon regulation",
     "description": "Kinetic Parameters",
-    "path": "Contributed/BNGPlayground_Examples/biology/lacoperonregulation/lac-operon-regulation.bngl",
+    "path": "Examples/biology/lacoperonregulation/lac-operon-regulation.bngl",
     "file": "lac-operon-regulation.bngl",
     "tags": [
       "lac",
@@ -6849,7 +6849,7 @@
     "id": "LilyIgE",
     "name": "LilyIgE",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/LilyIgE/LilyIgE.bngl",
+    "path": "Published/PyBioNetGen/tests/LilyIgE/LilyIgE.bngl",
     "file": "LilyIgE.bngl",
     "tags": [
       "lilyige",
@@ -6966,7 +6966,7 @@
     "id": "lipid-mediated-pip3-signaling",
     "name": "lipid mediated pip3 signaling",
     "description": "Kinetic Parameters",
-    "path": "Contributed/BNGPlayground_Examples/biology/lipidmediatedpip3signaling/lipid-mediated-pip3-signaling.bngl",
+    "path": "Examples/biology/lipidmediatedpip3signaling/lipid-mediated-pip3-signaling.bngl",
     "file": "lipid-mediated-pip3-signaling.bngl",
     "tags": [
       "lipid",
@@ -7045,7 +7045,7 @@
     "id": "localfunc",
     "name": "localfunc",
     "description": "Test local function expansion",
-    "path": "Contributed/BNGPlayground_Validation/localfunc/localfunc.bngl",
+    "path": "Tutorials/localfunc/localfunc.bngl",
     "file": "localfunc.bngl",
     "tags": [
       "validation",
@@ -7382,7 +7382,7 @@
     "id": "mapk-signaling-cascade",
     "name": "mapk signaling cascade",
     "description": "Rate Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/mapksignalingcascade/mapk-signaling-cascade.bngl",
+    "path": "Examples/biology/mapksignalingcascade/mapk-signaling-cascade.bngl",
     "file": "mapk-signaling-cascade.bngl",
     "tags": [
       "mapk",
@@ -7727,7 +7727,7 @@
     "id": "meta_formal_game_theory",
     "name": "meta formal game theory",
     "description": "Model: meta_formal_game_theory.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/metaformalgametheory/meta_formal_game_theory.bngl",
+    "path": "Examples/meta/metaformalgametheory/meta_formal_game_theory.bngl",
     "file": "meta_formal_game_theory.bngl",
     "tags": [
       "meta",
@@ -7750,7 +7750,7 @@
     "id": "meta_formal_molecular_clock",
     "name": "meta formal molecular clock",
     "description": "Model: meta_formal_molecular_clock.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/metaformalmolecularclock/meta_formal_molecular_clock.bngl",
+    "path": "Examples/meta/metaformalmolecularclock/meta_formal_molecular_clock.bngl",
     "file": "meta_formal_molecular_clock.bngl",
     "tags": [
       "meta",
@@ -7772,7 +7772,7 @@
     "id": "meta_formal_petri_net",
     "name": "meta formal petri net",
     "description": "Model: meta_formal_petri_net.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/metaformalpetrinet/meta_formal_petri_net.bngl",
+    "path": "Examples/meta/metaformalpetrinet/meta_formal_petri_net.bngl",
     "file": "meta_formal_petri_net.bngl",
     "tags": [
       "meta",
@@ -7812,7 +7812,7 @@
     "id": "michaelis-menten-kinetics",
     "name": "michaelis menten kinetics",
     "description": "Kinetic Constants",
-    "path": "Contributed/BNGPlayground_Examples/biology/michaelismentenkinetics/michaelis-menten-kinetics.bngl",
+    "path": "Examples/biology/michaelismentenkinetics/michaelis-menten-kinetics.bngl",
     "file": "michaelis-menten-kinetics.bngl",
     "tags": [
       "michaelis",
@@ -7853,7 +7853,7 @@
     "id": "michment",
     "name": "michment",
     "description": "Michaelis Menten",
-    "path": "Contributed/BNGPlayground_Validation/michment/michment.bngl",
+    "path": "Tutorials/michment/michment.bngl",
     "file": "michment.bngl",
     "tags": [
       "validation",
@@ -7872,7 +7872,7 @@
     "id": "michment_cont",
     "name": "michment_cont",
     "description": "Michaelis Menten Continue",
-    "path": "Contributed/BNGPlayground_Validation/michmentcont/michment_cont.bngl",
+    "path": "Tutorials/michmentcont/michment_cont.bngl",
     "file": "michment_cont.bngl",
     "tags": [
       "validation",
@@ -7929,7 +7929,7 @@
     "id": "ml_gradient_descent",
     "name": "ml gradient descent",
     "description": "Gradient Descent Optimizer in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/ml/mlgradientdescent/ml_gradient_descent.bngl",
+    "path": "Examples/ml/mlgradientdescent/ml_gradient_descent.bngl",
     "file": "ml_gradient_descent.bngl",
     "tags": [
       "ml",
@@ -7951,7 +7951,7 @@
     "id": "ml_hopfield",
     "name": "ml hopfield",
     "description": "Model: ml_hopfield.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ml/mlhopfield/ml_hopfield.bngl",
+    "path": "Examples/ml/mlhopfield/ml_hopfield.bngl",
     "file": "ml_hopfield.bngl",
     "tags": [
       "ml",
@@ -7972,7 +7972,7 @@
     "id": "ml_kmeans",
     "name": "ml kmeans",
     "description": "Model: ml_kmeans.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ml/mlkmeans/ml_kmeans.bngl",
+    "path": "Examples/ml/mlkmeans/ml_kmeans.bngl",
     "file": "ml_kmeans.bngl",
     "tags": [
       "ml",
@@ -7992,7 +7992,7 @@
     "id": "ml_q_learning",
     "name": "ml q learning",
     "description": "Q-Learning Agent in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/ml/mlqlearning/ml_q_learning.bngl",
+    "path": "Examples/ml/mlqlearning/ml_q_learning.bngl",
     "file": "ml_q_learning.bngl",
     "tags": [
       "ml",
@@ -8014,7 +8014,7 @@
     "id": "ml_svm",
     "name": "ml svm",
     "description": "Model: ml_svm.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ml/mlsvm/ml_svm.bngl",
+    "path": "Examples/ml/mlsvm/ml_svm.bngl",
     "file": "ml_svm.bngl",
     "tags": [
       "ml",
@@ -8053,7 +8053,7 @@
     "id": "model",
     "name": "model",
     "description": "filename: model.bngl",
-    "path": "PyBioNetGen/core/model/model.bngl",
+    "path": "Published/PyBioNetGen/core/model/model.bngl",
     "file": "model.bngl",
     "tags": [
       "model",
@@ -8075,7 +8075,7 @@
     "id": "model",
     "name": "model",
     "description": "A model of IgE receptor signaling",
-    "path": "PyBioNetGen/core/model_Degranulation_aMCMC/model.bngl",
+    "path": "Published/PyBioNetGen/core/model_Degranulation_aMCMC/model.bngl",
     "file": "model.bngl",
     "tags": [
       "model",
@@ -8097,7 +8097,7 @@
     "id": "model_tofit",
     "name": "model tofit",
     "description": "A model of IgE receptor signaling",
-    "path": "PyBioNetGen/core/modeltofit/model_tofit.bngl",
+    "path": "Published/PyBioNetGen/core/modeltofit/model_tofit.bngl",
     "file": "model_tofit.bngl",
     "tags": [
       "model",
@@ -8219,7 +8219,7 @@
     "id": "Motivating_example",
     "name": "Motivating_example",
     "description": "Signal Transduction with receptor internalization",
-    "path": "Contributed/BNGPlayground_Validation/Motivatingexample/Motivating_example.bngl",
+    "path": "Tutorials/Motivatingexample/Motivating_example.bngl",
     "file": "Motivating_example.bngl",
     "tags": [
       "validation",
@@ -8244,7 +8244,7 @@
     "id": "Motivating_example_cBNGL",
     "name": "Motivating_example_cBNGL",
     "description": "Signal transduction with receptor internalization",
-    "path": "Contributed/BNGPlayground_Validation/MotivatingexamplecBNGL/Motivating_example_cBNGL.bngl",
+    "path": "Tutorials/MotivatingexamplecBNGL/Motivating_example_cBNGL.bngl",
     "file": "Motivating_example_cBNGL.bngl",
     "tags": [
       "validation",
@@ -8270,7 +8270,7 @@
     "id": "motor",
     "name": "motor",
     "description": "Motor protein",
-    "path": "Contributed/BNGPlayground_Validation/motor/motor.bngl",
+    "path": "Tutorials/motor/motor.bngl",
     "file": "motor.bngl",
     "tags": [
       "validation",
@@ -8325,7 +8325,7 @@
     "id": "mt_arithmetic_compiler",
     "name": "mt arithmetic compiler",
     "description": "Model: mt_arithmetic_compiler.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/mtarithmeticcompiler/mt_arithmetic_compiler.bngl",
+    "path": "Examples/meta/mtarithmeticcompiler/mt_arithmetic_compiler.bngl",
     "file": "mt_arithmetic_compiler.bngl",
     "tags": [
       "mt",
@@ -8345,7 +8345,7 @@
     "id": "mt_bngl_interpreter",
     "name": "mt bngl interpreter",
     "description": "Model: mt_bngl_interpreter.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/mtbnglinterpreter/mt_bngl_interpreter.bngl",
+    "path": "Examples/meta/mtbnglinterpreter/mt_bngl_interpreter.bngl",
     "file": "mt_bngl_interpreter.bngl",
     "tags": [
       "mt",
@@ -8367,7 +8367,7 @@
     "id": "mt_music_sequencer",
     "name": "mt music sequencer",
     "description": "Music Sequencer / Chord Synthesizer in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/meta/mtmusicsequencer/mt_music_sequencer.bngl",
+    "path": "Examples/meta/mtmusicsequencer/mt_music_sequencer.bngl",
     "file": "mt_music_sequencer.bngl",
     "tags": [
       "mt",
@@ -8392,7 +8392,7 @@
     "id": "mt_pascal_triangle",
     "name": "mt pascal triangle",
     "description": "Model: mt_pascal_triangle.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/mtpascaltriangle/mt_pascal_triangle.bngl",
+    "path": "Examples/meta/mtpascaltriangle/mt_pascal_triangle.bngl",
     "file": "mt_pascal_triangle.bngl",
     "tags": [
       "mt",
@@ -8410,7 +8410,7 @@
     "id": "mt_quine",
     "name": "mt quine",
     "description": "Model: mt_quine.bngl",
-    "path": "Contributed/BNGPlayground_Examples/meta/mtquine/mt_quine.bngl",
+    "path": "Examples/meta/mtquine/mt_quine.bngl",
     "file": "mt_quine.bngl",
     "tags": [
       "mt",
@@ -8428,7 +8428,7 @@
     "id": "mtor-signaling",
     "name": "mtor signaling",
     "description": "mTOR Signaling Pathway",
-    "path": "Contributed/BNGPlayground_Examples/biology/mtorsignaling/mtor-signaling.bngl",
+    "path": "Examples/biology/mtorsignaling/mtor-signaling.bngl",
     "file": "mtor-signaling.bngl",
     "tags": [
       "mtor",
@@ -8448,7 +8448,7 @@
     "id": "mtorc2-signaling",
     "name": "mtorc2 signaling",
     "description": "mTORC2 signaling regulates cell survival and growth via AKT and SGK1.",
-    "path": "Contributed/BNGPlayground_Examples/biology/mtorc2signaling/mtorc2-signaling.bngl",
+    "path": "Examples/biology/mtorc2signaling/mtorc2-signaling.bngl",
     "file": "mtorc2-signaling.bngl",
     "tags": [
       "mtorc2",
@@ -8528,7 +8528,7 @@
     "id": "mwc",
     "name": "mwc",
     "description": "Monod-Wyman-Changeux model",
-    "path": "Contributed/BNGPlayground_Validation/mwc/mwc.bngl",
+    "path": "Tutorials/mwc/mwc.bngl",
     "file": "mwc.bngl",
     "tags": [
       "validation",
@@ -8548,7 +8548,7 @@
     "id": "myogenic-differentiation",
     "name": "myogenic differentiation",
     "description": "Myogenic Differentiation",
-    "path": "Contributed/BNGPlayground_Examples/biology/myogenicdifferentiation/myogenic-differentiation.bngl",
+    "path": "Examples/biology/myogenicdifferentiation/myogenic-differentiation.bngl",
     "file": "myogenic-differentiation.bngl",
     "tags": [
       "myogenic",
@@ -8567,7 +8567,7 @@
     "id": "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC",
     "name": "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC",
     "description": "Runtime-only BNGL model migrated from public/models: Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC",
-    "path": "Contributed/BNGPlayground_PublicRuntime/MyrtleBeachConwayNorthMyrtleBeachSCNC/Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC.bngl",
+    "path": "Published/MyrtleBeachConwayNorthMyrtleBeachSCNC/Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC.bngl",
     "file": "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC.bngl",
     "tags": [
       "myrtle",
@@ -8647,7 +8647,7 @@
     "id": "negative-feedback-loop",
     "name": "negative feedback loop",
     "description": "Negative Feedback Loop",
-    "path": "Contributed/BNGPlayground_Examples/biology/negativefeedbackloop/negative-feedback-loop.bngl",
+    "path": "Examples/biology/negativefeedbackloop/negative-feedback-loop.bngl",
     "file": "negative-feedback-loop.bngl",
     "tags": [
       "negative",
@@ -8667,7 +8667,7 @@
     "id": "neurotransmitter-release",
     "name": "neurotransmitter release",
     "description": "Neurotransmitter Release",
-    "path": "Contributed/BNGPlayground_Examples/biology/neurotransmitterrelease/neurotransmitter-release.bngl",
+    "path": "Examples/biology/neurotransmitterrelease/neurotransmitter-release.bngl",
     "file": "neurotransmitter-release.bngl",
     "tags": [
       "neurotransmitter",
@@ -8741,7 +8741,7 @@
     "id": "nfkb",
     "name": "nfkb",
     "description": "NF-kB signaling pathway",
-    "path": "Contributed/BNGPlayground_Validation/nfkb/nfkb.bngl",
+    "path": "Tutorials/nfkb/nfkb.bngl",
     "file": "nfkb.bngl",
     "tags": [
       "validation",
@@ -8764,7 +8764,7 @@
     "id": "nfkb_illustrating_protocols",
     "name": "nfkb_illustrating_protocols",
     "description": "NF-kB signaling pathway",
-    "path": "Contributed/BNGPlayground_Validation/nfkbillustratingprotocols/nfkb_illustrating_protocols.bngl",
+    "path": "Tutorials/nfkbillustratingprotocols/nfkb_illustrating_protocols.bngl",
     "file": "nfkb_illustrating_protocols.bngl",
     "tags": [
       "validation",
@@ -8789,7 +8789,7 @@
     "id": "nfkb-feedback",
     "name": "nfkb feedback",
     "description": "TNFalpha-induced NF-kB signaling with IkappaB-alpha feedback.",
-    "path": "Contributed/BNGPlayground_Examples/biology/nfkbfeedback/nfkb-feedback.bngl",
+    "path": "Examples/biology/nfkbfeedback/nfkb-feedback.bngl",
     "file": "nfkb-feedback.bngl",
     "tags": [
       "nfkb",
@@ -8808,7 +8808,7 @@
     "id": "NFmodel",
     "name": "NFmodel",
     "description": "BioNetGen model: NFmodel",
-    "path": "PyBioNetGen/tests/NFmodel/NFmodel.bngl",
+    "path": "Published/PyBioNetGen/tests/NFmodel/NFmodel.bngl",
     "file": "NFmodel.bngl",
     "tags": [
       "nfmodel",
@@ -8826,7 +8826,7 @@
     "id": "nfsim_aggregation_gelation",
     "name": "nfsim aggregation gelation",
     "description": "Model: nfsim_aggregation_gelation.bngl",
-    "path": "Contributed/BNGPlayground_Examples/nfsim/nfsimaggregationgelation/nfsim_aggregation_gelation.bngl",
+    "path": "Examples/nfsim/nfsimaggregationgelation/nfsim_aggregation_gelation.bngl",
     "file": "nfsim_aggregation_gelation.bngl",
     "tags": [
       "nfsim",
@@ -8844,7 +8844,7 @@
     "id": "nfsim_coarse_graining",
     "name": "nfsim coarse graining",
     "description": "Model: nfsim_coarse_graining.bngl",
-    "path": "Contributed/BNGPlayground_Examples/nfsim/nfsimcoarsegraining/nfsim_coarse_graining.bngl",
+    "path": "Examples/nfsim/nfsimcoarsegraining/nfsim_coarse_graining.bngl",
     "file": "nfsim_coarse_graining.bngl",
     "tags": [
       "nfsim",
@@ -8862,7 +8862,7 @@
     "id": "nfsim_dynamic_compartments",
     "name": "nfsim dynamic compartments",
     "description": "Model: nfsim_dynamic_compartments.bngl",
-    "path": "Contributed/BNGPlayground_Examples/nfsim/nfsimdynamiccompartments/nfsim_dynamic_compartments.bngl",
+    "path": "Examples/nfsim/nfsimdynamiccompartments/nfsim_dynamic_compartments.bngl",
     "file": "nfsim_dynamic_compartments.bngl",
     "tags": [
       "nfsim",
@@ -8882,7 +8882,7 @@
     "id": "nfsim_hybrid_particle_field",
     "name": "nfsim hybrid particle field",
     "description": "Model: nfsim_hybrid_particle_field.bngl",
-    "path": "Contributed/BNGPlayground_Examples/nfsim/nfsimhybridparticlefield/nfsim_hybrid_particle_field.bngl",
+    "path": "Examples/nfsim/nfsimhybridparticlefield/nfsim_hybrid_particle_field.bngl",
     "file": "nfsim_hybrid_particle_field.bngl",
     "tags": [
       "nfsim",
@@ -8900,7 +8900,7 @@
     "id": "nfsim_ring_closure_polymer",
     "name": "nfsim ring closure polymer",
     "description": "Model: nfsim_ring_closure_polymer.bngl",
-    "path": "Contributed/BNGPlayground_Examples/nfsim/nfsimringclosurepolymer/nfsim_ring_closure_polymer.bngl",
+    "path": "Examples/nfsim/nfsimringclosurepolymer/nfsim_ring_closure_polymer.bngl",
     "file": "nfsim_ring_closure_polymer.bngl",
     "tags": [
       "nfsim",
@@ -8939,7 +8939,7 @@
     "id": "nn_xor",
     "name": "nn xor",
     "description": "Model: nn_xor.bngl",
-    "path": "Contributed/BNGPlayground_Examples/ml/nnxor/nn_xor.bngl",
+    "path": "Examples/ml/nnxor/nn_xor.bngl",
     "file": "nn_xor.bngl",
     "tags": [
       "nn",
@@ -8962,7 +8962,7 @@
     "id": "no_frees",
     "name": "no frees",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/nofrees/no_frees.bngl",
+    "path": "Published/PyBioNetGen/tests/nofrees/no_frees.bngl",
     "file": "no_frees.bngl",
     "tags": [
       "no",
@@ -8982,7 +8982,7 @@
     "id": "no_generate_network",
     "name": "no generate network",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/nogeneratenetwork/no_generate_network.bngl",
+    "path": "Published/PyBioNetGen/tests/nogeneratenetwork/no_generate_network.bngl",
     "file": "no_generate_network.bngl",
     "tags": [
       "no",
@@ -9002,7 +9002,7 @@
     "id": "no_suffix",
     "name": "no suffix",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/nosuffix/no_suffix.bngl",
+    "path": "Published/PyBioNetGen/tests/nosuffix/no_suffix.bngl",
     "file": "no_suffix.bngl",
     "tags": [
       "no",
@@ -9022,7 +9022,7 @@
     "id": "no-cgmp-signaling",
     "name": "no cgmp signaling",
     "description": "Nitric Oxide (NO) / cGMP signaling pathway.",
-    "path": "Contributed/BNGPlayground_Examples/biology/nocgmpsignaling/no-cgmp-signaling.bngl",
+    "path": "Examples/biology/nocgmpsignaling/no-cgmp-signaling.bngl",
     "file": "no-cgmp-signaling.bngl",
     "tags": [
       "no",
@@ -9120,7 +9120,7 @@
     "id": "notch-delta-lateral-inhibition",
     "name": "notch delta lateral inhibition",
     "description": "Notch-Delta Lateral Inhibition",
-    "path": "Contributed/BNGPlayground_Examples/biology/notchdeltalateralinhibition/notch-delta-lateral-inhibition.bngl",
+    "path": "Examples/biology/notchdeltalateralinhibition/notch-delta-lateral-inhibition.bngl",
     "file": "notch-delta-lateral-inhibition.bngl",
     "tags": [
       "notch",
@@ -9334,7 +9334,7 @@
     "id": "oxidative-stress-response",
     "name": "oxidative stress response",
     "description": "Oxidative Stress Response (Keap1-Nrf2 Pathway)",
-    "path": "Contributed/BNGPlayground_Examples/biology/oxidativestressresponse/oxidative-stress-response.bngl",
+    "path": "Examples/biology/oxidativestressresponse/oxidative-stress-response.bngl",
     "file": "oxidative-stress-response.bngl",
     "tags": [
       "oxidative",
@@ -9373,7 +9373,7 @@
     "id": "p38-mapk-signaling",
     "name": "p38 mapk signaling",
     "description": "p38 MAPK stress signaling cascade.",
-    "path": "Contributed/BNGPlayground_Examples/biology/p38mapksignaling/p38-mapk-signaling.bngl",
+    "path": "Examples/biology/p38mapksignaling/p38-mapk-signaling.bngl",
     "file": "p38-mapk-signaling.bngl",
     "tags": [
       "p38",
@@ -9393,7 +9393,7 @@
     "id": "p53-mdm2-oscillator",
     "name": "p53 mdm2 oscillator",
     "description": "BioNetGen model: p53 mdm2 oscillator",
-    "path": "Contributed/BNGPlayground_Examples/biology/p53mdm2oscillator/p53-mdm2-oscillator.bngl",
+    "path": "Examples/biology/p53mdm2oscillator/p53-mdm2-oscillator.bngl",
     "file": "p53-mdm2-oscillator.bngl",
     "tags": [
       "p53",
@@ -9429,7 +9429,7 @@
     "id": "parabola",
     "name": "parabola",
     "description": "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1",
-    "path": "PyBioNetGen/core/parabola/parabola.bngl",
+    "path": "Published/PyBioNetGen/core/parabola/parabola.bngl",
     "file": "parabola.bngl",
     "tags": [
       "parabola",
@@ -9449,7 +9449,7 @@
     "id": "parabola",
     "name": "parabola",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/core/parabola_demo/parabola.bngl",
+    "path": "Published/PyBioNetGen/core/parabola_demo/parabola.bngl",
     "file": "parabola.bngl",
     "tags": [
       "parabola",
@@ -9468,7 +9468,7 @@
     "id": "parabola",
     "name": "parabola",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/parabola/parabola.bngl",
+    "path": "Published/PyBioNetGen/tests/parabola/parabola.bngl",
     "file": "parabola.bngl",
     "tags": [
       "parabola",
@@ -9488,7 +9488,7 @@
     "id": "parabola",
     "name": "parabola",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/parabola_bngl_files/parabola.bngl",
+    "path": "Published/PyBioNetGen/tests/parabola_bngl_files/parabola.bngl",
     "file": "parabola.bngl",
     "tags": [
       "parabola",
@@ -9507,7 +9507,7 @@
     "id": "parabola",
     "name": "parabola",
     "description": "Original values used to generate parabola.exp",
-    "path": "PyBioNetGen/tests/parabola_bngl_files_special_cases_model_check/parabola.bngl",
+    "path": "Published/PyBioNetGen/tests/parabola_bngl_files_special_cases_model_check/parabola.bngl",
     "file": "parabola.bngl",
     "tags": [
       "parabola",
@@ -9526,7 +9526,7 @@
     "id": "parabola_ground",
     "name": "parabola ground",
     "description": "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1",
-    "path": "PyBioNetGen/core/parabolaground/parabola_ground.bngl",
+    "path": "Published/PyBioNetGen/core/parabolaground/parabola_ground.bngl",
     "file": "parabola_ground.bngl",
     "tags": [
       "parabola",
@@ -9547,7 +9547,7 @@
     "id": "parabola2",
     "name": "parabola2",
     "description": "A file for testing behavior with duplicate file names",
-    "path": "PyBioNetGen/tests/parabola2/parabola2.bngl",
+    "path": "Published/PyBioNetGen/tests/parabola2/parabola2.bngl",
     "file": "parabola2.bngl",
     "tags": [
       "parabola2",
@@ -9567,7 +9567,7 @@
     "id": "ParamsEverywhere",
     "name": "ParamsEverywhere",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/ParamsEverywhere/ParamsEverywhere.bngl",
+    "path": "Published/PyBioNetGen/tests/ParamsEverywhere/ParamsEverywhere.bngl",
     "file": "ParamsEverywhere.bngl",
     "tags": [
       "paramseverywhere",
@@ -9585,7 +9585,7 @@
     "id": "parp1-mediated-dna-repair",
     "name": "parp1 mediated dna repair",
     "description": "PARP1-mediated DNA damage sensing and repair.",
-    "path": "Contributed/BNGPlayground_Examples/biology/parp1mediateddnarepair/parp1-mediated-dna-repair.bngl",
+    "path": "Examples/biology/parp1mediateddnarepair/parp1-mediated-dna-repair.bngl",
     "file": "parp1-mediated-dna-repair.bngl",
     "tags": [
       "parp1",
@@ -9667,7 +9667,7 @@
     "id": "ph_lorenz_attractor",
     "name": "ph lorenz attractor",
     "description": "Lorenz Attractor in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/physics/phlorenzattractor/ph_lorenz_attractor.bngl",
+    "path": "Examples/physics/phlorenzattractor/ph_lorenz_attractor.bngl",
     "file": "ph_lorenz_attractor.bngl",
     "tags": [
       "ph",
@@ -9689,7 +9689,7 @@
     "id": "ph_nbody_gravity",
     "name": "ph nbody gravity",
     "description": "Model: ph_nbody_gravity.bngl",
-    "path": "Contributed/BNGPlayground_Examples/physics/phnbodygravity/ph_nbody_gravity.bngl",
+    "path": "Examples/physics/phnbodygravity/ph_nbody_gravity.bngl",
     "file": "ph_nbody_gravity.bngl",
     "tags": [
       "ph",
@@ -9708,7 +9708,7 @@
     "id": "ph_schrodinger",
     "name": "ph schrodinger",
     "description": "Model: ph_schrodinger.bngl",
-    "path": "Contributed/BNGPlayground_Examples/physics/phschrodinger/ph_schrodinger.bngl",
+    "path": "Examples/physics/phschrodinger/ph_schrodinger.bngl",
     "file": "ph_schrodinger.bngl",
     "tags": [
       "ph",
@@ -9725,7 +9725,7 @@
     "id": "ph_wave_equation",
     "name": "ph wave equation",
     "description": "Model: ph_wave_equation.bngl",
-    "path": "Contributed/BNGPlayground_Examples/physics/phwaveequation/ph_wave_equation.bngl",
+    "path": "Examples/physics/phwaveequation/ph_wave_equation.bngl",
     "file": "ph_wave_equation.bngl",
     "tags": [
       "ph",
@@ -9802,7 +9802,7 @@
     "id": "phosphorelay-chain",
     "name": "phosphorelay chain",
     "description": "BioNetGen model: phosphorelay chain",
-    "path": "Contributed/BNGPlayground_Examples/biology/phosphorelaychain/phosphorelay-chain.bngl",
+    "path": "Examples/biology/phosphorelaychain/phosphorelay-chain.bngl",
     "file": "phosphorelay-chain.bngl",
     "tags": [
       "phosphorelay",
@@ -9875,7 +9875,7 @@
     "id": "platelet-activation",
     "name": "platelet activation",
     "description": "BioNetGen model: platelet activation",
-    "path": "Contributed/BNGPlayground_Examples/biology/plateletactivation/platelet-activation.bngl",
+    "path": "Examples/biology/plateletactivation/platelet-activation.bngl",
     "file": "platelet-activation.bngl",
     "tags": [
       "platelet",
@@ -9940,7 +9940,7 @@
     "id": "polymer_fixed",
     "name": "polymer_fixed",
     "description": "Runtime-only BNGL model migrated from public/models: polymer_fixed",
-    "path": "Contributed/BNGPlayground_PublicRuntime/polymerfixed/polymer_fixed.bngl",
+    "path": "Tutorials/polymerfixed/polymer_fixed.bngl",
     "file": "polymer_fixed.bngl",
     "tags": [
       "polymer",
@@ -9956,7 +9956,7 @@
     "id": "polynomial",
     "name": "polynomial",
     "description": "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1",
-    "path": "PyBioNetGen/core/polynomial/polynomial.bngl",
+    "path": "Published/PyBioNetGen/core/polynomial/polynomial.bngl",
     "file": "polynomial.bngl",
     "tags": [
       "polynomial",
@@ -9978,7 +9978,7 @@
     "id": "polynomial",
     "name": "polynomial",
     "description": "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1",
-    "path": "PyBioNetGen/tests/polynomial/polynomial.bngl",
+    "path": "Published/PyBioNetGen/tests/polynomial/polynomial.bngl",
     "file": "polynomial.bngl",
     "tags": [
       "polynomial",
@@ -10000,7 +10000,7 @@
     "id": "polynomial",
     "name": "polynomial",
     "description": "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1",
-    "path": "PyBioNetGen/tests/polynomial_full_tests_T6-check/polynomial.bngl",
+    "path": "Published/PyBioNetGen/tests/polynomial_full_tests_T6-check/polynomial.bngl",
     "file": "polynomial.bngl",
     "tags": [
       "polynomial",
@@ -10022,7 +10022,7 @@
     "id": "polynomial_ground",
     "name": "polynomial ground",
     "description": "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1",
-    "path": "PyBioNetGen/core/polynomialground/polynomial_ground.bngl",
+    "path": "Published/PyBioNetGen/core/polynomialground/polynomial_ground.bngl",
     "file": "polynomial_ground.bngl",
     "tags": [
       "polynomial",
@@ -10153,7 +10153,7 @@
     "id": "predator-prey-dynamics",
     "name": "predator prey dynamics",
     "description": "BioNetGen model: predator prey dynamics",
-    "path": "Contributed/BNGPlayground_Examples/biology/predatorpreydynamics/predator-prey-dynamics.bngl",
+    "path": "Examples/biology/predatorpreydynamics/predator-prey-dynamics.bngl",
     "file": "predator-prey-dynamics.bngl",
     "tags": [
       "predator",
@@ -10188,7 +10188,7 @@
     "id": "process_actin_treadmilling",
     "name": "process actin treadmilling",
     "description": "Model: process_actin_treadmilling.bngl",
-    "path": "Contributed/BNGPlayground_Examples/processes/processactintreadmilling/process_actin_treadmilling.bngl",
+    "path": "Examples/processes/processactintreadmilling/process_actin_treadmilling.bngl",
     "file": "process_actin_treadmilling.bngl",
     "tags": [
       "process",
@@ -10207,7 +10207,7 @@
     "id": "process_autophagy_flux",
     "name": "process autophagy flux",
     "description": "Model: process_autophagy_flux.bngl",
-    "path": "Contributed/BNGPlayground_Examples/processes/processautophagyflux/process_autophagy_flux.bngl",
+    "path": "Examples/processes/processautophagyflux/process_autophagy_flux.bngl",
     "file": "process_autophagy_flux.bngl",
     "tags": [
       "process",
@@ -10229,7 +10229,7 @@
     "id": "process_cell_adhesion_strength",
     "name": "process cell adhesion strength",
     "description": "Model: process_cell_adhesion_strength.bngl",
-    "path": "Contributed/BNGPlayground_Examples/processes/processcelladhesionstrength/process_cell_adhesion_strength.bngl",
+    "path": "Examples/processes/processcelladhesionstrength/process_cell_adhesion_strength.bngl",
     "file": "process_cell_adhesion_strength.bngl",
     "tags": [
       "process",
@@ -10251,7 +10251,7 @@
     "id": "process_kinetic_proofreading_tcr",
     "name": "process kinetic proofreading tcr",
     "description": "Model: process_kinetic_proofreading_tcr.bngl",
-    "path": "Contributed/BNGPlayground_Examples/processes/processkineticproofreadingtcr/process_kinetic_proofreading_tcr.bngl",
+    "path": "Examples/processes/processkineticproofreadingtcr/process_kinetic_proofreading_tcr.bngl",
     "file": "process_kinetic_proofreading_tcr.bngl",
     "tags": [
       "process",
@@ -10270,7 +10270,7 @@
     "id": "process_quorum_sensing_switch",
     "name": "process quorum sensing switch",
     "description": "Model: process_quorum_sensing_switch.bngl",
-    "path": "Contributed/BNGPlayground_Examples/processes/processquorumsensingswitch/process_quorum_sensing_switch.bngl",
+    "path": "Examples/processes/processquorumsensingswitch/process_quorum_sensing_switch.bngl",
     "file": "process_quorum_sensing_switch.bngl",
     "tags": [
       "process",
@@ -10328,7 +10328,7 @@
     "id": "pt303",
     "name": "pt303",
     "description": "c = 0.20 /d t_1/2 = 3.5 d (inferred)",
-    "path": "PyBioNetGen/HIVdynamics/pt303/pt303.bngl",
+    "path": "Published/PyBioNetGen/HIVdynamics/pt303/pt303.bngl",
     "file": "pt303.bngl",
     "tags": [
       "pt303",
@@ -10350,7 +10350,7 @@
     "id": "pt403",
     "name": "pt403",
     "description": "c = 0.23 /d t_1/2 = 3.0 d (inferred)",
-    "path": "PyBioNetGen/HIVdynamics/pt403/pt403.bngl",
+    "path": "Published/PyBioNetGen/HIVdynamics/pt403/pt403.bngl",
     "file": "pt403.bngl",
     "tags": [
       "pt403",
@@ -10372,7 +10372,7 @@
     "id": "pt409",
     "name": "pt409",
     "description": "c = 0.39 /d t_1/2 = 1.8 d (inferred)",
-    "path": "PyBioNetGen/HIVdynamics/pt409/pt409.bngl",
+    "path": "Published/PyBioNetGen/HIVdynamics/pt409/pt409.bngl",
     "file": "pt409.bngl",
     "tags": [
       "pt409",
@@ -10451,7 +10451,7 @@
     "id": "quorum-sensing-circuit",
     "name": "quorum sensing circuit",
     "description": "BioNetGen model: quorum sensing circuit",
-    "path": "Contributed/BNGPlayground_Examples/biology/quorumsensingcircuit/quorum-sensing-circuit.bngl",
+    "path": "Examples/biology/quorumsensingcircuit/quorum-sensing-circuit.bngl",
     "file": "quorum-sensing-circuit.bngl",
     "tags": [
       "quorum",
@@ -10472,7 +10472,7 @@
     "id": "rab-gtpase-cycle",
     "name": "rab gtpase cycle",
     "description": "BioNetGen model: rab gtpase cycle",
-    "path": "Contributed/BNGPlayground_Examples/biology/rabgtpasecycle/rab-gtpase-cycle.bngl",
+    "path": "Examples/biology/rabgtpasecycle/rab-gtpase-cycle.bngl",
     "file": "rab-gtpase-cycle.bngl",
     "tags": [
       "rab",
@@ -10510,7 +10510,7 @@
     "id": "RAFi",
     "name": "RAFi",
     "description": "BioNetGen model: RAFi",
-    "path": "PyBioNetGen/core/RAFi/RAFi.bngl",
+    "path": "Published/PyBioNetGen/core/RAFi/RAFi.bngl",
     "file": "RAFi.bngl",
     "tags": [
       "rafi",
@@ -10529,7 +10529,7 @@
     "id": "RAFi_ground",
     "name": "RAFi ground",
     "description": "BioNetGen model: RAFi ground",
-    "path": "PyBioNetGen/core/RAFiground/RAFi_ground.bngl",
+    "path": "Published/PyBioNetGen/core/RAFiground/RAFi_ground.bngl",
     "file": "RAFi_ground.bngl",
     "tags": [
       "rafi",
@@ -10567,7 +10567,7 @@
     "id": "rankl-rank-signaling",
     "name": "rankl rank signaling",
     "description": "RANKL-RANK-OPG signaling in bone remodeling.",
-    "path": "Contributed/BNGPlayground_Examples/biology/ranklranksignaling/rankl-rank-signaling.bngl",
+    "path": "Examples/biology/ranklranksignaling/rankl-rank-signaling.bngl",
     "file": "rankl-rank-signaling.bngl",
     "tags": [
       "rankl",
@@ -10587,7 +10587,7 @@
     "id": "ras-gef-gap-cycle",
     "name": "ras gef gap cycle",
     "description": "Ras-GEF-GAP cycle with explicit nucleotide exchange.",
-    "path": "Contributed/BNGPlayground_Examples/biology/rasgefgapcycle/ras-gef-gap-cycle.bngl",
+    "path": "Examples/biology/rasgefgapcycle/ras-gef-gap-cycle.bngl",
     "file": "ras-gef-gap-cycle.bngl",
     "tags": [
       "ras",
@@ -10627,7 +10627,7 @@
     "id": "rec_dim",
     "name": "rec_dim",
     "description": "Ligand-receptor binding",
-    "path": "Contributed/BNGPlayground_Validation/recdim/rec_dim.bngl",
+    "path": "Tutorials/recdim/rec_dim.bngl",
     "file": "rec_dim.bngl",
     "tags": [
       "validation",
@@ -10648,7 +10648,7 @@
     "id": "rec_dim_comp",
     "name": "rec_dim_comp",
     "description": "name dimension volume contained_by",
-    "path": "Contributed/BNGPlayground_Validation/recdimcomp/rec_dim_comp.bngl",
+    "path": "Tutorials/recdimcomp/rec_dim_comp.bngl",
     "file": "rec_dim_comp.bngl",
     "tags": [
       "validation",
@@ -10672,7 +10672,7 @@
     "id": "receptor",
     "name": "receptor",
     "description": "A simple model of ligand/receptor binding and receptor phosphorylation.",
-    "path": "PyBioNetGen/core/receptor/receptor.bngl",
+    "path": "Published/PyBioNetGen/core/receptor/receptor.bngl",
     "file": "receptor.bngl",
     "tags": [
       "receptor",
@@ -10690,7 +10690,7 @@
     "id": "receptor_nf",
     "name": "receptor nf",
     "description": "A simple model of ligand/receptor binding and receptor phosphorylation.",
-    "path": "PyBioNetGen/core/receptornf/receptor_nf.bngl",
+    "path": "Published/PyBioNetGen/core/receptornf/receptor_nf.bngl",
     "file": "receptor_nf.bngl",
     "tags": [
       "receptor",
@@ -10708,7 +10708,7 @@
     "id": "receptor_nf",
     "name": "receptor nf",
     "description": "A simple model of ligand/receptor binding and receptor phosphorylation.",
-    "path": "PyBioNetGen/tests/receptornf/receptor_nf.bngl",
+    "path": "Published/PyBioNetGen/tests/receptornf/receptor_nf.bngl",
     "file": "receptor_nf.bngl",
     "tags": [
       "receptor",
@@ -10770,7 +10770,7 @@
     "id": "repressilator-oscillator",
     "name": "repressilator oscillator",
     "description": "BioNetGen model: repressilator oscillator",
-    "path": "Contributed/BNGPlayground_Examples/biology/repressilatoroscillator/repressilator-oscillator.bngl",
+    "path": "Examples/biology/repressilatoroscillator/repressilator-oscillator.bngl",
     "file": "repressilator-oscillator.bngl",
     "tags": [
       "repressilator",
@@ -10794,7 +10794,7 @@
     "id": "retinoic-acid-signaling",
     "name": "retinoic acid signaling",
     "description": "BioNetGen model: retinoic acid signaling",
-    "path": "Contributed/BNGPlayground_Examples/biology/retinoicacidsignaling/retinoic-acid-signaling.bngl",
+    "path": "Examples/biology/retinoicacidsignaling/retinoic-acid-signaling.bngl",
     "file": "retinoic-acid-signaling.bngl",
     "tags": [
       "retinoic",
@@ -10815,7 +10815,7 @@
     "id": "rho-gtpase-actin-cytoskeleton",
     "name": "rho gtpase actin cytoskeleton",
     "description": "RhoA-GTPase regulation of the actin cytoskeleton.",
-    "path": "Contributed/BNGPlayground_Examples/biology/rhogtpaseactincytoskeleton/rho-gtpase-actin-cytoskeleton.bngl",
+    "path": "Examples/biology/rhogtpaseactincytoskeleton/rho-gtpase-actin-cytoskeleton.bngl",
     "file": "rho-gtpase-actin-cytoskeleton.bngl",
     "tags": [
       "rho",
@@ -11378,7 +11378,7 @@
     "id": "SHP2_base_model",
     "name": "SHP2_base_model",
     "description": "Base model of Shp2 regulation",
-    "path": "Contributed/BNGPlayground_Validation/SHP2basemodel/SHP2_base_model.bngl",
+    "path": "Tutorials/SHP2basemodel/SHP2_base_model.bngl",
     "file": "SHP2_base_model.bngl",
     "tags": [
       "validation",
@@ -11399,7 +11399,7 @@
     "id": "shp2-phosphatase-regulation",
     "name": "shp2 phosphatase regulation",
     "description": "SHP2 phosphatase regulation via autoinhibition and SH2 binding.",
-    "path": "Contributed/BNGPlayground_Examples/biology/shp2phosphataseregulation/shp2-phosphatase-regulation.bngl",
+    "path": "Examples/biology/shp2phosphataseregulation/shp2-phosphatase-regulation.bngl",
     "file": "shp2-phosphatase-regulation.bngl",
     "tags": [
       "shp2",
@@ -12337,7 +12337,7 @@
     "id": "signal-amplification-cascade",
     "name": "signal amplification cascade",
     "description": "BioNetGen model: signal amplification cascade",
-    "path": "Contributed/BNGPlayground_Examples/biology/signalamplificationcascade/signal-amplification-cascade.bngl",
+    "path": "Examples/biology/signalamplificationcascade/signal-amplification-cascade.bngl",
     "file": "signal-amplification-cascade.bngl",
     "tags": [
       "signal",
@@ -12379,7 +12379,7 @@
     "id": "Simple",
     "name": "Simple",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/Simple/Simple.bngl",
+    "path": "Published/PyBioNetGen/tests/Simple/Simple.bngl",
     "file": "Simple.bngl",
     "tags": [
       "simple",
@@ -12398,7 +12398,7 @@
     "id": "Simple_AddActions",
     "name": "Simple AddActions",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/SimpleAddActions/Simple_AddActions.bngl",
+    "path": "Published/PyBioNetGen/tests/SimpleAddActions/Simple_AddActions.bngl",
     "file": "Simple_AddActions.bngl",
     "tags": [
       "simple",
@@ -12418,7 +12418,7 @@
     "id": "Simple_Answer",
     "name": "Simple Answer",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/SimpleAnswer/Simple_Answer.bngl",
+    "path": "Published/PyBioNetGen/tests/SimpleAnswer/Simple_Answer.bngl",
     "file": "Simple_Answer.bngl",
     "tags": [
       "simple",
@@ -12438,7 +12438,7 @@
     "id": "Simple_GenOnly",
     "name": "Simple GenOnly",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/SimpleGenOnly/Simple_GenOnly.bngl",
+    "path": "Published/PyBioNetGen/tests/SimpleGenOnly/Simple_GenOnly.bngl",
     "file": "Simple_GenOnly.bngl",
     "tags": [
       "simple",
@@ -12458,7 +12458,7 @@
     "id": "simple_nf_seed",
     "name": "simple nf seed",
     "description": "BioNetGen model: simple nf seed",
-    "path": "PyBioNetGen/tests/simplenfseed/simple_nf_seed.bngl",
+    "path": "Published/PyBioNetGen/tests/simplenfseed/simple_nf_seed.bngl",
     "file": "simple_nf_seed.bngl",
     "tags": [
       "simple",
@@ -12479,7 +12479,7 @@
     "id": "simple_nfsim_test",
     "name": "simple_nfsim_test",
     "description": "Runtime-only BNGL model migrated from public/models: simple_nfsim_test",
-    "path": "Contributed/BNGPlayground_PublicRuntime/simplenfsimtest/simple_nfsim_test.bngl",
+    "path": "Tutorials/simplenfsimtest/simple_nfsim_test.bngl",
     "file": "simple_nfsim_test.bngl",
     "tags": [
       "simple",
@@ -12496,7 +12496,7 @@
     "id": "Simple_nogen",
     "name": "Simple nogen",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/Simplenogen/Simple_nogen.bngl",
+    "path": "Published/PyBioNetGen/tests/Simplenogen/Simple_nogen.bngl",
     "file": "Simple_nogen.bngl",
     "tags": [
       "simple",
@@ -12515,7 +12515,7 @@
     "id": "simple_sbml_import",
     "name": "simple_sbml_import",
     "description": "SBML import test",
-    "path": "Contributed/BNGPlayground_Validation/simplesbmlimport/simple_sbml_import.bngl",
+    "path": "Tutorials/simplesbmlimport/simple_sbml_import.bngl",
     "file": "simple_sbml_import.bngl",
     "tags": [
       "validation",
@@ -12536,7 +12536,7 @@
     "id": "simple_system",
     "name": "simple_system",
     "description": "Simple binding system",
-    "path": "Contributed/BNGPlayground_Validation/simplesystem/simple_system.bngl",
+    "path": "Tutorials/simplesystem/simple_system.bngl",
     "file": "simple_system.bngl",
     "tags": [
       "validation",
@@ -12555,7 +12555,7 @@
     "id": "simple-dimerization",
     "name": "simple dimerization",
     "description": "BioNetGen model: simple dimerization",
-    "path": "Contributed/BNGPlayground_Examples/biology/simpledimerization/simple-dimerization.bngl",
+    "path": "Examples/biology/simpledimerization/simple-dimerization.bngl",
     "file": "simple-dimerization.bngl",
     "tags": [
       "simple",
@@ -12628,7 +12628,7 @@
     "id": "sir-epidemic-model",
     "name": "sir epidemic model",
     "description": "BioNetGen model: sir epidemic model",
-    "path": "Contributed/BNGPlayground_Examples/biology/sirepidemicmodel/sir-epidemic-model.bngl",
+    "path": "Examples/biology/sirepidemicmodel/sir-epidemic-model.bngl",
     "file": "sir-epidemic-model.bngl",
     "tags": [
       "sir",
@@ -12648,7 +12648,7 @@
     "id": "smad-tgf-beta-signaling",
     "name": "smad tgf beta signaling",
     "description": "BioNetGen model: smad tgf beta signaling",
-    "path": "Contributed/BNGPlayground_Examples/biology/smadtgfbetasignaling/smad-tgf-beta-signaling.bngl",
+    "path": "Examples/biology/smadtgfbetasignaling/smad-tgf-beta-signaling.bngl",
     "file": "smad-tgf-beta-signaling.bngl",
     "tags": [
       "smad",
@@ -12670,7 +12670,7 @@
     "id": "sonic-hedgehog-gradient",
     "name": "sonic hedgehog gradient",
     "description": "Sonic Hedgehog (Shh) morphogen gradient formation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/sonichedgehoggradient/sonic-hedgehog-gradient.bngl",
+    "path": "Examples/biology/sonichedgehoggradient/sonic-hedgehog-gradient.bngl",
     "file": "sonic-hedgehog-gradient.bngl",
     "tags": [
       "sonic",
@@ -12708,7 +12708,7 @@
     "id": "sp_fourier_synthesizer",
     "name": "sp fourier synthesizer",
     "description": "Fourier Series Synthesizer in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/signal-processing/spfouriersynthesizer/sp_fourier_synthesizer.bngl",
+    "path": "Examples/signal-processing/spfouriersynthesizer/sp_fourier_synthesizer.bngl",
     "file": "sp_fourier_synthesizer.bngl",
     "tags": [
       "sp",
@@ -12732,7 +12732,7 @@
     "id": "sp_image_convolution",
     "name": "sp image convolution",
     "description": "Image Convolution Filter in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/signal-processing/spimageconvolution/sp_image_convolution.bngl",
+    "path": "Examples/signal-processing/spimageconvolution/sp_image_convolution.bngl",
     "file": "sp_image_convolution.bngl",
     "tags": [
       "sp",
@@ -12752,7 +12752,7 @@
     "id": "sp_kalman_filter",
     "name": "sp kalman filter",
     "description": "Kalman Filter in BNGL",
-    "path": "Contributed/BNGPlayground_Examples/signal-processing/spkalmanfilter/sp_kalman_filter.bngl",
+    "path": "Examples/signal-processing/spkalmanfilter/sp_kalman_filter.bngl",
     "file": "sp_kalman_filter.bngl",
     "tags": [
       "sp",
@@ -12919,7 +12919,7 @@
     "id": "stat3-mediated-transcription",
     "name": "stat3 mediated transcription",
     "description": "STAT3-mediated transcription and feedback.",
-    "path": "Contributed/BNGPlayground_Examples/biology/stat3mediatedtranscription/stat3-mediated-transcription.bngl",
+    "path": "Examples/biology/stat3mediatedtranscription/stat3-mediated-transcription.bngl",
     "file": "stat3-mediated-transcription.bngl",
     "tags": [
       "stat3",
@@ -12957,7 +12957,7 @@
     "id": "stress-response-adaptation",
     "name": "stress response adaptation",
     "description": "BioNetGen model: stress response adaptation",
-    "path": "Contributed/BNGPlayground_Examples/biology/stressresponseadaptation/stress-response-adaptation.bngl",
+    "path": "Examples/biology/stressresponseadaptation/stress-response-adaptation.bngl",
     "file": "stress-response-adaptation.bngl",
     "tags": [
       "stress",
@@ -13104,7 +13104,7 @@
     "id": "synaptic-plasticity-ltp",
     "name": "synaptic plasticity ltp",
     "description": "Initial Concentrations",
-    "path": "Contributed/BNGPlayground_Examples/biology/synapticplasticityltp/synaptic-plasticity-ltp.bngl",
+    "path": "Examples/biology/synapticplasticityltp/synaptic-plasticity-ltp.bngl",
     "file": "synaptic-plasticity-ltp.bngl",
     "tags": [
       "synaptic",
@@ -13127,7 +13127,7 @@
     "id": "synbio_band_pass_filter",
     "name": "synbio band pass filter",
     "description": "Model: synbio_band_pass_filter.bngl",
-    "path": "Contributed/BNGPlayground_Examples/synbio/synbiobandpassfilter/synbio_band_pass_filter.bngl",
+    "path": "Examples/synbio/synbiobandpassfilter/synbio_band_pass_filter.bngl",
     "file": "synbio_band_pass_filter.bngl",
     "tags": [
       "synbio",
@@ -13149,7 +13149,7 @@
     "id": "synbio_counter_molecular",
     "name": "synbio counter molecular",
     "description": "Model: synbio_counter_molecular.bngl",
-    "path": "Contributed/BNGPlayground_Examples/synbio/synbiocountermolecular/synbio_counter_molecular.bngl",
+    "path": "Examples/synbio/synbiocountermolecular/synbio_counter_molecular.bngl",
     "file": "synbio_counter_molecular.bngl",
     "tags": [
       "synbio",
@@ -13168,7 +13168,7 @@
     "id": "synbio_edge_detector",
     "name": "synbio edge detector",
     "description": "Model: synbio_edge_detector.bngl",
-    "path": "Contributed/BNGPlayground_Examples/synbio/synbioedgedetector/synbio_edge_detector.bngl",
+    "path": "Examples/synbio/synbioedgedetector/synbio_edge_detector.bngl",
     "file": "synbio_edge_detector.bngl",
     "tags": [
       "synbio",
@@ -13188,7 +13188,7 @@
     "id": "synbio_logic_gates_enzymatic",
     "name": "synbio logic gates enzymatic",
     "description": "Model: synbio_logic_gates_enzymatic.bngl",
-    "path": "Contributed/BNGPlayground_Examples/synbio/synbiologicgatesenzymatic/synbio_logic_gates_enzymatic.bngl",
+    "path": "Examples/synbio/synbiologicgatesenzymatic/synbio_logic_gates_enzymatic.bngl",
     "file": "synbio_logic_gates_enzymatic.bngl",
     "tags": [
       "synbio",
@@ -13212,7 +13212,7 @@
     "id": "synbio_oscillator_synchronization",
     "name": "synbio oscillator synchronization",
     "description": "Model: synbio_oscillator_synchronization.bngl",
-    "path": "Contributed/BNGPlayground_Examples/synbio/synbiooscillatorsynchronization/synbio_oscillator_synchronization.bngl",
+    "path": "Examples/synbio/synbiooscillatorsynchronization/synbio_oscillator_synchronization.bngl",
     "file": "synbio_oscillator_synchronization.bngl",
     "tags": [
       "synbio",
@@ -13250,7 +13250,7 @@
     "id": "t-cell-activation",
     "name": "t cell activation",
     "description": "BioNetGen model: t cell activation",
-    "path": "Contributed/BNGPlayground_Examples/biology/tcellactivation/t-cell-activation.bngl",
+    "path": "Examples/biology/tcellactivation/t-cell-activation.bngl",
     "file": "t-cell-activation.bngl",
     "tags": [
       "t",
@@ -13306,7 +13306,7 @@
     "id": "tcr",
     "name": "tcr",
     "description": "A model of T cell receptor signaling",
-    "path": "PyBioNetGen/core/tcr/tcr.bngl",
+    "path": "Published/PyBioNetGen/core/tcr/tcr.bngl",
     "file": "tcr.bngl",
     "tags": [
       "tcr",
@@ -13328,7 +13328,7 @@
     "id": "test_ANG_synthesis_simple",
     "name": "test_ANG_synthesis_simple",
     "description": "Synthesis network test",
-    "path": "Contributed/BNGPlayground_Validation/testANGsynthesissimple/test_ANG_synthesis_simple.bngl",
+    "path": "Tutorials/testANGsynthesissimple/test_ANG_synthesis_simple.bngl",
     "file": "test_ANG_synthesis_simple.bngl",
     "tags": [
       "validation",
@@ -13353,7 +13353,7 @@
     "id": "test_fixed",
     "name": "test_fixed",
     "description": "# actions ##",
-    "path": "Contributed/BNGPlayground_Validation/testfixed/test_fixed.bngl",
+    "path": "Tutorials/testfixed/test_fixed.bngl",
     "file": "test_fixed.bngl",
     "tags": [
       "validation",
@@ -13374,7 +13374,7 @@
     "id": "test_MM",
     "name": "test_MM",
     "description": "Kinetic constants",
-    "path": "Contributed/BNGPlayground_Validation/testMM/test_MM.bngl",
+    "path": "Tutorials/testMM/test_MM.bngl",
     "file": "test_MM.bngl",
     "tags": [
       "validation",
@@ -13395,7 +13395,7 @@
     "id": "test_mratio",
     "name": "test_mratio",
     "description": "Reaction ratio test",
-    "path": "Contributed/BNGPlayground_Validation/testmratio/test_mratio.bngl",
+    "path": "Tutorials/testmratio/test_mratio.bngl",
     "file": "test_mratio.bngl",
     "tags": [
       "validation",
@@ -13417,7 +13417,7 @@
     "id": "test_network_gen",
     "name": "test_network_gen",
     "description": "fceri model with network generation",
-    "path": "Contributed/BNGPlayground_Validation/testnetworkgen/test_network_gen.bngl",
+    "path": "Tutorials/testnetworkgen/test_network_gen.bngl",
     "file": "test_network_gen.bngl",
     "tags": [
       "validation",
@@ -13439,7 +13439,7 @@
     "id": "test_sat",
     "name": "test_sat",
     "description": "Kinetic constants",
-    "path": "Contributed/BNGPlayground_Validation/testsat/test_sat.bngl",
+    "path": "Tutorials/testsat/test_sat.bngl",
     "file": "test_sat.bngl",
     "tags": [
       "validation",
@@ -13460,7 +13460,7 @@
     "id": "test_synthesis_cBNGL_simple",
     "name": "test_synthesis_cBNGL_simple",
     "description": "Compartmental synthesis",
-    "path": "Contributed/BNGPlayground_Validation/testsynthesiscBNGLsimple/test_synthesis_cBNGL_simple.bngl",
+    "path": "Tutorials/testsynthesiscBNGLsimple/test_synthesis_cBNGL_simple.bngl",
     "file": "test_synthesis_cBNGL_simple.bngl",
     "tags": [
       "validation",
@@ -13485,7 +13485,7 @@
     "id": "test_synthesis_complex",
     "name": "test_synthesis_complex",
     "description": "Complex synthesis test",
-    "path": "Contributed/BNGPlayground_Validation/testsynthesiscomplex/test_synthesis_complex.bngl",
+    "path": "Tutorials/testsynthesiscomplex/test_synthesis_complex.bngl",
     "file": "test_synthesis_complex.bngl",
     "tags": [
       "validation",
@@ -13509,7 +13509,7 @@
     "id": "test_synthesis_complex_0_cBNGL",
     "name": "test_synthesis_complex_0_cBNGL",
     "description": "volume-surface",
-    "path": "Contributed/BNGPlayground_Validation/testsynthesiscomplex0cBNGL/test_synthesis_complex_0_cBNGL.bngl",
+    "path": "Tutorials/testsynthesiscomplex0cBNGL/test_synthesis_complex_0_cBNGL.bngl",
     "file": "test_synthesis_complex_0_cBNGL.bngl",
     "tags": [
       "validation",
@@ -13537,7 +13537,7 @@
     "id": "test_synthesis_complex_source_cBNGL",
     "name": "test_synthesis_complex_source_cBNGL",
     "description": "volume-surface",
-    "path": "Contributed/BNGPlayground_Validation/testsynthesiscomplexsourcecBNGL/test_synthesis_complex_source_cBNGL.bngl",
+    "path": "Tutorials/testsynthesiscomplexsourcecBNGL/test_synthesis_complex_source_cBNGL.bngl",
     "file": "test_synthesis_complex_source_cBNGL.bngl",
     "tags": [
       "validation",
@@ -13565,7 +13565,7 @@
     "id": "test_synthesis_simple",
     "name": "test_synthesis_simple",
     "description": "Simple synthesis test",
-    "path": "Contributed/BNGPlayground_Validation/testsynthesissimple/test_synthesis_simple.bngl",
+    "path": "Tutorials/testsynthesissimple/test_synthesis_simple.bngl",
     "file": "test_synthesis_simple.bngl",
     "tags": [
       "validation",
@@ -13623,6 +13623,25 @@
   },
   {
     "id": "tlbr",
+    "name": "tlbr",
+    "description": "A model of trivalent ligand, bivalent receptor",
+    "path": "Published/PyBioNetGen/core/tlbr/tlbr.bngl",
+    "file": "tlbr.bngl",
+    "tags": [
+      "tlbr",
+      "l",
+      "r",
+      "lambda",
+      "fl"
+    ],
+    "category": "other",
+    "bng2_compatible": true,
+    "origin": "published",
+    "visible": false,
+    "collectionId": null
+  },
+  {
+    "id": "tlbr",
     "name": "TLBR Tutorial",
     "description": "Ligand binding",
     "path": "Published/tlbr/tlbr.bngl",
@@ -13642,29 +13661,10 @@
     "collectionId": null
   },
   {
-    "id": "tlbr",
-    "name": "tlbr",
-    "description": "A model of trivalent ligand, bivalent receptor",
-    "path": "PyBioNetGen/core/tlbr/tlbr.bngl",
-    "file": "tlbr.bngl",
-    "tags": [
-      "tlbr",
-      "l",
-      "r",
-      "lambda",
-      "fl"
-    ],
-    "category": "other",
-    "bng2_compatible": true,
-    "origin": "published",
-    "visible": false,
-    "collectionId": null
-  },
-  {
     "id": "tlmr",
     "name": "tlmr",
     "description": "Trivalent ligand monovalent receptor",
-    "path": "Contributed/BNGPlayground_Validation/tlmr/tlmr.bngl",
+    "path": "Tutorials/tlmr/tlmr.bngl",
     "file": "tlmr.bngl",
     "tags": [
       "validation",
@@ -13684,7 +13684,7 @@
     "id": "tlr3-dsrna-sensing",
     "name": "tlr3 dsrna sensing",
     "description": "TLR3-mediated dsRNA sensing and TRIF pathway activation.",
-    "path": "Contributed/BNGPlayground_Examples/biology/tlr3dsrnasensing/tlr3-dsrna-sensing.bngl",
+    "path": "Examples/biology/tlr3dsrnasensing/tlr3-dsrna-sensing.bngl",
     "file": "tlr3-dsrna-sensing.bngl",
     "tags": [
       "tlr3",
@@ -13704,7 +13704,7 @@
     "id": "tnf-induced-apoptosis",
     "name": "tnf induced apoptosis",
     "description": "BioNetGen model: tnf induced apoptosis",
-    "path": "Contributed/BNGPlayground_Examples/biology/tnfinducedapoptosis/tnf-induced-apoptosis.bngl",
+    "path": "Examples/biology/tnfinducedapoptosis/tnf-induced-apoptosis.bngl",
     "file": "tnf-induced-apoptosis.bngl",
     "tags": [
       "tnf",
@@ -13784,7 +13784,7 @@
     "id": "toy-jim",
     "name": "toy-jim",
     "description": "The model consists of a monovalent extracellular ligand,",
-    "path": "Contributed/BNGPlayground_Validation/toyjim/toy-jim.bngl",
+    "path": "Tutorials/toyjim/toy-jim.bngl",
     "file": "toy-jim.bngl",
     "tags": [
       "validation",
@@ -13885,7 +13885,7 @@
     "id": "Tricky",
     "name": "Tricky",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/Tricky/Tricky.bngl",
+    "path": "Published/PyBioNetGen/tests/Tricky/Tricky.bngl",
     "file": "Tricky.bngl",
     "tags": [
       "tricky",
@@ -13903,7 +13903,7 @@
     "id": "TrickyUS",
     "name": "TrickyUS",
     "description": "An example from a real application",
-    "path": "PyBioNetGen/tests/TrickyUS/TrickyUS.bngl",
+    "path": "Published/PyBioNetGen/tests/TrickyUS/TrickyUS.bngl",
     "file": "TrickyUS.bngl",
     "tags": [
       "trickyus",
@@ -13921,7 +13921,7 @@
     "id": "trivial",
     "name": "trivial",
     "description": "A trivial model file for testing MCMC distributions.",
-    "path": "PyBioNetGen/tests/trivial/trivial.bngl",
+    "path": "Published/PyBioNetGen/tests/trivial/trivial.bngl",
     "file": "trivial.bngl",
     "tags": [
       "trivial",
@@ -14013,7 +14013,7 @@
     "id": "two-component-system",
     "name": "two component system",
     "description": "BioNetGen model: two component system",
-    "path": "Contributed/BNGPlayground_Examples/biology/twocomponentsystem/two-component-system.bngl",
+    "path": "Examples/biology/twocomponentsystem/two-component-system.bngl",
     "file": "two-component-system.bngl",
     "tags": [
       "two",
@@ -14033,7 +14033,7 @@
     "id": "univ_synth",
     "name": "univ_synth",
     "description": "example of universal synthesis",
-    "path": "Contributed/BNGPlayground_Validation/univsynth/univ_synth.bngl",
+    "path": "Tutorials/univsynth/univ_synth.bngl",
     "file": "univ_synth.bngl",
     "tags": [
       "validation",
@@ -14145,7 +14145,7 @@
     "id": "vegf-angiogenesis",
     "name": "vegf angiogenesis",
     "description": "VEGF-mediated signaling in angiogenesis.",
-    "path": "Contributed/BNGPlayground_Examples/biology/vegfangiogenesis/vegf-angiogenesis.bngl",
+    "path": "Examples/biology/vegfangiogenesis/vegf-angiogenesis.bngl",
     "file": "vegf-angiogenesis.bngl",
     "tags": [
       "vegf",
@@ -14261,7 +14261,7 @@
     "id": "viral-sensing-innate-immunity",
     "name": "viral sensing innate immunity",
     "description": "BioNetGen model: viral sensing innate immunity",
-    "path": "Contributed/BNGPlayground_Examples/biology/viralsensinginnateimmunity/viral-sensing-innate-immunity.bngl",
+    "path": "Examples/biology/viralsensinginnateimmunity/viral-sensing-innate-immunity.bngl",
     "file": "viral-sensing-innate-immunity.bngl",
     "tags": [
       "viral",
@@ -14342,7 +14342,7 @@
     "id": "wacky_alchemy_stone",
     "name": "wacky alchemy stone",
     "description": "Model: wacky_alchemy_stone.bngl",
-    "path": "Contributed/BNGPlayground_Examples/wacky/wackyalchemystone/wacky_alchemy_stone.bngl",
+    "path": "Examples/wacky/wackyalchemystone/wacky_alchemy_stone.bngl",
     "file": "wacky_alchemy_stone.bngl",
     "tags": [
       "wacky",
@@ -14361,7 +14361,7 @@
     "id": "wacky_black_hole",
     "name": "wacky black hole",
     "description": "Model: wacky_black_hole.bngl",
-    "path": "Contributed/BNGPlayground_Examples/wacky/wackyblackhole/wacky_black_hole.bngl",
+    "path": "Examples/wacky/wackyblackhole/wacky_black_hole.bngl",
     "file": "wacky_black_hole.bngl",
     "tags": [
       "wacky",
@@ -14382,7 +14382,7 @@
     "id": "wacky_bouncing_ball",
     "name": "wacky bouncing ball",
     "description": "Model: wacky_bouncing_ball.bngl",
-    "path": "Contributed/BNGPlayground_Examples/wacky/wackybouncingball/wacky_bouncing_ball.bngl",
+    "path": "Examples/wacky/wackybouncingball/wacky_bouncing_ball.bngl",
     "file": "wacky_bouncing_ball.bngl",
     "tags": [
       "wacky",
@@ -14401,7 +14401,7 @@
     "id": "wacky_traffic_jam_asep",
     "name": "wacky traffic jam asep",
     "description": "Model: wacky_traffic_jam_asep.bngl",
-    "path": "Contributed/BNGPlayground_Examples/wacky/wackytrafficjamasep/wacky_traffic_jam_asep.bngl",
+    "path": "Examples/wacky/wackytrafficjamasep/wacky_traffic_jam_asep.bngl",
     "file": "wacky_traffic_jam_asep.bngl",
     "tags": [
       "wacky",
@@ -14423,7 +14423,7 @@
     "id": "wacky_zombie_infection",
     "name": "wacky zombie infection",
     "description": "Model: wacky_zombie_infection.bngl",
-    "path": "Contributed/BNGPlayground_Examples/wacky/wackyzombieinfection/wacky_zombie_infection.bngl",
+    "path": "Examples/wacky/wackyzombieinfection/wacky_zombie_infection.bngl",
     "file": "wacky_zombie_infection.bngl",
     "tags": [
       "wacky",
@@ -14624,7 +14624,7 @@
     "id": "wnt-beta-catenin-signaling",
     "name": "wnt beta catenin signaling",
     "description": "Wnt/Beta-Catenin signaling (Canonical pathway).",
-    "path": "Contributed/BNGPlayground_Examples/biology/wntbetacateninsignaling/wnt-beta-catenin-signaling.bngl",
+    "path": "Examples/biology/wntbetacateninsignaling/wnt-beta-catenin-signaling.bngl",
     "file": "wnt-beta-catenin-signaling.bngl",
     "tags": [
       "wnt",
@@ -14665,7 +14665,7 @@
     "id": "wound-healing-pdgf-signaling",
     "name": "wound healing pdgf signaling",
     "description": "BioNetGen model: wound healing pdgf signaling",
-    "path": "Contributed/BNGPlayground_Examples/biology/woundhealingpdgfsignaling/wound-healing-pdgf-signaling.bngl",
+    "path": "Examples/biology/woundhealingpdgfsignaling/wound-healing-pdgf-signaling.bngl",
     "file": "wound-healing-pdgf-signaling.bngl",
     "tags": [
       "wound",

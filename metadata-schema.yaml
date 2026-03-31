@@ -22,7 +22,7 @@ date:
   published: YYYY-MM-DD
 
 tags: string[]
-category: enum(signaling, regulation, metabolism, gene-expression, epidemiology, immunology, tutorial, validation, showcase, synthetic-biology, ecology, physics, computer-science, other)
+category: enum(signaling, regulation, metabolism, gene-expression, epidemiology, immunology, tutorial, validation, showcase, synthetic-biology, ecology, physics, computer-science, other, compartments, energy, feature-demos, nfsim, processes, wacky, cs, biology, genetics, ml, signal-processing, mechanistic-modeling, biophysics)
 
 compatibility:
   bng2_compatible: boolean

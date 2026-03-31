@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SEARCH_ROOTS = ['Published', 'Contributed', 'Tutorials', 'PyBioNetGen'];
+const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
 function parseArgs(argv) {
   let root = path.resolve(__dirname, '..');
