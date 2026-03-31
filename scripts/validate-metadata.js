@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SEARCH_ROOTS = ['Published', 'Contributed', 'Tutorials', 'PyBioNetGen'];
+const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
   'signaling',
   'regulation',
@@ -17,6 +17,19 @@ const CATEGORY_VALUES = new Set([
   'physics',
   'computer-science',
   'other',
+  'compartments',
+  'energy',
+  'feature-demos',
+  'nfsim',
+  'processes',
+  'wacky',
+  'cs',
+  'biology',
+  'genetics',
+  'ml',
+  'signal-processing',
+  'mechanistic-modeling',
+  'biophysics',
 ]);
 const ORIGIN_VALUES = new Set([
   'published',
