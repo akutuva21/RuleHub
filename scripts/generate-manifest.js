@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { listModelFiles } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -43,8 +44,7 @@ function parseScalar(rawValue) {
   return value;
 }
 
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
+function setNested(target, parts, value) {
   const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
   if (parts.some((part) => blockedKeys.has(part))) return;
 
@@ -100,7 +100,7 @@ function parseMetadataYaml(content) {
       continue;
     }
 
-    setNested(result, dottedPath, parseScalar(rawValue));
+    setNested(result, pathParts, parseScalar(rawValue));
   }
 
   return result;
@@ -121,13 +121,6 @@ function listMetadataFiles(dir, results = []) {
   }
 
   return results;
-}
-
-function listModelFiles(dir) {
-  return fs.readdirSync(dir, { withFileTypes: true })
-    .filter(entry => entry.isFile() && entry.name.endsWith('.bngl'))
-    .map(entry => entry.name)
-    .sort();
 }
 
 function buildEntry(root, metadata, metadataFile, modelFile, isCollection) {
@@ -171,4 +164,10 @@ function main() {
   console.log(`Generated ${manifestEntries.length} manifest entries at ${output}`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  buildEntry,
+};

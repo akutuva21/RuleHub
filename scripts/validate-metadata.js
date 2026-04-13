@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { listModelFiles } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
@@ -139,13 +140,6 @@ function listMetadataFiles(dir, results = []) {
   return results;
 }
 
-function listModelFiles(dir) {
-  return fs.readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith('.bngl'))
-    .map((entry) => entry.name)
-    .sort();
-}
-
 function normalizeModelKey(value) {
   return String(value || '')
     .replace(/\.bngl$/i, '')
@@ -273,4 +267,11 @@ function main() {
   console.log(`Validated ${metadataFiles.length} metadata files.`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  parseScalar,
+  validateMetadataFile,
+};

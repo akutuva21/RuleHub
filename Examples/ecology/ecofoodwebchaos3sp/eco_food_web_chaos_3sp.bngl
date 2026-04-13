@@ -65,7 +65,7 @@ begin reaction rules
     # 4. Death
     C() -> 0 d1
     P() -> 0 d2
-    # FIX: Add resource dynamics (total R was conserved)
+
     0 -> R() 1.0  # Resource regeneration
     R() -> 0 0.01  # Resource natural decay
 end reaction rules
