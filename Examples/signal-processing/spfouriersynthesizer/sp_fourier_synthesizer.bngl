@@ -87,7 +87,7 @@ begin functions
     ds1() = 1*omega * c1()
     dc1() = -1*omega * s1()
     
-    ds3() = 3*omega * (Cos1 - amp_offset)  # Using Cos1 as approx
+    ds3() = 3*ds1() - 12*s1()*s1()*ds1()
     ds5() = 5*omega * (Cos1 - amp_offset)
     ds7() = 7*omega * (Cos1 - amp_offset)
     ds9() = 9*omega * (Cos1 - amp_offset)
@@ -111,8 +111,7 @@ begin reaction rules
     C1() -> 0   if(dc1() < 0,-dc1()/max(Cos1,0.001),0)
     
     # 3rd harmonic: d(S3)/dt = 3*omega*cos(3*omega*t)
-    # Hack: use sin(3x) = 3*sin(x) - 4*sin^3(x) identity
-    # Actually,just couple each harmonic independently
+    # Uses sin(3x) = 3*sin(x) - 4*sin^3(x) identity
     0 -> S3()   if(ds3() > 0,ds3(),0)
     S3() -> 0   if(ds3() < 0,-ds3()/max(Sin3,0.001),0)
     
