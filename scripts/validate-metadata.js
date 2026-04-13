@@ -67,6 +67,9 @@ function parseScalar(rawValue) {
 
 function setNested(target, dottedPath, value) {
   const parts = dottedPath.split('.');
+  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
+  if (parts.some((part) => blockedKeys.has(part))) return;
+
   let cursor = target;
   for (let index = 0; index < parts.length - 1; index += 1) {
     const part = parts[index];

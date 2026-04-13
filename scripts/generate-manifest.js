@@ -45,18 +45,18 @@ function parseScalar(rawValue) {
 
 function setNested(target, dottedPath, value) {
   const parts = dottedPath.split('.');
+  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
+  if (parts.some((part) => blockedKeys.has(part))) return;
+
   let cursor = target;
   for (let index = 0; index < parts.length - 1; index += 1) {
     const part = parts[index];
-    if (part === '__proto__' || part === 'constructor' || part === 'prototype') continue;
     if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
       cursor[part] = {};
     }
     cursor = cursor[part];
   }
-  const lastPart = parts[parts.length - 1];
-  if (lastPart === '__proto__' || lastPart === 'constructor' || lastPart === 'prototype') return;
-  cursor[lastPart] = value;
+  cursor[parts[parts.length - 1]] = value;
 }
 
 function parseMetadataYaml(content) {
