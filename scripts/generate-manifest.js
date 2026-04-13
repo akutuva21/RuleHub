@@ -48,12 +48,15 @@ function setNested(target, dottedPath, value) {
   let cursor = target;
   for (let index = 0; index < parts.length - 1; index += 1) {
     const part = parts[index];
+    if (part === '__proto__' || part === 'constructor' || part === 'prototype') continue;
     if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
       cursor[part] = {};
     }
     cursor = cursor[part];
   }
-  cursor[parts[parts.length - 1]] = value;
+  const lastPart = parts[parts.length - 1];
+  if (lastPart === '__proto__' || lastPart === 'constructor' || lastPart === 'prototype') return;
+  cursor[lastPart] = value;
 }
 
 function parseMetadataYaml(content) {
