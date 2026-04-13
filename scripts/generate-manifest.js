@@ -43,8 +43,7 @@ function parseScalar(rawValue) {
   return value;
 }
 
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
+function setNested(target, parts, value) {
   let cursor = target;
   for (let index = 0; index < parts.length - 1; index += 1) {
     const part = parts[index];
@@ -97,7 +96,7 @@ function parseMetadataYaml(content) {
       continue;
     }
 
-    setNested(result, dottedPath, parseScalar(rawValue));
+    setNested(result, pathParts, parseScalar(rawValue));
   }
 
   return result;
