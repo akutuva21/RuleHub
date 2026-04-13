@@ -271,4 +271,5 @@ if (require.main === module) {
 module.exports = {
   parseScalar,
   validateMetadataFile,
+  parseMetadataYaml,
 };
