@@ -270,4 +270,11 @@ function main() {
   console.log(`Validated ${metadataFiles.length} metadata files.`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  parseScalar,
+  validateMetadataFile,
+};
