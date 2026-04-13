@@ -168,4 +168,10 @@ function main() {
   console.log(`Generated ${manifestEntries.length} manifest entries at ${output}`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  buildEntry,
+};
