@@ -274,4 +274,7 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { parseScalar };
+module.exports = {
+  parseScalar,
+  validateMetadataFile,
+};
