@@ -3,6 +3,12 @@ from numpy import sin,sqrt
 import numpy as np
 import copy
 
+def schw(x,y):
+    return  837.9658 - x * sin(sqrt(np.abs(x))) - y * sin(sqrt(np.abs(y)))
+
+_xs, _ys = np.meshgrid(np.linspace(0,500,5000), np.linspace(0,500,500))
+_zs = schw(_xs, _ys)
+
 def movie():
 
     data = dict()
@@ -46,9 +52,7 @@ def movie():
 def plot_once(i,dots=None,triangles=None,dtriangles=None):
     plt.figure()
     
-    xs, ys = np.meshgrid(np.linspace(0,500,5000), np.linspace(0,500,500))
-    zs = schw(xs, ys)
-    plt.contourf(xs, ys, zs,levels=np.linspace(0,2000,100),cmap='Greys_r')
+    plt.contourf(_xs, _ys, _zs,levels=np.linspace(0,2000,100),cmap='Greys_r')
     if dots:
         plt.scatter(dots[0],dots[1],c=dots[2],marker='o')
     if triangles:
@@ -61,5 +65,3 @@ def plot_once(i,dots=None,triangles=None,dtriangles=None):
     plt.savefig('ps%i' % i)
     
 
-def schw(x,y):
-    return  837.9658 - x * sin(sqrt(np.abs(x))) - y * sin(sqrt(np.abs(y)))

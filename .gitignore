@@ -3,3 +3,5 @@
 *.cdat
 *.xml
 *.m
+__pycache__/
+venv/
