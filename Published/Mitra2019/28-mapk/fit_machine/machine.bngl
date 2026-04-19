@@ -139,7 +139,7 @@ begin functions
 	# Func4()=octomer / 2
 	# Func5()=hexamer / 2
 	Func6()=0.3 * ( Gpa1_free ^4 / ( Gpa1_free ^4 + 12000^4))
-	#Func7() = export rate # Ryan confirmed bug, actual rate is Func6. 
+	Func7() = Func6()
 end functions
 
 begin reaction rules
@@ -390,7 +390,7 @@ begin reaction rules
 	Ste12(dna!1).Ste12_gene(promoter!1) -> Ste12(dna) + Ste12_gene(promoter) 0.03
 	Ste12(dig1,dig2,mapk,dna!1).Ste12_gene(promoter!1) -> Ste12(dig1,dig2,mapk,dna!1).Ste12_gene(promoter!1) + Ste12(dig1,dig2,mapk,dna) 0.45
 	Ste5(ste11,ste7,ste4,mapk,ste5,loc~c) -> Ste5(ste11,ste7,ste4,mapk,ste5,loc~n) 0.5
-	Ste5(loc~n) -> Ste5(loc~c) Func6()
+	Ste5(loc~n) -> Ste5(loc~c) Func7()
 end reaction rules
 
 simulate({method=>"nf",t_start=>-1000,t_end=>0,n_steps=>5,suffix=>"equil"})
