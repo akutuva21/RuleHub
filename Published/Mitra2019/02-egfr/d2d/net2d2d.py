@@ -63,9 +63,10 @@ def net2d2d(netfilename, deffilename):
            
         # Write the observables
         out.write('\n\nOBSERVABLES\n')
+        observable_regex = re.compile(r'(\d+)$')
         for i in groups:
             # Turn the expressions that could be something like 2*49 into 2*sp49
-            formula = '+'.join([re.sub('(\d+)$',r'sp\1',m) for m in groups[i][1]])
+            formula = '+'.join([observable_regex.sub(r'sp\1', m) for m in groups[i][1]])
             out.write('%s_obs\tC\t"au"\t"conc."\t0\t0\t"%s"\n' % (groups[i][0], formula))
         
         # Not yet sure how this works, but crashes if left blank
