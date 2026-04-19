@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { parseScalar } = require('../validate-metadata.js');
+const { parseScalar } = require('../utils.js');
 
 test('parseScalar', async (t) => {
   await t.test('parses boolean strings', () => {
