@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml } = require('./validate-metadata.js');
+const { parseMetadataYaml } = require('./utils.js');
 
 test('parseMetadataYaml', async (t) => {
   await t.test('parses basic key-value pairs', () => {
