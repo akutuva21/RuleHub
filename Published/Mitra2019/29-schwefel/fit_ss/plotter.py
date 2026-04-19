@@ -13,16 +13,16 @@ def movie():
             data[parts[0]] = [float(x) for x in parts[1:]]
     
     tab10 = plt.cm.get_cmap('tab10')
-    xs = []
-    ys = []
-    cs = []
-    scores = []
+    xs = [None] * 5
+    ys = [None] * 5
+    cs = [None] * 5
+    scores = [None] * 5
     for i in range(5):
-        thisdata = data['init%i'%i]
-        scores.append(thisdata[0])
-        xs.append(thisdata[1])
-        ys.append(thisdata[2])
-        cs.append(tab10(i))
+        thisdata = data[f'init{i}']
+        scores[i] = thisdata[0]
+        xs[i] = thisdata[1]
+        ys[i] = thisdata[2]
+        cs[i] = tab10(i)
     plot_once(0)
     plot_once(1,dots=(xs,ys,cs))
     i=2
@@ -30,23 +30,25 @@ def movie():
     for it in range(1,20):
         oldxs = copy.copy(xs)
         oldys = copy.copy(ys)
-        propx = []
-        propy = []
-        propcp = []
-        propch = [] 
+        propx = [None] * 20
+        propy = [None] * 20
+        propcp = [None] * 20
+        propch = [None] * 20
+        idx = 0
         for p in range(5):
             for h in range(5):
                 if p==h:
                     continue
-                thisdata = data['iter%ip%ih%i' % (it,p,h)]
-                propx.append(thisdata[1])
-                propy.append(thisdata[2])
-                propcp.append(tab10(p))
-                propch.append(tab10(h))
+                thisdata = data[f'iter{it}p{p}h{h}']
+                propx[idx] = thisdata[1]
+                propy[idx] = thisdata[2]
+                propcp[idx] = tab10(p)
+                propch[idx] = tab10(h)
                 if thisdata[0] < scores[p]:
                     xs[p] = thisdata[1]
                     ys[p] = thisdata[2]
                     scores[p] = thisdata[0]
+                idx += 1
         plot_once(i,dots=(oldxs,oldys,cs), triangles=(propx,propy,propcp),dtriangles=(propx,propy,propch))
         plot_once(i+1,dots=(xs,ys,cs))
         i+=2
