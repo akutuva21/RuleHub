@@ -45,11 +45,20 @@ def movie():
         pic+=2
     
 
+_cached_grid = None
+
+def get_grid():
+    global _cached_grid
+    if _cached_grid is None:
+        xs, ys = np.meshgrid(np.linspace(0,500,5000), np.linspace(0,500,500))
+        zs = schw(xs, ys)
+        _cached_grid = (xs, ys, zs)
+    return _cached_grid
+
 def plot_once(i,dots=None,triangles=None,dtriangles=None):
     plt.figure()
     
-    xs, ys = np.meshgrid(np.linspace(0,500,5000), np.linspace(0,500,500))
-    zs = schw(xs, ys)
+    xs, ys, zs = get_grid()
     plt.contourf(xs, ys, zs,levels=np.linspace(0,2000,100),cmap='Greys_r')
     if dots:
         plt.scatter(dots[0],dots[1],c=dots[2],marker='o')
