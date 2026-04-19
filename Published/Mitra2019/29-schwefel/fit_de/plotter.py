@@ -1,7 +1,11 @@
 import matplotlib.pyplot as plt
-from numpy import sin,sqrt
 import numpy as np
 import copy
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from schwefel_math import schw
 
 def movie():
 
@@ -61,7 +65,3 @@ def plot_once(i,dots=None,triangles=None,dtriangles=None):
     plt.axis([0,500,0,500])
     # plt.show()
     plt.savefig('de%i' % i)
-    
-
-def schw(x,y):
-    return  837.9658 - x * sin(sqrt(np.abs(x))) - y * sin(sqrt(np.abs(y)))
