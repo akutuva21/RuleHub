@@ -16,11 +16,11 @@ def net2d2d(netfilename, deffilename):
             line = line.strip()
             
             # Check for "begin" and "end" statements
-            m = re.match('begin\s+([a-z]+)',line)
+            m = re.match(r'begin\s+([a-z]+)',line)
             if m and insection is None:
                 insection = m.groups()[0]
                 continue
-            if re.match('end\s+%s' % insection, line):
+            if re.match(r'end\s+%s' % insection, line):
                 insection = None
                 continue
             
@@ -63,9 +63,10 @@ def net2d2d(netfilename, deffilename):
            
         # Write the observables
         out.write('\n\nOBSERVABLES\n')
+        pattern = re.compile(r'(\d+)$')
         for i in groups:
             # Turn the expressions that could be something like 2*49 into 2*sp49
-            formula = '+'.join([re.sub('(\d+)$',r'sp\1',m) for m in groups[i][1]])
+            formula = '+'.join([pattern.sub(r'sp\1', m) for m in groups[i][1]])
             out.write('%s_obs\tC\t"au"\t"conc."\t0\t0\t"%s"\n' % (groups[i][0], formula))
         
         # Not yet sure how this works, but crashes if left blank
