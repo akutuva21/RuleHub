@@ -149,9 +149,9 @@ function main() {
   const manifestEntries = [];
 
   for (const metadataFile of metadataFiles) {
-    const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
     const modelFiles = listModelFiles(path.dirname(metadataFile));
     if (modelFiles.length === 0) continue;
+    const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
 
     const isCollection = modelFiles.length > 1 || Boolean(metadata.collection);
     for (const modelFile of modelFiles) {
