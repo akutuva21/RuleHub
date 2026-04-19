@@ -13,40 +13,34 @@ def movie():
             data[parts[0]] = [float(x) for x in parts[1:]]
     
     tab10 = plt.cm.get_cmap('tab10')
-    xs = []
-    ys = []
-    cs = []
-    scores = []
-    for i in range(5):
-        thisdata = data['init%i'%i]
-        scores.append(thisdata[0])
-        xs.append(thisdata[1])
-        ys.append(thisdata[2])
-        cs.append(tab10(i))
+
+    thisdata_init = [data[f'init{i}'] for i in range(5)]
+    scores = [d[0] for d in thisdata_init]
+    xs = [d[1] for d in thisdata_init]
+    ys = [d[2] for d in thisdata_init]
+    cs = [tab10(i) for i in range(5)]
+
     plot_once(0)
     plot_once(1,dots=(xs,ys,cs))
     i=2
     
+    pairs = [(p, h) for p in range(5) for h in range(5) if p != h]
     for it in range(1,20):
-        oldxs = copy.copy(xs)
-        oldys = copy.copy(ys)
-        propx = []
-        propy = []
-        propcp = []
-        propch = [] 
-        for p in range(5):
-            for h in range(5):
-                if p==h:
-                    continue
-                thisdata = data['iter%ip%ih%i' % (it,p,h)]
-                propx.append(thisdata[1])
-                propy.append(thisdata[2])
-                propcp.append(tab10(p))
-                propch.append(tab10(h))
-                if thisdata[0] < scores[p]:
-                    xs[p] = thisdata[1]
-                    ys[p] = thisdata[2]
-                    scores[p] = thisdata[0]
+        oldxs = list(xs)
+        oldys = list(ys)
+
+        thisdata_it = [data[f'iter{it}p{p}h{h}'] for p, h in pairs]
+        propx = [d[1] for d in thisdata_it]
+        propy = [d[2] for d in thisdata_it]
+        propcp = [tab10(p) for p, h in pairs]
+        propch = [tab10(h) for p, h in pairs]
+
+        for (p, h), d in zip(pairs, thisdata_it):
+            if d[0] < scores[p]:
+                xs[p] = d[1]
+                ys[p] = d[2]
+                scores[p] = d[0]
+
         plot_once(i,dots=(oldxs,oldys,cs), triangles=(propx,propy,propcp),dtriangles=(propx,propy,propch))
         plot_once(i+1,dots=(xs,ys,cs))
         i+=2
