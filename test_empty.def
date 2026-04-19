@@ -1,0 +1,24 @@
+STATES
+sp1	C	"nM"	"conc."
+
+
+INPUTS
+
+
+REACTIONS
+sp0 -> sp1 CUSTOM "sp0*k1"
+sp1 -> sp0 CUSTOM "sp1*k2"
+sp0 -> sp0 CUSTOM "sp0*k3"
+
+
+DERIVED
+
+
+OBSERVABLES
+
+
+ERRORS
+
+
+CONDITIONS
+init_sp1	"0"

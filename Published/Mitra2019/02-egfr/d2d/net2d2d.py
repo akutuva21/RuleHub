@@ -53,10 +53,19 @@ def net2d2d(netfilename, deffilename):
         for i in reactions:
             react,prod,rate = reactions[i]
             
+            react = [j for j in react if j != 0]
+            prod = [j for j in prod if j != 0]
+
             # the d2d rate has the reactant(s) explicitly listed
-            # TODO support empty reactant and products
-            d2drate = '%s*%s' % ('*'.join(['sp%i' % j for j in react]), rate)
-            out.write('%s -> %s CUSTOM "%s"\n' % (' + '.join(['sp%i' % j for j in react]), ' + '.join(['sp%i' % j for j in prod]), d2drate))
+            if react:
+                d2drate = '%s*%s' % ('*'.join(['sp%i' % j for j in react]), rate)
+            else:
+                d2drate = rate
+
+            react_str = ' + '.join(['sp%i' % j for j in react]) if react else ''
+            prod_str = ' + '.join(['sp%i' % j for j in prod]) if prod else ''
+
+            out.write('%s -> %s CUSTOM "%s"\n' % (react_str, prod_str, d2drate))
        
         #Unused section
         out.write('\n\nDERIVED\n')
