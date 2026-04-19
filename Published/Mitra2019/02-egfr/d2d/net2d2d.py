@@ -16,11 +16,11 @@ def net2d2d(netfilename, deffilename):
             line = line.strip()
             
             # Check for "begin" and "end" statements
-            m = re.match('begin\s+([a-z]+)',line)
+            m = re.match(r'begin\s+([a-z]+)',line)
             if m and insection is None:
                 insection = m.groups()[0]
                 continue
-            if re.match('end\s+%s' % insection, line):
+            if re.match(r'end\s+%s' % insection, line):
                 insection = None
                 continue
             
@@ -31,7 +31,9 @@ def net2d2d(netfilename, deffilename):
             elif insection == 'species':
                 species[int(parts[0])] = (parts[1], parts[2])
             elif insection == 'reactions':
-                reactions[int(parts[0])] = (tuple([int(x) for x in parts[1].split(',')]), tuple([int(x) for x in parts[2].split(',')]), parts[3])
+                react_parts = [int(x) for x in parts[1].split(',') if x != '0']
+                prod_parts = [int(x) for x in parts[2].split(',') if x != '0']
+                reactions[int(parts[0])] = (tuple(react_parts), tuple(prod_parts), parts[3])
             elif insection == 'groups':
                 groups[int(parts[0])] = (parts[1], tuple(parts[2].split(',')))
             
@@ -54,9 +56,15 @@ def net2d2d(netfilename, deffilename):
             react,prod,rate = reactions[i]
             
             # the d2d rate has the reactant(s) explicitly listed
-            # TODO support empty reactant and products
-            d2drate = '%s*%s' % ('*'.join(['sp%i' % j for j in react]), rate)
-            out.write('%s -> %s CUSTOM "%s"\n' % (' + '.join(['sp%i' % j for j in react]), ' + '.join(['sp%i' % j for j in prod]), d2drate))
+            if react:
+                d2drate = '%s*%s' % ('*'.join(['sp%i' % j for j in react]), rate)
+            else:
+                d2drate = rate
+
+            react_str = ' + '.join(['sp%i' % j for j in react]) if react else ''
+            prod_str = ' + '.join(['sp%i' % j for j in prod]) if prod else ''
+
+            out.write('%s -> %s CUSTOM "%s"\n' % (react_str, prod_str, d2drate))
        
         #Unused section
         out.write('\n\nDERIVED\n')
@@ -65,7 +73,7 @@ def net2d2d(netfilename, deffilename):
         out.write('\n\nOBSERVABLES\n')
         for i in groups:
             # Turn the expressions that could be something like 2*49 into 2*sp49
-            formula = '+'.join([re.sub('(\d+)$',r'sp\1',m) for m in groups[i][1]])
+            formula = '+'.join([re.sub(r'(\d+)$',r'sp\1',m) for m in groups[i][1]])
             out.write('%s_obs\tC\t"au"\t"conc."\t0\t0\t"%s"\n' % (groups[i][0], formula))
         
         # Not yet sure how this works, but crashes if left blank
