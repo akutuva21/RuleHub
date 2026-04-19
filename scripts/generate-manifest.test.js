@@ -1,7 +1,69 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
-const { buildEntry } = require('./generate-manifest.js');
+const os = require('os');
+const fs = require('fs');
+const { buildEntry, listMetadataFiles } = require('./generate-manifest.js');
+
+test('listMetadataFiles', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'metadata-test-'));
+  });
+
+  t.afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  await t.test('returns empty array for non-existent directory', () => {
+    const results = listMetadataFiles(path.join(tmpDir, 'non-existent'));
+    assert.deepStrictEqual(results, []);
+  });
+
+  await t.test('returns empty array when no metadata files exist', () => {
+    fs.writeFileSync(path.join(tmpDir, 'somefile.txt'), '');
+    const results = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(results, []);
+  });
+
+  await t.test('finds metadata.yaml in root directory', () => {
+    const yamlPath = path.join(tmpDir, 'metadata.yaml');
+    fs.writeFileSync(yamlPath, '');
+    const results = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(results, [yamlPath]);
+  });
+
+  await t.test('finds metadata.yaml in nested directories', () => {
+    const dir1 = path.join(tmpDir, 'dir1');
+    const dir2 = path.join(tmpDir, 'dir2');
+    fs.mkdirSync(dir1);
+    fs.mkdirSync(dir2);
+
+    const yaml1 = path.join(dir1, 'metadata.yaml');
+    const yaml2 = path.join(dir2, 'metadata.yaml');
+
+    fs.writeFileSync(yaml1, '');
+    fs.writeFileSync(yaml2, '');
+
+    const results = listMetadataFiles(tmpDir);
+    assert.strictEqual(results.length, 2);
+    assert.ok(results.includes(yaml1));
+    assert.ok(results.includes(yaml2));
+  });
+
+  await t.test('ignores other files named metadata.yaml if they are directories', () => {
+    const fakeYamlDir = path.join(tmpDir, 'metadata.yaml');
+    fs.mkdirSync(fakeYamlDir);
+
+    const realYaml = path.join(tmpDir, 'dir1', 'metadata.yaml');
+    fs.mkdirSync(path.join(tmpDir, 'dir1'));
+    fs.writeFileSync(realYaml, '');
+
+    const results = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(results, [realYaml]);
+  });
+});
 
 test('buildEntry', async (t) => {
   await t.test('handles a single model with full metadata', () => {
