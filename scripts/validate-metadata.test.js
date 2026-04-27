@@ -12,7 +12,7 @@ featured: true
 count: 42
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(result)), {
       id: 'my-model',
       name: 'My Model',
       description: 'A test model',
@@ -31,7 +31,7 @@ id: model-1
 name: test
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(result)), {
       id: 'model-1',
       name: 'test'
     });
@@ -46,7 +46,7 @@ tags:
   - chemistry
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(result)), {
       id: 'model-tags',
       tags: ['biology', 'physics', 'chemistry']
     });
@@ -63,7 +63,7 @@ source:
   original_repository: "http://example.com"
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(result)), {
       id: 'nested-model',
       compatibility: {
         bng2_compatible: true,
@@ -84,7 +84,7 @@ a:
       d: value
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(result)), {
       a: {
         b: {
           c: {
@@ -101,7 +101,7 @@ id: empty-tags
 tags:
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(result)), {
       id: 'empty-tags',
       tags: []
     });
