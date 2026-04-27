@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
-const { buildEntry } = require('./generate-manifest.js');
+const { buildEntry, parseArgs } = require('./generate-manifest.js');
 
 test('buildEntry', async (t) => {
   await t.test('handles a single model with full metadata', () => {
@@ -92,5 +92,47 @@ test('buildEntry', async (t) => {
 
     assert.strictEqual(entry.bng2_compatible, false);
     assert.strictEqual(entry.visible, false);
+  });
+});
+
+test('parseArgs', async (t) => {
+  const defaultRoot = path.resolve(__dirname, '..');
+
+  await t.test('uses default root and output when no args provided', () => {
+    const result = parseArgs([]);
+    assert.strictEqual(result.root, defaultRoot);
+    assert.strictEqual(result.output, path.join(defaultRoot, 'manifest.json'));
+  });
+
+  await t.test('parses --root argument', () => {
+    const customRoot = path.resolve('/custom/root');
+    const result = parseArgs(['--root', '/custom/root']);
+    assert.strictEqual(result.root, customRoot);
+    assert.strictEqual(result.output, path.join(customRoot, 'manifest.json'));
+  });
+
+  await t.test('parses --output argument', () => {
+    const customOutput = path.resolve('/custom/output.json');
+    const result = parseArgs(['--output', '/custom/output.json']);
+    assert.strictEqual(result.root, defaultRoot);
+    assert.strictEqual(result.output, customOutput);
+  });
+
+  await t.test('parses both --root and --output arguments', () => {
+    const customRoot = path.resolve('/custom/root');
+    const customOutput = path.resolve('/custom/output.json');
+    const result = parseArgs(['--root', '/custom/root', '--output', '/custom/output.json']);
+    assert.strictEqual(result.root, customRoot);
+    assert.strictEqual(result.output, customOutput);
+  });
+
+  await t.test('ignores flags missing a subsequent value', () => {
+    const result1 = parseArgs(['--root']);
+    assert.strictEqual(result1.root, defaultRoot);
+    assert.strictEqual(result1.output, path.join(defaultRoot, 'manifest.json'));
+
+    const result2 = parseArgs(['--output']);
+    assert.strictEqual(result2.root, defaultRoot);
+    assert.strictEqual(result2.output, path.join(defaultRoot, 'manifest.json'));
   });
 });
