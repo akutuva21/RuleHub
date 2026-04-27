@@ -273,6 +273,7 @@ if (require.main === module) {
 
 module.exports = {
   parseScalar,
+  setNested,
   validateMetadataFile,
   parseMetadataYaml,
 };

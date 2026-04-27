@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml } = require('./validate-metadata.js');
+const { parseMetadataYaml, setNested } = require('./validate-metadata.js');
 
 test('parseMetadataYaml', async (t) => {
   await t.test('parses basic key-value pairs', () => {
@@ -105,5 +105,53 @@ tags:
       id: 'empty-tags',
       tags: []
     });
+  });
+});
+
+
+test('setNested', async (t) => {
+  await t.test('sets single-level property', () => {
+    const obj = {};
+    setNested(obj, 'a', 1);
+    assert.deepStrictEqual(obj, { a: 1 });
+  });
+
+  await t.test('sets multi-level property', () => {
+    const obj = {};
+    setNested(obj, 'a.b.c', 123);
+    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+  });
+
+  await t.test('overrides primitive value with object', () => {
+    const obj = { a: 'hello' };
+    setNested(obj, 'a.b.c', 123);
+    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+  });
+
+  await t.test('overrides array value with object', () => {
+    const obj = { a: [1, 2, 3] };
+    setNested(obj, 'a.b.c', 123);
+    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+  });
+
+  await t.test('prevents __proto__ pollution', () => {
+    const obj = {};
+    setNested(obj, '__proto__.polluted', 'yes');
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+
+  await t.test('prevents constructor pollution', () => {
+    const obj = {};
+    setNested(obj, 'constructor.prototype.polluted', 'yes');
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+
+  await t.test('prevents prototype pollution', () => {
+    const obj = {};
+    setNested(obj, 'prototype.polluted', 'yes');
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
   });
 });
