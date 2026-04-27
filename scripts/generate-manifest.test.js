@@ -1,7 +1,9 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
-const { buildEntry } = require('./generate-manifest.js');
+const fs = require('fs');
+const os = require('os');
+const { buildEntry, listMetadataFiles } = require('./generate-manifest.js');
 
 test('buildEntry', async (t) => {
   await t.test('handles a single model with full metadata', () => {
@@ -92,5 +94,70 @@ test('buildEntry', async (t) => {
 
     assert.strictEqual(entry.bng2_compatible, false);
     assert.strictEqual(entry.visible, false);
+  });
+});
+
+test('listMetadataFiles', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'bionetgen-test-'));
+  });
+
+  t.afterEach(() => {
+    if (tmpDir) {
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    }
+  });
+
+  await t.test('returns an empty array for a non-existent directory', () => {
+    const nonExistentDir = path.join(tmpDir, 'does-not-exist');
+    const result = listMetadataFiles(nonExistentDir);
+    assert.deepStrictEqual(result, []);
+  });
+
+  await t.test('returns an empty array for an empty directory', () => {
+    const result = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(result, []);
+  });
+
+  await t.test('returns an empty array for a flat directory without metadata.yaml', () => {
+    fs.writeFileSync(path.join(tmpDir, 'not-metadata.txt'), 'some text');
+    fs.writeFileSync(path.join(tmpDir, 'another-file.yaml'), 'key: value');
+    const result = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(result, []);
+  });
+
+  await t.test('finds metadata.yaml in a flat directory', () => {
+    fs.writeFileSync(path.join(tmpDir, 'metadata.yaml'), 'key: value');
+    fs.writeFileSync(path.join(tmpDir, 'other.txt'), 'text');
+    const result = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(result, [path.join(tmpDir, 'metadata.yaml')]);
+  });
+
+  await t.test('finds metadata.yaml in nested directories', () => {
+    const subDir1 = path.join(tmpDir, 'subDir1');
+    const subDir2 = path.join(tmpDir, 'subDir2');
+    const subSubDir = path.join(subDir2, 'subSubDir');
+
+    fs.mkdirSync(subDir1);
+    fs.mkdirSync(subDir2);
+    fs.mkdirSync(subSubDir);
+
+    fs.writeFileSync(path.join(tmpDir, 'metadata.yaml'), 'root');
+    fs.writeFileSync(path.join(subDir1, 'metadata.yaml'), 'sub1');
+    fs.writeFileSync(path.join(subDir2, 'not-metadata.txt'), 'text');
+    fs.writeFileSync(path.join(subSubDir, 'metadata.yaml'), 'subsub');
+
+    const result = listMetadataFiles(tmpDir);
+
+    const expected = [
+      path.join(tmpDir, 'metadata.yaml'),
+      path.join(subDir1, 'metadata.yaml'),
+      path.join(subSubDir, 'metadata.yaml')
+    ];
+
+    // The order of readdirSync might vary, so we sort before deepStrictEqual
+    assert.deepStrictEqual(result.sort(), expected.sort());
   });
 });
