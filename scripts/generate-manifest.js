@@ -143,21 +143,21 @@ function buildEntry(root, metadata, metadataFile, modelFile, isCollection) {
   };
 }
 
-function main() {
+async function main() {
   const { root, output } = parseArgs(process.argv.slice(2));
   const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
-  const manifestEntries = [];
 
-  for (const metadataFile of metadataFiles) {
-    const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
+  const tasks = metadataFiles.map(async (metadataFile) => {
+    const content = await fs.promises.readFile(metadataFile, 'utf8');
+    const metadata = parseMetadataYaml(content);
     const modelFiles = listModelFiles(path.dirname(metadataFile));
-    if (modelFiles.length === 0) continue;
+    if (modelFiles.length === 0) return [];
 
     const isCollection = modelFiles.length > 1 || Boolean(metadata.collection);
-    for (const modelFile of modelFiles) {
-      manifestEntries.push(buildEntry(root, metadata, metadataFile, modelFile, isCollection));
-    }
-  }
+    return modelFiles.map(modelFile => buildEntry(root, metadata, metadataFile, modelFile, isCollection));
+  });
+
+  const manifestEntries = (await Promise.all(tasks)).flat();
 
   manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
   fs.writeFileSync(output, JSON.stringify(manifestEntries, null, 2));
@@ -165,7 +165,7 @@ function main() {
 }
 
 if (require.main === module) {
-  main();
+  main().catch(console.error);
 }
 
 module.exports = {
