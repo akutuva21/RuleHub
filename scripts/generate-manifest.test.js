@@ -1,7 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
-const { buildEntry } = require('./generate-manifest.js');
+const { buildEntry, setNested } = require('./generate-manifest.js');
 
 test('buildEntry', async (t) => {
   await t.test('handles a single model with full metadata', () => {
@@ -92,5 +92,51 @@ test('buildEntry', async (t) => {
 
     assert.strictEqual(entry.bng2_compatible, false);
     assert.strictEqual(entry.visible, false);
+  });
+});
+
+test('setNested', async (t) => {
+  await t.test('sets basic nested property', () => {
+    const target = {};
+    setNested(target, ['a', 'b', 'c'], 'value');
+    assert.deepStrictEqual(target, { a: { b: { c: 'value' } } });
+  });
+
+  await t.test('overwrites non-object properties', () => {
+    const target = { a: 'string' };
+    setNested(target, ['a', 'b'], 'value');
+    assert.deepStrictEqual(target, { a: { b: 'value' } });
+  });
+
+  await t.test('overwrites array properties', () => {
+    const target = { a: [] };
+    setNested(target, ['a', 'b'], 'value');
+    assert.deepStrictEqual(target, { a: { b: 'value' } });
+  });
+
+  await t.test('prevents prototype pollution via __proto__', () => {
+    const target = {};
+    setNested(target, ['__proto__', 'polluted'], 'yes');
+    assert.strictEqual(target.polluted, undefined);
+    assert.strictEqual({}.polluted, undefined);
+  });
+
+  await t.test('prevents prototype pollution via constructor', () => {
+    const target = {};
+    setNested(target, ['constructor', 'prototype', 'polluted'], 'yes');
+    assert.strictEqual(target.polluted, undefined);
+    assert.strictEqual({}.polluted, undefined);
+  });
+
+  await t.test('prevents prototype pollution via prototype', () => {
+    const target = {};
+    setNested(target, ['prototype', 'polluted'], 'yes');
+    assert.strictEqual(target.polluted, undefined);
+  });
+
+  await t.test('preserves existing properties in path', () => {
+    const target = { a: { existing: true } };
+    setNested(target, ['a', 'newKey'], 'newValue');
+    assert.deepStrictEqual(target, { a: { existing: true, newKey: 'newValue' } });
   });
 });

@@ -170,4 +170,5 @@ if (require.main === module) {
 
 module.exports = {
   buildEntry,
+  setNested,
 };
