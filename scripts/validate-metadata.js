@@ -275,4 +275,5 @@ module.exports = {
   parseScalar,
   validateMetadataFile,
   parseMetadataYaml,
+  normalizeModelKey,
 };
