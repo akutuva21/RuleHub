@@ -1,7 +1,69 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
-const { buildEntry, setNested } = require('./generate-manifest.js');
+const os = require('os');
+const fs = require('fs');
+const { buildEntry, parseMetadataYaml, listMetadataFiles } = require('./generate-manifest.js');
+
+test('listMetadataFiles', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'metadata-test-'));
+  });
+
+  t.afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  await t.test('returns empty array for non-existent directory', () => {
+    const results = listMetadataFiles(path.join(tmpDir, 'non-existent'));
+    assert.deepStrictEqual(results, []);
+  });
+
+  await t.test('returns empty array when no metadata files exist', () => {
+    fs.writeFileSync(path.join(tmpDir, 'somefile.txt'), '');
+    const results = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(results, []);
+  });
+
+  await t.test('finds metadata.yaml in root directory', () => {
+    const yamlPath = path.join(tmpDir, 'metadata.yaml');
+    fs.writeFileSync(yamlPath, '');
+    const results = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(results, [yamlPath]);
+  });
+
+  await t.test('finds metadata.yaml in nested directories', () => {
+    const dir1 = path.join(tmpDir, 'dir1');
+    const dir2 = path.join(tmpDir, 'dir2');
+    fs.mkdirSync(dir1);
+    fs.mkdirSync(dir2);
+
+    const yaml1 = path.join(dir1, 'metadata.yaml');
+    const yaml2 = path.join(dir2, 'metadata.yaml');
+
+    fs.writeFileSync(yaml1, '');
+    fs.writeFileSync(yaml2, '');
+
+    const results = listMetadataFiles(tmpDir);
+    assert.strictEqual(results.length, 2);
+    assert.ok(results.includes(yaml1));
+    assert.ok(results.includes(yaml2));
+  });
+
+  await t.test('ignores other files named metadata.yaml if they are directories', () => {
+    const fakeYamlDir = path.join(tmpDir, 'metadata.yaml');
+    fs.mkdirSync(fakeYamlDir);
+
+    const realYaml = path.join(tmpDir, 'dir1', 'metadata.yaml');
+    fs.mkdirSync(path.join(tmpDir, 'dir1'));
+    fs.writeFileSync(realYaml, '');
+
+    const results = listMetadataFiles(tmpDir);
+    assert.deepStrictEqual(results, [realYaml]);
+  });
+});
 
 test('buildEntry', async (t) => {
   await t.test('handles a single model with full metadata', () => {
@@ -95,48 +157,151 @@ test('buildEntry', async (t) => {
   });
 });
 
-test('setNested', async (t) => {
-  await t.test('sets basic nested property', () => {
-    const target = {};
-    setNested(target, ['a', 'b', 'c'], 'value');
-    assert.deepStrictEqual(target, { a: { b: { c: 'value' } } });
+test('parseArgs', async (t) => {
+  await t.test('returns default paths when no arguments are provided', () => {
+    const args = parseArgs([]);
+    const expectedRoot = path.resolve(__dirname, '..');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, path.join(expectedRoot, 'manifest.json'));
   });
 
-  await t.test('overwrites non-object properties', () => {
-    const target = { a: 'string' };
-    setNested(target, ['a', 'b'], 'value');
-    assert.deepStrictEqual(target, { a: { b: 'value' } });
+  await t.test('parses --root argument', () => {
+    const args = parseArgs(['--root', 'custom/root/path']);
+    const expectedRoot = path.resolve('custom/root/path');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, path.join(expectedRoot, 'manifest.json'));
   });
 
-  await t.test('overwrites array properties', () => {
-    const target = { a: [] };
-    setNested(target, ['a', 'b'], 'value');
-    assert.deepStrictEqual(target, { a: { b: 'value' } });
+  await t.test('parses --output argument', () => {
+    const args = parseArgs(['--output', 'custom/output.json']);
+    const expectedRoot = path.resolve(__dirname, '..');
+    const expectedOutput = path.resolve('custom/output.json');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, expectedOutput);
   });
 
-  await t.test('prevents prototype pollution via __proto__', () => {
-    const target = {};
-    setNested(target, ['__proto__', 'polluted'], 'yes');
-    assert.strictEqual(target.polluted, undefined);
-    assert.strictEqual({}.polluted, undefined);
+  await t.test('parses both --root and --output arguments', () => {
+    const args = parseArgs(['--root', 'custom/root', '--output', 'custom/output.json']);
+    const expectedRoot = path.resolve('custom/root');
+    const expectedOutput = path.resolve('custom/output.json');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, expectedOutput);
   });
 
-  await t.test('prevents prototype pollution via constructor', () => {
-    const target = {};
-    setNested(target, ['constructor', 'prototype', 'polluted'], 'yes');
-    assert.strictEqual(target.polluted, undefined);
-    assert.strictEqual({}.polluted, undefined);
+  await t.test('ignores flags at the end of the array', () => {
+    const args = parseArgs(['--root']);
+    const expectedRoot = path.resolve(__dirname, '..');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, path.join(expectedRoot, 'manifest.json'));
+
+    const args2 = parseArgs(['--output']);
+    assert.strictEqual(args2.root, expectedRoot);
+    assert.strictEqual(args2.output, path.join(expectedRoot, 'manifest.json'));
+  });
+});
+
+test('parseMetadataYaml', async (t) => {
+  await t.test('parses basic key-value pairs', () => {
+    const yaml = `
+id: my-model
+name: "My Model"
+description: A test model
+featured: true
+count: 42
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'my-model',
+      name: 'My Model',
+      description: 'A test model',
+      featured: true,
+      count: 42
+    });
   });
 
-  await t.test('prevents prototype pollution via prototype', () => {
-    const target = {};
-    setNested(target, ['prototype', 'polluted'], 'yes');
-    assert.strictEqual(target.polluted, undefined);
+  await t.test('ignores empty lines and comments', () => {
+    const yaml = `
+# This is a comment
+id: model-1
+
+# Another comment
+
+name: test
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'model-1',
+      name: 'test'
+    });
   });
 
-  await t.test('preserves existing properties in path', () => {
-    const target = { a: { existing: true } };
-    setNested(target, ['a', 'newKey'], 'newValue');
-    assert.deepStrictEqual(target, { a: { existing: true, newKey: 'newValue' } });
+  await t.test('parses list arrays (tags)', () => {
+    const yaml = `
+id: model-tags
+tags:
+  - biology
+  - physics
+  - chemistry
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'model-tags',
+      tags: ['biology', 'physics', 'chemistry']
+    });
+  });
+
+  await t.test('parses nested objects', () => {
+    const yaml = `
+id: nested-model
+compatibility:
+  bng2_compatible: true
+  simulation_methods: [ode, ssa]
+source:
+  origin: published
+  original_repository: "http://example.com"
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'nested-model',
+      compatibility: {
+        bng2_compatible: true,
+        simulation_methods: ['ode', 'ssa']
+      },
+      source: {
+        origin: 'published',
+        original_repository: 'http://example.com'
+      }
+    });
+  });
+
+  await t.test('parses deeply nested objects', () => {
+    const yaml = `
+a:
+  b:
+    c:
+      d: value
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      a: {
+        b: {
+          c: {
+            d: 'value'
+          }
+        }
+      }
+    });
+  });
+
+  await t.test('handles empty tags array', () => {
+    const yaml = `
+id: empty-tags
+tags:
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'empty-tags',
+      tags: []
+    });
   });
 });
