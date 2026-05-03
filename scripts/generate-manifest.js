@@ -148,11 +148,11 @@ async function main() {
   const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
 
   const entryPromises = metadataFiles.map(async (metadataFile) => {
-    const modelFiles = await listModelFilesAsync(path.dirname(metadataFile));
-    if (modelFiles.length === 0) return [];
-
     const content = await fs.promises.readFile(metadataFile, 'utf8');
     const metadata = parseMetadataYaml(content);
+    const modelFiles = await listModelFilesAsync(path.dirname(metadataFile));
+
+    if (modelFiles.length === 0) return [];
 
     const isCollection = modelFiles.length > 1 || Boolean(metadata.collection);
     return modelFiles.map(modelFile =>
