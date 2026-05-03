@@ -197,10 +197,11 @@ async function main() {
     sortedAssignments[modelId] = assignments[modelId].slice().sort();
   }
 
+  const outputBase = output.replace('.generated.json', '.json');
   let existingGenerated = null;
-  if (fs.existsSync(output)) {
+  if (fs.existsSync(outputBase)) {
     try {
-      const existing = JSON.parse(fs.readFileSync(output, 'utf8'));
+      const existing = JSON.parse(fs.readFileSync(outputBase, 'utf8'));
       existingGenerated = existing.generated || null;
     } catch (e) {}
   }
