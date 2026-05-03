@@ -177,4 +177,5 @@ if (require.main === module) {
 module.exports = {
   buildEntry,
   parseMetadataYaml,
+  listMetadataFiles,
 };
