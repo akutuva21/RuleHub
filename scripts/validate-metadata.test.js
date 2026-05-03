@@ -272,3 +272,58 @@ test('listMetadataFiles', async (t) => {
     assert.deepStrictEqual(result, []);
   });
 });
+
+test('listMetadataFiles', async (t) => {
+  await t.test('returns empty array for non-existent directory', () => {
+    const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
+    const result = listMetadataFiles(nonExistentPath);
+    assert.deepStrictEqual(result, []);
+  });
+});
+
+test('setNested', async (t) => {
+  await t.test('sets single-level property', () => {
+    const obj = {};
+    setNested(obj, 'a', 1);
+    assert.deepStrictEqual(obj, { a: 1 });
+  });
+
+  await t.test('sets multi-level property', () => {
+    const obj = {};
+    setNested(obj, 'a.b.c', 123);
+    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+  });
+
+  await t.test('overrides primitive value with object', () => {
+    const obj = { a: 'hello' };
+    setNested(obj, 'a.b.c', 123);
+    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+  });
+
+  await t.test('overrides array value with object', () => {
+    const obj = { a: [1, 2, 3] };
+    setNested(obj, 'a.b.c', 123);
+    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+  });
+
+  await t.test('prevents __proto__ pollution', () => {
+    const obj = {};
+    setNested(obj, '__proto__.polluted', 'yes');
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+
+  await t.test('prevents constructor pollution', () => {
+    const obj = {};
+    setNested(obj, 'constructor.prototype.polluted', 'yes');
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+
+  await t.test('prevents prototype pollution', () => {
+    const obj = {};
+    setNested(obj, 'prototype.polluted', 'yes');
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+});
