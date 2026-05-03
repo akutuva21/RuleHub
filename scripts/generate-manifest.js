@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles } = require('./utils');
+const { listModelFiles, listModelFilesAsync } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -147,27 +147,34 @@ async function main() {
   const { root, output } = parseArgs(process.argv.slice(2));
   const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
 
-  const tasks = metadataFiles.map(async (metadataFile) => {
+  const entryPromises = metadataFiles.map(async (metadataFile) => {
     const content = await fs.promises.readFile(metadataFile, 'utf8');
     const metadata = parseMetadataYaml(content);
-    const modelFiles = listModelFiles(path.dirname(metadataFile));
+    const modelFiles = await listModelFilesAsync(path.dirname(metadataFile));
+
     if (modelFiles.length === 0) return [];
 
     const isCollection = modelFiles.length > 1 || Boolean(metadata.collection);
-    return modelFiles.map(modelFile => buildEntry(root, metadata, metadataFile, modelFile, isCollection));
+    return modelFiles.map(modelFile =>
+      buildEntry(root, metadata, metadataFile, modelFile, isCollection)
+    );
   });
 
-  const manifestEntries = (await Promise.all(tasks)).flat();
+  const manifestEntries = (await Promise.all(entryPromises)).flat();
 
   manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
-  fs.writeFileSync(output, JSON.stringify(manifestEntries, null, 2));
+  await fs.promises.writeFile(output, JSON.stringify(manifestEntries, null, 2));
   console.log(`Generated ${manifestEntries.length} manifest entries at ${output}`);
 }
 
 if (require.main === module) {
-  main().catch(console.error);
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 }
 
 module.exports = {
   buildEntry,
+  parseMetadataYaml,
 };
