@@ -78,8 +78,7 @@ begin functions
                    P_term() + I_term() + D_term(),0)
     
     # Disturbance function (step at t=disturb_time)
-    # Hack: use a very steep sigmoid to approximate step function
-    Disturb_rate() = disturb_mag / (1 + exp(-10*(t - disturb_time)))
+    Disturb_rate() = if(t > disturb_time, disturb_mag, 0)
 end functions
 
 begin reaction rules
