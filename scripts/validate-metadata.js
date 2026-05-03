@@ -156,8 +156,8 @@ function expectArray(errors, value, label, filePath) {
   }
 }
 
-function validateMetadataFile(metadataFile, errors) {
-  const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
+async function validateMetadataFile(metadataFile, errors) {
+  const metadata = parseMetadataYaml(await fs.promises.readFile(metadataFile, 'utf8'));
   const modelDir = path.dirname(metadataFile);
   const modelFiles = listModelFiles(modelDir);
   const readmePath = path.join(modelDir, 'README.md');
@@ -232,14 +232,12 @@ function validateMetadataFile(metadataFile, errors) {
   }
 }
 
-function main() {
+async function main() {
   const root = path.resolve(__dirname, '..');
   const metadataFiles = SEARCH_ROOTS.flatMap((searchRoot) => listMetadataFiles(path.join(root, searchRoot)));
   const errors = [];
 
-  for (const metadataFile of metadataFiles) {
-    validateMetadataFile(metadataFile, errors);
-  }
+  await Promise.all(metadataFiles.map((metadataFile) => validateMetadataFile(metadataFile, errors)));
 
   if (errors.length > 0) {
     console.error(`Metadata validation failed with ${errors.length} issue(s):`);

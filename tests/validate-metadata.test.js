@@ -5,10 +5,10 @@ const path = require('path');
 const os = require('os');
 const { validateMetadataFile } = require('../scripts/validate-metadata');
 
-function withTempDir(testFn) {
+async function withTempDir(testFn) {
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'validate-metadata-test-'));
   try {
-    testFn(tempDir);
+    await testFn(tempDir);
   } finally {
     fs.rmSync(tempDir, { recursive: true, force: true });
   }
@@ -43,15 +43,15 @@ playground:
   difficulty: "beginner"
 `;
 
-test('valid metadata file passes validation without errors', () => {
-  withTempDir((tempDir) => {
+test('valid metadata file passes validation without errors', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     fs.writeFileSync(metadataFile, VALID_METADATA_YAML);
     fs.writeFileSync(path.join(tempDir, 'README.md'), '# Test Model');
     fs.writeFileSync(path.join(tempDir, 'testmodel.bngl'), 'begin model\nend model');
 
     const errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.deepStrictEqual(errors, []);
   });
@@ -149,29 +149,29 @@ test('missing README.md adds error', () => {
     fs.writeFileSync(path.join(tempDir, 'testmodel.bngl'), 'begin model\nend model');
 
     const errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.strictEqual(errors.length, 1);
     assert.match(errors[0], /missing README\.md/);
   });
 });
 
-test('missing .bngl file adds error', () => {
-  withTempDir((tempDir) => {
+test('missing .bngl file adds error', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     fs.writeFileSync(metadataFile, VALID_METADATA_YAML);
     fs.writeFileSync(path.join(tempDir, 'README.md'), '# Test Model');
 
     const errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.strictEqual(errors.length, 1);
     assert.match(errors[0], /no \.bngl files found alongside metadata\.yaml/);
   });
 });
 
-test('invalid metadata structure adds errors', () => {
-  withTempDir((tempDir) => {
+test('invalid metadata structure adds errors', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     const invalidYaml = `
 id: "test-model"
@@ -184,7 +184,7 @@ category: "invalid-category"
     fs.writeFileSync(path.join(tempDir, 'testmodel.bngl'), 'begin model\nend model');
 
     const errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.ok(errors.length > 0);
     assert.ok(errors.some(e => e.includes('missing or invalid name')));
@@ -196,8 +196,8 @@ category: "invalid-category"
   });
 });
 
-test('multiple models without collection adds error if no primary model', () => {
-  withTempDir((tempDir) => {
+test('multiple models without collection adds error if no primary model', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     fs.writeFileSync(metadataFile, VALID_METADATA_YAML); // id: "test-model"
     fs.writeFileSync(path.join(tempDir, 'README.md'), '# Test Model');
@@ -206,15 +206,15 @@ test('multiple models without collection adds error if no primary model', () => 
     fs.writeFileSync(path.join(tempDir, 'othermodel2.bngl'), 'begin model\nend model');
 
     const errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.strictEqual(errors.length, 1);
     assert.match(errors[0], /multiple \.bngl files require either a collection section or a primary model file/);
   });
 });
 
-test('multiple models with collection valid count', () => {
-  withTempDir((tempDir) => {
+test('multiple models with collection valid count', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     const collectionYaml = VALID_METADATA_YAML + `
 collection:
@@ -229,7 +229,7 @@ collection:
     fs.writeFileSync(path.join(tempDir, 'model2.bngl'), '');
 
     const errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.deepStrictEqual(errors, []);
   });
