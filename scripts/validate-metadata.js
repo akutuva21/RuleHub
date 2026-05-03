@@ -142,7 +142,7 @@ async function validateMetadataFile(metadataFile, errors) {
     errors.push(`${metadataFile}: missing playground section`);
   } else {
     expectBoolean(errors, metadata.playground.visible, 'playground.visible', metadataFile);
-    expectString(errors, metadata.playground.gallery_category, 'playground.gallery_category', metadataFile);
+    expectArray(errors, metadata.playground.gallery_categories, 'playground.gallery_categories', metadataFile);
     expectBoolean(errors, metadata.playground.featured, 'playground.featured', metadataFile);
     expectEnum(errors, metadata.playground.difficulty, DIFFICULTY_VALUES, 'playground.difficulty', metadataFile);
   }
