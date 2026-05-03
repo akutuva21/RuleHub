@@ -7,6 +7,14 @@ function listModelFiles(dir) {
     .sort();
 }
 
+async function listModelFilesAsync(dir) {
+  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.bngl'))
+    .map((entry) => entry.name)
+    .sort();
+}
+
 function parseScalar(rawValue) {
   const value = rawValue.trim();
   if (value === 'true') return true;
@@ -51,7 +59,7 @@ function parseMetadataYaml(content) {
     const trimmed = rawLine.trim();
 
     if (trimmed.startsWith('- ')) {
-      const currentPath = stack.map((entry) => entry.key).join('.');
+      const currentPath = stack.length > 0 ? stack[stack.length - 1].path : '';
       const listValue = parseScalar(trimmed.slice(2));
       if (currentPath === 'tags') {
         result.tags = Array.isArray(result.tags) ? result.tags : [];
@@ -69,18 +77,17 @@ function parseMetadataYaml(content) {
 
     const key = trimmed.slice(0, separator).trim();
     const rawValue = trimmed.slice(separator + 1);
-    const pathParts = [...stack.map((entry) => entry.key), key];
-    const dottedPath = pathParts.join('.');
+    const dottedPath = stack.length > 0 ? stack[stack.length - 1].path + '.' + key : key;
 
     if (!rawValue.trim()) {
-      stack.push({ key, indent });
+      stack.push({ key, indent, path: dottedPath });
       if (dottedPath === 'tags') {
         result.tags = Array.isArray(result.tags) ? result.tags : [];
       }
       continue;
     }
 
-    setNested(result, pathParts, parseScalar(rawValue));
+    setNested(result, dottedPath, parseScalar(rawValue));
   }
 
   return result;
@@ -88,6 +95,7 @@ function parseMetadataYaml(content) {
 
 module.exports = {
   listModelFiles,
+  listModelFilesAsync,
   parseScalar,
   setNested,
   parseMetadataYaml
