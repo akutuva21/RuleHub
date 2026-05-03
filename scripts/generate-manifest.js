@@ -162,6 +162,7 @@ if (require.main === module) {
 module.exports = {
   parseArgs,
   buildEntry,
+  parseArgs,
   parseMetadataYaml,
   listMetadataFiles,
 };
