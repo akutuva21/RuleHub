@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles, listModelFilesAsync } = require('./utils');
+const { listModelFiles, listModelFilesAsync, parseScalar, parseMetadataYaml } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -42,21 +42,6 @@ function parseScalar(rawValue) {
     return value.slice(1, -1);
   }
   return value;
-}
-
-function setNested(target, parts, value) {
-  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
-  if (parts.some((part) => blockedKeys.has(part))) return;
-
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
 }
 
 function parseMetadataYaml(content) {
@@ -175,10 +160,9 @@ if (require.main === module) {
 }
 
 module.exports = {
-  buildEntry,
-
-  parseMetadataYaml,
-
   parseArgs,
-
+  buildEntry,
+  parseArgs,
+  parseMetadataYaml,
+  listMetadataFiles,
 };

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles } = require('./utils');
+const { listModelFiles, parseScalar, parseMetadataYaml } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
@@ -66,22 +66,6 @@ function parseScalar(rawValue) {
   return value;
 }
 
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
-  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
-  if (parts.some((part) => blockedKeys.has(part))) return;
-
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
-}
-
 function parseMetadataYaml(content) {
   const result = {};
   const stack = [];
@@ -111,7 +95,8 @@ function parseMetadataYaml(content) {
 
     const key = trimmed.slice(0, separator).trim();
     const rawValue = trimmed.slice(separator + 1);
-    const dottedPath = stack.length > 0 ? stack[stack.length - 1].path + '.' + key : key;
+    const pathParts = [...stack.map((entry) => entry.key), key];
+    const dottedPath = pathParts.join('.');
 
     if (!rawValue.trim()) {
       stack.push({ key, indent, path: dottedPath });
@@ -121,7 +106,7 @@ function parseMetadataYaml(content) {
       continue;
     }
 
-    setNested(result, dottedPath, parseScalar(rawValue));
+    setNested(result, pathParts, parseScalar(rawValue));
   }
 
   return result;
@@ -171,8 +156,8 @@ function expectArray(errors, value, label, filePath) {
   }
 }
 
-function validateMetadataFile(metadataFile, errors) {
-  const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
+async function validateMetadataFile(metadataFile, errors) {
+  const metadata = parseMetadataYaml(await fs.promises.readFile(metadataFile, 'utf8'));
   const modelDir = path.dirname(metadataFile);
   const modelFiles = listModelFiles(modelDir);
   const readmePath = path.join(modelDir, 'README.md');
@@ -247,14 +232,12 @@ function validateMetadataFile(metadataFile, errors) {
   }
 }
 
-function main() {
+async function main() {
   const root = path.resolve(__dirname, '..');
   const metadataFiles = SEARCH_ROOTS.flatMap((searchRoot) => listMetadataFiles(path.join(root, searchRoot)));
   const errors = [];
 
-  for (const metadataFile of metadataFiles) {
-    validateMetadataFile(metadataFile, errors);
-  }
+  await Promise.all(metadataFiles.map((metadataFile) => validateMetadataFile(metadataFile, errors)));
 
   if (errors.length > 0) {
     console.error(`Metadata validation failed with ${errors.length} issue(s):`);
@@ -273,7 +256,10 @@ if (require.main === module) {
 
 module.exports = {
   parseScalar,
+  setNested,
   validateMetadataFile,
   parseMetadataYaml,
+  normalizeModelKey,
   listMetadataFiles,
+  setNested,
 };
