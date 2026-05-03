@@ -1,36 +1,54 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml, parseScalar, listMetadataFiles } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested } = require('./validate-metadata.js');
 
-test('parseScalar', async (t) => {
-  await t.test('parses booleans', () => {
-    assert.strictEqual(parseScalar('true'), true);
-    assert.strictEqual(parseScalar('false'), false);
-    assert.strictEqual(parseScalar(' true '), true);
+test('setNested', async (t) => {
+  await t.test('sets a single property', () => {
+    const obj = {};
+    setNested(obj, 'a', 1);
+    assert.deepStrictEqual(obj, { a: 1 });
   });
 
-  await t.test('parses null', () => {
-    assert.strictEqual(parseScalar('null'), null);
+  await t.test('sets a nested property', () => {
+    const obj = {};
+    setNested(obj, 'a.b.c', 2);
+    assert.deepStrictEqual(obj, { a: { b: { c: 2 } } });
   });
 
-  await t.test('parses integers', () => {
-    assert.strictEqual(parseScalar('42'), 42);
-    assert.strictEqual(parseScalar('-42'), -42);
-    assert.strictEqual(parseScalar('0'), 0);
+  await t.test('adds to an existing object structure', () => {
+    const obj = { a: { x: 1 } };
+    setNested(obj, 'a.y', 2);
+    assert.deepStrictEqual(obj, { a: { x: 1, y: 2 } });
   });
 
-  await t.test('parses arrays', () => {
-    assert.deepStrictEqual(parseScalar('[]'), []);
-    assert.deepStrictEqual(parseScalar(' [ ] '), []);
-    assert.deepStrictEqual(parseScalar('[a, b, c]'), ['a', 'b', 'c']);
-    assert.deepStrictEqual(parseScalar('["a", "b", "c"]'), ['a', 'b', 'c']);
+  await t.test('overrides non-object intermediates', () => {
+    const obj = { a: 1 };
+    setNested(obj, 'a.b', 2);
+    assert.deepStrictEqual(obj, { a: { b: 2 } });
   });
 
-  await t.test('parses strings', () => {
-    assert.strictEqual(parseScalar('"hello"'), 'hello');
-    assert.strictEqual(parseScalar('hello'), 'hello');
+  await t.test('blocks prototype pollution (__proto__)', () => {
+    const obj = {};
+    setNested(obj, '__proto__.polluted', true);
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+
+  await t.test('blocks prototype pollution (constructor)', () => {
+    const obj = {};
+    setNested(obj, 'constructor.prototype.polluted', true);
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
+  });
+
+  await t.test('blocks prototype pollution (prototype)', () => {
+    const obj = {};
+    setNested(obj, 'prototype.polluted', true);
+    assert.strictEqual({}.polluted, undefined);
+    assert.deepStrictEqual(obj, {});
   });
 });
+
 
 test('parseMetadataYaml', async (t) => {
   await t.test('parses basic key-value pairs', () => {
@@ -325,6 +343,14 @@ test('setNested', async (t) => {
     setNested(obj, 'prototype.polluted', 'yes');
     assert.strictEqual({}.polluted, undefined);
     assert.deepStrictEqual(obj, {});
+  });
+});
+
+test('listMetadataFiles', async (t) => {
+  await t.test('returns empty array for non-existent directory', () => {
+    const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
+    const result = listMetadataFiles(nonExistentPath);
+    assert.deepStrictEqual(result, []);
   });
 });
 

@@ -277,4 +277,5 @@ module.exports = {
   validateMetadataFile,
   parseMetadataYaml,
   listMetadataFiles,
+  setNested,
 };
