@@ -197,9 +197,17 @@ async function main() {
     sortedAssignments[modelId] = assignments[modelId].slice().sort();
   }
 
+  let existingGenerated = null;
+  if (fs.existsSync(output)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(output, 'utf8'));
+      existingGenerated = existing.generated || null;
+    } catch (e) {}
+  }
+
   const gallery = {
     version: 1,
-    generated: new Date().toISOString(),
+    generated: existingGenerated || new Date().toISOString(),
     categories: finalCategories,
     assignments: sortedAssignments,
     sortOverrides,
