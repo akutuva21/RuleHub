@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml, parseScalar } = require('./validate-metadata.js');
+const { parseMetadataYaml, parseScalar, listMetadataFiles } = require('./validate-metadata.js');
 
 test('parseScalar', async (t) => {
   await t.test('parses booleans', () => {
@@ -254,5 +254,13 @@ tags:
     `;
     const result = parseMetadataYaml(yaml);
     assert.deepStrictEqual(result, { tags: ['one', 'two'] });
+  });
+});
+
+test('listMetadataFiles', async (t) => {
+  await t.test('returns empty array for non-existent directory', () => {
+    const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
+    const result = listMetadataFiles(nonExistentPath);
+    assert.deepStrictEqual(result, []);
   });
 });
