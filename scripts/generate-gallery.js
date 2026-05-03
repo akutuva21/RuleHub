@@ -191,11 +191,17 @@ async function main() {
     sortOrder: cat.sortOrder,
   }));
 
+  const sortedAssignments = {};
+  const sortedModelIds = Object.keys(assignments).sort();
+  for (const modelId of sortedModelIds) {
+    sortedAssignments[modelId] = assignments[modelId].slice().sort();
+  }
+
   const gallery = {
     version: 1,
     generated: new Date().toISOString(),
     categories: finalCategories,
-    assignments,
+    assignments: sortedAssignments,
     sortOverrides,
   };
 
