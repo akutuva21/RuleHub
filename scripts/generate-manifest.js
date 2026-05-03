@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles } = require('./utils');
+const { listModelFiles, listModelFilesAsync, parseScalar, parseMetadataYaml } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -42,21 +42,6 @@ function parseScalar(rawValue) {
     return value.slice(1, -1);
   }
   return value;
-}
-
-function setNested(target, parts, value) {
-  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
-  if (parts.some((part) => blockedKeys.has(part))) return;
-
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
 }
 
 function parseMetadataYaml(content) {
@@ -143,31 +128,40 @@ function buildEntry(root, metadata, metadataFile, modelFile, isCollection) {
   };
 }
 
-function main() {
+async function main() {
   const { root, output } = parseArgs(process.argv.slice(2));
   const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
-  const manifestEntries = [];
 
-  for (const metadataFile of metadataFiles) {
-    const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
-    const modelFiles = listModelFiles(path.dirname(metadataFile));
-    if (modelFiles.length === 0) continue;
+  const entryPromises = metadataFiles.map(async (metadataFile) => {
+    const content = await fs.promises.readFile(metadataFile, 'utf8');
+    const metadata = parseMetadataYaml(content);
+    const modelFiles = await listModelFilesAsync(path.dirname(metadataFile));
+
+    if (modelFiles.length === 0) return [];
 
     const isCollection = modelFiles.length > 1 || Boolean(metadata.collection);
-    for (const modelFile of modelFiles) {
-      manifestEntries.push(buildEntry(root, metadata, metadataFile, modelFile, isCollection));
-    }
-  }
+    return modelFiles.map(modelFile =>
+      buildEntry(root, metadata, metadataFile, modelFile, isCollection)
+    );
+  });
+
+  const manifestEntries = (await Promise.all(entryPromises)).flat();
 
   manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
-  fs.writeFileSync(output, JSON.stringify(manifestEntries, null, 2));
+  await fs.promises.writeFile(output, JSON.stringify(manifestEntries, null, 2));
   console.log(`Generated ${manifestEntries.length} manifest entries at ${output}`);
 }
 
 if (require.main === module) {
-  main();
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 }
 
 module.exports = {
+  parseArgs,
   buildEntry,
+  parseMetadataYaml,
+  listMetadataFiles,
 };

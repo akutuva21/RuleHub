@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles } = require('./utils');
+const { listModelFiles, parseScalar, parseMetadataYaml } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
@@ -66,22 +66,6 @@ function parseScalar(rawValue) {
   return value;
 }
 
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
-  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
-  if (parts.some((part) => blockedKeys.has(part))) return;
-
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
-}
-
 function parseMetadataYaml(content) {
   const result = {};
   const stack = [];
@@ -93,7 +77,7 @@ function parseMetadataYaml(content) {
     const trimmed = rawLine.trim();
 
     if (trimmed.startsWith('- ')) {
-      const currentPath = stack.map((entry) => entry.key).join('.');
+      const currentPath = stack.length > 0 ? stack[stack.length - 1].path : '';
       const listValue = parseScalar(trimmed.slice(2));
       if (currentPath === 'tags') {
         result.tags = Array.isArray(result.tags) ? result.tags : [];
@@ -111,17 +95,18 @@ function parseMetadataYaml(content) {
 
     const key = trimmed.slice(0, separator).trim();
     const rawValue = trimmed.slice(separator + 1);
-    const dottedPath = [...stack.map((entry) => entry.key), key].join('.');
+    const pathParts = [...stack.map((entry) => entry.key), key];
+    const dottedPath = pathParts.join('.');
 
     if (!rawValue.trim()) {
-      stack.push({ key, indent });
+      stack.push({ key, indent, path: dottedPath });
       if (dottedPath === 'tags') {
         result.tags = Array.isArray(result.tags) ? result.tags : [];
       }
       continue;
     }
 
-    setNested(result, dottedPath, parseScalar(rawValue));
+    setNested(result, pathParts, parseScalar(rawValue));
   }
 
   return result;
@@ -271,6 +256,10 @@ if (require.main === module) {
 
 module.exports = {
   parseScalar,
+  setNested,
   validateMetadataFile,
   parseMetadataYaml,
+  normalizeModelKey,
+  listMetadataFiles,
+  setNested,
 };
