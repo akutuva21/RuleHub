@@ -66,22 +66,6 @@ function parseScalar(rawValue) {
   return value;
 }
 
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
-  const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
-  if (parts.some((part) => blockedKeys.has(part))) return;
-
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
-}
-
 function parseMetadataYaml(content) {
   const result = {};
   const stack = [];
@@ -111,7 +95,8 @@ function parseMetadataYaml(content) {
 
     const key = trimmed.slice(0, separator).trim();
     const rawValue = trimmed.slice(separator + 1);
-    const dottedPath = stack.length > 0 ? stack[stack.length - 1].path + '.' + key : key;
+    const pathParts = [...stack.map((entry) => entry.key), key];
+    const dottedPath = pathParts.join('.');
 
     if (!rawValue.trim()) {
       stack.push({ key, indent, path: dottedPath });
@@ -121,7 +106,7 @@ function parseMetadataYaml(content) {
       continue;
     }
 
-    setNested(result, dottedPath, parseScalar(rawValue));
+    setNested(result, pathParts, parseScalar(rawValue));
   }
 
   return result;
