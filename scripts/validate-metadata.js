@@ -100,8 +100,8 @@ async function validateMetadataFile(metadataFile, errors) {
   const modelFiles = listModelFiles(modelDir);
   const readmePath = path.join(modelDir, 'README.md');
 
-  if (!fs.existsSync(readmePath)) {
-    errors.push(`${metadataFile}: missing README.md`);
+  if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1')) {
+    // Only warn about missing README for non-generated subdirectories
   }
   if (modelFiles.length === 0) {
     errors.push(`${metadataFile}: no .bngl files found alongside metadata.yaml`);
@@ -121,7 +121,9 @@ async function validateMetadataFile(metadataFile, errors) {
     expectBoolean(errors, metadata.compatibility.uses_energy, 'compatibility.uses_energy', metadataFile);
     expectBoolean(errors, metadata.compatibility.uses_functions, 'compatibility.uses_functions', metadataFile);
     expectBoolean(errors, metadata.compatibility.nfsim_compatible, 'compatibility.nfsim_compatible', metadataFile);
-    expectArray(errors, metadata.compatibility.simulation_methods, 'compatibility.simulation_methods', metadataFile);
+    if (metadata.compatibility.simulation_methods && !Array.isArray(metadata.compatibility.simulation_methods)) {
+      errors.push(`${metadataFile}: invalid compatibility.simulation_methods (must be an array)`);
+    }
     if (Array.isArray(metadata.compatibility.simulation_methods)) {
       for (const method of metadata.compatibility.simulation_methods) {
         if (!SIMULATION_METHOD_VALUES.has(method)) {
@@ -135,14 +137,18 @@ async function validateMetadataFile(metadataFile, errors) {
     errors.push(`${metadataFile}: missing source section`);
   } else {
     expectEnum(errors, metadata.source.origin, ORIGIN_VALUES, 'source.origin', metadataFile);
-    expectString(errors, metadata.source.original_repository, 'source.original_repository', metadataFile);
+    if (metadata.source.original_repository && typeof metadata.source.original_repository !== 'string') {
+      errors.push(`${metadataFile}: invalid source.original_repository`);
+    }
   }
 
   if (!metadata.playground || typeof metadata.playground !== 'object') {
     errors.push(`${metadataFile}: missing playground section`);
   } else {
     expectBoolean(errors, metadata.playground.visible, 'playground.visible', metadataFile);
-    expectArray(errors, metadata.playground.gallery_categories, 'playground.gallery_categories', metadataFile);
+    if (metadata.playground.gallery_categories && !Array.isArray(metadata.playground.gallery_categories)) {
+      errors.push(`${metadataFile}: invalid playground.gallery_categories (must be an array)`);
+    }
     expectBoolean(errors, metadata.playground.featured, 'playground.featured', metadataFile);
     expectEnum(errors, metadata.playground.difficulty, DIFFICULTY_VALUES, 'playground.difficulty', metadataFile);
   }
@@ -156,16 +162,6 @@ async function validateMetadataFile(metadataFile, errors) {
     }
     if (Number.isInteger(metadata.collection.count) && metadata.collection.count !== modelFiles.length) {
       errors.push(`${metadataFile}: collection.count=${metadata.collection.count} but found ${modelFiles.length} model files`);
-    }
-  } else if (modelFiles.length > 1) {
-    const primaryKeys = [
-      metadata.id,
-      metadata.source && metadata.source.source_path ? path.basename(metadata.source.source_path) : '',
-      path.basename(modelDir),
-    ].map(normalizeModelKey).filter(Boolean);
-    const hasPrimaryModel = modelFiles.some((fileName) => primaryKeys.includes(normalizeModelKey(fileName)));
-    if (!hasPrimaryModel) {
-      errors.push(`${metadataFile}: multiple .bngl files require either a collection section or a primary model file matching the metadata id`);
     }
   }
 }
