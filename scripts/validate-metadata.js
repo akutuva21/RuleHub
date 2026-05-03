@@ -195,4 +195,5 @@ if (require.main === module) {
 
 module.exports = {
   validateMetadataFile,
+  listMetadataFiles,
 };

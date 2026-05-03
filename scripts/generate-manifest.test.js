@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert');
 const path = require('path');
 const { buildEntry } = require('./generate-manifest.js');
+const { parseMetadataYaml } = require('./utils.js');
 
 test('buildEntry', async (t) => {
   await t.test('handles a single model with full metadata', () => {
@@ -92,5 +93,111 @@ test('buildEntry', async (t) => {
 
     assert.strictEqual(entry.bng2_compatible, false);
     assert.strictEqual(entry.visible, false);
+  });
+});
+
+test('parseMetadataYaml', async (t) => {
+  await t.test('parses basic key-value pairs', () => {
+    const yaml = `
+id: my-model
+name: "My Model"
+description: A test model
+featured: true
+count: 42
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'my-model',
+      name: 'My Model',
+      description: 'A test model',
+      featured: true,
+      count: 42
+    });
+  });
+
+  await t.test('ignores empty lines and comments', () => {
+    const yaml = `
+# This is a comment
+id: model-1
+
+# Another comment
+
+name: test
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'model-1',
+      name: 'test'
+    });
+  });
+
+  await t.test('parses list arrays (tags)', () => {
+    const yaml = `
+id: model-tags
+tags:
+  - biology
+  - physics
+  - chemistry
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'model-tags',
+      tags: ['biology', 'physics', 'chemistry']
+    });
+  });
+
+  await t.test('parses nested objects', () => {
+    const yaml = `
+id: nested-model
+compatibility:
+  bng2_compatible: true
+  simulation_methods: [ode, ssa]
+source:
+  origin: published
+  original_repository: "http://example.com"
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'nested-model',
+      compatibility: {
+        bng2_compatible: true,
+        simulation_methods: ['ode', 'ssa']
+      },
+      source: {
+        origin: 'published',
+        original_repository: 'http://example.com'
+      }
+    });
+  });
+
+  await t.test('parses deeply nested objects', () => {
+    const yaml = `
+a:
+  b:
+    c:
+      d: value
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      a: {
+        b: {
+          c: {
+            d: 'value'
+          }
+        }
+      }
+    });
+  });
+
+  await t.test('handles empty tags array', () => {
+    const yaml = `
+id: empty-tags
+tags:
+    `;
+    const result = parseMetadataYaml(yaml);
+    assert.deepStrictEqual(result, {
+      id: 'empty-tags',
+      tags: []
+    });
   });
 });
