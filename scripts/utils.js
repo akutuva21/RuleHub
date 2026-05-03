@@ -7,6 +7,15 @@ function listModelFiles(dir) {
     .sort();
 }
 
+async function listModelFilesAsync(dir) {
+  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.bngl'))
+    .map((entry) => entry.name)
+    .sort();
+}
+
 module.exports = {
-  listModelFiles
+  listModelFiles,
+  listModelFilesAsync
 };
