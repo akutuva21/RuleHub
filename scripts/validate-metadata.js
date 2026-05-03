@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles, setNested } = require('./utils');
+const { listModelFiles, parseScalar, parseMetadataYaml } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
@@ -77,7 +77,7 @@ function parseMetadataYaml(content) {
     const trimmed = rawLine.trim();
 
     if (trimmed.startsWith('- ')) {
-      const currentPath = stack.map((entry) => entry.key).join('.');
+      const currentPath = stack.length > 0 ? stack[stack.length - 1].path : '';
       const listValue = parseScalar(trimmed.slice(2));
       if (currentPath === 'tags') {
         result.tags = Array.isArray(result.tags) ? result.tags : [];
@@ -99,7 +99,7 @@ function parseMetadataYaml(content) {
     const dottedPath = pathParts.join('.');
 
     if (!rawValue.trim()) {
-      stack.push({ key, indent });
+      stack.push({ key, indent, path: dottedPath });
       if (dottedPath === 'tags') {
         result.tags = Array.isArray(result.tags) ? result.tags : [];
       }
@@ -258,7 +258,10 @@ if (require.main === module) {
 
 module.exports = {
   parseScalar,
+  setNested,
   validateMetadataFile,
   parseMetadataYaml,
+  normalizeModelKey,
   listMetadataFiles,
+  setNested,
 };
