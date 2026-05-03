@@ -57,6 +57,91 @@ test('valid metadata file passes validation without errors', () => {
   });
 });
 
+test('invalid enum values for expectEnum fields add errors', () => {
+  withTempDir((tempDir) => {
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+
+    // Test with wrong types (e.g. number, boolean, null instead of string)
+    const invalidTypeYaml = `
+id: "test-model"
+name: "Test Model"
+description: "A test model"
+tags: []
+category: 123
+compatibility:
+  bng2_compatible: true
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+  simulation_methods: [ode]
+source:
+  origin: true
+  original_repository: "repo"
+playground:
+  visible: true
+  gallery_category: "Test"
+  featured: false
+  difficulty: null
+collection:
+  type: 456
+  parent_model: "test-model"
+  variant_key: "test"
+  count: 2
+`;
+    fs.writeFileSync(metadataFile, invalidTypeYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# Test Model');
+    fs.writeFileSync(path.join(tempDir, 'model1.bngl'), '');
+    fs.writeFileSync(path.join(tempDir, 'model2.bngl'), '');
+
+    let errors = [];
+    validateMetadataFile(metadataFile, errors);
+
+    assert.ok(errors.some(e => e.includes('invalid category (123)')), 'Should report invalid category type');
+    assert.ok(errors.some(e => e.includes('invalid source.origin (true)')), 'Should report invalid origin type');
+    assert.ok(errors.some(e => e.includes('invalid playground.difficulty (null)')), 'Should report invalid difficulty type');
+    assert.ok(errors.some(e => e.includes('invalid collection.type (456)')), 'Should report invalid collection type');
+
+    // Test with string values not in the allowed sets
+    const invalidStringYaml = `
+id: "test-model"
+name: "Test Model"
+description: "A test model"
+tags: []
+category: "not-a-real-category"
+compatibility:
+  bng2_compatible: true
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+  simulation_methods: [ode]
+source:
+  origin: "fake-origin"
+  original_repository: "repo"
+playground:
+  visible: true
+  gallery_category: "Test"
+  featured: false
+  difficulty: "extremely-hard"
+collection:
+  type: "unknown-collection-type"
+  parent_model: "test-model"
+  variant_key: "test"
+  count: 2
+`;
+    fs.writeFileSync(metadataFile, invalidStringYaml);
+
+    errors = [];
+    validateMetadataFile(metadataFile, errors);
+
+    assert.ok(errors.some(e => e.includes('invalid category ("not-a-real-category")')), 'Should report invalid category string');
+    assert.ok(errors.some(e => e.includes('invalid source.origin ("fake-origin")')), 'Should report invalid origin string');
+    assert.ok(errors.some(e => e.includes('invalid playground.difficulty ("extremely-hard")')), 'Should report invalid difficulty string');
+    assert.ok(errors.some(e => e.includes('invalid collection.type ("unknown-collection-type")')), 'Should report invalid collection type string');
+  });
+});
+
 test('missing README.md adds error', () => {
   withTempDir((tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
