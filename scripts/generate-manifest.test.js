@@ -157,6 +157,49 @@ test('buildEntry', async (t) => {
   });
 });
 
+test('parseArgs', async (t) => {
+  await t.test('returns default paths when no arguments are provided', () => {
+    const args = parseArgs([]);
+    const expectedRoot = path.resolve(__dirname, '..');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, path.join(expectedRoot, 'manifest.json'));
+  });
+
+  await t.test('parses --root argument', () => {
+    const args = parseArgs(['--root', 'custom/root/path']);
+    const expectedRoot = path.resolve('custom/root/path');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, path.join(expectedRoot, 'manifest.json'));
+  });
+
+  await t.test('parses --output argument', () => {
+    const args = parseArgs(['--output', 'custom/output.json']);
+    const expectedRoot = path.resolve(__dirname, '..');
+    const expectedOutput = path.resolve('custom/output.json');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, expectedOutput);
+  });
+
+  await t.test('parses both --root and --output arguments', () => {
+    const args = parseArgs(['--root', 'custom/root', '--output', 'custom/output.json']);
+    const expectedRoot = path.resolve('custom/root');
+    const expectedOutput = path.resolve('custom/output.json');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, expectedOutput);
+  });
+
+  await t.test('ignores flags at the end of the array', () => {
+    const args = parseArgs(['--root']);
+    const expectedRoot = path.resolve(__dirname, '..');
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, path.join(expectedRoot, 'manifest.json'));
+
+    const args2 = parseArgs(['--output']);
+    assert.strictEqual(args2.root, expectedRoot);
+    assert.strictEqual(args2.output, path.join(expectedRoot, 'manifest.json'));
+  });
+});
+
 test('parseMetadataYaml', async (t) => {
   await t.test('parses basic key-value pairs', () => {
     const yaml = `
