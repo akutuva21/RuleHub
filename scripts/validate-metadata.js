@@ -276,6 +276,7 @@ module.exports = {
   setNested,
   validateMetadataFile,
   parseMetadataYaml,
+  normalizeModelKey,
   listMetadataFiles,
   setNested,
 };
