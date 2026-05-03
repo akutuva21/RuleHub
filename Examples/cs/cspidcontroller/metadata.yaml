@@ -19,6 +19,6 @@ source:
   source_path: "example-models/cs_pid_controller.bngl"
 playground:
   visible: false
-  gallery_category: "computer-science"
+  gallery_categories: ["cs","test-models"]
   featured: false
   difficulty: "advanced"

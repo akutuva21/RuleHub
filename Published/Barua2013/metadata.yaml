@@ -17,6 +17,6 @@ source:
   source_path: "published-models/cell-regulation/Barua_2013.bngl"
 playground:
   visible: true
-  gallery_category: "regulation"
+  gallery_categories: []
   featured: false
   difficulty: "intermediate"

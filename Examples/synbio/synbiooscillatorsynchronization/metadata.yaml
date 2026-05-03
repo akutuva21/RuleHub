@@ -19,6 +19,6 @@ source:
   source_path: "example-models/synbio_oscillator_synchronization.bngl"
 playground:
   visible: false
-  gallery_category: "synthetic-biology"
+  gallery_categories: ["synbio","test-models"]
   featured: false
   difficulty: "advanced"

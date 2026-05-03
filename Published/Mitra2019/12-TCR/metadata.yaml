@@ -1,0 +1,19 @@
+id: 12_TCR_tcr
+name: of T cell receptor signaling
+description: A model of T cell receptor signaling
+tags: ["immunology"]
+category: immunology
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

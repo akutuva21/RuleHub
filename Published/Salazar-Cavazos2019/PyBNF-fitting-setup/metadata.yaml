@@ -1,0 +1,19 @@
+id: PyBNF_fitting_setup_190127_CHO_EGFR_forBNF
+name: PyBNF-fitting-setup
+description: BNGL model: 190127_CHO_EGFR_forBNF
+tags: ["kdephosy1068_f", "kdephosy1173_f", "kphos_f", "grb2_f", "ratio_kdephosy1173", "ratio_kphosy1173", "offrate_f", "onrate_f", "kdephosy1068_pre", "kdephosy1173_pre", "kdephosyn_pre", "kphosy1068_pre", "kphosy1173_pre", "kphosyn_pre", "kdephosy1068", "kdephosy1173", "kdephosyn", "kphosy1068", "kphosy1173", "kphosyn", "ratio_kphos_receiver", "molecules"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

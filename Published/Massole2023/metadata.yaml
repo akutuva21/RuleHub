@@ -17,6 +17,6 @@ source:
   source_path: "published-models/complex-models/Massole_2023.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["developmental"]
   featured: false
   difficulty: "advanced"

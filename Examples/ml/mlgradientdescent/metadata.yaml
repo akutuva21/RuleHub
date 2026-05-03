@@ -19,6 +19,6 @@ source:
   source_path: "example-models/ml_gradient_descent.bngl"
 playground:
   visible: false
-  gallery_category: "computer-science"
+  gallery_categories: ["ml-signal","test-models"]
   featured: false
   difficulty: "advanced"

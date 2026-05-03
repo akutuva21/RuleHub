@@ -1,4 +1,4 @@
-# RuleHub Model Metadata Standard v1.0
+# RuleHub Model Metadata Standard v1.1
 
 id: string
 name: string
@@ -28,13 +28,12 @@ compatibility:
   bng2_compatible: boolean
   min_bng_version: string
   simulation_methods:
-    - ode
-    - ssa
-    - nf
+    - enum(ode, ssa, nf, pla, hybrid)
   uses_compartments: boolean
   uses_energy: boolean
   uses_functions: boolean
   nfsim_compatible: boolean
+  excluded: boolean
 
 source:
   origin: enum(published, contributed, ai-generated, ported-from-sbml, tutorial, test-case)
@@ -42,15 +41,17 @@ source:
   original_repository: string
   biomodels_id: string
   source_path: string
+  aux_dirs: string[]
 
 collection:
-  type: enum(parameter-fit-variants, sensitivity-analysis, geographic-variants, patient-specific)
+  type: enum(parameter-fit-variants, sensitivity-analysis, geographic-variants, patient-specific, benchmark-suite)
   parent_model: string
   variant_key: string
   count: integer
 
 playground:
   visible: boolean
-  gallery_category: string
+  gallery_categories: string[]
   featured: boolean
   difficulty: enum(beginner, intermediate, advanced)
+  sort_priority: integer

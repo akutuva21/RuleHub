@@ -19,6 +19,6 @@ source:
   source_path: "example-models/tlr3-dsrna-sensing.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["immunology","test-models"]
   featured: false
   difficulty: "advanced"

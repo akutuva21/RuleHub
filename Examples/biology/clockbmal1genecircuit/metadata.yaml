@@ -19,6 +19,6 @@ source:
   source_path: "example-models/clock-bmal1-gene-circuit.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["cell-cycle","test-models"]
   featured: false
   difficulty: "advanced"

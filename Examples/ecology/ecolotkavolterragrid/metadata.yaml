@@ -19,6 +19,6 @@ source:
   source_path: "example-models/eco_lotka_volterra_grid.bngl"
 playground:
   visible: false
-  gallery_category: "ecology"
+  gallery_categories: ["ecology","test-models"]
   featured: false
   difficulty: "advanced"

@@ -19,6 +19,6 @@ source:
   source_path: "example-models/feature_symmetry_factors_cyclic.bngl"
 playground:
   visible: false
-  gallery_category: "other"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"

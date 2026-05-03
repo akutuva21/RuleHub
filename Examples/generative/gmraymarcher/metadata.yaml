@@ -19,6 +19,6 @@ source:
   source_path: "example-models/gm_ray_marcher.bngl"
 playground:
   visible: false
-  gallery_category: "computer-science"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"

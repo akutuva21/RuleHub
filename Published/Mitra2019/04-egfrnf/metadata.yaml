@@ -1,0 +1,19 @@
+id: 04_egfrnf_egfr_nf
+name: example2_starting_point.bngl
+description: Filename: example2_starting_point.bngl
+tags: ["f", "lt_nm", "rt", "k11", "k11r", "k21", "k21r", "k22", "k22r", "l20", "l20r", "l21r", "l22r", "k_o", "k_c", "kaf", "kar", "kp", "kdp", "chi_r", "avg1", "avg2", "avg3", "avg4", "molecules"]
+category: signaling
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

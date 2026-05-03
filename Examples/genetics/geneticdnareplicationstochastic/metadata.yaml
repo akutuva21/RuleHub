@@ -19,6 +19,6 @@ source:
   source_path: "example-models/genetic_dna_replication_stochastic.bngl"
 playground:
   visible: false
-  gallery_category: "gene-expression"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"

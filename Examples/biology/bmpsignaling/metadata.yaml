@@ -19,6 +19,6 @@ source:
   source_path: "example-models/bmp-signaling.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["developmental","test-models"]
   featured: false
   difficulty: "advanced"

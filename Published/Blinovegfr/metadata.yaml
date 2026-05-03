@@ -4,7 +4,7 @@ description: "EGFR signaling model"
 tags: ["published", "nfsim", "blinov", "egfr", "egf", "grb2", "shc", "simulate_nf"]
 category: "signaling"
 compatibility:
-  bng2_compatible: false
+  bng2_compatible: true
   simulation_methods: ["nf"]
   uses_compartments: true
   uses_energy: false
@@ -17,6 +17,6 @@ source:
   source_path: "published-models/growth-factor-signaling/Blinov_egfr.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["cancer"]
   featured: false
   difficulty: "advanced"

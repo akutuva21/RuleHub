@@ -19,6 +19,6 @@ source:
   source_path: "example-models/synbio_band_pass_filter.bngl"
 playground:
   visible: false
-  gallery_category: "synthetic-biology"
+  gallery_categories: ["synbio","test-models"]
   featured: false
   difficulty: "advanced"

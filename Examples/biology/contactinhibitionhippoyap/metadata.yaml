@@ -19,6 +19,6 @@ source:
   source_path: "example-models/contact-inhibition-hippo-yap.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"

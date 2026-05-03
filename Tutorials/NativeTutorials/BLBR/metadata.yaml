@@ -9,7 +9,7 @@ compatibility:
   uses_compartments: false
   uses_energy: false
   uses_functions: false
-  nfsim_compatible: false
+  nfsim_compatible: true
 source:
   origin: "tutorial"
   original_format: "bngl"

@@ -19,6 +19,6 @@ source:
   source_path: "example-models/mt_arithmetic_compiler.bngl"
 playground:
   visible: false
-  gallery_category: "computer-science"
+  gallery_categories: ["cs","test-models"]
   featured: false
   difficulty: "advanced"

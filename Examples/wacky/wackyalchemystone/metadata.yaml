@@ -19,6 +19,6 @@ source:
   source_path: "example-models/wacky_alchemy_stone.bngl"
 playground:
   visible: false
-  gallery_category: "other"
+  gallery_categories: ["synbio","test-models"]
   featured: false
   difficulty: "advanced"

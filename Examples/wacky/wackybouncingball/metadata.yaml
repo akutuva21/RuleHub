@@ -19,6 +19,6 @@ source:
   source_path: "example-models/wacky_bouncing_ball.bngl"
 playground:
   visible: false
-  gallery_category: "other"
+  gallery_categories: ["physics","test-models"]
   featured: false
   difficulty: "advanced"

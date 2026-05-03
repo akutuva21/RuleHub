@@ -1,0 +1,19 @@
+id: 14_receptor_nf_receptor_nf
+name: of ligand/receptor binding and receptor phosphorylation.
+description: A simple model of ligand/receptor binding and receptor phosphorylation.
+tags: ["molecules", "species"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

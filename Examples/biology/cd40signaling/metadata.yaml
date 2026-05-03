@@ -19,6 +19,6 @@ source:
   source_path: "example-models/cd40-signaling.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["immunology","test-models"]
   featured: false
   difficulty: "advanced"

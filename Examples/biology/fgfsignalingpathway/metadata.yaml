@@ -19,6 +19,6 @@ source:
   source_path: "example-models/fgf-signaling-pathway.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["developmental","test-models"]
   featured: false
   difficulty: "advanced"

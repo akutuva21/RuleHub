@@ -19,6 +19,6 @@ source:
   source_path: "example-models/ph_wave_equation.bngl"
 playground:
   visible: false
-  gallery_category: "physics"
+  gallery_categories: ["physics","test-models"]
   featured: false
   difficulty: "advanced"

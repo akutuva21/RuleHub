@@ -17,6 +17,6 @@ source:
   source_path: "published-models/literature/Lin_ERK_2019.bngl"
 playground:
   visible: true
-  gallery_category: "other"
+  gallery_categories: ["developmental"]
   featured: false
   difficulty: "intermediate"

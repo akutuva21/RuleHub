@@ -11,7 +11,7 @@ compatibility:
   uses_compartments: false
   uses_energy: false
   uses_functions: false
-  nfsim_compatible: false
+  nfsim_compatible: true
 source:
   origin: "ai-generated"
   original_format: "bngl"
@@ -19,6 +19,6 @@ source:
   source_path: "example-models/neurotransmitter-release.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["neuroscience","test-models"]
   featured: false
   difficulty: "advanced"

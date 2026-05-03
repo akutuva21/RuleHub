@@ -19,6 +19,6 @@ source:
   source_path: "example-models/autophagy-regulation.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["metabolism","test-models"]
   featured: false
   difficulty: "advanced"

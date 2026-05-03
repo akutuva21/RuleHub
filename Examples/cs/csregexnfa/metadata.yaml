@@ -19,6 +19,6 @@ source:
   source_path: "example-models/cs_regex_nfa.bngl"
 playground:
   visible: false
-  gallery_category: "computer-science"
+  gallery_categories: ["cs","test-models"]
   featured: false
   difficulty: "advanced"

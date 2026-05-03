@@ -19,6 +19,6 @@ source:
   source_path: "example-models/p38-mapk-signaling.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["cancer","test-models"]
   featured: false
   difficulty: "advanced"

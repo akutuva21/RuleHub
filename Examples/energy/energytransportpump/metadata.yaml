@@ -19,6 +19,6 @@ source:
   source_path: "example-models/energy_transport_pump.bngl"
 playground:
   visible: false
-  gallery_category: "other"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"

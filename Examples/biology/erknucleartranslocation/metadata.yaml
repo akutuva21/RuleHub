@@ -19,6 +19,6 @@ source:
   source_path: "example-models/erk-nuclear-translocation.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"

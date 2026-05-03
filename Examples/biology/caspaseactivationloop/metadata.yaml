@@ -19,6 +19,6 @@ source:
   source_path: "example-models/caspase-activation-loop.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["cell-cycle","test-models"]
   featured: false
   difficulty: "advanced"

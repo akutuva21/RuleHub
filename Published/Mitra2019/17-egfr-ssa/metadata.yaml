@@ -1,0 +1,19 @@
+id: 17_egfr_ssa_egfr
+name: 17-egfr-ssa
+description: EGFR model
+tags: ["signaling"]
+category: signaling
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

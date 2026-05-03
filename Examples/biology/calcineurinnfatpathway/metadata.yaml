@@ -19,6 +19,6 @@ source:
   source_path: "example-models/calcineurin-nfat-pathway.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["neuroscience","test-models"]
   featured: false
   difficulty: "advanced"

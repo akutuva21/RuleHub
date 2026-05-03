@@ -19,6 +19,6 @@ source:
   source_path: "example-models/eco_rock_paper_scissors_spatial.bngl"
 playground:
   visible: false
-  gallery_category: "ecology"
+  gallery_categories: ["ecology","test-models"]
   featured: false
   difficulty: "advanced"

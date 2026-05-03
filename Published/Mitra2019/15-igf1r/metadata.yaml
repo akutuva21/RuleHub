@@ -1,0 +1,19 @@
+id: 15_igf1r_IGF1R_fit_all
+name: 15-igf1r
+description: Author: William S. Hlavacek
+tags: ["dilution", "a1_permpers", "a2_permpers", "molecules"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

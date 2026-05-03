@@ -1,0 +1,19 @@
+id: Lin2019_ERK_model
+name: ERK_model.bngl
+description: filename: ERK_model.bngl
+tags: ["egf", "erkpp_sos1_fb", "erkpp_mek_fb", "erkpp_raf1_fb", "lambda", "egfr_tot", "ras_tot", "sos_tot", "rasgap_tot", "raf_tot", "mek_tot", "erk_tot", "ekar3_tot", "erktr_tot", "a1", "d1", "b1", "u1a", "u1b", "b2a", "u2a", "b2b", "u2b", "k2a", "k2b", "b3", "u3", "k3", "a2", "d2", "p1", "q1", "p2", "q2", "p3", "q3", "p4", "q4", "q5", "p6", "q6", "a0_ekar3", "d0_ekar3", "a0_erktr", "d0_erktr", "species"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode", "ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

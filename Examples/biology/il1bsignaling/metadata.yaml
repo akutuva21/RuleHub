@@ -19,6 +19,6 @@ source:
   source_path: "example-models/il1b-signaling.bngl"
 playground:
   visible: false
-  gallery_category: "signaling"
+  gallery_categories: ["test-models"]
   featured: false
   difficulty: "advanced"
