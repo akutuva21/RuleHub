@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles, setNested } = require('./utils');
+const { listModelFiles, listModelFilesAsync, setNested } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -155,4 +155,5 @@ if (require.main === module) {
 
 module.exports = {
   buildEntry,
+  parseMetadataYaml,
 };

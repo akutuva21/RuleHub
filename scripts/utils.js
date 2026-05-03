@@ -7,6 +7,14 @@ function listModelFiles(dir) {
     .sort();
 }
 
+async function listModelFilesAsync(dir) {
+  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.bngl'))
+    .map((entry) => entry.name)
+    .sort();
+}
+
 function setNested(target, parts, value) {
   const blockedKeys = new Set(['__proto__', 'constructor', 'prototype']);
   if (parts.some((part) => blockedKeys.has(part))) return;
@@ -24,5 +32,6 @@ function setNested(target, parts, value) {
 
 module.exports = {
   listModelFiles,
+  listModelFilesAsync,
   setNested
 };
