@@ -1,0 +1,19 @@
+id: 18_mapk_Scaff_22_ground
+name: 18-mapk
+description: For "ground truth" model, use median values such that hierarchy H1 occurs, as shown in Table 3.
+tags: ["signaling"]
+category: signaling
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

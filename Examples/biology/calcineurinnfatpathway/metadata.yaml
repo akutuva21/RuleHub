@@ -1,0 +1,24 @@
+id: "calcineurin-nfat-pathway"
+name: "calcineurin nfat pathway"
+description: "NFAT Signaling: Calcium-dependent nuclear translocation."
+contributors:
+  - name: "Achyudhan"
+tags: ["calcineurin", "nfat", "pathway", "ca", "cam", "can", "rcan1"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/calcineurin-nfat-pathway.bngl"
+playground:
+  visible: false
+  gallery_categories: ["neuroscience","test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "endosomal-sorting-rab"
+name: "endosomal sorting rab"
+description: "Endosomal Sorting: Rab GTPase conversion and effector recruitment."
+contributors:
+  - name: "Achyudhan"
+tags: ["endosomal", "sorting", "rab", "rab5", "rab7", "effector", "v_gef", "v_gap_drive"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/endosomal-sorting-rab.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

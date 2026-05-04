@@ -1,0 +1,24 @@
+id: "vegf-angiogenesis"
+name: "vegf angiogenesis"
+description: "VEGF-mediated signaling in angiogenesis."
+contributors:
+  - name: "Achyudhan"
+tags: ["vegf", "angiogenesis", "vegfr2", "vegfr1", "erk", "endothelial"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/vegf-angiogenesis.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cancer","test-models"]
+  featured: false
+  difficulty: "advanced"

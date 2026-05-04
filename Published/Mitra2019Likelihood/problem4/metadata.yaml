@@ -1,0 +1,19 @@
+id: problem4_model0_tofit
+name: model.bngl
+description: filename: model.bngl
+tags: ["f", "na", "t", "vchannel", "nchannel", "vcyt", "ag_tot_0", "ag_conc1", "r_tot", "syk_tot", "ship1_tot", "kon", "koff", "kase", "pase", "kp_syk", "km_syk", "kp_ship1", "km_ship1", "ksynth1", "kdeg1", "kpten", "h_tot", "kdegran", "kdegx", "k_xon", "k_xoff", "kp_x", "km_x", "molecules"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

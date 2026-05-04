@@ -1,0 +1,24 @@
+id: "nn_xor"
+name: "nn xor"
+description: "Model: nn_xor.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["nn", "xor", "input", "hidden", "output", "target", "weightih", "weightho", "dopamine"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/nn_xor.bngl"
+playground:
+  visible: false
+  gallery_categories: ["ml-signal","test-models"]
+  featured: false
+  difficulty: "advanced"

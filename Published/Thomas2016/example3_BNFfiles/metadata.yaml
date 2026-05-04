@@ -1,0 +1,19 @@
+id: example3_BNFfiles_example3
+name: example3 BNFfiles
+description: BNGL model: example3
+tags: ["alpha", "molecules", "species"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

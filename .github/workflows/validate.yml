@@ -26,5 +26,17 @@ jobs:
       - name: Regenerate manifest
         run: node scripts/generate-manifest.js --root . --output manifest.generated.json
 
+      - name: Regenerate slim manifest
+        run: node scripts/generate-manifest.js --root . --slim --output manifest-slim.generated.json
+
+      - name: Regenerate gallery
+        run: node scripts/generate-gallery.js --root . --output gallery.generated.json
+
       - name: Check manifest is up to date
         run: diff -u manifest.json manifest.generated.json
+
+      - name: Check slim manifest is up to date
+        run: diff -u manifest-slim.json manifest-slim.generated.json
+
+      - name: Check gallery is up to date
+        run: diff -u gallery.json gallery.generated.json

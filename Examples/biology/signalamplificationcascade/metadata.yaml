@@ -1,0 +1,24 @@
+id: "signal-amplification-cascade"
+name: "signal amplification cascade"
+description: "BioNetGen model: signal amplification cascade"
+contributors:
+  - name: "Achyudhan"
+tags: ["signal", "amplification", "cascade", "ligand", "receptor", "effector", "messenger"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/signal-amplification-cascade.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

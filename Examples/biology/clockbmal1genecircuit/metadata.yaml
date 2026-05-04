@@ -1,0 +1,24 @@
+id: "clock-bmal1-gene-circuit"
+name: "clock bmal1 gene circuit"
+description: "BMAL1-CLOCK: The master activator of the circadian circuit."
+contributors:
+  - name: "Achyudhan"
+tags: ["clock", "bmal1", "gene", "circuit", "ror", "reverb", "dna"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/clock-bmal1-gene-circuit.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cell-cycle","test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "wound-healing-pdgf-signaling"
+name: "wound healing pdgf signaling"
+description: "BioNetGen model: wound healing pdgf signaling"
+contributors:
+  - name: "Achyudhan"
+tags: ["wound", "healing", "pdgf", "signaling", "pdgfr", "stat3", "fibroblast"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/wound-healing-pdgf-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

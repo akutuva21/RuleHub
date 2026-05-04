@@ -1,0 +1,24 @@
+id: "inositol-phosphate-metabolism"
+name: "inositol phosphate metabolism"
+description: "Inositol Phosphate (IP) Metabolism: PLC signaling and branch points."
+contributors:
+  - name: "Achyudhan"
+tags: ["inositol", "phosphate", "metabolism", "pip2", "ip3", "ip4", "calcium", "agonist"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/inositol-phosphate-metabolism.bngl"
+playground:
+  visible: false
+  gallery_categories: ["neuroscience","test-models"]
+  featured: false
+  difficulty: "advanced"

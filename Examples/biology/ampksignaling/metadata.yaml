@@ -1,0 +1,24 @@
+id: "ampk-signaling"
+name: "ampk signaling"
+description: "AMPK signaling: The cellular energy sensor."
+contributors:
+  - name: "Achyudhan"
+tags: ["ampk", "signaling", "amp", "lkb1", "ca", "sik", "crtc"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/ampk-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["neuroscience","test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,11 +1,14 @@
 const fs = require('fs');
 const path = require('path');
+const { listModelFilesAsync, parseMetadataYaml } = require('./utils');
 
-const SEARCH_ROOTS = ['Published', 'Contributed', 'Tutorials', 'PyBioNetGen'];
+const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
+const DEFAULT_IGNORE_DIRS = ['fitting', 'BioNetFit_files', 'output_*', 'fit_*', '__pycache__', 'pybnf_files'];
 
 function parseArgs(argv) {
   let root = path.resolve(__dirname, '..');
   let output = '';
+  let slim = false;
 
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
@@ -17,96 +20,27 @@ function parseArgs(argv) {
     if (arg === '--output' && argv[index + 1]) {
       output = path.resolve(argv[index + 1]);
       index += 1;
-    }
-  }
-
-  return {
-    root,
-    output: output || path.join(root, 'manifest.json'),
-  };
-}
-
-function parseScalar(rawValue) {
-  const value = rawValue.trim();
-  if (value === 'true') return true;
-  if (value === 'false') return false;
-  if (value === 'null') return null;
-  if (/^-?\d+$/.test(value)) return Number(value);
-  if (value.startsWith('[') && value.endsWith(']')) {
-    const inner = value.slice(1, -1).trim();
-    if (!inner) return [];
-    return inner.split(',').map(entry => entry.trim().replace(/^"|"$/g, ''));
-  }
-  if (value.startsWith('"') && value.endsWith('"')) {
-    return value.slice(1, -1);
-  }
-  return value;
-}
-
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
-}
-
-function parseMetadataYaml(content) {
-  const result = {};
-  const stack = [];
-
-  for (const rawLine of content.split(/\r?\n/)) {
-    if (!rawLine.trim() || rawLine.trim().startsWith('#')) continue;
-
-    const indent = rawLine.match(/^\s*/)[0].length;
-    const trimmed = rawLine.trim();
-
-    if (trimmed.startsWith('- ')) {
-      const currentPath = stack.map(entry => entry.key).join('.');
-      const listValue = parseScalar(trimmed.slice(2));
-
-      if (currentPath === 'tags') {
-        result.tags = Array.isArray(result.tags) ? result.tags : [];
-        result.tags.push(String(listValue));
-      }
       continue;
     }
-
-    while (stack.length > 0 && indent <= stack[stack.length - 1].indent) {
-      stack.pop();
+    if (arg === '--slim') {
+      slim = true;
     }
-
-    const separator = trimmed.indexOf(':');
-    if (separator < 0) continue;
-
-    const key = trimmed.slice(0, separator).trim();
-    const rawValue = trimmed.slice(separator + 1);
-    const pathParts = [...stack.map(entry => entry.key), key];
-    const dottedPath = pathParts.join('.');
-
-    if (!rawValue.trim()) {
-      stack.push({ key, indent });
-      if (dottedPath === 'tags') {
-        result.tags = Array.isArray(result.tags) ? result.tags : [];
-      }
-      continue;
-    }
-
-    setNested(result, dottedPath, parseScalar(rawValue));
   }
 
-  return result;
+  if (!output) {
+    output = slim 
+      ? path.join(root, 'manifest-slim.json')
+      : path.join(root, 'manifest.json');
+  }
+
+  return { root, output, slim };
 }
 
 function listMetadataFiles(dir, results = []) {
   if (!fs.existsSync(dir)) return results;
 
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       listMetadataFiles(fullPath, results);
@@ -120,52 +54,153 @@ function listMetadataFiles(dir, results = []) {
   return results;
 }
 
-function listModelFiles(dir) {
-  return fs.readdirSync(dir, { withFileTypes: true })
+function getIgnoreDirs(metadata) {
+  const auxDirs = metadata?.source?.aux_dirs;
+  if (auxDirs && Array.isArray(auxDirs)) {
+    return [...DEFAULT_IGNORE_DIRS, ...auxDirs];
+  }
+  return DEFAULT_IGNORE_DIRS;
+}
+
+function isIgnoredDir(dirName, ignoreDirs) {
+  return ignoreDirs.some(ignored => {
+    if (ignored.includes('*')) {
+      return dirName.startsWith(ignored.replace('*', ''));
+    }
+    return dirName === ignored;
+  });
+}
+
+async function listModelFilesFiltered(dir, metadata) {
+  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  
+  return entries
     .filter(entry => entry.isFile() && entry.name.endsWith('.bngl'))
     .map(entry => entry.name)
     .sort();
 }
 
-function buildEntry(root, metadata, metadataFile, modelFile, isCollection) {
+function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim, modelFiles) {
   const modelDir = path.dirname(metadataFile);
   const relativeModelPath = path.relative(root, path.join(modelDir, modelFile)).replace(/\\/g, '/');
-  const id = isCollection ? path.basename(modelFile, '.bngl') : metadata.id || path.basename(modelFile, '.bngl');
+  const id = isCollection 
+    ? metadata.id || path.basename(modelFile, '.bngl')
+    : (metadata.id && modelFiles.length === 1) 
+      ? metadata.id 
+      : path.basename(modelFile, '.bngl');
 
-  return {
+  const compatibility = {
+    bng2: metadata.compatibility?.bng2_compatible ?? false,
+    nfsim: metadata.compatibility?.nfsim_compatible ?? false,
+    excluded: metadata.compatibility?.excluded ?? false,
+    methods: metadata.compatibility?.simulation_methods || [],
+  };
+
+  const gallery = metadata.playground?.gallery_categories 
+    || (metadata.playground?.gallery_category 
+        ? [metadata.playground.gallery_category] 
+        : []);
+
+  const baseEntry = {
     id,
-    name: isCollection ? `${metadata.name} - ${path.basename(modelFile, '.bngl')}` : metadata.name || id,
+    name: isCollection ? metadata.name : (metadata.name || id),
     description: metadata.description || '',
-    path: relativeModelPath,
-    file: modelFile,
     tags: Array.isArray(metadata.tags) ? metadata.tags : [],
     category: metadata.category || 'other',
-    bng2_compatible: metadata.compatibility?.bng2_compatible ?? false,
     origin: metadata.source?.origin || 'other',
     visible: metadata.playground?.visible ?? false,
-    collectionId: isCollection ? metadata.id || null : null,
+    compatibility,
+    gallery,
   };
-}
 
-function main() {
-  const { root, output } = parseArgs(process.argv.slice(2));
-  const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
-  const manifestEntries = [];
+  if (!slim) {
+    baseEntry.path = relativeModelPath;
+    baseEntry.file = modelFile;
+  }
 
-  for (const metadataFile of metadataFiles) {
-    const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
-    const modelFiles = listModelFiles(path.dirname(metadataFile));
-    if (modelFiles.length === 0) continue;
+  if (isCollection) {
+    baseEntry.collectionId = metadata.id || null;
+    
+    if (!slim && metadata.collection) {
+      const modelFiles = fs.readdirSync(modelDir, { withFileTypes: true })
+        .filter(e => e.isFile() && e.name.endsWith('.bngl'))
+        .map(e => e.name)
+        .sort();
 
-    const isCollection = modelFiles.length > 1 || Boolean(metadata.collection);
-    for (const modelFile of modelFiles) {
-      manifestEntries.push(buildEntry(root, metadata, metadataFile, modelFile, isCollection));
+      const variants = modelFiles.map(file => ({
+        id: path.basename(file, '.bngl'),
+        file: file,
+      }));
+
+      baseEntry.collection = {
+        type: metadata.collection.type || 'parameter-fit-variants',
+        count: metadata.collection.count || variants.length,
+        variant_key: metadata.collection.variant_key || 'variant',
+        variants: variants,
+      };
+    }
+  } else {
+    baseEntry.collectionId = null;
+  }
+
+  if (!slim) {
+    if (metadata.playground?.featured !== undefined) {
+      baseEntry.featured = metadata.playground.featured;
+    }
+    if (metadata.playground?.difficulty) {
+      baseEntry.difficulty = metadata.playground.difficulty;
+    }
+    if (metadata.citation?.doi) {
+      baseEntry.citation = { doi: metadata.citation.doi };
     }
   }
 
-  manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
-  fs.writeFileSync(output, JSON.stringify(manifestEntries, null, 2));
-  console.log(`Generated ${manifestEntries.length} manifest entries at ${output}`);
+  return baseEntry;
 }
 
-main();
+function isCollectionEntry(metadata, modelFiles) {
+  return Boolean(metadata.collection);
+}
+
+async function main() {
+  const { root, output, slim } = parseArgs(process.argv.slice(2));
+  const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
+
+  const entryPromises = metadataFiles.map(async (metadataFile) => {
+    const content = await fs.promises.readFile(metadataFile, 'utf8');
+    const metadata = parseMetadataYaml(content);
+    const modelFiles = await listModelFilesFiltered(path.dirname(metadataFile), metadata);
+
+    if (modelFiles.length === 0) return [];
+
+    const isCollection = isCollectionEntry(metadata, modelFiles);
+
+    if (isCollection) {
+      return [buildEntry(root, metadata, metadataFile, modelFiles[0], true, slim, modelFiles)];
+    }
+
+    return modelFiles.map(modelFile =>
+      buildEntry(root, metadata, metadataFile, modelFile, false, slim, modelFiles)
+    );
+  });
+
+  const manifestEntries = (await Promise.all(entryPromises)).flat();
+
+  manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
+  await fs.promises.writeFile(output, JSON.stringify(manifestEntries, null, 2));
+  console.log(`Generated ${manifestEntries.length} manifest entries at ${output}${slim ? ' (slim)' : ''}`);
+}
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  parseArgs,
+  buildEntry,
+  listMetadataFiles,
+  isCollectionEntry,
+};

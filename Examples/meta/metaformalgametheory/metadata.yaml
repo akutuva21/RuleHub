@@ -1,0 +1,24 @@
+id: "meta_formal_game_theory"
+name: "meta formal game theory"
+description: "Model: meta_formal_game_theory.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["meta", "formal", "game", "theory", "hawk", "dove", "pop", "payoffh", "payoffd"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/meta_formal_game_theory.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

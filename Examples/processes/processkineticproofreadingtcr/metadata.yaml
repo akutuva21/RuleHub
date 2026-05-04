@@ -1,0 +1,24 @@
+id: "process_kinetic_proofreading_tcr"
+name: "process kinetic proofreading tcr"
+description: "Model: process_kinetic_proofreading_tcr.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["process", "kinetic", "proofreading", "tcr", "l"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/process_kinetic_proofreading_tcr.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

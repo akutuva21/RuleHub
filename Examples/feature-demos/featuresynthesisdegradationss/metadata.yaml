@@ -1,0 +1,24 @@
+id: "feature_synthesis_degradation_ss"
+name: "feature synthesis degradation ss"
+description: "Model: feature_synthesis_degradation_ss.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["feature", "synthesis", "degradation", "ss", "m", "generate_network", "simulate"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/feature_synthesis_degradation_ss.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

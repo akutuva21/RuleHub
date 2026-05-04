@@ -1,0 +1,24 @@
+id: "stress-response-adaptation"
+name: "stress response adaptation"
+description: "BioNetGen model: stress response adaptation"
+contributors:
+  - name: "Achyudhan"
+tags: ["stress", "response", "adaptation", "sensor", "adapter", "enzyme"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/stress-response-adaptation.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,2417 @@
+{
+  "AB": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ABC": {
+    "gallery_categories": [
+      "metabolism",
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ABC_scan": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ABC_ssa": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ABp": {
+    "gallery_categories": [
+      "metabolism",
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ABp_approx": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "An_2009": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "BAB": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "BAB_coop": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "BAB_scan": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "BaruaBCR_2012": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "BaruaFceRI_2012": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Barua_2007": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Barua_2009": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Blinov_2006": {
+    "gallery_categories": [
+      "cell-cycle"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Blinov_egfr": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": true
+  },
+  "Blinov_ran": {
+    "gallery_categories": [
+      "cell-cycle"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": true
+  },
+  "CaOscillate_Func": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "CaOscillate_Sat": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Chattaraj_2021": {
+    "gallery_categories": [
+      "neuroscience"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Cheemalavagu_JAK_STAT": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ChylekTCR_2014": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Chylek_library": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "CircadianOscillator": {
+    "gallery_categories": [
+      "cell-cycle",
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ComplexDegradation": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Creamer_2012": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Dolan_2015": {
+    "gallery_categories": [
+      "metabolism"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Dushek_2011": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Dushek_2014": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Erdem_2021": {
+    "gallery_categories": [
+      "metabolism"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Faeder_2003": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "FceRI_ji": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "FceRI_viz": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "GK": {
+    "gallery_categories": [
+      "metabolism",
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Hat_2016": {
+    "gallery_categories": [
+      "cell-cycle",
+      "multistage"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Haugh2b": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Jaruszewicz-Blonska_2023": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Jung_2017": {
+    "gallery_categories": [
+      "neuroscience"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Kesseler_2013": {
+    "gallery_categories": [
+      "cell-cycle"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Korwek_2023": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Kozer_2013": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Kozer_2014": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "LR": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "LRR": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "LRR_comp": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "LR_comp": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "LV": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "LV_comp": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Lang_2024": {
+    "gallery_categories": [
+      "cell-cycle"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Ligon_2014": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
+  },
+  "Lin_ERK_2019": {
+    "gallery_categories": [
+      "developmental"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Lin_Prion_2019": {
+    "gallery_categories": [
+      "neuroscience"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Lin_TCR_2019": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Lisman": {
+    "gallery_categories": [
+      "neuroscience",
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Lisman_bifurcate": {
+    "gallery_categories": [
+      "neuroscience",
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Massole_2023": {
+    "gallery_categories": [
+      "developmental"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "McMillan_2021": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
+  },
+  "Mertins_2023": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "Model_ZAP": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
+  },
+  "Motivating_example": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Motivating_example_cBNGL": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Mukhopadhyay_2013": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Nag_2009": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Nosbisch_2022": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Repressilator": {
+    "gallery_categories": [
+      "cell-cycle",
+      "synbio",
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Rule_based_egfr_tutorial": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "SHP2_base_model": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "SIR": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Suderman_2013": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Zhang_2021": {
+    "gallery_categories": [
+      "developmental"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "Zhang_2023": {
+    "gallery_categories": [
+      "developmental"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "akt-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "allosteric-activation": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ampk-signaling": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "apoptosis-cascade": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "auto-activation-loop": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "autophagy-regulation": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "bcr-signaling": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "beta-adrenergic-response": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "birth-death": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "bistable-toggle-switch": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "blbr": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "blood-coagulation-thrombin": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "bmp-signaling": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "brusselator-oscillator": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cBNGL_simple": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "calcineurin-nfat-pathway": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "calcium-spike-signaling": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "caspase-activation-loop": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "catalysis": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cd40-signaling": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cell-cycle-checkpoint": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "checkpoint-kinase-signaling": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "chemistry": {
+    "gallery_categories": [
+      "tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "chemotaxis-signal-transduction": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "circadian-oscillator": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "clock-bmal1-gene-circuit": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "compartment_endocytosis": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "compartment_membrane_bound": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "compartment_nested_transport": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "compartment_nuclear_transport": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "compartment_organelle_exchange": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "competitive-enzyme-inhibition": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "complement-activation-cascade": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "contact-inhibition-hippo-yap": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cooperative-binding": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_diffie_hellman": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_hash_function": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_huffman": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_monte_carlo_pi": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_pagerank": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_pid_controller": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "cs_regex_nfa": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "degranulation_model": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "dna-damage-repair": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "dna-methylation-dynamics": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "dr5-apoptosis-signaling": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "dual-site-phosphorylation": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "e2f-rb-cell-cycle-switch": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "eco_coevolution_host_parasite": {
+    "gallery_categories": [
+      "ecology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "eco_food_web_chaos_3sp": {
+    "gallery_categories": [
+      "ecology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "eco_lotka_volterra_grid": {
+    "gallery_categories": [
+      "ecology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "eco_mutualism_obligate": {
+    "gallery_categories": [
+      "ecology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "eco_rock_paper_scissors_spatial": {
+    "gallery_categories": [
+      "ecology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "egfr-signaling-pathway": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "egfr_net_red": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "egfr_ode": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "egfr_path": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "egfr_simple": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "eif2a-stress-response": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "endosomal-sorting-rab": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "energy_allostery_mwc": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "energy_catalysis_mm": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "energy_cooperativity_adh": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "energy_example1": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "energy_linear_chain": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "energy_transport_pump": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "er-stress-response": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "erk-nuclear-translocation": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "fceri_fyn": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "feature_functional_rates_volume": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "feature_global_functions_scan": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "feature_local_functions_explicit": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "feature_symmetry_factors_cyclic": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "feature_synthesis_degradation_ss": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "fgf-signaling-pathway": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "gas6-axl-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "gene-expression-toggle": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "genetic_bistability_energy": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "genetic_dna_replication_stochastic": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "genetic_goodwin_oscillator": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "genetic_translation_kinetics": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "genetic_turing_pattern_1d": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "glioblastoma-egfrviii-signaling": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "glycolysis-branch-point": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "gm_game_of_life": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "gm_ray_marcher": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "gpcr-desensitization-arrestin": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "hedgehog-signaling-pathway": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "heise": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "hematopoietic-growth-factor": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "hif1a-degradation-loop": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "hif1a_degradation_loop": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "hypoxia-response-signaling": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "il1b-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "il6-jak-stat-pathway": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "immune-synapse-formation": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "inflammasome-activation": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "innate_immunity": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "inositol-phosphate-metabolism": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "insulin-glucose-homeostasis": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "interferon-signaling": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ire1a-xbp1-er-stress": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "issue_198_short": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "jak-stat-cytokine-signaling": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "jnk-mapk-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "kir-channel-regulation": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "l-type-calcium-channel-dynamics": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "lac-operon-regulation": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "lipid-mediated-pip3-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "localfunc": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mapk-dimers": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mapk-monomers": {
+    "gallery_categories": [
+      "cancer"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mapk-signaling-cascade": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "meta_formal_game_theory": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "meta_formal_molecular_clock": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "meta_formal_petri_net": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "michaelis-menten-kinetics": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "michment": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ml_gradient_descent": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ml_hopfield": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ml_kmeans": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ml_q_learning": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ml_svm": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "motor": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mt_arithmetic_compiler": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mt_bngl_interpreter": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mt_music_sequencer": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mt_pascal_triangle": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mt_quine": {
+    "gallery_categories": [
+      "cs",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mtor-signaling": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mtorc2-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "mwc": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "myogenic-differentiation": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "negative-feedback-loop": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "neurotransmitter-release": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfkb": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfkb-feedback": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfsim_aggregation_gelation": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfsim_coarse_graining": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfsim_dynamic_compartments": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfsim_hybrid_particle_field": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nfsim_ring_closure_polymer": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "nn_xor": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "no-cgmp-signaling": {
+    "gallery_categories": [
+      "metabolism",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "notch-delta-lateral-inhibition": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "organelle_transport": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "organelle_transport_struct": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "oxidative-stress-response": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "p38-mapk-signaling": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "p53-mdm2-oscillator": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "parp1-mediated-dna-repair": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ph_lorenz_attractor": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ph_nbody_gravity": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ph_schrodinger": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ph_wave_equation": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "phosphorelay-chain": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "platelet-activation": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "polymer": {
+    "gallery_categories": [
+      "tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": true
+  },
+  "polymer_draft": {
+    "gallery_categories": [
+      "tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": true
+  },
+  "predator-prey-dynamics": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "process_actin_treadmilling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "process_autophagy_flux": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "process_cell_adhesion_strength": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "process_kinetic_proofreading_tcr": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "process_quorum_sensing_switch": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "quasi_equilibrium": {
+    "gallery_categories": [
+      "tutorials",
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "quorum-sensing-circuit": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "rab-gtpase-cycle": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "rankl-rank-signaling": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "ras-gef-gap-cycle": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "repressilator-oscillator": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "retinoic-acid-signaling": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "rho-gtpase-actin-cytoskeleton": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "shp2-phosphatase-regulation": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "signal-amplification-cascade": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "simple": {
+    "gallery_categories": [
+      "tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "simple-dimerization": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "simple_system": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "sir-epidemic-model": {
+    "gallery_categories": [
+      "ecology",
+      "tutorials",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "smad-tgf-beta-signaling": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "sonic-hedgehog-gradient": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "sp_fourier_synthesizer": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "sp_image_convolution": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "sp_kalman_filter": {
+    "gallery_categories": [
+      "ml-signal",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "stat3-mediated-transcription": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "stress-response-adaptation": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "synaptic-plasticity-ltp": {
+    "gallery_categories": [
+      "neuroscience",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "synbio_band_pass_filter": {
+    "gallery_categories": [
+      "synbio",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "synbio_counter_molecular": {
+    "gallery_categories": [
+      "synbio",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "synbio_edge_detector": {
+    "gallery_categories": [
+      "synbio",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "synbio_logic_gates_enzymatic": {
+    "gallery_categories": [
+      "synbio",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "synbio_oscillator_synchronization": {
+    "gallery_categories": [
+      "synbio",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "t-cell-activation": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_ANG_synthesis_simple": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_MM": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_fixed": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_mratio": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_sat": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_synthesis_cBNGL_simple": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_synthesis_complex": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_synthesis_complex_0_cBNGL": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_synthesis_complex_source_cBNGL": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "test_synthesis_simple": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "tlbr": {
+    "gallery_categories": [
+      "immunology"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "tlmr": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "tlr3-dsrna-sensing": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "tnf-induced-apoptosis": {
+    "gallery_categories": [
+      "cell-cycle",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "toggle": {
+    "gallery_categories": [
+      "synbio",
+      "native-tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "toy-jim": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "toy1": {
+    "gallery_categories": [
+      "tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "toy2": {
+    "gallery_categories": [
+      "tutorials"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": true
+  },
+  "two-component-system": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "univ_synth": {
+    "gallery_categories": [],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "vegf-angiogenesis": {
+    "gallery_categories": [
+      "cancer",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "vilar_2002": {
+    "gallery_categories": [
+      "cell-cycle"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "vilar_2002b": {
+    "gallery_categories": [
+      "cell-cycle"
+    ],
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "viral-sensing-innate-immunity": {
+    "gallery_categories": [
+      "immunology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "visualize": {
+    "gallery_categories": [
+      "native-tutorials"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wacky_alchemy_stone": {
+    "gallery_categories": [
+      "synbio",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wacky_black_hole": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wacky_bouncing_ball": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wacky_traffic_jam_asep": {
+    "gallery_categories": [
+      "physics",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wacky_zombie_infection": {
+    "gallery_categories": [
+      "ecology",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wnt-beta-catenin-signaling": {
+    "gallery_categories": [
+      "developmental",
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  "wound-healing-pdgf-signaling": {
+    "gallery_categories": [
+      "test-models"
+    ],
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  }
+}

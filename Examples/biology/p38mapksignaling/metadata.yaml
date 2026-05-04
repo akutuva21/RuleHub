@@ -1,0 +1,24 @@
+id: "p38-mapk-signaling"
+name: "p38 mapk signaling"
+description: "p38 MAPK stress signaling cascade."
+contributors:
+  - name: "Achyudhan"
+tags: ["p38", "mapk", "signaling", "mkk3", "mapkap2", "v_thermal"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/p38-mapk-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cancer","test-models"]
+  featured: false
+  difficulty: "advanced"

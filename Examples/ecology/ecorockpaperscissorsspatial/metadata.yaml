@@ -1,0 +1,24 @@
+id: "eco_rock_paper_scissors_spatial"
+name: "eco rock paper scissors spatial"
+description: "Model: eco_rock_paper_scissors_spatial.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["eco", "rock", "paper", "scissors", "spatial", "s", "generate_network"]
+category: "ecology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/eco_rock_paper_scissors_spatial.bngl"
+playground:
+  visible: false
+  gallery_categories: ["ecology","test-models"]
+  featured: false
+  difficulty: "advanced"

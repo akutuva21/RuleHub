@@ -1,0 +1,24 @@
+id: "jnk-mapk-signaling"
+name: "jnk mapk signaling"
+description: "JNK MAPK Signaling: Scaffold-mediated activation and feedback."
+contributors:
+  - name: "Achyudhan"
+tags: ["jnk", "mapk", "signaling", "mkk7", "jip1", "v_dephos"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/jnk-mapk-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

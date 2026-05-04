@@ -1,0 +1,24 @@
+id: "dna-damage-repair"
+name: "dna damage repair"
+description: "DNA damage sensing and repair pathway (ATM-CHK2-p53 axis)"
+contributors:
+  - name: "Achyudhan"
+tags: ["dna", "damage", "repair", "mrn", "atm", "chk2", "repaircomplex"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/dna-damage-repair.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cancer","test-models"]
+  featured: false
+  difficulty: "advanced"

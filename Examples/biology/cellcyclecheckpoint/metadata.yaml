@@ -1,0 +1,24 @@
+id: "cell-cycle-checkpoint"
+name: "cell cycle checkpoint"
+description: "Cell cycle checkpoint: Mitotic entry switch (CDK1)."
+contributors:
+  - name: "Achyudhan"
+tags: ["cell", "cycle", "checkpoint", "cyclin", "cdk", "cdc25", "wee1", "apc", "p21"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/cell-cycle-checkpoint.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cell-cycle","test-models"]
+  featured: false
+  difficulty: "advanced"

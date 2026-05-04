@@ -17,6 +17,6 @@ source:
   source_path: "published-models/immune-signaling/innate_immunity.bngl"
 playground:
   visible: true
-  gallery_category: "immunology"
+  gallery_categories: ["immunology"]
   featured: false
   difficulty: "intermediate"

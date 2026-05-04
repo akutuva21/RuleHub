@@ -1,0 +1,24 @@
+id: "immune-synapse-formation"
+name: "immune synapse formation"
+description: "Kinetic Parameters"
+contributors:
+  - name: "Achyudhan"
+tags: ["immune", "synapse", "formation", "tcr", "pmhc", "lck", "zap70"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/immune-synapse-formation.bngl"
+playground:
+  visible: false
+  gallery_categories: ["immunology","test-models"]
+  featured: false
+  difficulty: "advanced"

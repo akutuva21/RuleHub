@@ -4,7 +4,7 @@ description: "Polymerization model"
 tags: ["published", "tutorials", "nfsim", "polymer", "a", "b", "c", "simulate_nf"]
 category: "tutorial"
 compatibility:
-  bng2_compatible: false
+  bng2_compatible: true
   simulation_methods: ["nf"]
   uses_compartments: true
   uses_energy: false
@@ -17,6 +17,6 @@ source:
   source_path: "published-models/tutorials/polymer.bngl"
 playground:
   visible: false
-  gallery_category: "tutorial"
+  gallery_categories: ["tutorials"]
   featured: false
   difficulty: "advanced"

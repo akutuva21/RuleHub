@@ -1,0 +1,24 @@
+id: "eco_food_web_chaos_3sp"
+name: "eco food web chaos 3sp"
+description: "Model: eco_food_web_chaos_3sp.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["eco", "food", "web", "chaos", "3sp", "r", "c", "p", "k_eat_r", "k_eat_c"]
+category: "ecology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ssa"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/eco_food_web_chaos_3sp.bngl"
+playground:
+  visible: false
+  gallery_categories: ["ecology","test-models"]
+  featured: false
+  difficulty: "advanced"

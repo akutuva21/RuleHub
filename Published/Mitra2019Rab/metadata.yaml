@@ -1,0 +1,72 @@
+id: rab_mon1ccz1_ox
+name: rab_mon1ccz1_ox.bngl
+description: filename:rab_mon1ccz1_ox.bngl
+tags:
+  - kd_rabgef1__free
+  - d_hill__free
+  - d_threshold__free
+  - k_deg__free
+  - k_dephos__free
+  - k_deub__free
+  - k_extract__free
+  - k_insert__free
+  - k_recyc__free
+  - k_synth__free
+  - k_to_endo__free
+  - kcat_rab5__free
+  - kcat_rab7__free
+  - kf_rab5_mon1__free
+  - kf_rab5_rabep1__free
+  - kf_ptyr_sh2__free
+  - kr_kub_uim__free
+  - kr_rab5_mon1__free
+  - kr_rab5_rabep1__free
+  - kr_ptyr_sh2__free
+  - py_basal_coef__free
+  - py_half_coef__free
+  - py_hill_coef__free
+  - py_scale_coef__free
+  - r_hill__free
+  - r_threshold__free
+  - ub_basal_coef__free
+  - ub_half_coef__free
+  - ub_hill_coef__free
+  - ub_scale_coef__free
+  - rab5_expr
+  - rab7_expr
+  - mon1_expr
+  - ccz1_expr
+  - kf_mon1_ccz1
+  - kr_mon1_ccz1
+  - egf_conc_ngml
+  - ub_hill_coef
+  - ub_half_coef
+  - ub_basal_coef
+  - ub_scale_coef
+  - py_hill_coef
+  - py_half_coef
+  - py_basal_coef
+  - py_scale_coef
+  - gtp_to_gdp_ratio
+  - kcatgtp_rab5
+  - k_gdp_gef_eff
+  - kcatgtp_rab7
+  - molecules
+  - 0
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods:
+    - ode
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories:
+    []
+  featured: false
+  difficulty: intermediate

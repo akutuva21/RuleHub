@@ -1,0 +1,24 @@
+id: "nfsim_coarse_graining"
+name: "nfsim coarse graining"
+description: "Model: nfsim_coarse_graining.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["nfsim", "coarse", "graining", "droplet"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["nf"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/nfsim_coarse_graining.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "eif2a-stress-response"
+name: "eif2a stress response"
+description: "Integrated Stress Response: eIF2alpha and the translational gate."
+contributors:
+  - name: "Achyudhan"
+tags: ["eif2a", "stress", "response", "eif2b", "perk", "gadd34"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/eif2a-stress-response.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

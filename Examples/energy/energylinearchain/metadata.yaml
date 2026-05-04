@@ -1,0 +1,24 @@
+id: "energy_linear_chain"
+name: "energy linear chain"
+description: "Model: energy_linear_chain.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["energy", "linear", "chain", "m", "generate_network"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: true
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/energy_linear_chain.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,24 @@
+id: "cs_hash_function"
+name: "cs hash function"
+description: "Cryptographic Hash Function in BNGL"
+contributors:
+  - name: "Achyudhan"
+tags: ["cs", "hash", "function", "b0", "b1", "b2", "b3", "h0", "h1", "h2", "h3"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/cs_hash_function.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cs","test-models"]
+  featured: false
+  difficulty: "advanced"

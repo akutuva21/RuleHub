@@ -1,0 +1,19 @@
+id: 05_threestep_m1
+name: of a 3-step signaling cascade
+description: Toy model of a 3-step signaling cascade
+tags: ["k1", "k2", "k3", "ainit", "molecules"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

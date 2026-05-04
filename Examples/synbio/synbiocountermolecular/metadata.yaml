@@ -1,0 +1,24 @@
+id: "synbio_counter_molecular"
+name: "synbio counter molecular"
+description: "Model: synbio_counter_molecular.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["synbio", "counter", "molecular", "state", "input"]
+category: "synthetic-biology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/synbio_counter_molecular.bngl"
+playground:
+  visible: false
+  gallery_categories: ["synbio","test-models"]
+  featured: false
+  difficulty: "advanced"

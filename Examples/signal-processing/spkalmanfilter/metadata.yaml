@@ -1,0 +1,24 @@
+id: "sp_kalman_filter"
+name: "sp kalman filter"
+description: "Kalman Filter in BNGL"
+contributors:
+  - name: "Achyudhan"
+tags: ["sp", "kalman", "filter", "truex", "obs", "estx", "estv", "variance", "innovation"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/sp_kalman_filter.bngl"
+playground:
+  visible: false
+  gallery_categories: ["ml-signal","test-models"]
+  featured: false
+  difficulty: "advanced"

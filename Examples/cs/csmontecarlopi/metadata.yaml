@@ -1,0 +1,24 @@
+id: "cs_monte_carlo_pi"
+name: "cs monte carlo pi"
+description: "Model: cs_monte_carlo_pi.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["cs", "monte", "carlo", "pi", "trial", "pi_estimate", "generate_network", "simulate"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/cs_monte_carlo_pi.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cs","test-models"]
+  featured: false
+  difficulty: "advanced"

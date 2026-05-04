@@ -1,0 +1,19 @@
+id: 28_mapk_ensemble_tofit
+name: translated into BNGL
+description: Ensemble model translated into BNGL
+tags: ["signaling"]
+category: signaling
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

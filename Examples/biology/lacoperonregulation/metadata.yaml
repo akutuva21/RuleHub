@@ -1,0 +1,24 @@
+id: "lac-operon-regulation"
+name: "lac operon regulation"
+description: "Kinetic Parameters"
+contributors:
+  - name: "Achyudhan"
+tags: ["lac", "operon", "regulation", "laci", "promoter", "mrna", "betagal", "lactose", "allolactose"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/lac-operon-regulation.bngl"
+playground:
+  visible: false
+  gallery_categories: ["metabolism","test-models"]
+  featured: false
+  difficulty: "advanced"

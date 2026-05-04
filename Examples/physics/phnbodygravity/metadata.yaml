@@ -1,0 +1,24 @@
+id: "ph_nbody_gravity"
+name: "ph nbody gravity"
+description: "Model: ph_nbody_gravity.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["ph", "nbody", "gravity", "body", "r2"]
+category: "physics"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/ph_nbody_gravity.bngl"
+playground:
+  visible: false
+  gallery_categories: ["physics","test-models"]
+  featured: false
+  difficulty: "advanced"

@@ -1,0 +1,22 @@
+id: "tlbr"
+name: "tlbr"
+description: "A model of trivalent ligand, bivalent receptor"
+tags: ["tlbr", "l", "r", "lambda", "fl"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "published"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "published-models/PyBNG/tlbr/tlbr.bngl"
+playground:
+  visible: false
+  gallery_categories: ["immunology"]
+  featured: false
+  difficulty: "advanced"

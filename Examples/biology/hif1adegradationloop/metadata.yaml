@@ -1,0 +1,24 @@
+id: "hif1a_degradation_loop"
+name: "hif1a degradation loop"
+description: "HIF-1alpha Oxygen Sensing: Hydroxylation and VHL-mediated decay."
+contributors:
+  - name: "Achyudhan"
+tags: ["hif1a", "degradation", "loop", "vhl", "arnt", "v_hydrox"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/hif1a_degradation_loop.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

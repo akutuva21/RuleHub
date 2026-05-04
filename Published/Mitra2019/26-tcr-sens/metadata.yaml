@@ -1,0 +1,19 @@
+id: 26_tcr_sens_tcr_sens_tofit
+name: for the Manz/Groves 2011 data
+description: Modification of Mukhopadhyay/Dushek 2013 model for the Manz/Groves 2011 data
+tags: ["immunology"]
+category: immunology
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

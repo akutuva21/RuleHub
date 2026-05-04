@@ -1,0 +1,24 @@
+id: "gpcr-desensitization-arrestin"
+name: "gpcr desensitization arrestin"
+description: "GPCR Desensitization: Arrestin-mediated spatial sequestration."
+contributors:
+  - name: "Achyudhan"
+tags: ["gpcr", "desensitization", "arrestin", "ligand", "gprotein"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/gpcr-desensitization-arrestin.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

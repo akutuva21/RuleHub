@@ -1,0 +1,24 @@
+id: "oxidative-stress-response"
+name: "oxidative stress response"
+description: "Oxidative Stress Response (Keap1-Nrf2 Pathway)"
+contributors:
+  - name: "Achyudhan"
+tags: ["oxidative", "stress", "response", "ros", "keap1", "nrf2", "antioxidant"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/oxidative-stress-response.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

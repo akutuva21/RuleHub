@@ -1,0 +1,24 @@
+id: "complement-activation-cascade"
+name: "complement activation cascade"
+description: "Complement System: Pathogen opsonization and the Alternative Pathway."
+contributors:
+  - name: "Achyudhan"
+tags: ["complement", "activation", "cascade", "c3", "fb", "c5", "mac", "surf"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/complement-activation-cascade.bngl"
+playground:
+  visible: false
+  gallery_categories: ["immunology","test-models"]
+  featured: false
+  difficulty: "advanced"

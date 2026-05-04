@@ -17,6 +17,6 @@ source:
   source_path: "published-models/cell-regulation/Hat_2016.bngl"
 playground:
   visible: true
-  gallery_category: "regulation"
+  gallery_categories: ["cell-cycle","multistage"]
   featured: false
   difficulty: "intermediate"

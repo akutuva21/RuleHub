@@ -1,0 +1,24 @@
+id: "myogenic-differentiation"
+name: "myogenic differentiation"
+description: "Myogenic Differentiation"
+contributors:
+  - name: "Achyudhan"
+tags: ["myogenic", "differentiation", "myod", "myog", "mef2"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/myogenic-differentiation.bngl"
+playground:
+  visible: false
+  gallery_categories: ["developmental","test-models"]
+  featured: false
+  difficulty: "advanced"

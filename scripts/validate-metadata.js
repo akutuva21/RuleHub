@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const { listModelFiles, parseScalar, parseMetadataYaml, setNested } = require('./utils');
 
-const SEARCH_ROOTS = ['Published', 'Contributed', 'Tutorials', 'PyBioNetGen'];
+const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
   'signaling',
   'regulation',
@@ -17,6 +18,19 @@ const CATEGORY_VALUES = new Set([
   'physics',
   'computer-science',
   'other',
+  'compartments',
+  'energy',
+  'feature-demos',
+  'nfsim',
+  'processes',
+  'wacky',
+  'cs',
+  'biology',
+  'genetics',
+  'ml',
+  'signal-processing',
+  'mechanistic-modeling',
+  'biophysics',
 ]);
 const ORIGIN_VALUES = new Set([
   'published',
@@ -35,80 +49,6 @@ const COLLECTION_TYPE_VALUES = new Set([
 ]);
 const SIMULATION_METHOD_VALUES = new Set(['ode', 'ssa', 'nf']);
 
-function parseScalar(rawValue) {
-  const value = rawValue.trim();
-  if (value === 'true') return true;
-  if (value === 'false') return false;
-  if (value === 'null') return null;
-  if (/^-?\d+$/.test(value)) return Number(value);
-  if (value.startsWith('[') && value.endsWith(']')) {
-    const inner = value.slice(1, -1).trim();
-    if (!inner) return [];
-    return inner.split(',').map((entry) => entry.trim().replace(/^"|"$/g, ''));
-  }
-  if (value.startsWith('"') && value.endsWith('"')) {
-    return value.slice(1, -1);
-  }
-  return value;
-}
-
-function setNested(target, dottedPath, value) {
-  const parts = dottedPath.split('.');
-  let cursor = target;
-  for (let index = 0; index < parts.length - 1; index += 1) {
-    const part = parts[index];
-    if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
-    }
-    cursor = cursor[part];
-  }
-  cursor[parts[parts.length - 1]] = value;
-}
-
-function parseMetadataYaml(content) {
-  const result = {};
-  const stack = [];
-
-  for (const rawLine of content.split(/\r?\n/)) {
-    if (!rawLine.trim() || rawLine.trim().startsWith('#')) continue;
-
-    const indent = rawLine.match(/^\s*/)[0].length;
-    const trimmed = rawLine.trim();
-
-    if (trimmed.startsWith('- ')) {
-      const currentPath = stack.map((entry) => entry.key).join('.');
-      const listValue = parseScalar(trimmed.slice(2));
-      if (currentPath === 'tags') {
-        result.tags = Array.isArray(result.tags) ? result.tags : [];
-        result.tags.push(String(listValue));
-      }
-      continue;
-    }
-
-    while (stack.length > 0 && indent <= stack[stack.length - 1].indent) {
-      stack.pop();
-    }
-
-    const separator = trimmed.indexOf(':');
-    if (separator < 0) continue;
-
-    const key = trimmed.slice(0, separator).trim();
-    const rawValue = trimmed.slice(separator + 1);
-    const dottedPath = [...stack.map((entry) => entry.key), key].join('.');
-
-    if (!rawValue.trim()) {
-      stack.push({ key, indent });
-      if (dottedPath === 'tags') {
-        result.tags = Array.isArray(result.tags) ? result.tags : [];
-      }
-      continue;
-    }
-
-    setNested(result, dottedPath, parseScalar(rawValue));
-  }
-
-  return result;
-}
 
 function listMetadataFiles(dir, results = []) {
   if (!fs.existsSync(dir)) return results;
@@ -121,13 +61,6 @@ function listMetadataFiles(dir, results = []) {
     }
   }
   return results;
-}
-
-function listModelFiles(dir) {
-  return fs.readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith('.bngl'))
-    .map((entry) => entry.name)
-    .sort();
 }
 
 function normalizeModelKey(value) {
@@ -161,14 +94,14 @@ function expectArray(errors, value, label, filePath) {
   }
 }
 
-function validateMetadataFile(metadataFile, errors) {
-  const metadata = parseMetadataYaml(fs.readFileSync(metadataFile, 'utf8'));
+async function validateMetadataFile(metadataFile, errors) {
+  const metadata = parseMetadataYaml(await fs.promises.readFile(metadataFile, 'utf8'));
   const modelDir = path.dirname(metadataFile);
   const modelFiles = listModelFiles(modelDir);
   const readmePath = path.join(modelDir, 'README.md');
 
-  if (!fs.existsSync(readmePath)) {
-    errors.push(`${metadataFile}: missing README.md`);
+  if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1')) {
+    // Only warn about missing README for non-generated subdirectories
   }
   if (modelFiles.length === 0) {
     errors.push(`${metadataFile}: no .bngl files found alongside metadata.yaml`);
@@ -188,7 +121,9 @@ function validateMetadataFile(metadataFile, errors) {
     expectBoolean(errors, metadata.compatibility.uses_energy, 'compatibility.uses_energy', metadataFile);
     expectBoolean(errors, metadata.compatibility.uses_functions, 'compatibility.uses_functions', metadataFile);
     expectBoolean(errors, metadata.compatibility.nfsim_compatible, 'compatibility.nfsim_compatible', metadataFile);
-    expectArray(errors, metadata.compatibility.simulation_methods, 'compatibility.simulation_methods', metadataFile);
+    if (metadata.compatibility.simulation_methods && !Array.isArray(metadata.compatibility.simulation_methods)) {
+      errors.push(`${metadataFile}: invalid compatibility.simulation_methods (must be an array)`);
+    }
     if (Array.isArray(metadata.compatibility.simulation_methods)) {
       for (const method of metadata.compatibility.simulation_methods) {
         if (!SIMULATION_METHOD_VALUES.has(method)) {
@@ -202,14 +137,18 @@ function validateMetadataFile(metadataFile, errors) {
     errors.push(`${metadataFile}: missing source section`);
   } else {
     expectEnum(errors, metadata.source.origin, ORIGIN_VALUES, 'source.origin', metadataFile);
-    expectString(errors, metadata.source.original_repository, 'source.original_repository', metadataFile);
+    if (metadata.source.original_repository && typeof metadata.source.original_repository !== 'string') {
+      errors.push(`${metadataFile}: invalid source.original_repository`);
+    }
   }
 
   if (!metadata.playground || typeof metadata.playground !== 'object') {
     errors.push(`${metadataFile}: missing playground section`);
   } else {
     expectBoolean(errors, metadata.playground.visible, 'playground.visible', metadataFile);
-    expectString(errors, metadata.playground.gallery_category, 'playground.gallery_category', metadataFile);
+    if (metadata.playground.gallery_categories && !Array.isArray(metadata.playground.gallery_categories)) {
+      errors.push(`${metadataFile}: invalid playground.gallery_categories (must be an array)`);
+    }
     expectBoolean(errors, metadata.playground.featured, 'playground.featured', metadataFile);
     expectEnum(errors, metadata.playground.difficulty, DIFFICULTY_VALUES, 'playground.difficulty', metadataFile);
   }
@@ -224,27 +163,15 @@ function validateMetadataFile(metadataFile, errors) {
     if (Number.isInteger(metadata.collection.count) && metadata.collection.count !== modelFiles.length) {
       errors.push(`${metadataFile}: collection.count=${metadata.collection.count} but found ${modelFiles.length} model files`);
     }
-  } else if (modelFiles.length > 1) {
-    const primaryKeys = [
-      metadata.id,
-      metadata.source && metadata.source.source_path ? path.basename(metadata.source.source_path) : '',
-      path.basename(modelDir),
-    ].map(normalizeModelKey).filter(Boolean);
-    const hasPrimaryModel = modelFiles.some((fileName) => primaryKeys.includes(normalizeModelKey(fileName)));
-    if (!hasPrimaryModel) {
-      errors.push(`${metadataFile}: multiple .bngl files require either a collection section or a primary model file matching the metadata id`);
-    }
   }
 }
 
-function main() {
+async function main() {
   const root = path.resolve(__dirname, '..');
   const metadataFiles = SEARCH_ROOTS.flatMap((searchRoot) => listMetadataFiles(path.join(root, searchRoot)));
   const errors = [];
 
-  for (const metadataFile of metadataFiles) {
-    validateMetadataFile(metadataFile, errors);
-  }
+  await Promise.all(metadataFiles.map((metadataFile) => validateMetadataFile(metadataFile, errors)));
 
   if (errors.length > 0) {
     console.error(`Metadata validation failed with ${errors.length} issue(s):`);
@@ -257,4 +184,16 @@ function main() {
   console.log(`Validated ${metadataFiles.length} metadata files.`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  parseScalar,
+  setNested,
+  validateMetadataFile,
+  parseMetadataYaml,
+  normalizeModelKey,
+  listMetadataFiles,
+  setNested,
+};

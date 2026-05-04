@@ -1,0 +1,24 @@
+id: "compartment_organelle_exchange"
+name: "compartment organelle exchange"
+description: "Model: compartment_organelle_exchange.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["compartment", "organelle", "exchange", "cargo", "generate_network", "simulate"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: true
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/compartment_organelle_exchange.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

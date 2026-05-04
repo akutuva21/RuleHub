@@ -17,6 +17,6 @@ source:
   source_path: "published-models/complex-models/Blinov_2006.bngl"
 playground:
   visible: true
-  gallery_category: "signaling"
+  gallery_categories: ["cell-cycle"]
   featured: false
   difficulty: "intermediate"

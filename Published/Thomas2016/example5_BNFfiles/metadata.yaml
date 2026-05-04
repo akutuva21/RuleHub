@@ -1,0 +1,19 @@
+id: example5_BNFfiles_example5
+name: example5 BNFfiles
+description: A simple model
+tags: ["ligand_ispresent", "molecules", "species"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

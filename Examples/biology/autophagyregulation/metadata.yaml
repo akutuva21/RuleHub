@@ -1,0 +1,24 @@
+id: "autophagy-regulation"
+name: "autophagy regulation"
+description: "Autophagy regulation: mTOR and AMPK competition on the ULK1 switch."
+contributors:
+  - name: "Achyudhan"
+tags: ["autophagy", "regulation", "mtor", "ampk", "ulk1", "lc3", "p62"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/autophagy-regulation.bngl"
+playground:
+  visible: false
+  gallery_categories: ["metabolism","test-models"]
+  featured: false
+  difficulty: "advanced"

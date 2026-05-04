@@ -1,0 +1,24 @@
+id: "il1b-signaling"
+name: "il1b signaling"
+description: "IL-1beta Signaling: MyD88/IRAK assembly and NF-kB translocation."
+contributors:
+  - name: "Achyudhan"
+tags: ["il1b", "signaling", "il1ri", "myd88", "irak", "nfkb"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/il1b-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

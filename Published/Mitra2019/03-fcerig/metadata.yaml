@@ -1,0 +1,19 @@
+id: 03_fcerig_fceri_gamma2
+name: 03-fcerig
+description: Added molecule type definition block so that the
+tags: ["immunology"]
+category: immunology
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

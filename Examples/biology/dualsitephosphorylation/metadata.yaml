@@ -1,0 +1,24 @@
+id: "dual-site-phosphorylation"
+name: "dual site phosphorylation"
+description: "Dual-site phosphorylation: Requires two sequential modifications for activity."
+contributors:
+  - name: "Achyudhan"
+tags: ["dual", "site", "phosphorylation", "kinase", "phosphatase", "substrate"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/dual-site-phosphorylation.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

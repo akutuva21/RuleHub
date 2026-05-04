@@ -1,0 +1,24 @@
+id: "wacky_traffic_jam_asep"
+name: "wacky traffic jam asep"
+description: "Model: wacky_traffic_jam_asep.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["wacky", "traffic", "jam", "asep", "site", "car", "generate_network", "simulate"]
+category: "other"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/wacky_traffic_jam_asep.bngl"
+playground:
+  visible: false
+  gallery_categories: ["physics","test-models"]
+  featured: false
+  difficulty: "advanced"

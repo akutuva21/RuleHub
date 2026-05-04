@@ -1,0 +1,24 @@
+id: "gas6-axl-signaling"
+name: "gas6 axl signaling"
+description: "GAS6/AXL Signaling: AKT activation and SOCS feedback."
+contributors:
+  - name: "Achyudhan"
+tags: ["gas6", "axl", "signaling", "pi3k", "akt", "socs", "survival_burst"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/gas6-axl-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

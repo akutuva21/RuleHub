@@ -1,0 +1,24 @@
+id: "retinoic-acid-signaling"
+name: "retinoic acid signaling"
+description: "BioNetGen model: retinoic acid signaling"
+contributors:
+  - name: "Achyudhan"
+tags: ["retinoic", "acid", "signaling", "ra", "rarrxr", "corepressor", "targetgene"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/retinoic-acid-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["developmental","test-models"]
+  featured: false
+  difficulty: "advanced"

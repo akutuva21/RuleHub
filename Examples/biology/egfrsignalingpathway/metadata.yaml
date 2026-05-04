@@ -1,0 +1,24 @@
+id: "egfr-signaling-pathway"
+name: "egfr signaling pathway"
+description: "Enhanced EGFR Signaling: Combinatorial complexity with multiple phosphorylation sites."
+contributors:
+  - name: "Achyudhan"
+tags: ["egfr", "signaling", "pathway", "egf", "grb2", "shc"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/egfr-signaling-pathway.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cancer","test-models"]
+  featured: false
+  difficulty: "advanced"

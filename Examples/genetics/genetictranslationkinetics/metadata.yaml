@@ -1,0 +1,24 @@
+id: "genetic_translation_kinetics"
+name: "genetic translation kinetics"
+description: "Model: genetic_translation_kinetics.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["genetic", "translation", "kinetics", "mrna", "rib", "protein"]
+category: "gene-expression"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/genetic_translation_kinetics.bngl"
+playground:
+  visible: false
+  gallery_categories: ["test-models"]
+  featured: false
+  difficulty: "advanced"

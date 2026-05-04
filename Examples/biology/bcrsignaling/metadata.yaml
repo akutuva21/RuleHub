@@ -1,0 +1,24 @@
+id: "bcr-signaling"
+name: "bcr signaling"
+description: "BCR signaling: The B-cell antigen receptor cascade."
+contributors:
+  - name: "Achyudhan"
+tags: ["bcr", "signaling", "antigen", "syk", "plcg2", "cd22", "shp1", "calcium"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/bcr-signaling.bngl"
+playground:
+  visible: false
+  gallery_categories: ["immunology","test-models"]
+  featured: false
+  difficulty: "advanced"

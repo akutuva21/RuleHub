@@ -1,0 +1,83 @@
+# Gallery Category Definitions
+# These define the static structure of the playground gallery
+
+categories:
+  - id: cancer
+    name: Cancer Biology
+    description: Oncogenic signaling pathways and cancer models
+    sortOrder: 0
+
+  - id: immunology
+    name: Immunology
+    description: Immune signaling models, TCR, BCR, Fc receptors
+    sortOrder: 1
+
+  - id: neuroscience
+    name: Neuroscience
+    description: Neuronal signaling, neural networks, synaptic models
+    sortOrder: 2
+
+  - id: cell-cycle
+    name: Cell Cycle
+    description: Cell division, cell cycle regulation models
+    sortOrder: 3
+
+  - id: metabolism
+    name: Metabolism
+    description: Metabolic networks, biochemical pathways
+    sortOrder: 4
+
+  - id: developmental
+    name: Developmental Biology
+    description: Developmental signaling, pattern formation
+    sortOrder: 5
+
+  - id: ecology
+    name: Ecology
+    description: Population dynamics, ecological networks
+    sortOrder: 6
+
+  - id: physics
+    name: Physics
+    description: Physical systems modeled with BNGL
+    sortOrder: 7
+
+  - id: cs
+    name: Computer Science
+    description: CS models, computational systems
+    sortOrder: 8
+
+  - id: ml-signal
+    name: ML / Signal Processing
+    description: Signal processing, machine learning models
+    sortOrder: 9
+
+  - id: synbio
+    name: Synthetic Biology
+    description: Synthetic gene circuits, engineered systems
+    sortOrder: 10
+
+  - id: published-models
+    name: Published Models
+    description: Peer-reviewed published models from literature
+    sortOrder: 11
+
+  - id: multistage
+    name: Multistage Models
+    description: Models with multiple stages or compartments
+    sortOrder: 12
+
+  - id: tutorials
+    name: Tutorials
+    description: Example models for learning BNGL
+    sortOrder: 13
+
+  - id: native-tutorials
+    name: Native Tutorials
+    description: Built-in tutorial models with guided steps
+    sortOrder: 14
+
+  - id: test-models
+    name: Test Models
+    description: Internal test and validation models
+    sortOrder: 15

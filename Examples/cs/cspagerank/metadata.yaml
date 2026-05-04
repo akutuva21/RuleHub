@@ -1,0 +1,24 @@
+id: "cs_pagerank"
+name: "cs pagerank"
+description: "Model: cs_pagerank.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["cs", "pagerank", "teleport", "page"]
+category: "computer-science"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/cs_pagerank.bngl"
+playground:
+  visible: false
+  gallery_categories: ["cs","test-models"]
+  featured: false
+  difficulty: "advanced"

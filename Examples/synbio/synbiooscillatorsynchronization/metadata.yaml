@@ -1,0 +1,24 @@
+id: "synbio_oscillator_synchronization"
+name: "synbio oscillator synchronization"
+description: "Model: synbio_oscillator_synchronization.bngl"
+contributors:
+  - name: "Achyudhan"
+tags: ["synbio", "oscillator", "synchronization", "osc1", "osc2", "signal"]
+category: "synthetic-biology"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/synbio_oscillator_synchronization.bngl"
+playground:
+  visible: false
+  gallery_categories: ["synbio","test-models"]
+  featured: false
+  difficulty: "advanced"

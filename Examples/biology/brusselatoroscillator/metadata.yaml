@@ -1,0 +1,24 @@
+id: "brusselator-oscillator"
+name: "brusselator oscillator"
+description: "The Brusselator: Auto-catalytic chemical oscillator."
+contributors:
+  - name: "Achyudhan"
+tags: ["brusselator", "oscillator", "a", "b", "x", "y"]
+category: "signaling"
+compatibility:
+  bng2_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+  nfsim_compatible: true
+source:
+  origin: "ai-generated"
+  original_format: "bngl"
+  original_repository: "bionetgen-web-simulator"
+  source_path: "example-models/brusselator-oscillator.bngl"
+playground:
+  visible: false
+  gallery_categories: ["physics","test-models"]
+  featured: false
+  difficulty: "advanced"

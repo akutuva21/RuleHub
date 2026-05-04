@@ -1,0 +1,19 @@
+id: 24_jnk_JNKmodel_180724_bnf
+name: 24-jnk
+description: BNGL model: JNKmodel_180724_bnf
+tags: ["scale_t", "ani", "k3_zakbyu1", "k1_u1tozak", "d3_zak", "d1_zak", "k3_mkk4byzak", "k1_zaktomkk4", "d3_mkk4", "d1_mkk4", "k3_mkk7byzak", "k1_zaktomkk7", "f3_mkk7byzak", "d3_mkk7", "d1_mkk7", "k3_jnkbymkk4", "k1_mkk4tojnk", "k3_jnkbymkk7", "k1_mkk7tojnk", "f3_jnkbymkk7", "d3_jnk", "d1_jnk", "k3_mkk7byjnk", "k1_jnktomkk7", "inh_jnk", "d3_mkk7byjnkpt", "d1_jnkpttomkk7", "f1_zaktomkk7p", "k1_zaktojnk", "k3_mkk4byakt", "k1_akttomkk4", "k3_mkk7byakt", "k1_akttomkk7", "d3_mkk4byaktpt", "d1_aktpttomkk4", "d3_mkk7byaktpt", "d1_aktpttomkk7", "scale_ppmkk4", "scale_ppmkk7", "scale_ppjnk", "pakt", "molecules"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: false
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: true
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate

@@ -1,0 +1,19 @@
+id: example6_BNFfiles_example6
+name: example6 BNFfiles
+description: A simple model
+tags: ["molecules", "species"]
+category: other
+compatibility:
+  bng2_compatible: true
+  nfsim_compatible: true
+  simulation_methods: ["ode"]
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+source:
+  origin: published
+playground:
+  visible: false
+  gallery_categories: []
+  featured: false
+  difficulty: intermediate
