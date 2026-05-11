@@ -195,5 +195,5 @@ module.exports = {
   parseMetadataYaml,
   normalizeModelKey,
   listMetadataFiles,
-  setNested,
+  expectString,
 };

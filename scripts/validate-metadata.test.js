@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml, listMetadataFiles, setNested } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -272,6 +272,38 @@ tags:
     `;
     const result = parseMetadataYaml(yaml);
     assert.deepStrictEqual(result, { tags: ['one', 'two'] });
+  });
+});
+
+test('expectString', async (t) => {
+  await t.test('appends error if value is not a string', () => {
+    const errors = [];
+    expectString(errors, 123, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectString(errors, null, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if string is empty', () => {
+    const errors = [];
+    expectString(errors, '', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if string is only whitespace', () => {
+    const errors = [];
+    expectString(errors, '   \n  ', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('does not append error for valid string', () => {
+    const errors = [];
+    expectString(errors, 'valid string', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
   });
 });
 
