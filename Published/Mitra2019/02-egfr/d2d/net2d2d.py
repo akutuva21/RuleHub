@@ -16,11 +16,11 @@ def net2d2d(netfilename, deffilename):
             line = line.strip()
             
             # Check for "begin" and "end" statements
-            m = re.match('begin\s+([a-z]+)',line)
+            m = re.match(r'begin\s+([a-z]+)',line)
             if m and insection is None:
                 insection = m.groups()[0]
                 continue
-            if re.match('end\s+%s' % insection, line):
+            if re.match(r'end\s+%s' % insection, line):
                 insection = None
                 continue
             
@@ -54,9 +54,17 @@ def net2d2d(netfilename, deffilename):
             react,prod,rate = reactions[i]
             
             # the d2d rate has the reactant(s) explicitly listed
-            # TODO support empty reactant and products
-            d2drate = '%s*%s' % ('*'.join(['sp%i' % j for j in react]), rate)
-            out.write('%s -> %s CUSTOM "%s"\n' % (' + '.join(['sp%i' % j for j in react]), ' + '.join(['sp%i' % j for j in prod]), d2drate))
+            react_clean = [j for j in react if j != 0]
+            prod_clean = [j for j in prod if j != 0]
+
+            if react_clean:
+                d2drate = '%s*%s' % ('*'.join(['sp%i' % j for j in react_clean]), rate)
+            else:
+                d2drate = str(rate)
+
+            react_str = ' + '.join(['sp%i' % j for j in react_clean])
+            prod_str = ' + '.join(['sp%i' % j for j in prod_clean])
+            out.write('%s -> %s CUSTOM "%s"\n' % (react_str, prod_str, d2drate))
        
         #Unused section
         out.write('\n\nDERIVED\n')
@@ -65,7 +73,7 @@ def net2d2d(netfilename, deffilename):
         out.write('\n\nOBSERVABLES\n')
         for i in groups:
             # Turn the expressions that could be something like 2*49 into 2*sp49
-            formula = '+'.join([re.sub('(\d+)$',r'sp\1',m) for m in groups[i][1]])
+            formula = '+'.join([re.sub(r'(\d+)$',r'sp\1',m) for m in groups[i][1]])
             out.write('%s_obs\tC\t"au"\t"conc."\t0\t0\t"%s"\n' % (groups[i][0], formula))
         
         # Not yet sure how this works, but crashes if left blank
