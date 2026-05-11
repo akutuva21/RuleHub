@@ -54,10 +54,10 @@ function parseMetadataYaml(content) {
   const stack = [];
 
   for (const rawLine of content.split(/\r?\n/)) {
-    if (!rawLine.trim() || rawLine.trim().startsWith('#')) continue;
+    const trimmed = rawLine.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
 
     const indent = rawLine.match(/^\s*/)[0].length;
-    const trimmed = rawLine.trim();
 
     if (trimmed.startsWith('- ')) {
       const currentPath = stack.map((entry) => entry.key).join('.');
