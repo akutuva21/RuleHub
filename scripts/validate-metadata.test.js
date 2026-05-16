@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml, listMetadataFiles, setNested, expectString } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString, normalizeModelKey } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -312,6 +312,38 @@ test('listMetadataFiles', async (t) => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
     const result = listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
+  });
+});
+
+test('normalizeModelKey', async (t) => {
+  await t.test('handles falsy values', () => {
+    assert.strictEqual(normalizeModelKey(null), '');
+    assert.strictEqual(normalizeModelKey(undefined), '');
+    assert.strictEqual(normalizeModelKey(''), '');
+  });
+
+  await t.test('handles standard strings', () => {
+    assert.strictEqual(normalizeModelKey('model'), 'model');
+    assert.strictEqual(normalizeModelKey('simplemodel'), 'simplemodel');
+  });
+
+  await t.test('replaces non-alphanumeric characters with hyphens', () => {
+    assert.strictEqual(normalizeModelKey('model_1-2!3'), 'model-1-2-3');
+    assert.strictEqual(normalizeModelKey('some model name'), 'some-model-name');
+    assert.strictEqual(normalizeModelKey('a.b,c:d;e/f'), 'a-b-c-d-e-f');
+  });
+
+  await t.test('trims leading and trailing hyphens', () => {
+    assert.strictEqual(normalizeModelKey('__model__'), 'model');
+    assert.strictEqual(normalizeModelKey('--model--'), 'model');
+    assert.strictEqual(normalizeModelKey('  model  '), 'model');
+    assert.strictEqual(normalizeModelKey('!, model.,!'), 'model');
+  });
+
+  await t.test('converts to lowercase', () => {
+    assert.strictEqual(normalizeModelKey('Model1'), 'model1');
+    assert.strictEqual(normalizeModelKey('SOME_MODEL'), 'some-model');
+    assert.strictEqual(normalizeModelKey('MiXeD'), 'mixed');
   });
 });
 
