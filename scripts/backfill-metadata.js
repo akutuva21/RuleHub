@@ -255,16 +255,20 @@ function inferOrigin(dirPath) {
   return 'test-case';
 }
 
+function generateId(dir, baseName, dirName) {
+  const relativePath = path.relative(process.cwd(), dir);
+  const pathParts = relativePath.split(path.sep).filter(p => p && p !== 'Published' && p !== 'Examples' && p !== 'Tutorials');
+  return pathParts.length > 0
+    ? [...pathParts, baseName].join('_').replace(/\s+/g, '_').replace(/-/g, '_')
+    : `${dirName}_${baseName}`.replace(/\s+/g, '_').replace(/-/g, '_');
+}
+
 function generateMetadata(bnglFile, parsed) {
   const dir = path.dirname(bnglFile);
   const baseName = path.basename(bnglFile, '.bngl');
   const dirName = path.basename(dir);
   
-  const relativePath = path.relative(process.cwd(), dir);
-  const pathParts = relativePath.split(path.sep).filter(p => p && p !== 'Published' && p !== 'Examples' && p !== 'Tutorials');
-  const id = pathParts.length > 0 
-    ? [...pathParts, baseName].join('_').replace(/\s+/g, '_').replace(/-/g, '_')
-    : `${dirName}_${baseName}`.replace(/\s+/g, '_').replace(/-/g, '_');
+  const id = generateId(dir, baseName, dirName);
   const name = parsed.name || dirName.replace(/_/g, ' ');
   const description = parsed.description || `BNGL model: ${baseName}`;
   const category = inferCategory(dir);
