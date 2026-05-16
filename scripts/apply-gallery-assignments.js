@@ -36,8 +36,8 @@ function findAllMetadataFiles(dir, results = []) {
   return results;
 }
 
-function updateMetadataFile(filePath, assignments, dryRun) {
-  let content = fs.readFileSync(filePath, 'utf8');
+async function updateMetadataFile(filePath, assignments, dryRun) {
+  let content = await fs.promises.readFile(filePath, 'utf8');
   const dir = path.dirname(filePath);
   const modelDirName = path.basename(dir);
   
@@ -102,17 +102,17 @@ function updateMetadataFile(filePath, assignments, dryRun) {
   }
   
   if (updated && !dryRun) {
-    fs.writeFileSync(filePath, newContent);
+    await fs.promises.writeFile(filePath, newContent);
   }
   
   return updated;
 }
 
-function main() {
+async function main() {
   const { input, root, dryRun } = parseArgs(process.argv.slice(2));
   
   console.log(`Reading ${input}...`);
-  const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
+  const assignments = JSON.parse(await fs.promises.readFile(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
@@ -122,14 +122,17 @@ function main() {
   
   console.log(`Found ${metadataFiles.length} metadata.yaml files`);
   
-  let updated = 0;
-  for (const filePath of metadataFiles) {
-    if (updateMetadataFile(filePath, assignments, dryRun)) {
-      updated++;
-    }
-  }
+  const updatePromises = metadataFiles.map(filePath =>
+    updateMetadataFile(filePath, assignments, dryRun)
+  );
+
+  const results = await Promise.all(updatePromises);
+  const updated = results.filter(Boolean).length;
   
   console.log(`\n${dryRun ? 'Would update' : 'Updated'} ${updated} files`);
 }
 
-main();
+main().catch(error => {
+  console.error("An error occurred:", error);
+  process.exit(1);
+});
