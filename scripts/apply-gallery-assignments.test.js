@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { updateMetadataFile } = require('./apply-gallery-assignments.js');
+const { updateMetadataFile, parseArgs } = require('./apply-gallery-assignments.js');
 
 test('updateMetadataFile', async (t) => {
   let tmpDir;
@@ -95,4 +95,54 @@ test('updateMetadataFile', async (t) => {
     assert.strictEqual(result, true);
     assert.strictEqual(fs.readFileSync(filePath, 'utf8'), 'id: "model-1"\nbng2_compatible: false\n');
   });
+});
+
+test('parseArgs default values', () => {
+  const args = parseArgs([]);
+  assert.strictEqual(args.input, 'gallery-assignments.json');
+  assert.strictEqual(args.root, path.resolve(__dirname, '..'));
+  assert.strictEqual(args.dryRun, false);
+});
+
+test('parseArgs with --input', () => {
+  const args = parseArgs(['--input', 'custom-input.json']);
+  assert.strictEqual(args.input, 'custom-input.json');
+  assert.strictEqual(args.root, path.resolve(__dirname, '..'));
+  assert.strictEqual(args.dryRun, false);
+});
+
+test('parseArgs with --root', () => {
+  const args = parseArgs(['--root', '/custom/root']);
+  assert.strictEqual(args.input, 'gallery-assignments.json');
+  assert.strictEqual(args.root, '/custom/root');
+  assert.strictEqual(args.dryRun, false);
+});
+
+test('parseArgs with --dry-run', () => {
+  const args = parseArgs(['--dry-run']);
+  assert.strictEqual(args.input, 'gallery-assignments.json');
+  assert.strictEqual(args.root, path.resolve(__dirname, '..'));
+  assert.strictEqual(args.dryRun, true);
+});
+
+test('parseArgs with all arguments', () => {
+  const args = parseArgs(['--dry-run', '--root', '/tmp/root', '--input', 'test.json']);
+  assert.strictEqual(args.input, 'test.json');
+  assert.strictEqual(args.root, '/tmp/root');
+  assert.strictEqual(args.dryRun, true);
+});
+
+test('parseArgs ignoring missing value for --input', () => {
+  const args = parseArgs(['--input']);
+  assert.strictEqual(args.input, 'gallery-assignments.json');
+});
+
+test('parseArgs ignoring missing value for --root', () => {
+  const args = parseArgs(['--root']);
+  assert.strictEqual(args.root, path.resolve(__dirname, '..'));
+});
+
+test('parseArgs ignoring unrecognized arguments', () => {
+  const args = parseArgs(['--unknown', 'value', '--input', 'test.json']);
+  assert.strictEqual(args.input, 'test.json');
 });
