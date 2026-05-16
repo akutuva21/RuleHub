@@ -132,4 +132,8 @@ function main() {
   console.log(`\n${dryRun ? 'Would update' : 'Updated'} ${updated} files`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = { updateMetadataFile, parseArgs, findAllMetadataFiles };
