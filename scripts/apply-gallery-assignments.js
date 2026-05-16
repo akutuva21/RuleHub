@@ -36,7 +36,8 @@ function findAllMetadataFiles(dir, results = []) {
   return results;
 }
 
-function updateMetadataFile(filePath, assignments, dryRun) {
+
+function updateMetadataFile(filePath, assignments, compiledAssignments, dryRun) {
   let content = fs.readFileSync(filePath, 'utf8');
   const dir = path.dirname(filePath);
   const modelDirName = path.basename(dir);
@@ -44,8 +45,7 @@ function updateMetadataFile(filePath, assignments, dryRun) {
   let updated = false;
   let newContent = content;
   
-  for (const [modelId, data] of Object.entries(assignments)) {
-    const idPattern = new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm');
+  for (const {modelId, data, idPattern} of compiledAssignments) {
     
     if (idPattern.test(content)) {
       console.log(`  Found model ${modelId} in ${filePath}`);
@@ -115,6 +115,11 @@ function main() {
   const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
+  const compiledAssignments = Object.entries(assignments).map(([modelId, data]) => ({
+    modelId, data,
+    idPattern: new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm')
+  }));
+
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
   const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => 
     findAllMetadataFiles(path.join(root, searchRoot))
@@ -124,7 +129,7 @@ function main() {
   
   let updated = 0;
   for (const filePath of metadataFiles) {
-    if (updateMetadataFile(filePath, assignments, dryRun)) {
+    if (updateMetadataFile(filePath, assignments, compiledAssignments, dryRun)) {
       updated++;
     }
   }
