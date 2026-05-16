@@ -64,10 +64,11 @@ function listMetadataFiles(dir, results = []) {
 }
 
 function normalizeModelKey(value) {
-  return String(value || '')
-    .replace(/\.bngl$/i, '')
-    .replace(/[^a-z0-9]+/gi, '')
-    .toLowerCase();
+  if (!value) return '';
+  return String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
 function expectString(errors, value, label, filePath) {
