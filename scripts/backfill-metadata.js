@@ -55,7 +55,7 @@ function parseBngl(filePath) {
   const lines = content.split('\n');
 
   const metadata = {
-    tags: [],
+    tags: new Set(),
     uses_compartments: false,
     uses_energy: false,
     uses_functions: false,
@@ -129,9 +129,7 @@ function parseBngl(filePath) {
         const match = trimmed.match(/^(\w+)\s+/);
         if (match && !trimmed.includes('=>') && !trimmed.includes('=')) {
           const moleculeName = match[1].toLowerCase();
-          if (!metadata.tags.includes(moleculeName)) {
-            metadata.tags.push(moleculeName);
-          }
+          metadata.tags.add(moleculeName);
         }
       }
 
@@ -191,6 +189,7 @@ function parseBngl(filePath) {
   }
 
   metadata.simulation_methods = [...new Set(metadata.simulation_methods)];
+  metadata.tags = Array.from(metadata.tags);
 
   return metadata;
 }
