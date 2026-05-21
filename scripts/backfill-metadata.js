@@ -23,31 +23,37 @@ function parseArgs(argv) {
   return { root, dryRun };
 }
 
-function findBnglFiles(dir, ignoreDirs = DEFAULT_IGNORE_DIRS) {
-  if (!fs.existsSync(dir)) return [];
-
-  const results = [];
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
+async function findBnglFiles(dir, ignoreDirs = DEFAULT_IGNORE_DIRS) {
+  try {
+    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
     
-    if (entry.isDirectory()) {
-      if (ignoreDirs.some(ignored => {
-        if (ignored.includes('*')) {
-          return entry.name.startsWith(ignored.replace('*', ''));
-        }
-        return entry.name === ignored;
-      })) {
-        continue;
-      }
-      results.push(...findBnglFiles(fullPath, ignoreDirs));
-    } else if (entry.isFile() && entry.name.endsWith('.bngl')) {
-      results.push(fullPath);
-    }
-  }
+    const promises = entries.map(async (entry) => {
+      const fullPath = path.join(dir, entry.name);
 
-  return results;
+      if (entry.isDirectory()) {
+        if (ignoreDirs.some(ignored => {
+          if (ignored.includes('*')) {
+            return entry.name.startsWith(ignored.replace('*', ''));
+          }
+          return entry.name === ignored;
+        })) {
+          return [];
+        }
+        return findBnglFiles(fullPath, ignoreDirs);
+      } else if (entry.isFile() && entry.name.endsWith('.bngl')) {
+        return [fullPath];
+      }
+      return [];
+    });
+
+    const results = await Promise.all(promises);
+    return results.flat();
+  } catch (error) {
+    if (error.code === 'ENOENT' || error.code === 'ENOTDIR') {
+      return [];
+    }
+    throw error;
+  }
 }
 
 function parseBngl(filePath) {
@@ -365,9 +371,11 @@ async function main() {
   console.log(`Scanning for .bngl files without metadata.yaml in ${root}...`);
   console.log(`Dry run: ${dryRun}\n`);
 
-  const bnglFiles = SEARCH_ROOTS.flatMap(searchRoot => 
+  const searchPromises = SEARCH_ROOTS.map(searchRoot =>
     findBnglFiles(path.join(root, searchRoot))
   );
+  const bnglFilesArrays = await Promise.all(searchPromises);
+  const bnglFiles = bnglFilesArrays.flat();
 
   console.log(`Found ${bnglFiles.length} .bngl files\n`);
 
