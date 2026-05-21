@@ -400,11 +400,6 @@ async function main() {
 
     created++;
   }
-
-  console.log(`\nSummary:`);
-  console.log(`  Total .bngl files: ${bnglFiles.length}`);
-  console.log(`  Skipped (has metadata): ${skipped}`);
-  console.log(`  Created: ${created}`);
 }
 
 if (require.main === module) {
