@@ -383,8 +383,6 @@ async function main() {
       continue;
     }
 
-    console.log(`Processing: ${bnglFile}`);
-
     const parsed = parseBngl(bnglFile);
     const metadata = generateMetadata(bnglFile, parsed);
 
