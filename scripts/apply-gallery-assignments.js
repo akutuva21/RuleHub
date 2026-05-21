@@ -48,8 +48,6 @@ function updateMetadataFile(filePath, assignments, dryRun) {
     const idPattern = new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm');
     
     if (idPattern.test(content)) {
-      console.log(`  Found model ${modelId} in ${filePath}`);
-      
       if (data.gallery_categories && data.gallery_categories.length > 0) {
         const catsStr = JSON.stringify(data.gallery_categories);
         const galleryMatch = content.match(/gallery_categories:\s*(\[\]|["\'][^"\']*["\'])/);
