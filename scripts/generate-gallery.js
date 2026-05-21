@@ -46,15 +46,15 @@ function listMetadataFiles(dir, results = []) {
   return results;
 }
 
-function loadGalleryCategories(root) {
+async function loadGalleryCategories(root) {
   const categoriesFile = path.join(root, 'gallery-categories.yaml');
-  if (!fs.existsSync(categoriesFile)) {
+  try {
+    const content = await fs.promises.readFile(categoriesFile, 'utf8');
+    return parseYamlSimple(content);
+  } catch (err) {
     console.warn('Warning: gallery-categories.yaml not found, using defaults');
     return { categories: [] };
   }
-
-  const content = fs.readFileSync(categoriesFile, 'utf8');
-  return parseYamlSimple(content);
 }
 
 function parseYamlSimple(content) {
@@ -129,7 +129,7 @@ async function main() {
   const { root, output } = parseArgs(process.argv.slice(2));
 
   console.log('Loading gallery categories...');
-  const galleryConfig = loadGalleryCategories(root);
+  const galleryConfig = await loadGalleryCategories(root);
   const categoryIds = new Set(galleryConfig.categories.map(c => c.id));
 
   console.log('Scanning for metadata files...');
