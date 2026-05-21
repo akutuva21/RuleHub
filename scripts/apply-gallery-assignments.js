@@ -113,7 +113,6 @@ function main() {
   
   console.log(`Reading ${input}...`);
   const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
-  console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
   const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => 
