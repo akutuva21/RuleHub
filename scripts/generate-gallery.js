@@ -233,12 +233,10 @@ async function main(argv = process.argv.slice(2)) {
 
   const outputBase = output.replace('.generated.json', '.json');
   let existingGenerated = null;
-  if (fs.existsSync(outputBase)) {
-    try {
-      const existing = JSON.parse(fs.readFileSync(outputBase, 'utf8'));
-      existingGenerated = existing.generated || null;
-    } catch (e) {}
-  }
+  try {
+    const existing = JSON.parse(await fs.promises.readFile(outputBase, 'utf8'));
+    existingGenerated = existing.generated || null;
+  } catch (e) {}
 
   const gallery = {
     version: 1,
