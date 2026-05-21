@@ -1,0 +1,196 @@
+const test = require('node:test');
+const assert = require('node:assert');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+const { parseBngl, generateMetadata } = require('./backfill-metadata.js');
+
+test('backfill-metadata.js', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'bionetgen-backfill-test-'));
+  });
+
+  t.afterEach(() => {
+    if (tmpDir) {
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    }
+  });
+
+  await t.test('parseBngl - parses metadata and tags correctly', () => {
+    const bnglContent = `
+# name: Test Model
+# doi: 10.1234/test
+# This is a description of the model.
+# Some other comment
+
+begin model
+begin parameters
+  k1 1.0
+end parameters
+
+begin molecule types
+  A(b)
+end molecule types
+
+begin seed species
+  A(b) 100
+end seed species
+
+begin observables
+  Molecules A_obs A()
+end observables
+
+begin functions
+  func() 1.0
+end functions
+
+begin compartments
+  cell  3  1.0
+end compartments
+
+begin reaction rules
+  A(b) -> null k1
+end reaction rules
+end model
+
+begin actions
+  generate_network({overwrite=>1})
+  simulate({method=>"ode", t_end=>10, n_steps=>10})
+end actions
+`;
+    const filePath = path.join(tmpDir, 'test.bngl');
+    fs.writeFileSync(filePath, bnglContent);
+
+    const result = parseBngl(filePath);
+
+    assert.strictEqual(result.name, 'Test Model');
+    assert.strictEqual(result.doi, '10.1234/test');
+    assert.strictEqual(result.description, 'name: Test Model'); // because the parser sets description to the first comment
+    assert.strictEqual(result.uses_compartments, true);
+    assert.strictEqual(result.uses_functions, true);
+    assert.strictEqual(result.uses_energy, false);
+    assert.deepStrictEqual(result.simulation_methods, ['ode']);
+    assert.strictEqual(result.nfsim_compatible, false);
+    assert.strictEqual(result.bng2_compatible, true);
+
+    // tags are roughly extracted using `/^(\w+)\s+/`, for instance "Molecules" or "k1" will be captured if there's no `=>` or `=`
+    assert.ok(result.tags.includes('k1'));
+    assert.ok(result.tags.includes('molecules'));
+  });
+
+  await t.test('parseBngl - handles missing actions, implies nfsim_compatible without generate_network', () => {
+    const bnglContent = `
+begin model
+begin parameters
+end parameters
+end model
+`;
+    const filePath = path.join(tmpDir, 'test-no-actions.bngl');
+    fs.writeFileSync(filePath, bnglContent);
+
+    const result = parseBngl(filePath);
+
+    // If there are no actions, it assumes 'ode' by default if length is 0
+    // and if there's no generate_network, it marks nfsim_compatible as true
+    assert.deepStrictEqual(result.simulation_methods, ['ode']);
+    assert.strictEqual(result.nfsim_compatible, true);
+  });
+
+  await t.test('parseBngl - extracts various simulation methods from actions', () => {
+    const bnglContent = `
+begin model
+end model
+begin actions
+  simulate({method=>"nf"})
+  simulate({method=>"ssa"})
+  simulate({method=>"pla"})
+  simulate({method=>"hybrid"})
+end actions
+`;
+    const filePath = path.join(tmpDir, 'test-methods.bngl');
+    fs.writeFileSync(filePath, bnglContent);
+
+    const result = parseBngl(filePath);
+
+    assert.ok(result.simulation_methods.includes('nf'));
+    assert.ok(result.simulation_methods.includes('ssa'));
+    assert.ok(result.simulation_methods.includes('pla'));
+    assert.ok(result.simulation_methods.includes('hybrid'));
+    assert.strictEqual(result.nfsim_compatible, true); // Since method=>"nf" is present
+  });
+
+  await t.test('parseBngl - infers energy / Phi usage', () => {
+    const bnglContent = `
+begin model
+begin reaction rules
+  # uses energy
+  A() -> B()  Arrhenius(Phi)
+end reaction rules
+end model
+`;
+    const filePath = path.join(tmpDir, 'test-energy.bngl');
+    fs.writeFileSync(filePath, bnglContent);
+
+    const result = parseBngl(filePath);
+    assert.strictEqual(result.uses_energy, true);
+  });
+  await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', () => {
+    // create fake paths inside tmpDir to test path inferencing
+    // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
+    const publishedDir = path.join(tmpDir, 'Published', 'Test_Paper');
+    fs.mkdirSync(publishedDir, { recursive: true });
+
+    const filePath = path.join(publishedDir, 'test_model.bngl');
+    fs.writeFileSync(filePath, 'begin model\nend model');
+
+    // Simulate parsed output from parseBngl
+    const parsed = {
+      name: 'Parsed Name',
+      description: 'Parsed Description',
+      tags: ['tag1'],
+      uses_compartments: true,
+      uses_energy: false,
+      uses_functions: false,
+      simulation_methods: ['ode'],
+      nfsim_compatible: false,
+      bng2_compatible: true
+    };
+
+    const cwdOrig = process.cwd();
+    process.chdir(tmpDir); // set cwd to tmpDir to test relative path inferencing
+    try {
+      const result = generateMetadata(filePath, parsed);
+
+      // Verify category inference
+      // Because the path includes "Test", `inferCategory` matches "test" and returns "validation"
+      assert.strictEqual(result.category, 'validation');
+
+      // Verify origin inference inside `source`
+      // `inferOrigin` looks for paths starting with 'published'
+      assert.strictEqual(result.source.origin, 'published');
+
+      // Verify id generation
+      assert.strictEqual(result.id, 'Test_Paper_test_model');
+
+      // Verify basic fields
+      assert.strictEqual(result.name, 'Parsed Name');
+      assert.strictEqual(result.description, 'Parsed Description');
+      assert.deepStrictEqual(result.tags, ['tag1']);
+
+      // Verify nested properties (compatibility)
+      assert.deepStrictEqual(result.compatibility, {
+        bng2_compatible: true,
+        nfsim_compatible: false,
+        simulation_methods: ['ode'],
+        uses_compartments: true,
+        uses_energy: false,
+        uses_functions: false
+      });
+
+    } finally {
+      process.chdir(cwdOrig);
+    }
+  });
+});
