@@ -97,88 +97,29 @@ function extractAllModelIds(content) {
 }
 
 function extractCategoryMappings(content) {
-  const mappings = {};
-  
-  const categoryPatterns = [
-    { pattern: /CANCER_MODELS.*?egfr-signaling-pathway.*?glioblastoma.*?hif1a.*?hypoxia.*?vegf.*?dna-damage.*?checkpoint.*?ras-gef.*?p38.*?mapk-signaling-cascade/s, category: 'cancer' },
-    { pattern: /IMMUNOLOGY_MODELS.*?bcr-signaling.*?cd40.*?complement.*?immune-synapse/s, category: 'immunology' },
-    { pattern: /NEUROSCIENCE_MODELS.*?ampk-signaling.*?calcineurin.*?calcium.*?mtor.*?neurotransmitter.*?synaptic/s, category: 'neuroscience' },
-    { pattern: /CELL_CYCLE_MODELS.*?apoptosis.*?caspase.*?cell-cycle.*?dr5.*?e2f.*?tnf.*?p53.*?clock-bmal1/s, category: 'cell-cycle' },
-    { pattern: /METABOLISM_MODELS.*?allosteric.*?auto-activation.*?autophagy.*?glycolysis.*?insulin.*?lac-operon/s, category: 'metabolism' },
-    { pattern: /DEVELOPMENTAL_MODELS.*?hedgehog.*?myogenic.*?notch.*?rankl.*?sonic-hedgehog.*?wnt.*?fgf.*?smad.*?retinoic.*?bmp/s, category: 'developmental' },
-    { pattern: /ECOLOGY_MODELS.*?eco_/s, category: 'ecology' },
-    { pattern: /PHYSICS_MODELS.*?ph_/s, category: 'physics' },
-    { pattern: /COMPUTER_SCIENCE_MODELS.*?cs_/s, category: 'cs' },
-    { pattern: /ML_SIGNAL_MODELS.*?ml_|sp_/s, category: 'ml-signal' },
-    { pattern: /SYNBIO_MODELS.*?synbio/s, category: 'synbio' },
-  ];
-  
   const modelIdToCategory = {};
   
-  const cancertest = content.match(/CANCER_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (cancertest) {
-    const ids = cancertest[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'cancer');
-  }
+  const simpleCategories = [
+    { prefix: 'CANCER_MODELS', category: 'cancer' },
+    { prefix: 'IMMUNOLOGY_MODELS', category: 'immunology' },
+    { prefix: 'NEUROSCIENCE_MODELS', category: 'neuroscience' },
+    { prefix: 'CELL_CYCLE_MODELS', category: 'cell-cycle' },
+    { prefix: 'METABOLISM_MODELS', category: 'metabolism' },
+    { prefix: 'DEVELOPMENTAL_MODELS', category: 'developmental' },
+    { prefix: 'ECOLOGY_MODELS', category: 'ecology' },
+    { prefix: 'PHYSICS_MODELS', category: 'physics' },
+    { prefix: 'COMPUTER_SCIENCE_MODELS', category: 'cs' },
+    { prefix: 'ML_SIGNAL_MODELS', category: 'ml-signal' },
+    { prefix: 'SYNBIO_MODELS', category: 'synbio' },
+  ];
   
-  const immunetest = content.match(/IMMUNOLOGY_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (immunetest) {
-    const ids = immunetest[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'immunology');
-  }
-  
-  const neuroscience = content.match(/NEUROSCIENCE_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (neuroscience) {
-    const ids = neuroscience[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'neuroscience');
-  }
-  
-  const cellcycle = content.match(/CELL_CYCLE_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (cellcycle) {
-    const ids = cellcycle[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'cell-cycle');
-  }
-  
-  const metabolism = content.match(/METABOLISM_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (metabolism) {
-    const ids = metabolism[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'metabolism');
-  }
-  
-  const developmental = content.match(/DEVELOPMENTAL_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (developmental) {
-    const ids = developmental[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'developmental');
-  }
-  
-  const ecology = content.match(/ECOLOGY_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (ecology) {
-    const ids = ecology[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'ecology');
-  }
-  
-  const physics = content.match(/PHYSICS_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (physics) {
-    const ids = physics[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'physics');
-  }
-  
-  const cs = content.match(/COMPUTER_SCIENCE_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (cs) {
-    const ids = cs[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'cs');
-  }
-  
-  const ml = content.match(/ML_SIGNAL_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (ml) {
-    const ids = ml[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'ml-signal');
-  }
-  
-  const synbio = content.match(/SYNBIO_MODELS\.filter\(m => \[([^\]]+)\]\.includes\(m\.id\)\)/);
-  if (synbio) {
-    const ids = synbio[1].match(/["']([^"']+)["']/g) || [];
-    ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = 'synbio');
+  for (const { prefix, category } of simpleCategories) {
+    const regex = new RegExp(`${prefix}\\.filter\\(m => \\[\([^\\]]+\)\\]\\.includes\\(m\\.id\\)\\)`);
+    const match = content.match(regex);
+    if (match) {
+      const ids = match[1].match(/["']([^"']+)["']/g) || [];
+      ids.forEach(id => modelIdToCategory[id.replace(/['"]/g, '')] = category);
+    }
   }
   
   const tutorials = content.match(/const TUTORIALS: Example\[\] = \[([\s\S]*?)\];/);
