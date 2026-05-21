@@ -50,6 +50,89 @@ function findBnglFiles(dir, ignoreDirs = DEFAULT_IGNORE_DIRS) {
   return results;
 }
 
+function extractMetadataFromComments(headerComments, metadata) {
+  if (headerComments.length === 0) return;
+
+  for (const comment of headerComments) {
+    const nameMatch = comment.match(/(?:model|name)[:\s]+(.+)/i);
+    if (nameMatch && !metadata.name) {
+      metadata.name = nameMatch[1].trim();
+    }
+
+    const doiMatch = comment.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i);
+    if (doiMatch) {
+      metadata.doi = doiMatch[1].trim();
+    }
+  }
+
+  const nonParamComments = headerComments.filter(c =>
+    !c.match(/^[a-zA-Z_]\w*\s+changed\s+to/i)
+  );
+  if (nonParamComments.length > 0 && !metadata.description) {
+    metadata.description = nonParamComments[0];
+  }
+}
+
+function processActionLine(trimmed, metadata) {
+  const nfMatch = trimmed.match(/method\s*=>\s*["']?nf["']?/);
+  const odeMatch = trimmed.match(/method\s*=>\s*["']?ode["']?/);
+  const ssaMatch = trimmed.match(/method\s*=>\s*["']?ssa["']?/);
+  const plaMatch = trimmed.match(/method\s*=>\s*["']?pla["']?/);
+  const hybridMatch = trimmed.match(/method\s*=>\s*["']?hybrid["']?/);
+
+  if (nfMatch) {
+    metadata.simulation_methods.push('nf');
+    metadata.nfsim_compatible = true;
+  }
+  if (odeMatch) metadata.simulation_methods.push('ode');
+  if (ssaMatch) metadata.simulation_methods.push('ssa');
+  if (plaMatch) metadata.simulation_methods.push('pla');
+  if (hybridMatch) metadata.simulation_methods.push('hybrid');
+}
+
+function processModelLine(trimmed, metadata, state) {
+  if (trimmed === 'begin compartments') {
+    state.inCompartments = true;
+    metadata.uses_compartments = true;
+    return;
+  }
+  if (trimmed === 'end compartments') {
+    state.inCompartments = false;
+    return;
+  }
+
+  if (trimmed === 'begin functions') {
+    state.inFunctions = true;
+    metadata.uses_functions = true;
+    return;
+  }
+  if (trimmed === 'end functions') {
+    state.inFunctions = false;
+    return;
+  }
+
+  if (trimmed.startsWith('begin molecule types')) {
+    return;
+  }
+  if (trimmed.startsWith('end molecule types')) {
+    return;
+  }
+
+  if (!state.inCompartments && !state.inFunctions && trimmed && !trimmed.startsWith('begin') && !trimmed.startsWith('end')) {
+    const match = trimmed.match(/^(\w+)\s+/);
+    if (match && !trimmed.includes('=>') && !trimmed.includes('=')) {
+      const moleculeName = match[1].toLowerCase();
+      if (!metadata.tags.includes(moleculeName)) {
+        metadata.tags.push(moleculeName);
+      }
+    }
+  }
+
+  if (trimmed.includes('energy') || trimmed.includes('Phi')) {
+    metadata.uses_energy = true;
+  }
+}
+
 function parseBngl(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const lines = content.split('\n');
@@ -66,118 +149,49 @@ function parseBngl(filePath) {
     name: ''
   };
 
-  let inModel = false;
-  let inActions = false;
-  let inCompartments = false;
-  let inFunctions = false;
+  const state = {
+    inModel: false,
+    inActions: false,
+    inCompartments: false,
+    inFunctions: false,
+  };
   let headerComments = [];
 
   for (const line of lines) {
     const trimmed = line.trim();
 
-    if (trimmed.startsWith('#') && !inModel && !inActions) {
+    if (trimmed.startsWith('#') && !state.inModel && !state.inActions) {
       headerComments.push(trimmed.slice(1).trim());
       continue;
     }
 
     if (trimmed === 'begin model') {
-      inModel = true;
+      state.inModel = true;
       continue;
     }
     if (trimmed === 'end model') {
-      inModel = false;
+      state.inModel = false;
       continue;
     }
     if (trimmed === 'begin actions') {
-      inActions = true;
+      state.inActions = true;
       continue;
     }
     if (trimmed === 'end actions') {
-      inActions = false;
+      state.inActions = false;
       continue;
     }
 
-    if (inModel) {
-      if (trimmed === 'begin compartments') {
-        inCompartments = true;
-        metadata.uses_compartments = true;
-        continue;
-      }
-      if (trimmed === 'end compartments') {
-        inCompartments = false;
-        continue;
-      }
-
-      if (trimmed === 'begin functions') {
-        inFunctions = true;
-        metadata.uses_functions = true;
-        continue;
-      }
-      if (trimmed === 'end functions') {
-        inFunctions = false;
-        continue;
-      }
-
-      if (trimmed.startsWith('begin molecule types')) {
-        continue;
-      }
-      if (trimmed.startsWith('end molecule types')) {
-        continue;
-      }
-
-      if (!inCompartments && !inFunctions && trimmed && !trimmed.startsWith('begin') && !trimmed.startsWith('end')) {
-        const match = trimmed.match(/^(\w+)\s+/);
-        if (match && !trimmed.includes('=>') && !trimmed.includes('=')) {
-          const moleculeName = match[1].toLowerCase();
-          if (!metadata.tags.includes(moleculeName)) {
-            metadata.tags.push(moleculeName);
-          }
-        }
-      }
-
-      if (trimmed.includes('energy') || trimmed.includes('Phi')) {
-        metadata.uses_energy = true;
-      }
+    if (state.inModel) {
+      processModelLine(trimmed, metadata, state);
     }
 
-    if (inActions) {
-      const nfMatch = trimmed.match(/method\s*=>\s*["']?nf["']?/);
-      const odeMatch = trimmed.match(/method\s*=>\s*["']?ode["']?/);
-      const ssaMatch = trimmed.match(/method\s*=>\s*["']?ssa["']?/);
-      const plaMatch = trimmed.match(/method\s*=>\s*["']?pla["']?/);
-      const hybridMatch = trimmed.match(/method\s*=>\s*["']?hybrid["']?/);
-
-      if (nfMatch) {
-        metadata.simulation_methods.push('nf');
-        metadata.nfsim_compatible = true;
-      }
-      if (odeMatch) metadata.simulation_methods.push('ode');
-      if (ssaMatch) metadata.simulation_methods.push('ssa');
-      if (plaMatch) metadata.simulation_methods.push('pla');
-      if (hybridMatch) metadata.simulation_methods.push('hybrid');
+    if (state.inActions) {
+      processActionLine(trimmed, metadata);
     }
   }
 
-  if (headerComments.length > 0) {
-    for (const comment of headerComments) {
-      const nameMatch = comment.match(/(?:model|name)[:\s]+(.+)/i);
-      if (nameMatch && !metadata.name) {
-        metadata.name = nameMatch[1].trim();
-      }
-
-      const doiMatch = comment.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i);
-      if (doiMatch) {
-        metadata.doi = doiMatch[1].trim();
-      }
-    }
-
-    const nonParamComments = headerComments.filter(c => 
-      !c.match(/^[a-zA-Z_]\w*\s+changed\s+to/i)
-    );
-    if (nonParamComments.length > 0 && !metadata.description) {
-      metadata.description = nonParamComments[0];
-    }
-  }
+  extractMetadataFromComments(headerComments, metadata);
 
   if (metadata.simulation_methods.length === 0) {
     const hasGenerateNetwork = content.includes('generate_network');
