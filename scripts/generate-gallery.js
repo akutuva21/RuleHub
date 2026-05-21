@@ -106,9 +106,9 @@ function parseYamlSimple(content) {
   return result;
 }
 
-function extractModelId(metadataFile, metadata) {
+async function extractModelId(metadataFile, metadata) {
   const modelDir = path.dirname(metadataFile);
-  const bnglFiles = fs.readdirSync(modelDir, { withFileTypes: true })
+  const bnglFiles = (await fs.promises.readdir(modelDir, { withFileTypes: true }))
     .filter(e => e.isFile() && e.name.endsWith('.bngl'))
     .map(e => e.name);
 
@@ -141,13 +141,13 @@ async function main() {
   const sortOverrides = {};
   const publishedModelIds = new Set();
 
-  for (const metadataFile of metadataFiles) {
+  await Promise.all(metadataFiles.map(async (metadataFile) => {
     try {
-      const content = fs.readFileSync(metadataFile, 'utf8');
+      const content = await fs.promises.readFile(metadataFile, 'utf8');
       const metadata = parseMetadataYaml(content);
 
-      const modelId = extractModelId(metadataFile, metadata);
-      if (!modelId) continue;
+      const modelId = await extractModelId(metadataFile, metadata);
+      if (!modelId) return;
 
       const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
       if (tags.includes('published') || metadata.source?.origin === 'published') {
@@ -172,7 +172,7 @@ async function main() {
     } catch (err) {
       console.warn(`Warning: Failed to process ${metadataFile}: ${err.message}`);
     }
-  }
+  }));
 
   for (const modelId of publishedModelIds) {
     if (assignments[modelId]) {
