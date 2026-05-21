@@ -362,14 +362,14 @@ function formatYamlValue(value, indent = 0) {
 async function main() {
   const { root, dryRun } = parseArgs(process.argv.slice(2));
 
-  console.log(`Scanning for .bngl files without metadata.yaml in ${root}...`);
-  console.log(`Dry run: ${dryRun}\n`);
+  console.info(`Scanning for .bngl files without metadata.yaml in ${root}...`);
+  console.info(`Dry run: ${dryRun}\n`);
 
   const bnglFiles = SEARCH_ROOTS.flatMap(searchRoot => 
     findBnglFiles(path.join(root, searchRoot))
   );
 
-  console.log(`Found ${bnglFiles.length} .bngl files\n`);
+  console.info(`Found ${bnglFiles.length} .bngl files\n`);
 
   let created = 0;
   let skipped = 0;
@@ -383,7 +383,7 @@ async function main() {
       continue;
     }
 
-    console.log(`Processing: ${bnglFile}`);
+    console.info(`Processing: ${bnglFile}`);
 
     const parsed = parseBngl(bnglFile);
     const metadata = generateMetadata(bnglFile, parsed);
@@ -391,20 +391,20 @@ async function main() {
     const yamlContent = formatYaml(metadata);
 
     if (dryRun) {
-      console.log(`  [DRY RUN] Would create: ${metadataPath}`);
-      console.log(yamlContent);
+      console.info(`  [DRY RUN] Would create: ${metadataPath}`);
+      console.info(yamlContent);
     } else {
       fs.writeFileSync(metadataPath, yamlContent);
-      console.log(`  Created: ${metadataPath}`);
+      console.info(`  Created: ${metadataPath}`);
     }
 
     created++;
   }
 
-  console.log(`\nSummary:`);
-  console.log(`  Total .bngl files: ${bnglFiles.length}`);
-  console.log(`  Skipped (has metadata): ${skipped}`);
-  console.log(`  Created: ${created}`);
+  console.info(`\nSummary:`);
+  console.info(`  Total .bngl files: ${bnglFiles.length}`);
+  console.info(`  Skipped (has metadata): ${skipped}`);
+  console.info(`  Created: ${created}`);
 }
 
 if (require.main === module) {
