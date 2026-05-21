@@ -80,7 +80,7 @@ async function listModelFilesFiltered(dir, metadata) {
     .sort();
 }
 
-function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim, modelFiles) {
+async function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim, modelFiles) {
   const modelDir = path.dirname(metadataFile);
   const relativeModelPath = path.relative(root, path.join(modelDir, modelFile)).replace(/\\/g, '/');
   const id = isCollection 
@@ -122,12 +122,9 @@ function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim,
     baseEntry.collectionId = metadata.id || null;
     
     if (!slim && metadata.collection) {
-      const modelFiles = fs.readdirSync(modelDir, { withFileTypes: true })
-        .filter(e => e.isFile() && e.name.endsWith('.bngl'))
-        .map(e => e.name)
-        .sort();
+      const filesToUse = await listModelFilesAsync(modelDir);
 
-      const variants = modelFiles.map(file => ({
+      const variants = filesToUse.map(file => ({
         id: path.basename(file, '.bngl'),
         file: file,
       }));
@@ -176,12 +173,12 @@ async function main() {
     const isCollection = isCollectionEntry(metadata, modelFiles);
 
     if (isCollection) {
-      return [buildEntry(root, metadata, metadataFile, modelFiles[0], true, slim, modelFiles)];
+      return [await buildEntry(root, metadata, metadataFile, modelFiles[0], true, slim, modelFiles)];
     }
 
-    return modelFiles.map(modelFile =>
+    return Promise.all(modelFiles.map(modelFile =>
       buildEntry(root, metadata, metadataFile, modelFile, false, slim, modelFiles)
-    );
+    ));
   });
 
   const manifestEntries = (await Promise.all(entryPromises)).flat();
