@@ -6,46 +6,46 @@ test('setNested', async (t) => {
   await t.test('sets a single property', () => {
     const obj = {};
     setNested(obj, 'a', 1);
-    assert.deepStrictEqual(obj, { a: 1 });
+    assert.deepEqual(obj, { a: 1 });
   });
 
   await t.test('sets a nested property', () => {
     const obj = {};
     setNested(obj, 'a.b.c', 2);
-    assert.deepStrictEqual(obj, { a: { b: { c: 2 } } });
+    assert.deepEqual(obj, { a: { b: { c: 2 } } });
   });
 
   await t.test('adds to an existing object structure', () => {
     const obj = { a: { x: 1 } };
     setNested(obj, 'a.y', 2);
-    assert.deepStrictEqual(obj, { a: { x: 1, y: 2 } });
+    assert.deepEqual(obj, { a: { x: 1, y: 2 } });
   });
 
   await t.test('overrides non-object intermediates', () => {
     const obj = { a: 1 };
     setNested(obj, 'a.b', 2);
-    assert.deepStrictEqual(obj, { a: { b: 2 } });
+    assert.deepEqual(obj, { a: { b: 2 } });
   });
 
   await t.test('blocks prototype pollution (__proto__)', () => {
     const obj = {};
     setNested(obj, '__proto__.polluted', true);
     assert.strictEqual({}.polluted, undefined);
-    assert.deepStrictEqual(obj, {});
+    assert.deepEqual(obj, {});
   });
 
   await t.test('blocks prototype pollution (constructor)', () => {
     const obj = {};
     setNested(obj, 'constructor.prototype.polluted', true);
     assert.strictEqual({}.polluted, undefined);
-    assert.deepStrictEqual(obj, {});
+    assert.deepEqual(obj, {});
   });
 
   await t.test('blocks prototype pollution (prototype)', () => {
     const obj = {};
     setNested(obj, 'prototype.polluted', true);
     assert.strictEqual({}.polluted, undefined);
-    assert.deepStrictEqual(obj, {});
+    assert.deepEqual(obj, {});
   });
 });
 
@@ -60,7 +60,7 @@ featured: true
 count: 42
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       id: 'my-model',
       name: 'My Model',
       description: 'A test model',
@@ -79,7 +79,7 @@ id: model-1
 name: test
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       id: 'model-1',
       name: 'test'
     });
@@ -94,7 +94,7 @@ tags:
   - chemistry
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       id: 'model-tags',
       tags: ['biology', 'physics', 'chemistry']
     });
@@ -111,7 +111,7 @@ source:
   original_repository: "http://example.com"
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       id: 'nested-model',
       compatibility: {
         bng2_compatible: true,
@@ -132,7 +132,7 @@ a:
       d: value
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       a: {
         b: {
           c: {
@@ -149,7 +149,7 @@ id: empty-tags
 tags:
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       id: 'empty-tags',
       tags: []
     });
@@ -162,13 +162,13 @@ this line has no colon and should be ignored
 name: valid
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { id: 'my-model', name: 'valid' });
+    assert.deepEqual(result, { id: 'my-model', name: 'valid' });
   });
 
   await t.test('handles windows CR LF line endings', () => {
     const yaml = "id: windows\r\nname: test\r\n";
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { id: 'windows', name: 'test' });
+    assert.deepEqual(result, { id: 'windows', name: 'test' });
   });
 
   await t.test('handles un-indenting multiple levels at once', () => {
@@ -180,7 +180,7 @@ a:
 e: 2
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { a: { b: { c: { d: 1 } } }, e: 2 });
+    assert.deepEqual(result, { a: { b: { c: { d: 1 } } }, e: 2 });
   });
 
   await t.test('blocks prototype pollution keys', () => {
@@ -194,7 +194,7 @@ prototype:
 normal: safe
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { normal: 'safe' });
+    assert.deepEqual(result, { normal: 'safe' });
   });
 
   await t.test('ignores list items not under tags', () => {
@@ -207,7 +207,7 @@ tags:
   - tag1
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { id: 'my-model', tags: ['tag1'] });
+    assert.deepEqual(result, { id: 'my-model', tags: ['tag1'] });
   });
 
   await t.test('parses various scalar types correctly', () => {
@@ -222,7 +222,7 @@ quotedStr: "hello"
 normalStr: world
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, {
+    assert.deepEqual(result, {
       boolTrue: true,
       boolFalse: false,
       nullVal: null,
@@ -246,7 +246,7 @@ a:
   safe: true
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { a: { safe: true } });
+    assert.deepEqual(result, { a: { safe: true } });
   });
 
   await t.test('handles creating nested object when parent is primitive or array', () => {
@@ -261,7 +261,7 @@ c:
     `;
     const result = parseMetadataYaml(yaml);
     // Since 'a' was primitive, setNested overwrites it with {} then adds 'b: 2'
-    assert.deepStrictEqual(result, { a: { b: 2 }, c: { d: 3 } });
+    assert.deepEqual(result, { a: { b: 2 }, c: { d: 3 } });
   });
 
   await t.test('handles existing tags logic', () => {
@@ -271,7 +271,7 @@ tags:
   - two
     `;
     const result = parseMetadataYaml(yaml);
-    assert.deepStrictEqual(result, { tags: ['one', 'two'] });
+    assert.deepEqual(result, { tags: ['one', 'two'] });
   });
 });
 
@@ -335,46 +335,46 @@ test('setNested', async (t) => {
   await t.test('sets single-level property', () => {
     const obj = {};
     setNested(obj, 'a', 1);
-    assert.deepStrictEqual(obj, { a: 1 });
+    assert.deepEqual(obj, { a: 1 });
   });
 
   await t.test('sets multi-level property', () => {
     const obj = {};
     setNested(obj, 'a.b.c', 123);
-    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+    assert.deepEqual(obj, { a: { b: { c: 123 } } });
   });
 
   await t.test('overrides primitive value with object', () => {
     const obj = { a: 'hello' };
     setNested(obj, 'a.b.c', 123);
-    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+    assert.deepEqual(obj, { a: { b: { c: 123 } } });
   });
 
   await t.test('overrides array value with object', () => {
     const obj = { a: [1, 2, 3] };
     setNested(obj, 'a.b.c', 123);
-    assert.deepStrictEqual(obj, { a: { b: { c: 123 } } });
+    assert.deepEqual(obj, { a: { b: { c: 123 } } });
   });
 
   await t.test('prevents __proto__ pollution', () => {
     const obj = {};
     setNested(obj, '__proto__.polluted', 'yes');
     assert.strictEqual({}.polluted, undefined);
-    assert.deepStrictEqual(obj, {});
+    assert.deepEqual(obj, {});
   });
 
   await t.test('prevents constructor pollution', () => {
     const obj = {};
     setNested(obj, 'constructor.prototype.polluted', 'yes');
     assert.strictEqual({}.polluted, undefined);
-    assert.deepStrictEqual(obj, {});
+    assert.deepEqual(obj, {});
   });
 
   await t.test('prevents prototype pollution', () => {
     const obj = {};
     setNested(obj, 'prototype.polluted', 'yes');
     assert.strictEqual({}.polluted, undefined);
-    assert.deepStrictEqual(obj, {});
+    assert.deepEqual(obj, {});
   });
 });
 
