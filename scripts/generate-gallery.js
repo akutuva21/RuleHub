@@ -28,33 +28,37 @@ function parseArgs(argv) {
   return { root, output };
 }
 
-function listMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
-
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      listMetadataFiles(fullPath, results);
-      continue;
-    }
-    if (entry.isFile() && entry.name === 'metadata.yaml') {
-      results.push(fullPath);
-    }
+async function listMetadataFiles(dir) {
+  let entries;
+  try {
+    entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  } catch (err) {
+    if (err.code === 'ENOENT') return [];
+    throw err;
   }
 
-  return results;
+  const results = await Promise.all(entries.map(async (entry) => {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      return listMetadataFiles(fullPath);
+    } else if (entry.isFile() && entry.name === 'metadata.yaml') {
+      return [fullPath];
+    }
+    return [];
+  }));
+
+  return results.flat();
 }
 
-function loadGalleryCategories(root) {
+async function loadGalleryCategories(root) {
   const categoriesFile = path.join(root, 'gallery-categories.yaml');
-  if (!fs.existsSync(categoriesFile)) {
+  try {
+    const content = await fs.promises.readFile(categoriesFile, 'utf8');
+    return parseYamlSimple(content);
+  } catch (err) {
     console.warn('Warning: gallery-categories.yaml not found, using defaults');
     return { categories: [] };
   }
-
-  const content = fs.readFileSync(categoriesFile, 'utf8');
-  return parseYamlSimple(content);
 }
 
 function parseYamlSimple(content) {
@@ -134,13 +138,14 @@ async function main(argv = process.argv.slice(2)) {
   const { root, output } = parseArgs(argv);
 
   console.log('Loading gallery categories...');
-  const galleryConfig = loadGalleryCategories(root);
+  const galleryConfig = await loadGalleryCategories(root);
   const categoryIds = new Set(galleryConfig.categories.map(c => c.id));
 
   console.log('Scanning for metadata files...');
-  const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => 
-    listMetadataFiles(path.join(root, searchRoot))
+  const results = await Promise.all(
+    SEARCH_ROOTS.map(searchRoot => listMetadataFiles(path.join(root, searchRoot)))
   );
+  const metadataFiles = results.flat();
 
   const assignments = {};
   const sortOverrides = {};

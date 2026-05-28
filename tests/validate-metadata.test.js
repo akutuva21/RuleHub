@@ -57,8 +57,8 @@ test('valid metadata file passes validation without errors', async () => {
   });
 });
 
-test('invalid enum values for expectEnum fields add errors', () => {
-  withTempDir((tempDir) => {
+test('invalid enum values for expectEnum fields add errors', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
 
     // Test with wrong types (e.g. number, boolean, null instead of string)
@@ -95,7 +95,7 @@ collection:
     fs.writeFileSync(path.join(tempDir, 'model2.bngl'), '');
 
     let errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.ok(errors.some(e => e.includes('invalid category (123)')), 'Should report invalid category type');
     assert.ok(errors.some(e => e.includes('invalid source.origin (true)')), 'Should report invalid origin type');
@@ -133,7 +133,7 @@ collection:
     fs.writeFileSync(metadataFile, invalidStringYaml);
 
     errors = [];
-    validateMetadataFile(metadataFile, errors);
+    await validateMetadataFile(metadataFile, errors);
 
     assert.ok(errors.some(e => e.includes('invalid category ("not-a-real-category")')), 'Should report invalid category string');
     assert.ok(errors.some(e => e.includes('invalid source.origin ("fake-origin")')), 'Should report invalid origin string');
@@ -142,8 +142,8 @@ collection:
   });
 });
 
-test('missing README.md adds error', () => {
-  withTempDir((tempDir) => {
+test('missing README.md adds error', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     fs.writeFileSync(metadataFile, VALID_METADATA_YAML);
     fs.writeFileSync(path.join(tempDir, 'testmodel.bngl'), 'begin model\nend model');
