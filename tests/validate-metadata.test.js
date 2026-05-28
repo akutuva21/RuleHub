@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { validateMetadataFile } = require('../scripts/validate-metadata');
+const { validateMetadataFile, expectString } = require('../scripts/validate-metadata');
 
 async function withTempDir(testFn) {
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'validate-metadata-test-'));
@@ -233,4 +233,39 @@ collection:
 
     assert.deepStrictEqual(errors, []);
   });
+});
+
+
+test('expectString correctly validates string values', () => {
+  const label = 'test_label';
+  const filePath = 'test.yaml';
+
+  // Happy paths
+  let errors = [];
+  expectString(errors, 'valid string', label, filePath);
+  assert.deepStrictEqual(errors, [], 'Should not add error for valid string');
+
+  errors = [];
+  expectString(errors, '  valid string with spaces  ', label, filePath);
+  assert.deepStrictEqual(errors, [], 'Should not add error for valid string with spaces');
+
+  // Edge cases - Empty or whitespace only
+  errors = [];
+  expectString(errors, '', label, filePath);
+  assert.strictEqual(errors.length, 1, 'Should add error for empty string');
+  assert.match(errors[0], /test\.yaml: missing or invalid test_label/);
+
+  errors = [];
+  expectString(errors, '   ', label, filePath);
+  assert.strictEqual(errors.length, 1, 'Should add error for whitespace-only string');
+  assert.match(errors[0], /test\.yaml: missing or invalid test_label/);
+
+  // Invalid types
+  const invalidInputs = [null, undefined, 123, true, false, {}, []];
+  for (const input of invalidInputs) {
+    errors = [];
+    expectString(errors, input, label, filePath);
+    assert.strictEqual(errors.length, 1, `Should add error for ${typeof input} input`);
+    assert.match(errors[0], /test\.yaml: missing or invalid test_label/);
+  }
 });
