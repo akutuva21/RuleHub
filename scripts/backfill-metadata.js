@@ -137,8 +137,8 @@ function processModelLine(trimmed, metadata, state) {
   }
 }
 
-function parseBngl(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
+async function parseBngl(filePath) {
+  const content = await fs.promises.readFile(filePath, 'utf8');
   const lines = content.split('\n');
 
   const metadata = {
@@ -399,18 +399,21 @@ async function main() {
   let created = 0;
   let skipped = 0;
 
-  for (const bnglFile of bnglFiles) {
+  await Promise.all(bnglFiles.map(async (bnglFile) => {
     const dir = path.dirname(bnglFile);
     const metadataPath = path.join(dir, 'metadata.yaml');
 
-    if (fs.existsSync(metadataPath)) {
+    try {
+      await fs.promises.access(metadataPath);
       skipped++;
-      continue;
+      return;
+    } catch {
+      // File does not exist, proceed
     }
 
     console.info(`Processing: ${bnglFile}`);
 
-    const parsed = parseBngl(bnglFile);
+    const parsed = await parseBngl(bnglFile);
     const metadata = generateMetadata(bnglFile, parsed);
 
     const yamlContent = formatYaml(metadata);
@@ -419,12 +422,12 @@ async function main() {
       console.info(`  [DRY RUN] Would create: ${metadataPath}`);
       console.info(yamlContent);
     } else {
-      fs.writeFileSync(metadataPath, yamlContent);
+      await fs.promises.writeFile(metadataPath, yamlContent);
       console.info(`  Created: ${metadataPath}`);
     }
 
     created++;
-  }
+  }));
 
   console.info(`\nSummary:`);
   console.info(`  Total .bngl files: ${bnglFiles.length}`);
