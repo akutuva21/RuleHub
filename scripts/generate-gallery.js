@@ -265,4 +265,5 @@ module.exports = {
   parseArgs,
   loadGalleryCategories,
   extractModelIds,
+  parseYamlSimple,
 };
