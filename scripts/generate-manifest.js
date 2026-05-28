@@ -81,6 +81,7 @@ async function listModelFilesFiltered(dir, metadata) {
 }
 
 async function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim, modelFiles) {
+  modelFiles = modelFiles || [modelFile];
   const modelDir = path.dirname(metadataFile);
   const relativeModelPath = path.relative(root, path.join(modelDir, modelFile)).replace(/\\/g, '/');
   const fileBaseName = path.basename(modelFile, '.bngl');
@@ -105,12 +106,12 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
 
   const baseEntry = {
     id,
-    name: isCollection 
-      ? metadata.name 
+    name: isCollection
+      ? (metadata.name || fileBaseName)
       : (metadata.name && modelFiles.length === 1)
         ? metadata.name
-        : (metadata.name 
-           ? `${metadata.name} (${path.basename(modelFile, '.bngl')})` 
+        : (metadata.name
+           ? `${metadata.name} (${path.basename(modelFile, '.bngl')})`
            : path.basename(modelFile, '.bngl')),
     description: metadata.description || '',
     tags: Array.isArray(metadata.tags) ? metadata.tags : [],
@@ -130,7 +131,10 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
     baseEntry.collectionId = metadata.id || null;
     
     if (!slim && metadata.collection) {
-      const filesToUse = await listModelFilesAsync(modelDir);
+      let filesToUse = modelFiles;
+      if (fs.existsSync(modelDir)) {
+        filesToUse = await listModelFilesAsync(modelDir);
+      }
 
       const variants = filesToUse.map(file => ({
         id: path.basename(file, '.bngl'),
@@ -159,6 +163,11 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
       baseEntry.citation = { doi: metadata.citation.doi };
     }
   }
+
+  // Backwards-compatible top-level compatibility flags
+  baseEntry.bng2_compatible = compatibility.bng2 || false;
+  baseEntry.nfsim_compatible = compatibility.nfsim || false;
+  baseEntry.excluded = compatibility.excluded || false;
 
   return baseEntry;
 }
@@ -207,4 +216,5 @@ module.exports = {
   buildEntry,
   listMetadataFiles,
   isCollectionEntry,
+  parseMetadataYaml,
 };
