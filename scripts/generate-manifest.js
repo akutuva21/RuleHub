@@ -86,6 +86,9 @@ function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim,
   const relativeModelPath = path.relative(root, path.join(modelDir, modelFile)).replace(/\\/g, '/');
   const fileBaseName = path.basename(modelFile, '.bngl');
   let id = metadata.id || fileBaseName;
+  if (isCollection) {
+    id = fileBaseName;
+  }
   if (!isCollection && modelFiles.length > 1 && metadata.id) {
     if (!metadata.id.endsWith(fileBaseName) && metadata.id !== fileBaseName) {
       id = `${metadata.id}_${fileBaseName}`;
