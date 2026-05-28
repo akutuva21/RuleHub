@@ -106,8 +106,8 @@ function updateMetadataFile(filePath, assignments, dryRun) {
   return updated;
 }
 
-function main() {
-  const { input, root, dryRun } = parseArgs(process.argv.slice(2));
+function main(argv = process.argv.slice(2)) {
+  const { input, root, dryRun } = parseArgs(argv);
   
   const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
@@ -125,4 +125,13 @@ function main() {
   }
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  parseArgs,
+  findAllMetadataFiles,
+  updateMetadataFile,
+  main,
+};
