@@ -130,8 +130,8 @@ function extractModelIds(metadataFile, metadata) {
   return [];
 }
 
-async function main() {
-  const { root, output } = parseArgs(process.argv.slice(2));
+async function main(argv = process.argv.slice(2)) {
+  const { root, output } = parseArgs(argv);
 
   console.log('Loading gallery categories...');
   const galleryConfig = loadGalleryCategories(root);
@@ -258,6 +258,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  main,
   parseArgs,
   loadGalleryCategories,
   extractModelIds,
