@@ -109,7 +109,6 @@ function updateMetadataFile(filePath, assignments, dryRun) {
 function main() {
   const { input, root, dryRun } = parseArgs(process.argv.slice(2));
   
-  console.log(`Reading ${input}...`);
   const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
