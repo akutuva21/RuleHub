@@ -124,8 +124,6 @@ function main() {
       updated++;
     }
   }
-  
-  console.log(`\n${dryRun ? 'Would update' : 'Updated'} ${updated} files`);
 }
 
 main();
