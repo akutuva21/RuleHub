@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { listModelFiles } = require('./utils.js');
+const { listModelFiles, parseScalar } = require('./utils.js');
 
 test('utils.js', async (t) => {
   let tmpDir;
@@ -48,5 +48,37 @@ test('utils.js', async (t) => {
   await t.test('listModelFiles returns empty array for empty directory', () => {
     const files = listModelFiles(tmpDir);
     assert.deepStrictEqual(files, []);
+  });
+});
+
+test('parseScalar', async (t) => {
+  await t.test('handles array edge cases', () => {
+    assert.deepStrictEqual(parseScalar('[ ]'), []);
+    assert.deepStrictEqual(parseScalar('[ a , b ]'), ['a', 'b']);
+    assert.deepStrictEqual(parseScalar('[a, , b]'), ['a', '', 'b']);
+  });
+
+  await t.test('handles string edge cases', () => {
+    assert.strictEqual(parseScalar('   '), '');
+    assert.strictEqual(parseScalar('""'), '');
+    assert.strictEqual(parseScalar('" "'), ' ');
+    assert.strictEqual(parseScalar('"hello'), '"hello');
+    assert.strictEqual(parseScalar('hello"'), 'hello"');
+  });
+
+  await t.test('handles bracket edge cases', () => {
+    assert.strictEqual(parseScalar('[a, b'), '[a, b');
+    assert.strictEqual(parseScalar('a, b]'), 'a, b]');
+  });
+
+  await t.test('is case sensitive for booleans', () => {
+    assert.strictEqual(parseScalar('True'), 'True');
+    assert.strictEqual(parseScalar('FALSE'), 'FALSE');
+  });
+
+  await t.test('handles number edge cases by parsing as string', () => {
+    assert.strictEqual(parseScalar('1.23'), '1.23');
+    assert.strictEqual(parseScalar('-1.23'), '-1.23');
+    assert.strictEqual(parseScalar('1e5'), '1e5');
   });
 });
