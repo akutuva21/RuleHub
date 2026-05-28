@@ -368,8 +368,6 @@ async function main() {
     findBnglFiles(path.join(root, searchRoot))
   );
 
-  console.log(`Found ${bnglFiles.length} .bngl files\n`);
-
   let created = 0;
   let skipped = 0;
 
