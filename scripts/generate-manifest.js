@@ -196,7 +196,6 @@ async function main() {
 
   manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
   await fs.promises.writeFile(output, JSON.stringify(manifestEntries, null, 2));
-  console.log(`Generated ${manifestEntries.length} manifest entries at ${output}${slim ? ' (slim)' : ''}`);
 }
 
 if (require.main === module) {
