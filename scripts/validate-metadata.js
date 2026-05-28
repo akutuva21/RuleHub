@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFiles, parseScalar, parseMetadataYaml, setNested } = require('./utils');
+const { listModelFilesAsync, parseScalar, parseMetadataYaml, setNested } = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
@@ -97,7 +97,7 @@ function expectArray(errors, value, label, filePath) {
 async function validateMetadataFile(metadataFile, errors) {
   const metadata = parseMetadataYaml(await fs.promises.readFile(metadataFile, 'utf8'));
   const modelDir = path.dirname(metadataFile);
-  const modelFiles = listModelFiles(modelDir);
+  const modelFiles = await listModelFilesAsync(modelDir);
   const readmePath = path.join(modelDir, 'README.md');
   if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1')) {
     errors.push(`${metadataFile}: missing README.md`);
