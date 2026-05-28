@@ -363,7 +363,6 @@ async function main() {
   const { root, dryRun } = parseArgs(process.argv.slice(2));
 
   console.log(`Scanning for .bngl files without metadata.yaml in ${root}...`);
-  console.log(`Dry run: ${dryRun}\n`);
 
   const bnglFiles = SEARCH_ROOTS.flatMap(searchRoot => 
     findBnglFiles(path.join(root, searchRoot))
