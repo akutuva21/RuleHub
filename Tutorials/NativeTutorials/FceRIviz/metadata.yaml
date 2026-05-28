@@ -1,7 +1,7 @@
 id: "FceRI_viz"
 name: "FceRI Viz"
 description: "FcÃƒÅ½Ã‚ÂµRI (viz)"
-tags: ["published", "tutorial", "native", "fceri", "viz", "fcr", "ige", "lat", "lyn", "syk", "pb", "pg", "sykp"]
+tags: ["fceri", "fcr", "ige", "lat", "lyn", "syk", "pb", "pg", "sykp"]
 category: "tutorial"
 compatibility:
   bng2_compatible: false

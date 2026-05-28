@@ -1,7 +1,7 @@
 id: "Lisman_bifurcate"
 name: "Lisman bifurcate"
 description: "title: Lisman_bifurcate.bngl"
-tags: ["lisman", "bifurcate", "k1", "p"]
+tags: ["lisman", "bifurcate"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

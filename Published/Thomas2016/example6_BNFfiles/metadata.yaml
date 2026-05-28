@@ -1,7 +1,7 @@
-id: example6_BNFfiles_example6
-name: example6 BNFfiles
+id: Thomas_Example6_2016
+name: "Thomas et al. 2016: Parameter Fitting - Example 6 Model"
 description: A simple model
-tags: ["molecules", "species"]
+tags: ["egfr", "signaling", "2016", "thomas"]
 category: other
 compatibility:
   bng2_compatible: true

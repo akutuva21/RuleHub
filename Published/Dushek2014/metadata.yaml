@@ -1,7 +1,7 @@
-id: "Dushek_2014"
-name: "Dushek 2014"
+id: Dushek_TCR_2014
+name: "Dushek et al. 2014: T Cell Receptor Phosphorylation Feedback"
 description: "TCR signaling dynamics"
-tags: ["published", "dushek", "2014", "e", "f", "b"]
+tags: ["tcr", "feedback-loop", "immune-signaling", "2014", "dushek"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
 id: "Lisman"
 name: "Lisman"
 description: "title: auto.bngl"
-tags: ["lisman", "k1", "p", "input", "visualize", "setparameter", "simulate"]
+tags: ["lisman", "input"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

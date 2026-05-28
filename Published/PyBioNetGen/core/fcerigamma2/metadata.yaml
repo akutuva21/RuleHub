@@ -1,7 +1,7 @@
-id: "fceri_gamma2"
-name: "fceri gamma2"
+id: PyBioNetGen_FceRI_Gamma2
+name: "PyBioNetGen Core: FceRI Gamma2 Subunit Signaling"
 description: "BioNetGen model: fceri gamma2"
-tags: ["fceri", "gamma2", "lig", "lyn", "syk", "rec"]
+tags: ["fceri", "gamma2-subunit", "immune-signaling"]
 category: "other"
 compatibility:
   bng2_compatible: true

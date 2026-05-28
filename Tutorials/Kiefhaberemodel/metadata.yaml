@@ -1,7 +1,7 @@
 id: "Kiefhaber_emodel"
 name: "Kiefhaber_emodel"
 description: "Allow molar units to be used for bimolecular rate constants"
-tags: ["validation", "kiefhaber", "emodel", "setoption", "l", "p", "s", "a"]
+tags: ["emodel"]
 category: "validation"
 compatibility:
   bng2_compatible: false

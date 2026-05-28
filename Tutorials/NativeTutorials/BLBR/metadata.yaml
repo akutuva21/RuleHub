@@ -1,7 +1,7 @@
 id: "BLBR"
 name: "BLBR"
 description: "title: BLBR.bngl"
-tags: ["blbr", "setoption", "r", "l", "simulate"]
+tags: ["blbr"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

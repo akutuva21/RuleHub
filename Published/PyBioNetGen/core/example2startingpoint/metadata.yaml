@@ -1,7 +1,7 @@
-id: "example2_starting_point"
-name: "example2 starting point"
+id: PyBioNetGen_Example2_Start
+name: "PyBioNetGen Core: Example 2 EGFR Starting Point"
 description: "Filename: example2_starting_point.bngl"
-tags: ["example2", "starting", "point", "egf", "egfr", "clusters", "pre1_dose", "pre2_time"]
+tags: ["egfr", "signaling", "starting-point", "example-model"]
 category: "other"
 compatibility:
   bng2_compatible: true

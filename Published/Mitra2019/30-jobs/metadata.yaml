@@ -1,7 +1,7 @@
-id: 30_jobs_jobs_ground
-name: 30-jobs
+id: Mitra_JobScheduling_2019
+name: "Mitra et al. 2019: Job Scheduling Simulation"
 description: NFsim simulation of the job market
-tags: ["other"]
+tags: ["job-scheduling", "queueing-theory", "non-biological", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

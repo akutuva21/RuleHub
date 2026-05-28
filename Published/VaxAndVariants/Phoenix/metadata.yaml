@@ -1,7 +1,7 @@
-id: "Phoenix"
-name: "Phoenix"
+id: Mallela_VaxVariants_Phoenix_2022
+name: "Mallela et al. 2022: Covid-19 Vax and Variants - Phoenix MSA"
 description: "- This model is intended to be consistent with the compartmental model"
-tags: ["phoenix", "counter", "fdcs", "s", "sv", "e", "a", "i", "v"]
+tags: ["covid-19", "epidemiology", "vaccination", "variants", "phoenix", "2022", "mallela"]
 category: "epidemiology"
 compatibility:
   bng2_compatible: true

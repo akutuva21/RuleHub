@@ -1,7 +1,7 @@
-id: "egfr_ode"
-name: "PyBNG: EGFR ODE"
+id: PyBioNetGen_EGFR_ODE_Pub
+name: "PyBioNetGen Core: Published EGFR ODE-Based Model"
 description: "EGFR ODE"
-tags: ["published", "pybng", "egfr", "ode", "egf", "pre1_dose", "pre2_time", "pre3_dose"]
+tags: ["egfr", "signaling", "ode-solver"]
 category: "other"
 compatibility:
   bng2_compatible: false

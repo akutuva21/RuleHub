@@ -1,7 +1,7 @@
-id: "fceri_gamma2_ground_truth"
-name: "fceri gamma2 ground truth"
+id: PyBioNetGen_FceRI_Gamma2_Ground
+name: "PyBioNetGen Core: FceRI Gamma2 Ground Truth Reference"
 description: "BioNetGen model: fceri gamma2 ground truth"
-tags: ["fceri", "gamma2", "ground", "truth", "lig", "lyn", "syk", "rec"]
+tags: ["fceri", "gamma2-subunit", "reference-standard"]
 category: "other"
 compatibility:
   bng2_compatible: true

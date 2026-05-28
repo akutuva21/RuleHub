@@ -1,7 +1,7 @@
 id: "organelle_transport_struct"
 name: "organelle transport struct"
 description: "title: organelle_transport_abcd.bngl"
-tags: ["organelle", "transport", "struct", "a", "b", "t1", "t2"]
+tags: ["organelle", "transport", "struct"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

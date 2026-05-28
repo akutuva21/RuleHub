@@ -1,7 +1,7 @@
-id: "polynomial"
-name: "polynomial"
+id: PyBioNetGen_Core_Polynomial
+name: "PyBioNetGen Core: Polynomial Trajectory Model"
 description: "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1"
-tags: ["polynomial", "counter", "y1", "y2", "generate_network", "simulate", "setparameter", "resetconcentrations"]
+tags: ["mathematical-model", "polynomial-equation"]
 category: "other"
 compatibility:
   bng2_compatible: true

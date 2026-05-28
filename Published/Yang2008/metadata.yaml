@@ -1,7 +1,7 @@
-id: "Yang_2008"
+id: "Yang_tlbr_2008"
 name: "Yang 2008"
 description: "TLBR yang 2008"
-tags: ["published", "physics", "yang", "2008"]
+tags: ["2008", "yang"]
 category: "physics"
 compatibility:
   bng2_compatible: true

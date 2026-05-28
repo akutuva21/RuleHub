@@ -1,7 +1,7 @@
 id: "SIR"
 name: "SIR"
 description: "BioNetGen model: SIR"
-tags: ["sir", "saveconcentrations", "simulate"]
+tags: ["sir", "saveconcentrations"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "Dolan_2015"
-name: "Dolan 2015"
+id: Dolan_Insulin_2015
+name: "Dolan et al. 2015: Insulin Receptor Signaling Model"
 description: "Insulin signaling"
-tags: ["published", "literature", "signaling", "dolan", "2015", "time", "t", "p", "e", "ir", "d", "p53_mrna", "p53"]
+tags: ["insulin", "metabolism", "2015", "dolan"]
 category: "other"
 compatibility:
   bng2_compatible: false

@@ -1,7 +1,7 @@
-id: "notch"
-name: "Notch"
+id: Notch_Signaling_Pathway
+name: "Canonical Notch Signaling Pathway Model"
 description: "Notch signaling"
-tags: ["published", "notch", "icn", "ofut1", "fringe", "furin", "dsl", "csl", "maml"]
+tags: ["notch-signaling", "csl-binding", "fringe-regulation", "developmental-signaling"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

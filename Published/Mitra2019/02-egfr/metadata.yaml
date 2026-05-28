@@ -1,7 +1,7 @@
-id: 02_egfr_egfr
-name: 02-egfr
+id: Mitra_EGFR_2019
+name: "Mitra et al. 2019: EGFR Receptor Signaling (ODE)"
 description: EGFR model
-tags: ["signaling"]
+tags: ["egfr", "signaling", "receptor-binding", "2019", "mitra"]
 category: signaling
 compatibility:
   bng2_compatible: true

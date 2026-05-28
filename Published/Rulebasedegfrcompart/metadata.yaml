@@ -1,7 +1,7 @@
-id: "Rule_based_egfr_compart"
-name: "Rule based egfr compart"
+id: Faeder_egfr_compart_2009
+name: "Faeder et al. 2009: Compartmental Rule-Based EGFR model"
 description: "Compartmental EGFR model"
-tags: ["published", "rule", "based", "egfr", "compart", "egf", "grb2", "shc", "generate_network"]
+tags: ["egfr", "compartments", "receptor-trafficking", "signaling", "2009", "faeder"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

@@ -1,7 +1,7 @@
-id: "McMillan_2021"
+id: "McMillan_TNF_2021"
 name: "McMillan 2021"
 description: "TNF signaling"
-tags: ["published", "nfsim", "mcmillan", "2021", "r0_tot", "t0_tot", "r", "t", "generate_network", "simulate_ode"]
+tags: ["2021", "mcmillan", "nfsim", "signaling", "tnf"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

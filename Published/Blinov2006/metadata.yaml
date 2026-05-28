@@ -1,7 +1,7 @@
-id: "Blinov_2006"
-name: "Blinov 2006"
+id: Blinov_egfr_2006
+name: "Blinov et al. 2006: EGFR Signaling Pathway (ODE)"
 description: "Phosphotyrosine signaling"
-tags: ["published", "blinov", "2006", "egf", "egfr", "shc", "grb2", "sos"]
+tags: ["egfr", "signaling", "ode", "receptor-activation", "2006", "blinov"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

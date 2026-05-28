@@ -1,7 +1,7 @@
 id: "nfkb_illustrating_protocols"
 name: "nfkb_illustrating_protocols"
 description: "NF-kB signaling pathway"
-tags: ["validation", "nfkb", "illustrating", "protocols", "tnfr", "ikkk", "tnf", "ikk", "ikba", "a20", "competitor"]
+tags: ["nfkb", "illustrating", "protocols", "tnfr", "ikkk", "tnf", "ikk", "ikba", "competitor"]
 category: "validation"
 compatibility:
   bng2_compatible: false

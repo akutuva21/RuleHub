@@ -1,7 +1,7 @@
-id: "Simple_GenOnly"
-name: "Simple GenOnly"
+id: PyBioNetGen_Simple_GenOnly
+name: "PyBioNetGen Simple Synthesis Network-Generation Only"
 description: "An example from a real application"
-tags: ["simple", "genonly", "setoption", "ag", "r", "h"]
+tags: ["test-case", "network-generation"]
 category: "validation"
 compatibility:
   bng2_compatible: true

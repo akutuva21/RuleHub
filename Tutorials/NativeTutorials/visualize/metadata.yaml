@@ -1,7 +1,7 @@
 id: "visualize"
 name: "Visualize"
 description: "Visualization toy"
-tags: ["published", "tutorial", "native", "visualize", "x", "a1", "a2", "b"]
+tags: []
 category: "tutorial"
 compatibility:
   bng2_compatible: true

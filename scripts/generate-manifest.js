@@ -83,11 +83,13 @@ async function listModelFilesFiltered(dir, metadata) {
 function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim, modelFiles) {
   const modelDir = path.dirname(metadataFile);
   const relativeModelPath = path.relative(root, path.join(modelDir, modelFile)).replace(/\\/g, '/');
-  const id = isCollection 
-    ? metadata.id || path.basename(modelFile, '.bngl')
-    : (metadata.id && modelFiles.length === 1) 
-      ? metadata.id 
-      : path.basename(modelFile, '.bngl');
+  const fileBaseName = path.basename(modelFile, '.bngl');
+  let id = metadata.id || fileBaseName;
+  if (!isCollection && modelFiles.length > 1 && metadata.id) {
+    if (!metadata.id.endsWith(fileBaseName) && metadata.id !== fileBaseName) {
+      id = `${metadata.id}_${fileBaseName}`;
+    }
+  }
 
   const compatibility = {
     bng2: metadata.compatibility?.bng2_compatible ?? false,
@@ -103,7 +105,13 @@ function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim,
 
   const baseEntry = {
     id,
-    name: isCollection ? metadata.name : (metadata.name || id),
+    name: isCollection 
+      ? metadata.name 
+      : (metadata.name && modelFiles.length === 1)
+        ? metadata.name
+        : (metadata.name 
+           ? `${metadata.name} (${path.basename(modelFile, '.bngl')})` 
+           : path.basename(modelFile, '.bngl')),
     description: metadata.description || '',
     tags: Array.isArray(metadata.tags) ? metadata.tags : [],
     category: metadata.category || 'other',
@@ -188,7 +196,6 @@ async function main() {
 
   manifestEntries.sort((left, right) => left.id.localeCompare(right.id));
   await fs.promises.writeFile(output, JSON.stringify(manifestEntries, null, 2));
-  console.log(`Generated ${manifestEntries.length} manifest entries at ${output}${slim ? ' (slim)' : ''}`);
 }
 
 if (require.main === module) {

@@ -1,7 +1,7 @@
-id: "Dembo_1978"
-name: "Dembo 1978"
+id: Dembo_blbr_1978
+name: "Dembo et al. 1978: Bivalent Ligand Bivalent Receptor (BLBR) Model"
 description: "BLBR dembo 1978"
-tags: ["published", "physics", "dembo", "1978"]
+tags: ["blbr", "ligand-receptor", "binding", "1978", "dembo"]
 category: "physics"
 compatibility:
   bng2_compatible: true

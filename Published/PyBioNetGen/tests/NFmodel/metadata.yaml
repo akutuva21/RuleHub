@@ -1,7 +1,7 @@
-id: "NFmodel"
-name: "NFmodel"
+id: PyBioNetGen_NFmodel
+name: "PyBioNetGen NFsim Simulation Test"
 description: "BioNetGen model: NFmodel"
-tags: ["nfmodel", "ag", "ab", "simulate"]
+tags: ["test-case", "nfsim"]
 category: "validation"
 compatibility:
   bng2_compatible: true

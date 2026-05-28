@@ -1,7 +1,7 @@
 id: "Motivating_example_cBNGL"
 name: "Motivating_example_cBNGL"
 description: "Signal transduction with receptor internalization"
-tags: ["validation", "motivating", "example", "cbngl", "l", "r", "tf", "dna", "mrna1", "mrna2", "p1", "p2"]
+tags: ["motivating", "example", "cbngl", "tf", "dna", "mrna1", "mrna2"]
 category: "validation"
 compatibility:
   bng2_compatible: true

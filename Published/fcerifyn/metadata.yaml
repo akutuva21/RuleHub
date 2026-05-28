@@ -1,7 +1,7 @@
-id: "fceri_fyn"
-name: "FceRI Fyn"
+id: Faeder_FceRI_Fyn_2003
+name: "Faeder et al. 2003: FceRI Signaling with Fyn Kinase Regulation"
 description: "FceRI signaling"
-tags: ["published", "immunology", "fceri", "fyn", "lig", "lyn", "syk", "rec"]
+tags: ["fceri", "fyn-kinase", "mast-cell", "immune-signaling", "2003", "faeder"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

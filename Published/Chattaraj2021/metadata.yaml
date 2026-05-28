@@ -1,7 +1,7 @@
-id: "Chattaraj_2021"
-name: "Chattaraj 2021"
+id: Chattaraj_nephrin_2021
+name: "Chattaraj et al. 2021: Nephrin-Nck-NWASP Clustering Model"
 description: "NFkB oscillations"
-tags: ["published", "chattaraj", "2021", "nephrin", "nck", "nwasp", "writexml"]
+tags: ["nephrin", "nck", "nwasp", "clustering", "2021", "chattaraj"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

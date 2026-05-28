@@ -1,7 +1,7 @@
-id: "actions_syntax"
-name: "actions syntax"
+id: PyBioNetGen_Actions_Syntax
+name: "PyBioNetGen Actions Syntax Verification Model"
 description: "Original values used to generate parabola.exp"
-tags: ["actions", "syntax", "counter", "y", "generate_network", "simulate"]
+tags: ["test-case", "syntax-check", "actions"]
 category: "validation"
 compatibility:
   bng2_compatible: true

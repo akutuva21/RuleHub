@@ -1,7 +1,7 @@
 id: "translateSBML"
 name: "translateSBML"
 description: "title: translateSBML.bngl"
-tags: ["translatesbml", "generate_network", "simulate"]
+tags: ["translatesbml"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

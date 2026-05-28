@@ -1,7 +1,7 @@
 id: "simple_sbml_import"
 name: "simple_sbml_import"
 description: "SBML import test"
-tags: ["validation", "simple", "sbml", "import", "readfile", "generate_network", "simulate"]
+tags: ["simple", "sbml", "import", "readfile"]
 category: "validation"
 compatibility:
   bng2_compatible: false

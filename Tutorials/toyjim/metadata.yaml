@@ -1,7 +1,7 @@
 id: "toy-jim"
 name: "toy-jim"
 description: "The model consists of a monovalent extracellular ligand,"
-tags: ["validation", "toy", "jim", "l", "r", "a", "k", "null"]
+tags: ["toy", "jim"]
 category: "validation"
 compatibility:
   bng2_compatible: true

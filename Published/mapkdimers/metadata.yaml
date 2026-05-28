@@ -1,7 +1,7 @@
-id: "mapk-dimers"
-name: "MAPK Dimers"
+id: MAPK_Dimers_Model
+name: "MAPK Cascades with Raf Dimerization"
 description: "MAPK dimerization"
-tags: ["published", "mapk", "dimers", "ste5", "ste11", "ste7", "fus3"]
+tags: ["mapk-pathway", "kinase-cascade", "raf-dimerization", "phosphorylation"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

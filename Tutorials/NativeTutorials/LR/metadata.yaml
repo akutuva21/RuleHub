@@ -1,7 +1,7 @@
 id: "LR"
 name: "LR"
 description: "title: LR.bngl"
-tags: ["lr", "l", "r", "simulate"]
+tags: ["lr"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

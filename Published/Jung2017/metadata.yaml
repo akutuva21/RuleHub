@@ -1,7 +1,7 @@
-id: "Jung_2017"
-name: "Jung 2017"
+id: Jung_CaMKII_2017
+name: "Jung et al. 2017: CaMKII Activation Kinetics"
 description: "M1 receptor signaling"
-tags: ["published", "jung", "2017", "m1r", "oxo", "arrestin", "mek", "erk", "perk", "oxo_ec", "pp2a"]
+tags: ["camkii", "neuroscience", "kinase-activation", "2017", "jung"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

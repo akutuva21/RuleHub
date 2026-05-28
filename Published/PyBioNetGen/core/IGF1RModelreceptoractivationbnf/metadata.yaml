@@ -1,7 +1,7 @@
-id: "IGF1R_Model_receptor_activation_bnf"
-name: "IGF1R Model receptor activation bnf"
+id: PyBioNetGen_IGF1R_Activation
+name: "PyBioNetGen Core: IGF1R Receptor Activation Model"
 description: "Author: William S. Hlavacek"
-tags: ["igf1r", "model", "receptor", "activation", "bnf", "igf1"]
+tags: ["igf1r", "receptor-activation", "phosphorylation"]
 category: "other"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
 id: "GK"
 name: "GK"
 description: "title: GK.bngl"
-tags: ["gk", "b", "simulate"]
+tags: ["gk"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

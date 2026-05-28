@@ -1,7 +1,7 @@
-id: 13_receptor_example5_starting_point
-name: 13-receptor
+id: Mitra_SimpleReceptor_2019
+name: "Mitra et al. 2019: Simple Ligand-Receptor Binding"
 description: A simple model
-tags: ["ligand_ispresent", "molecules", "species"]
+tags: ["ligand-receptor", "binding", "reversible-reaction", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

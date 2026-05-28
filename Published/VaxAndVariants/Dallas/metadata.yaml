@@ -1,7 +1,7 @@
-id: "Dallas"
-name: "Dallas"
+id: Mallela_VaxVariants_Dallas_2022
+name: "Mallela et al. 2022: Covid-19 Vax and Variants - Dallas MSA"
 description: "- This model is intended to be consistent with the compartmental model"
-tags: ["dallas", "counter", "fdcs", "s", "sv", "e", "a", "i", "v"]
+tags: ["covid-19", "epidemiology", "vaccination", "variants", "dallas", "2022", "mallela"]
 category: "epidemiology"
 compatibility:
   bng2_compatible: true

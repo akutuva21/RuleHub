@@ -1,7 +1,7 @@
-id: 03_fcerig_fceri_gamma2
-name: 03-fcerig
+id: Mitra_FceRI_gamma2_2019
+name: "Mitra et al. 2019: FceRI Gamma2 Subunit Signaling"
 description: Added molecule type definition block so that the
-tags: ["immunology"]
+tags: ["fceri", "gamma2-subunit", "immune-signaling", "2019", "mitra"]
 category: immunology
 compatibility:
   bng2_compatible: true

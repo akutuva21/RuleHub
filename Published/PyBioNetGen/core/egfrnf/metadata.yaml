@@ -1,7 +1,7 @@
-id: "egfr_nf"
-name: "egfr nf"
+id: PyBioNetGen_EGFR_NF
+name: "PyBioNetGen Core: EGFR Network-Free Simulation"
 description: "Filename: example2_starting_point.bngl"
-tags: ["egfr", "nf", "egf", "clusters", "pre1_dose", "pre2_time"]
+tags: ["egfr", "signaling", "nfsim", "network-free"]
 category: "other"
 compatibility:
   bng2_compatible: true

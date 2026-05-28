@@ -1,7 +1,7 @@
 id: "energy_example1"
 name: "energy_example1"
 description: "Illustration of energy modeling approach w/ a simple protein scaffold model"
-tags: ["validation", "energy", "example1", "version", "setoption", "s", "a", "b", "c"]
+tags: ["energy", "example1"]
 category: "validation"
 compatibility:
   bng2_compatible: true

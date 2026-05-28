@@ -1,7 +1,7 @@
 id: "michment_cont"
 name: "michment_cont"
 description: "Michaelis Menten Continue"
-tags: ["validation", "michment", "cont", "readfile", "setconcentration", "simulate_ode", "addconcentration"]
+tags: ["michment", "cont", "readfile", "setconcentration", "addconcentration"]
 category: "validation"
 compatibility:
   bng2_compatible: false

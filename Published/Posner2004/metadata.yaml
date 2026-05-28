@@ -1,7 +1,7 @@
-id: "Posner_2004"
-name: "Posner 2004"
+id: Posner_blbr_2004
+name: "Posner et al. 2004: Cooperativity in Receptor Binding"
 description: "BLBR cooperativity"
-tags: ["published", "physics", "posner", "2004"]
+tags: ["blbr", "cooperativity", "receptor-binding", "2004", "posner"]
 category: "physics"
 compatibility:
   bng2_compatible: true

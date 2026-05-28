@@ -1,7 +1,7 @@
 id: "univ_synth"
 name: "univ_synth"
 description: "example of universal synthesis"
-tags: ["validation", "univ", "synth", "a", "b", "c", "generate_network", "simulate_ode"]
+tags: ["univ", "synth"]
 category: "validation"
 compatibility:
   bng2_compatible: true

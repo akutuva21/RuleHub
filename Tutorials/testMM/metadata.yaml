@@ -1,7 +1,7 @@
 id: "test_MM"
 name: "test_MM"
 description: "Kinetic constants"
-tags: ["validation", "test", "mm", "e", "s", "p", "generate_network"]
+tags: ["test", "mm"]
 category: "validation"
 compatibility:
   bng2_compatible: true

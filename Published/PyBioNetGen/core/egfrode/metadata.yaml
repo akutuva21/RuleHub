@@ -1,7 +1,7 @@
-id: "egfr_ode"
-name: "egfr ode"
+id: PyBioNetGen_EGFR_ODE
+name: "PyBioNetGen Core: EGFR ODE-Based Simulation"
 description: "Filename: example1.bngl"
-tags: ["egfr", "ode", "egf", "pre1_dose", "pre2_time", "pre3_dose"]
+tags: ["egfr", "signaling", "ode-solver"]
 category: "other"
 compatibility:
   bng2_compatible: true

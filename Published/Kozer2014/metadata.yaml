@@ -1,7 +1,7 @@
-id: "Kozer_2014"
-name: "Kozer 2014"
+id: Kozer_egfr_2014
+name: "Kozer et al. 2014: EGFR Oligomerization Dynamics"
 description: "Grb2-EGFR recruitment"
-tags: ["published", "kozer", "2014", "egf", "egfr", "grb2"]
+tags: ["egfr", "oligomerization", "internalization", "2014", "kozer"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

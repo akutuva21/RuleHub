@@ -1,7 +1,7 @@
 id: "rec_dim_comp"
 name: "rec_dim_comp"
 description: "name dimension volume contained_by"
-tags: ["validation", "rec", "dim", "comp", "kp1", "kp2", "lig", "writemdl", "generate_network", "simulate"]
+tags: ["rec", "dim", "comp", "lig", "writemdl"]
 category: "validation"
 compatibility:
   bng2_compatible: false

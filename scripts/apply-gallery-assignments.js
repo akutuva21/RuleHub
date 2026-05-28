@@ -48,8 +48,6 @@ function updateMetadataFile(filePath, assignments, dryRun) {
     const idPattern = new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm');
     
     if (idPattern.test(content)) {
-      console.log(`  Found model ${modelId} in ${filePath}`);
-      
       if (data.gallery_categories && data.gallery_categories.length > 0) {
         const catsStr = JSON.stringify(data.gallery_categories);
         const galleryMatch = content.match(/gallery_categories:\s*(\[\]|["\'][^"\']*["\'])/);
@@ -111,7 +109,6 @@ function updateMetadataFile(filePath, assignments, dryRun) {
 function main() {
   const { input, root, dryRun } = parseArgs(process.argv.slice(2));
   
-  console.log(`Reading ${input}...`);
   const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
@@ -120,16 +117,12 @@ function main() {
     findAllMetadataFiles(path.join(root, searchRoot))
   );
   
-  console.log(`Found ${metadataFiles.length} metadata.yaml files`);
-  
   let updated = 0;
   for (const filePath of metadataFiles) {
     if (updateMetadataFile(filePath, assignments, dryRun)) {
       updated++;
     }
   }
-  
-  console.log(`\n${dryRun ? 'Would update' : 'Updated'} ${updated} files`);
 }
 
 main();

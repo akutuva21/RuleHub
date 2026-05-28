@@ -1,7 +1,7 @@
-id: "mCaMKII_Ca_Spike"
-name: "Ordyan 2020: mCaMKII Ca Spike"
+id: Ordyan_mCaMKIICaSpike_2020
+name: "Ordyan et al. 2020: CaMKII Activation under Calcium Spikes"
 description: "mCaMKII Ca Spike model"
-tags: ["published", "neuroscience", "mcamkii", "ca", "spike", "cam", "ng", "camkii", "pp1", "time_counter"]
+tags: ["camkii", "calcium-spikes", "neuroscience", "2020", "ordyan"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

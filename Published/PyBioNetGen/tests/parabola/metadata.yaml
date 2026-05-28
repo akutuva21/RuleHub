@@ -1,7 +1,7 @@
-id: "parabola"
-name: "parabola"
+id: PyBioNetGen_Parabola
+name: "PyBioNetGen Parabolic Trajectory Test"
 description: "Original values used to generate parabola.exp"
-tags: ["parabola", "counter", "y", "generate_network", "simulate", "resetconcentrations"]
+tags: ["test-case", "mathematical-model"]
 category: "validation"
 compatibility:
   bng2_compatible: true

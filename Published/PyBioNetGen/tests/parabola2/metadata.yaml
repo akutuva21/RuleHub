@@ -1,7 +1,7 @@
-id: "parabola2"
-name: "parabola2"
+id: PyBioNetGen_Parabola2
+name: "PyBioNetGen Parabolic Trajectory Alternative Test"
 description: "A file for testing behavior with duplicate file names"
-tags: ["parabola2", "counter", "y", "generate_network", "simulate", "resetconcentrations"]
+tags: ["test-case", "mathematical-model"]
 category: "validation"
 compatibility:
   bng2_compatible: true

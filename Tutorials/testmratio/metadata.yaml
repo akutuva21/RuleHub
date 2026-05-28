@@ -1,7 +1,7 @@
 id: "test_mratio"
 name: "test_mratio"
 description: "Reaction ratio test"
-tags: ["validation", "test", "mratio", "a", "b", "c_theory", "c_upper", "c_lower"]
+tags: ["test", "mratio", "c_theory", "c_upper", "c_lower"]
 category: "validation"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "tlbr"
-name: "tlbr"
+id: PyBioNetGen_Core_TLBR
+name: "PyBioNetGen Core: Trivalent Ligand Bivalent Receptor Model"
 description: "A model of trivalent ligand, bivalent receptor"
-tags: ["tlbr", "l", "r", "lambda", "fl"]
+tags: ["tlbr", "polymerization", "ligand-receptor"]
 category: "other"
 compatibility:
   bng2_compatible: true

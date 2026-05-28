@@ -1,7 +1,7 @@
 id: "ComplexDegradation"
 name: "ComplexDegradation"
 description: "Degradation model"
-tags: ["published", "tutorial", "native", "complexdegradation", "a", "b", "c", "generate_network"]
+tags: ["complexdegradation"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

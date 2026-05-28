@@ -1,7 +1,7 @@
-id: "Jaruszewicz-Blonska_2023"
-name: "Jaruszewicz 2023"
+id: JaruszewiczBlonska_NFkB_2023
+name: "Jaruszewicz-Blonska et al. 2023: NF-kB Feedback Regulation"
 description: "T-cell discrimination"
-tags: ["published", "immunology", "jaruszewicz", "blonska", "2023", "ikk", "ikba", "ikba_mrna", "a20", "nfkb"]
+tags: ["nfkb", "feedback-regulation", "inflammatory-response", "2023", "jaruszewiczblonska"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

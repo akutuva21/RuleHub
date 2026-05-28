@@ -1,7 +1,7 @@
-id: "Hat_2016"
-name: "Hat 2016"
+id: Hat_wip1_2016
+name: "Hat et al. 2016: Wip1-Mediated Feedback Oscillator"
 description: "Nuclear transport"
-tags: ["published", "hat", "2016", "dna_dsb", "atm", "siah1", "hipk2", "wip1", "gene_wip1", "mrna_wip1", "p53"]
+tags: ["wip1", "feedback-loop", "p53-pathway", "2016", "hat"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

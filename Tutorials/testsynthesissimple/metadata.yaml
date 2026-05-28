@@ -1,7 +1,7 @@
 id: "test_synthesis_simple"
 name: "test_synthesis_simple"
 description: "Simple synthesis test"
-tags: ["validation", "test", "synthesis", "simple", "a", "b", "c", "source", "source2", "generate_network"]
+tags: ["test", "synthesis", "simple", "source", "source2"]
 category: "validation"
 compatibility:
   bng2_compatible: true

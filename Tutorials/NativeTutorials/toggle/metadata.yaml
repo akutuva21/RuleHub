@@ -1,7 +1,7 @@
 id: "toggle"
 name: "Toggle"
 description: "Toggle switch"
-tags: ["published", "tutorial", "native", "toggle", "x", "y", "generate_network", "writemfile", "setconcentration"]
+tags: ["toggle", "writemfile", "setconcentration"]
 category: "tutorial"
 compatibility:
   bng2_compatible: false

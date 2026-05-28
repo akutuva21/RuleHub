@@ -1,7 +1,7 @@
 id: "catalysis"
 name: "catalysis"
 description: "Catalysis in energy BNG"
-tags: ["validation", "catalysis", "version", "setoption", "s", "kinase", "pptase", "atp", "adp"]
+tags: ["catalysis", "pptase", "atp", "adp"]
 category: "validation"
 compatibility:
   bng2_compatible: true

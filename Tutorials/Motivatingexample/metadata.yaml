@@ -1,7 +1,7 @@
 id: "Motivating_example"
 name: "Motivating_example"
 description: "Signal Transduction with receptor internalization"
-tags: ["validation", "motivating", "example", "l", "r", "tf", "dna", "mrna1", "mrna2", "p1", "p2"]
+tags: ["motivating", "example", "tf", "dna", "mrna1", "mrna2"]
 category: "validation"
 compatibility:
   bng2_compatible: true

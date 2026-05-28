@@ -1,7 +1,7 @@
 id: "simple"
 name: "simple"
 description: "Simple binding model"
-tags: ["published", "tutorials", "simple", "s", "t", "dnat", "trash"]
+tags: ["tutorials", "simple", "dnat", "trash"]
 category: "tutorial"
 compatibility:
   bng2_compatible: false

@@ -1,7 +1,7 @@
 id: "heise"
 name: "heise"
 description: "Validate state inheritance in a symmetric context"
-tags: ["validation", "heise", "a", "b", "generate_network", "simulate_ode", "setparameter"]
+tags: ["heise"]
 category: "validation"
 compatibility:
   bng2_compatible: true

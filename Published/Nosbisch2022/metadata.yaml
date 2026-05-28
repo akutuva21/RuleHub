@@ -1,7 +1,7 @@
-id: "Nosbisch_2022"
-name: "Nosbisch 2022"
+id: Nosbisch_cancer_2022
+name: "Nosbisch et al. 2022: RTK Heterodimerization Modeling"
 description: "RTK-PLCgamma1 signaling"
-tags: ["published", "nosbisch", "2022", "rtk", "plcgamma1", "generate_network"]
+tags: ["rtk", "heterodimerization", "cancer", "2022", "nosbisch"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

@@ -1,7 +1,7 @@
-id: "ErrNoFrees"
-name: "ErrNoFrees"
+id: PyBioNetGen_ErrNoFrees
+name: "PyBioNetGen Free Molecule Error Test"
 description: "An example from a real application"
-tags: ["errnofrees", "ag", "r", "h"]
+tags: ["test-case", "error-handling"]
 category: "validation"
 compatibility:
   bng2_compatible: true

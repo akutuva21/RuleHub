@@ -1,7 +1,7 @@
-id: 11_TLBR_tlbr
-name: 11-TLBR
+id: Mitra_TLBR_2019
+name: "Mitra et al. 2019: Trivalent Ligand Bivalent Receptor (TLBR)"
 description: BNGL model: tlbr
-tags: ["alpha", "molecules", "species"]
+tags: ["tlbr", "polymerization", "ligand-receptor", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

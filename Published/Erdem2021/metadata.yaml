@@ -1,7 +1,7 @@
-id: "Erdem_2021"
-name: "Erdem 2021"
+id: Erdem_InsR_2021
+name: "Erdem et al. 2021: Insulin Receptor Internalization Model"
 description: "InsR/IGF1R signaling"
-tags: ["published", "erdem", "2021", "igf1", "ins", "igf1r", "insr", "irs", "sos", "ras", "raf"]
+tags: ["insulin", "receptor-internalization", "2021", "erdem"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

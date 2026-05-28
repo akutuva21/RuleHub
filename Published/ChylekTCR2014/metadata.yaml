@@ -1,7 +1,7 @@
-id: "ChylekTCR_2014"
-name: "Chylek 2014 (TCR)"
+id: Chylek_TCR_2014
+name: "Chylek et al. 2014: T Cell Receptor (TCR) Signaling Model"
 description: "TCR signaling"
-tags: ["published", "immunology", "chylektcr", "2014", "lig1", "lig2", "lig3", "tcr", "cd28", "lck", "itk", "zap70"]
+tags: ["tcr", "immune-signaling", "t-cell", "2014", "chylek"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

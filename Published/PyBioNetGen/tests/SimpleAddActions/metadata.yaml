@@ -1,7 +1,7 @@
-id: "Simple_AddActions"
-name: "Simple AddActions"
+id: PyBioNetGen_Simple_AddActions
+name: "PyBioNetGen Simple Synthesis with Dynamic Actions"
 description: "An example from a real application"
-tags: ["simple", "addactions", "setoption", "ag", "r", "h"]
+tags: ["test-case", "actions"]
 category: "validation"
 compatibility:
   bng2_compatible: true

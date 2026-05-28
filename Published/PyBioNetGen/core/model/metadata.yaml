@@ -1,7 +1,7 @@
-id: "model"
-name: "model"
+id: PyBioNetGen_Model
+name: "PyBioNetGen Core: Generic Mast Cell Degranulation Model"
 description: "filename: model.bngl"
-tags: ["model", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+tags: ["fceri", "degranulation", "mast-cell"]
 category: "other"
 compatibility:
   bng2_compatible: true

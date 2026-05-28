@@ -1,7 +1,7 @@
-id: example4_BNFfiles_example4
-name: in BNGL. For a description of BNGL, see:
+id: Thomas_Example4_2016
+name: "Thomas et al. 2016: Parameter Fitting - Example 4 Model"
 description: Supplementary File A in File S1
-tags: ["other"]
+tags: ["egfr", "signaling", "2016", "thomas"]
 category: other
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "pt403"
-name: "pt403"
+id: HIV_Dynamics_pt403
+name: "HIV Viral Load Dynamics - Patient 403"
 description: "c = 0.23 /d t_1/2 = 3.0 d (inferred)"
-tags: ["pt403", "counter", "v", "lnv", "s", "c", "half_life", "lnv_tangent"]
+tags: ["hiv", "viral-dynamics", "patient-403", "epidemiology"]
 category: "other"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: pybnf_files_rab_mon1ccz1_ox
-name: rab_mon1ccz1_ox.bngl
+id: Mitra_Rab_wt_pybnf_2019
+name: "Mitra et al. 2019: Rab Cascade - Wild Type (PyBNF)"
 description: filename:rab_mon1ccz1_ox.bngl
-tags: ["rab5_expr", "rab7_expr", "mon1_expr", "ccz1_expr", "kf_mon1_ccz1", "kr_mon1_ccz1", "egf_conc_ngml", "ub_hill_coef", "ub_half_coef", "ub_basal_coef", "ub_scale_coef", "py_hill_coef", "py_half_coef", "py_basal_coef", "py_scale_coef", "gtp_to_gdp_ratio", "kcatgtp_rab5", "k_gdp_gef_eff", "kcatgtp_rab7", "molecules", "0"]
+tags: ["rab-cascade", "vesicle-trafficking", "mon1-ccz1", "rab5", "rab7", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

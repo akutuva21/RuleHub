@@ -1,7 +1,7 @@
 id: "egfr_net"
 name: "egfr_net"
 description: "check detailed balanced"
-tags: ["validation", "egfr", "net", "egf", "shc", "grb2", "sos"]
+tags: ["egfr", "net", "egf", "shc", "grb2", "sos"]
 category: "validation"
 compatibility:
   bng2_compatible: false

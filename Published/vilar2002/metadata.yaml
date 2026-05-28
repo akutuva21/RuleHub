@@ -1,7 +1,7 @@
-id: "vilar_2002"
+id: "Vilar_Circadian_2002"
 name: "Vilar 2002"
 description: "Genetic oscillator"
-tags: ["published", "vilar", "2002", "dna", "a", "r"]
+tags: ["2002", "dna", "oscillations"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

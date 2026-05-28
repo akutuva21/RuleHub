@@ -1,7 +1,7 @@
-id: "Zhang_2021"
-name: "Zhang 2021"
+id: Zhang_developmental_2021
+name: "Zhang et al. 2021: VE-PTP and Tie2 Receptor Regulation Model"
 description: "CAR-T signaling"
-tags: ["published", "zhang", "2021", "tie2", "tie1", "ang1_4", "ang2_2", "ang2_3", "ang2_4", "veptp", "pten"]
+tags: ["ve-ptp", "tie2", "angiogenesis", "2021", "zhang"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

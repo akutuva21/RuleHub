@@ -1,7 +1,7 @@
-id: "CaMKII_holo"
-name: "Ordyan 2020: CaMKII holo"
+id: Ordyan_CaMKIIholo_2020
+name: "Ordyan et al. 2020: CaMKII Holoenzyme Activation Model"
 description: "CaMKII holo"
-tags: ["published", "neuroscience", "camkii", "holo", "ca", "cam", "ng", "pp1", "time_counter"]
+tags: ["camkii", "holoenzyme", "neuroscience", "2020", "ordyan"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

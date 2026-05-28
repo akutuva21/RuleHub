@@ -1,7 +1,7 @@
-id: "Miller2025_MEK"
-name: "Miller 2025 - MEK Isoform Models"
+id: Miller_MEK_2025
+name: "Miller et al. 2025: MEK Isoform Specific Signaling"
 description: "MEK isoform variant models curated for PyBioNetGen."
-tags: ["mek", "isoforms", "signaling", "pybionetgen"]
+tags: ["mek-isoforms", "mapk-pathway", "signaling", "2025", "miller"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

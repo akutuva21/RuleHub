@@ -42,7 +42,7 @@ function setNested(target, dottedPath, value) {
   for (let index = 0; index < parts.length - 1; index += 1) {
     const part = parts[index];
     if (!cursor[part] || typeof cursor[part] !== 'object' || Array.isArray(cursor[part])) {
-      cursor[part] = {};
+      cursor[part] = Object.create(null);
     }
     cursor = cursor[part];
   }

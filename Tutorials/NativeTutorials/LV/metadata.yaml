@@ -1,7 +1,7 @@
 id: "LV"
 name: "LV"
 description: "title: LV.bgl"
-tags: ["lv", "s", "w", "generate_network", "writesbml", "simulate"]
+tags: ["lv", "writesbml"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

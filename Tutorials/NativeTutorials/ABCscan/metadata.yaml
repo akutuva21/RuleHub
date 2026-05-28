@@ -1,7 +1,7 @@
 id: "ABC_scan"
 name: "ABC scan"
 description: "BioNetGen model: ABC scan"
-tags: ["abc", "scan", "a", "generate_network", "parameter_scan"]
+tags: ["abc", "scan", "parameter_scan"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
 id: "simple_system"
 name: "simple_system"
 description: "Simple binding system"
-tags: ["validation", "simple", "system", "x", "y"]
+tags: ["simple", "system"]
 category: "validation"
 compatibility:
   bng2_compatible: true

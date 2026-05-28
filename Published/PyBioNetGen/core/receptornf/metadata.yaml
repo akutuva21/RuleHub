@@ -1,7 +1,7 @@
-id: "receptor_nf"
-name: "receptor nf"
+id: PyBioNetGen_Core_Receptor_NF
+name: "PyBioNetGen Core: Ligand-Receptor Network-Free Simulation"
 description: "A simple model of ligand/receptor binding and receptor phosphorylation."
-tags: ["receptor", "nf", "l", "r"]
+tags: ["ligand-receptor", "binding-kinetics", "nfsim"]
 category: "other"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
 id: "motor"
 name: "motor"
 description: "Motor protein"
-tags: ["validation", "motor", "chey", "kplus", "kminus"]
+tags: ["motor", "chey"]
 category: "validation"
 compatibility:
   bng2_compatible: true

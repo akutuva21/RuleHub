@@ -1,7 +1,7 @@
-id: "Pekalski_2013"
-name: "Pekalski 2013"
+id: Pekalski_published_2013
+name: "Pekalski et al. 2013: TNFR-Mediated NF-kB Activation Model"
 description: "Spontaneous signaling"
-tags: ["published", "pekalski", "2013", "tnfr", "ikk", "ikkk", "ikba", "ikba_mrna", "a20", "a20_mrna", "nfkb"]
+tags: ["tnfr", "nfkb", "inflammatory-signaling", "2013", "pekalski"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

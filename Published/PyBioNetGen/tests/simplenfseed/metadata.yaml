@@ -1,7 +1,7 @@
-id: "simple_nf_seed"
-name: "simple nf seed"
+id: PyBioNetGen_Simple_NF_Seed
+name: "PyBioNetGen NFsim Seed Population Test"
 description: "BioNetGen model: simple nf seed"
-tags: ["simple", "nf", "seed", "a", "b", "function1", "simulate"]
+tags: ["test-case", "nfsim", "seed"]
 category: "validation"
 compatibility:
   bng2_compatible: true

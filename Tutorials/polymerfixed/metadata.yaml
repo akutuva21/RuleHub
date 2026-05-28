@@ -11,7 +11,7 @@ compatibility:
   uses_functions: true
   nfsim_compatible: true
 source:
-  origin: "contributed"
+  origin: "tutorial"
   original_format: "bngl"
   original_repository: "bionetgen-web-simulator"
   source_path: "public/models/polymer_fixed.bngl"

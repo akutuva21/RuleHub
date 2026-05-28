@@ -1,7 +1,7 @@
-id: Hlavacek2018Restructuration_after_bunching
-name: Hlavacek2018Restructuration
+id: Hlavacek_Restructuration_2018
+name: "Hlavacek et al. 2018: Network Restructuration Analysis"
 description: BNGL model: after_bunching
-tags: ["na", "vecf", "egftot", "egfrtot", "kd", "kr", "kpx", "kmx", "kp", "kdp", "molecules"]
+tags: ["network-restructuration", "mathematical-model", "2018", "hlavacek"]
 category: other
 compatibility:
   bng2_compatible: true

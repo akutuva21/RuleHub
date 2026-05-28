@@ -1,7 +1,7 @@
-id: "Barua_2013"
-name: "Barua 2013"
+id: Barua_bcat_2013
+name: "Barua et al. 2013: Beta-Catenin Regulation Model"
 description: "Beta-catenin destruction"
-tags: ["published", "barua", "2013", "axin", "gsk3b", "apc", "bcat", "ck1a"]
+tags: ["beta-catenin", "regulation", "wnt-signaling", "2013", "barua"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

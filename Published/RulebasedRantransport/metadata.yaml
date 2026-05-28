@@ -1,7 +1,7 @@
-id: "Rule_based_Ran_transport"
-name: "Rule based Ran transport"
+id: Ran_NuclearTransport
+name: "Rule-Based Ran-Mediated Nuclear Transport Model"
 description: "Nuclear Ran transport"
-tags: ["published", "rule", "based", "ran", "transport", "c", "rcc1", "generate_network"]
+tags: ["ran-gtpase", "nuclear-transport", "nuclear-pore-complex", "import-export"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

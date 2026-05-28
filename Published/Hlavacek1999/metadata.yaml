@@ -1,7 +1,7 @@
-id: "Hlavacek_1999"
-name: "Hlavacek 1999"
+id: Hlavacek_Steric_1999
+name: "Hlavacek et al. 1999: Steric Hindrance in Ligand Binding"
 description: "Steric effects"
-tags: ["published", "physics", "hlavacek", "1999"]
+tags: ["steric-hindrance", "ligand-binding", "1999", "hlavacek"]
 category: "physics"
 compatibility:
   bng2_compatible: true

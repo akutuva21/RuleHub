@@ -1,7 +1,7 @@
 id: "Repressilator"
 name: "Repressilator"
 description: "Repressilator circuit"
-tags: ["published", "tutorial", "native", "repressilator", "gtetr", "gci", "glaci", "mtetr", "mci", "mlaci", "ptetr", "pci"]
+tags: ["repressilator", "gtetr", "gci", "glaci", "mtetr", "mci", "mlaci", "ptetr", "pci"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "model"
-name: "model"
+id: PyBioNetGen_Model_aMCMC
+name: "PyBioNetGen Core: Mast Cell Degranulation via aMCMC Fitting"
 description: "A model of IgE receptor signaling"
-tags: ["model", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+tags: ["fceri", "degranulation", "amcmc-fitting"]
 category: "other"
 compatibility:
   bng2_compatible: true

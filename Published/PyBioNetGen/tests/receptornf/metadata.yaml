@@ -1,7 +1,7 @@
 id: "receptor_nf"
 name: "receptor nf"
 description: "A simple model of ligand/receptor binding and receptor phosphorylation."
-tags: ["receptor", "nf", "l", "r"]
+tags: ["receptor", "nf"]
 category: "validation"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "parabola_ground"
-name: "parabola ground"
+id: PyBioNetGen_Core_Parabola_Ground
+name: "PyBioNetGen Core: Parabolic Ground Truth Reference"
 description: "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1"
-tags: ["parabola", "ground", "counter", "par", "line", "generate_network", "simulate"]
+tags: ["mathematical-model", "reference-standard"]
 category: "other"
 compatibility:
   bng2_compatible: true

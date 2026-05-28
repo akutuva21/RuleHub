@@ -1,7 +1,7 @@
-id: "degranulation_model"
-name: "PyBNG: Degranulation model"
+id: PyBioNetGen_Degranulation_Model
+name: "PyBioNetGen Core: IgE Receptor Degranulation Model"
 description: "Degranulation model"
-tags: ["published", "pybng", "degranulation", "model", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+tags: ["fceri", "degranulation", "mast-cell", "immune-signaling"]
 category: "other"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "An_2009"
-name: "An 2009"
+id: An_TLR4_2009
+name: "An et al. 2009: TLR4 Signaling Model"
 description: "TLR4 signaling"
-tags: ["published", "immunology", "an", "2009", "cd14", "md2", "tlr4", "tram", "trif", "sarm", "traf4", "irak1"]
+tags: ["tlr4", "immune-signaling", "innate-immunity", "2009", "an"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

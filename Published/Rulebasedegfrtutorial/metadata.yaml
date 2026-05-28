@@ -1,7 +1,7 @@
-id: "Rule_based_egfr_tutorial"
+id: "Faeder_egfr_2009"
 name: "Faeder 2009"
 description: "EGFR signaling"
-tags: ["published", "rule", "based", "egfr", "tutorial", "egf", "grb2", "shc", "generate_network"]
+tags: ["based", "egf", "egfr", "rule", "rulebasedegfrtutorial", "shc", "signaling"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

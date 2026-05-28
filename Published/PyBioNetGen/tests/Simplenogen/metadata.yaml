@@ -1,7 +1,7 @@
-id: "Simple_nogen"
-name: "Simple nogen"
+id: PyBioNetGen_Simple_NoGen
+name: "PyBioNetGen Simple Synthesis Without Network-Generation"
 description: "An example from a real application"
-tags: ["simple", "nogen", "ag", "r", "h"]
+tags: ["test-case", "direct-simulation"]
 category: "validation"
 compatibility:
   bng2_compatible: true

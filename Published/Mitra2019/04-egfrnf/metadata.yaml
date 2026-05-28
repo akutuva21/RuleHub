@@ -1,7 +1,7 @@
-id: 04_egfrnf_egfr_nf
-name: example2_starting_point.bngl
+id: Mitra_EGFR_NF_2019
+name: "Mitra et al. 2019: EGFR Network-Free Simulation"
 description: Filename: example2_starting_point.bngl
-tags: ["f", "lt_nm", "rt", "k11", "k11r", "k21", "k21r", "k22", "k22r", "l20", "l20r", "l21r", "l22r", "k_o", "k_c", "kaf", "kar", "kp", "kdp", "chi_r", "avg1", "avg2", "avg3", "avg4", "molecules"]
+tags: ["egfr", "signaling", "network-free", "nfsim", "2019", "mitra"]
 category: signaling
 compatibility:
   bng2_compatible: true

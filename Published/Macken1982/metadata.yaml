@@ -1,7 +1,7 @@
-id: "Macken_1982"
-name: "Macken 1982"
+id: Macken_physics_1982
+name: "Macken et al. 1982: Polymer Chain Reaction Kinetics"
 description: "TLBR solution macken 1982"
-tags: ["published", "physics", "macken", "1982"]
+tags: ["polymerization", "mathematical-model", "1982", "macken"]
 category: "physics"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
 id: "LV_comp"
 name: "LV comp"
 description: "title: LV_comp.bgl"
-tags: ["lv", "comp", "k2", "s", "w"]
+tags: ["lv", "comp"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

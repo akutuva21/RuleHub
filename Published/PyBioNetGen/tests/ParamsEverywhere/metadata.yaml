@@ -1,7 +1,7 @@
-id: "ParamsEverywhere"
-name: "ParamsEverywhere"
+id: PyBioNetGen_ParamsEverywhere
+name: "PyBioNetGen Global Parameters Boundary Test"
 description: "An example from a real application"
-tags: ["paramseverywhere", "ag", "r", "h"]
+tags: ["test-case", "parameter-boundaries"]
 category: "validation"
 compatibility:
   bng2_compatible: true

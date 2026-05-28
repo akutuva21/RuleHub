@@ -1,7 +1,7 @@
 id: "continue"
 name: "continue"
 description: "Test trajectory continuation"
-tags: ["validation", "continue", "a", "b", "c", "trash"]
+tags: ["continue", "trash"]
 category: "validation"
 compatibility:
   bng2_compatible: false

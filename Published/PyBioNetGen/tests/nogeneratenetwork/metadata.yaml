@@ -1,7 +1,7 @@
-id: "no_generate_network"
-name: "no generate network"
+id: PyBioNetGen_NoGenerateNetwork
+name: "PyBioNetGen Direct Simulation Without Expansion Test"
 description: "Original values used to generate parabola.exp"
-tags: ["no", "generate", "network", "counter", "y", "simulate"]
+tags: ["test-case", "simulation-modes"]
 category: "validation"
 compatibility:
   bng2_compatible: true

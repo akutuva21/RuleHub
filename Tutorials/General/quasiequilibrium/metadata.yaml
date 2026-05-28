@@ -1,7 +1,7 @@
 id: "quasi_equilibrium"
 name: "quasi equilibrium"
 description: "Quasi-equilibrium approximation"
-tags: ["published", "toy models", "quasi", "equilibrium", "a", "b", "c"]
+tags: ["toy models", "quasi", "equilibrium"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true
