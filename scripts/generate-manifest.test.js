@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, parseMetadataYaml, listMetadataFiles } = require('./generate-manifest.js');
+const { buildEntry, parseMetadataYaml, listMetadataFiles, parseArgs } = require('./generate-manifest.js');
 
 test('listMetadataFiles', async (t) => {
   let tmpDir;

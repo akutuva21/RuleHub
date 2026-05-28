@@ -131,12 +131,17 @@ function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim,
     baseEntry.collectionId = metadata.id || null;
     
     if (!slim && metadata.collection) {
-      const modelFiles = fs.readdirSync(modelDir, { withFileTypes: true })
-        .filter(e => e.isFile() && e.name.endsWith('.bngl'))
-        .map(e => e.name)
-        .sort();
+      let modelFilesList;
+      if (fs.existsSync(modelDir)) {
+        modelFilesList = fs.readdirSync(modelDir, { withFileTypes: true })
+          .filter(e => e.isFile() && e.name.endsWith('.bngl'))
+          .map(e => e.name)
+          .sort();
+      } else {
+        modelFilesList = modelFiles || [modelFile];
+      }
 
-      const variants = modelFiles.map(file => ({
+      const variants = modelFilesList.map(file => ({
         id: path.basename(file, '.bngl'),
         file: file,
       }));
