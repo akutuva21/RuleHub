@@ -37,8 +37,8 @@ function findAllMetadataFiles(dir, results = []) {
 }
 
 
-function updateMetadataFile(filePath, assignments, compiledAssignments, dryRun) {
-  let content = fs.readFileSync(filePath, 'utf8');
+async function updateMetadataFile(filePath, assignments, compiledAssignments, dryRun) {
+  let content = await fs.promises.readFile(filePath, 'utf8');
   const dir = path.dirname(filePath);
   const modelDirName = path.basename(dir);
   
@@ -100,16 +100,16 @@ function updateMetadataFile(filePath, assignments, compiledAssignments, dryRun) 
   }
   
   if (updated && !dryRun) {
-    fs.writeFileSync(filePath, newContent);
+    await fs.promises.writeFile(filePath, newContent);
   }
   
   return updated;
 }
 
-function main(argv = process.argv.slice(2)) {
+async function main(argv = process.argv.slice(2)) {
   const { input, root, dryRun } = parseArgs(argv);
   
-  const assignments = JSON.parse(fs.readFileSync(input, 'utf8'));
+  const assignments = JSON.parse(await fs.promises.readFile(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
   const compiledAssignments = Object.entries(assignments).map(([modelId, data]) => ({
@@ -122,16 +122,19 @@ function main(argv = process.argv.slice(2)) {
     findAllMetadataFiles(path.join(root, searchRoot))
   );
   
-  let updated = 0;
-  for (const filePath of metadataFiles) {
-    if (updateMetadataFile(filePath, assignments, compiledAssignments, dryRun)) {
-      updated++;
-    }
-  }
+  const updatePromises = metadataFiles.map(filePath =>
+    updateMetadataFile(filePath, assignments, compiledAssignments, dryRun)
+  );
+
+  const results = await Promise.all(updatePromises);
+  const updated = results.filter(Boolean).length;
 }
 
 if (require.main === module) {
-  main();
+  main().catch(error => {
+    console.error("An error occurred:", error);
+    process.exit(1);
+  });
 }
 
 module.exports = {
