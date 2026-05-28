@@ -142,8 +142,8 @@ collection:
   });
 });
 
-test('missing README.md adds error', () => {
-  withTempDir((tempDir) => {
+test('missing README.md adds error', async () => {
+  await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     fs.writeFileSync(metadataFile, VALID_METADATA_YAML);
     fs.writeFileSync(path.join(tempDir, 'testmodel.bngl'), 'begin model\nend model');
