@@ -118,8 +118,6 @@ function main() {
     findAllMetadataFiles(path.join(root, searchRoot))
   );
   
-  console.log(`Found ${metadataFiles.length} metadata.yaml files`);
-  
   let updated = 0;
   for (const filePath of metadataFiles) {
     if (updateMetadataFile(filePath, assignments, dryRun)) {
