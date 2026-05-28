@@ -1,7 +1,7 @@
 id: "LRR"
 name: "LRR"
 description: "title: LRR.bngl"
-tags: ["lrr", "l", "r"]
+tags: ["lrr"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

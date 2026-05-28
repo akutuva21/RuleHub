@@ -1,7 +1,7 @@
 id: "Haugh2b"
 name: "Haugh2b"
 description: "R(KD,Y1~U,Y2~U) 1.00"
-tags: ["validation", "haugh2b", "r", "s1", "s2", "exclude_reactants", "include_reactants"]
+tags: ["haugh2b", "exclude_reactants", "include_reactants"]
 category: "validation"
 compatibility:
   bng2_compatible: true

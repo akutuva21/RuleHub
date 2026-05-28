@@ -1,7 +1,7 @@
-id: "free_missing"
-name: "free missing"
+id: PyBioNetGen_FreeMissing
+name: "PyBioNetGen Free Species Constraint Test"
 description: "Original values used to generate parabola.exp"
-tags: ["free", "missing", "counter", "y", "generate_network", "simulate"]
+tags: ["test-case", "constraints"]
 category: "validation"
 compatibility:
   bng2_compatible: true

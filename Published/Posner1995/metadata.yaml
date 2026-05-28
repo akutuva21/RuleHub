@@ -1,7 +1,7 @@
-id: "Posner_1995"
-name: "Posner 1995"
+id: Posner_blbr_1995
+name: "Posner et al. 1995: Receptor Ring Aggregation Model"
 description: "BLBR rings"
-tags: ["published", "physics", "posner", "1995"]
+tags: ["blbr", "aggregation", "receptor-rings", "1995", "posner"]
 category: "physics"
 compatibility:
   bng2_compatible: true

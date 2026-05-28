@@ -1,7 +1,7 @@
-id: 05_threestep_m1
-name: of a 3-step signaling cascade
+id: Mitra_ThreeStepCascade_2019
+name: "Mitra et al. 2019: Three-Step Signaling Cascade"
 description: Toy model of a 3-step signaling cascade
-tags: ["k1", "k2", "k3", "ainit", "molecules"]
+tags: ["cascade", "kinase", "phosphorylation", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

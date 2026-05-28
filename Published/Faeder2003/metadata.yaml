@@ -1,7 +1,7 @@
-id: "Faeder_2003"
-name: "Faeder 2003"
+id: Faeder_FceRI_2003
+name: "Faeder et al. 2003: FceRI Signaling Model"
 description: "FceRI signaling"
-tags: ["published", "immunology", "faeder", "2003", "lig", "lyn", "syk", "rec"]
+tags: ["fceri", "immune-signaling", "mast-cell", "2003", "faeder"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

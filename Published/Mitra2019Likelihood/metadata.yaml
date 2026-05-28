@@ -1,5 +1,5 @@
-id: model_ground
-name: model_ground.bngl
+id: Mitra_Likelihood_2019
+name: "Mitra et al. 2019: Likelihood Profiling Analysis Reference"
 description: filename: model_ground.bngl
 tags:
   - x_tot__free

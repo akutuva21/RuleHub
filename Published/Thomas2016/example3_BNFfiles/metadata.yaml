@@ -1,7 +1,7 @@
-id: example3_BNFfiles_example3
-name: example3 BNFfiles
+id: Thomas_Example3_2016
+name: "Thomas et al. 2016: Parameter Fitting - Example 3 (TLBR)"
 description: BNGL model: example3
-tags: ["alpha", "molecules", "species"]
+tags: ["tlbr", "polymerization", "ligand-receptor", "2016", "thomas"]
 category: other
 compatibility:
   bng2_compatible: true

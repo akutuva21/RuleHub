@@ -1,7 +1,7 @@
-id: "innate_immunity"
-name: "Korwek 2023"
+id: Korwek_InnateImmunity_2023
+name: "Korwek et al. 2023: Innate Immunity Activation Model"
 description: "Immune response"
-tags: ["published", "immunology", "innate", "immunity", "polyic", "rigi", "mavs", "pkr", "oas3", "rnasel", "eif2a", "rigi_mrna"]
+tags: ["innate-immunity", "rig-i-sensing", "pkr-activation", "rnase-l-cleavage", "viral-sensing", "2023", "korwek"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

@@ -1,8 +1,8 @@
-id: "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC"
-name: "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC"
+id: Mallela_VaxVariants_MyrtleBeach_2022
+name: "Mallela et al. 2022: Covid-19 Vax and Variants - Myrtle Beach MSA"
 description: "Runtime-only BNGL model migrated from public/models: Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC"
-tags: ["myrtle", "beach", "conway", "north", "sc", "nc"]
-category: "other"
+tags: ["covid-19", "epidemiology", "vaccination", "variants", "myrtle-beach", "2022", "mallela"]
+category: "epidemiology"
 compatibility:
   bng2_compatible: true
   simulation_methods: ["ode"]
@@ -11,7 +11,7 @@ compatibility:
   uses_functions: true
   nfsim_compatible: false
 source:
-  origin: "contributed"
+  origin: "published"
   original_format: "bngl"
   original_repository: "bionetgen-web-simulator"
   source_path: "public/models/Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC.bngl"

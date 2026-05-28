@@ -1,7 +1,7 @@
-id: "parabola"
-name: "parabola"
+id: PyBioNetGen_Core_Parabola_Demo
+name: "PyBioNetGen Core: Parabolic Trajectory Demo"
 description: "Original values used to generate parabola.exp"
-tags: ["parabola", "counter", "y", "generate_network", "simulate"]
+tags: ["mathematical-model", "demo"]
 category: "other"
 compatibility:
   bng2_compatible: true

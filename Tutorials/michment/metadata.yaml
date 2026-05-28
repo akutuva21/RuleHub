@@ -1,7 +1,7 @@
 id: "michment"
 name: "michment"
 description: "Michaelis Menten"
-tags: ["validation", "michment", "e", "s", "generate_network"]
+tags: ["michment"]
 category: "validation"
 compatibility:
   bng2_compatible: true

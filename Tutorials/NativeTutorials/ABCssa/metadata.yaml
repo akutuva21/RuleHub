@@ -1,7 +1,7 @@
 id: "ABC_ssa"
 name: "ABC ssa"
 description: "BioNetGen model: ABC ssa"
-tags: ["abc", "ssa", "a", "simulate"]
+tags: ["abc", "ssa"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

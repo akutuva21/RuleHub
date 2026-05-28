@@ -1,7 +1,7 @@
-id: "RAFi_ground"
-name: "RAFi ground"
+id: PyBioNetGen_Core_RAFi_Ground
+name: "PyBioNetGen Core: Raf Inhibitor Ground Truth Reference"
 description: "BioNetGen model: RAFi ground"
-tags: ["rafi", "ground", "r", "i", "ybar", "activity"]
+tags: ["rafi", "raf-kinase", "reference-standard"]
 category: "other"
 compatibility:
   bng2_compatible: true

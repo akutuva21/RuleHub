@@ -1,7 +1,7 @@
 id: "ABp"
 name: "ABp"
 description: "title: ABp.bngl"
-tags: ["abp", "a", "b", "simulate"]
+tags: ["abp"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: 17_egfr_ssa_egfr
-name: 17-egfr-ssa
+id: Mitra_EGFR_SSA_2019
+name: "Mitra et al. 2019: EGFR Stochastic (SSA) Model"
 description: EGFR model
-tags: ["signaling"]
+tags: ["egfr", "stochastic", "ssa", "signaling", "2019", "mitra"]
 category: signaling
 compatibility:
   bng2_compatible: true

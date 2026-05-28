@@ -1,7 +1,7 @@
 id: "BAB_scan"
 name: "BAB scan"
 description: "Simple binding model with a bivalent A molecule that has two identical sites"
-tags: ["bab", "scan", "a", "b", "generate_network", "parameter_scan"]
+tags: ["bab", "scan", "parameter_scan"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "Ligon_2014"
-name: "Ligon 2014"
+id: Ligon_egfr_2014
+name: "Ligon et al. 2014: EGFR Dimerization in Living Cells"
 description: "Lipoplex delivery"
-tags: ["published", "nfsim", "ligon", "2014", "lext", "pit", "lint"]
+tags: ["egfr", "dimerization", "fluorescence-microscopy", "2014", "ligon"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

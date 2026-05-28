@@ -1,7 +1,7 @@
 id: "toy1"
 name: "toy1"
 description: "Basic signaling toy"
-tags: ["published", "tutorials", "toy1", "l", "r", "a", "generate_network", "writesbml", "simulate_ode"]
+tags: ["tutorials", "toy1", "writesbml"]
 category: "tutorial"
 compatibility:
   bng2_compatible: false

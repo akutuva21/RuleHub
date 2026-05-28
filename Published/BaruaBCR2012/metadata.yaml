@@ -1,7 +1,7 @@
-id: "BaruaBCR_2012"
-name: "Barua 2012"
+id: Barua_BCR_2012
+name: "Barua et al. 2012: BCR Signaling Model"
 description: "BCR signaling"
-tags: ["published", "immunology", "baruabcr", "2012", "bcr", "lyn", "fyn", "csk", "pag", "syk"]
+tags: ["bcr", "immune-signaling", "b-cell", "2012", "barua"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "Model_ZAP"
+id: "ZAP70_immunology_2021"
 name: "Model ZAP"
 description: "ZAP-70 recruitment"
-tags: ["published", "immunology", "nfsim", "model", "zap", "kon", "a", "cbl", "cd16", "lck", "ligand", "zeta", "dead"]
+tags: ["cbl", "dead", "lck", "ligand", "modelzap", "nfsim", "zap", "zeta"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

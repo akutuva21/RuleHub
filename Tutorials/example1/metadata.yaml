@@ -1,7 +1,7 @@
 id: "example1"
 name: "example1"
 description: "Example file for BNG2 tutorial."
-tags: ["validation", "example1", "version", "generate_network", "simulate_ode"]
+tags: ["example1"]
 category: "validation"
 compatibility:
   bng2_compatible: false

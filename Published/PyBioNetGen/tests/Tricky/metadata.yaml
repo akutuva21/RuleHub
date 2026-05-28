@@ -1,7 +1,7 @@
-id: "Tricky"
-name: "Tricky"
+id: PyBioNetGen_Tricky
+name: "PyBioNetGen Complex Pattern Matching Test"
 description: "An example from a real application"
-tags: ["tricky", "ag", "r", "h"]
+tags: ["test-case", "pattern-matching"]
 category: "validation"
 compatibility:
   bng2_compatible: true

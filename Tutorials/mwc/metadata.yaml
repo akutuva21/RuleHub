@@ -1,7 +1,7 @@
 id: "mwc"
 name: "mwc"
 description: "Monod-Wyman-Changeux model"
-tags: ["validation", "mwc", "setoption", "h", "ox", "b"]
+tags: ["mwc", "ox"]
 category: "validation"
 compatibility:
   bng2_compatible: true

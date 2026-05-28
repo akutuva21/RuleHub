@@ -1,7 +1,7 @@
-id: 26_tcr_sens_tcr_sens_tofit
-name: for the Manz/Groves 2011 data
+id: Mitra_TCRSensitivity_2019
+name: "Mitra et al. 2019: T Cell Receptor Sensitivity Analysis"
 description: Modification of Mukhopadhyay/Dushek 2013 model for the Manz/Groves 2011 data
-tags: ["immunology"]
+tags: ["tcr", "sensitivity-analysis", "ligand-discrimination", "2019", "mitra"]
 category: immunology
 compatibility:
   bng2_compatible: true

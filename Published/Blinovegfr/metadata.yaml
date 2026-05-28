@@ -1,7 +1,7 @@
-id: "Blinov_egfr"
-name: "Blinov egfr"
+id: Blinov_egfr_NF_2006
+name: "Blinov et al. 2006: EGFR Signaling Pathway (NFsim)"
 description: "EGFR signaling model"
-tags: ["published", "nfsim", "blinov", "egfr", "egf", "grb2", "shc", "simulate_nf"]
+tags: ["egfr", "signaling", "nfsim", "receptor-activation", "2006", "blinov"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

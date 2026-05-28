@@ -1,7 +1,7 @@
-id: 10_egfr_egfr_ode
-name: example1.bngl
+id: Mitra_EGFR_ODE_2019
+name: "Mitra et al. 2019: EGFR Parameter Estimation (ODE)"
 description: Filename: example1.bngl
-tags: ["lt", "rt", "k11", "k11r", "k21", "k21r", "k22", "k22r", "l20", "l20r", "l21r", "l22r", "k_o", "k_c", "kaf", "kar", "kp", "kdp", "chi_r", "avg1", "avg2", "avg3", "avg4", "alpha1", "alpha2", "alpha3", "alpha4", "molecules", "species"]
+tags: ["egfr", "signaling", "ode", "parameter-estimation", "2019", "mitra"]
 category: signaling
 compatibility:
   bng2_compatible: true

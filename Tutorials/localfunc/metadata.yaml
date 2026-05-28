@@ -1,7 +1,7 @@
 id: "localfunc"
 name: "localfunc"
 description: "Test local function expansion"
-tags: ["validation", "localfunc", "a", "b", "c", "trash", "f_synth"]
+tags: ["localfunc", "trash", "f_synth"]
 category: "validation"
 compatibility:
   bng2_compatible: true

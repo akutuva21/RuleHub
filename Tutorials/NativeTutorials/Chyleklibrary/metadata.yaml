@@ -1,7 +1,7 @@
 id: "Chylek_library"
 name: "Chylek library"
 description: "Created by BioNetGen 2.2.6"
-tags: ["chylek", "library", "kflatplcg", "kfgrb2gab2", "kflcp2plcg1", "kd1", "kd2", "sink", "pre", "pag1"]
+tags: ["chylek", "library", "sink", "pre", "pag1"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

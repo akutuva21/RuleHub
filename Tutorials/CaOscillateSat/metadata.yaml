@@ -1,7 +1,7 @@
 id: "CaOscillate_Sat"
 name: "CaOscillate_Sat"
 description: "Calcium oscillations (sat)"
-tags: ["validation", "caoscillate", "sat", "null", "ga", "plc", "ca"]
+tags: ["caoscillate", "sat", "ga", "plc", "ca"]
 category: "validation"
 compatibility:
   bng2_compatible: true

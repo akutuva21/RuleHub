@@ -1,7 +1,7 @@
 id: "test_synthesis_complex_0_cBNGL"
 name: "test_synthesis_complex_0_cBNGL"
 description: "volume-surface"
-tags: ["validation", "test", "synthesis", "complex", "0", "cbngl", "volume_molecule1", "volume_molecule2", "surface_molecule1", "surface_molecule2", "volume_molecule3", "volume_molecule4", "volume_receptor", "surface_receptor"]
+tags: ["test", "synthesis", "complex", "cbngl", "surface_molecule1", "surface_molecule2", "surface_receptor"]
 category: "validation"
 compatibility:
   bng2_compatible: true

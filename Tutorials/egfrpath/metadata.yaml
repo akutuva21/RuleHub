@@ -1,7 +1,7 @@
 id: "egfr_path"
 name: "egfr_path"
 description: "The primary focus of the model developed by Kholodenko"
-tags: ["validation", "egfr", "path", "generate_network", "setconcentration", "simulate"]
+tags: ["egfr", "path", "setconcentration"]
 category: "validation"
 compatibility:
   bng2_compatible: true

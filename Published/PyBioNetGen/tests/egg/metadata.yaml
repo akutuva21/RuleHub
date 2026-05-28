@@ -1,7 +1,7 @@
-id: "egg"
-name: "egg"
+id: PyBioNetGen_Egg
+name: "PyBioNetGen Egg Cell Oscillator Test"
 description: "BioNetGen model: egg"
-tags: ["egg", "x", "y", "generate_network", "simulate"]
+tags: ["test-case", "calcium-oscillation"]
 category: "validation"
 compatibility:
   bng2_compatible: true

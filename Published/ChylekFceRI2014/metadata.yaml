@@ -1,7 +1,7 @@
-id: "ChylekFceRI_2014"
-name: "Chylek 2014 (FceRI)"
+id: Chylek_FceRI_2014
+name: "Chylek et al. 2014: FceRI Signaling Model"
 description: "FceRI signaling"
-tags: ["published", "immunology", "chylekfceri", "2014", "lig", "rec", "lyn", "fyn", "syk", "pag1", "csk", "lat"]
+tags: ["fceri", "immune-signaling", "mast-cell", "2014", "chylek"]
 category: "immunology"
 compatibility:
   bng2_compatible: false

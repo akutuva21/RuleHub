@@ -1,7 +1,7 @@
-id: "Kocieniewski_2012"
-name: "Kocieniewski 2012"
+id: Kocieniewski_published_2012
+name: "Kocieniewski et al. 2012: MAPK Signaling on Scaffolds"
 description: "Actin dynamics"
-tags: ["published", "kocieniewski", "2012", "map3k", "map2k", "mapk", "scaff"]
+tags: ["mapk", "scaffold-proteins", "signaling", "2012", "kocieniewski"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

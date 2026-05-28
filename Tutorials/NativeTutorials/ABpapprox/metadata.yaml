@@ -1,7 +1,7 @@
 id: "ABp_approx"
 name: "ABp approx"
 description: "title: ABp.bngl"
-tags: ["abp", "approx", "km", "a", "b", "simulate"]
+tags: ["abp", "km"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

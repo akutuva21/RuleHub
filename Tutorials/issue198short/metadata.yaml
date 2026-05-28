@@ -1,7 +1,7 @@
 id: "issue_198_short"
 name: "issue_198_short"
 description: "No description available"
-tags: ["validation", "issue", "198", "short", "a", "b", "c", "generate_network", "simulate"]
+tags: ["issue", "198", "short"]
 category: "validation"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "Simple_Answer"
-name: "Simple Answer"
+id: PyBioNetGen_Simple_Answer
+name: "PyBioNetGen Simple Synthesis with Response Check"
 description: "An example from a real application"
-tags: ["simple", "answer", "setoption", "ag", "r", "h"]
+tags: ["test-case", "verification"]
 category: "validation"
 compatibility:
   bng2_compatible: true

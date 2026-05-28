@@ -1,7 +1,7 @@
 id: "toy2"
 name: "toy2"
 description: "Enzymatic reaction toy"
-tags: ["published", "tutorials", "toy2", "l", "r", "a", "k"]
+tags: ["tutorials", "toy2"]
 category: "tutorial"
 compatibility:
   bng2_compatible: false

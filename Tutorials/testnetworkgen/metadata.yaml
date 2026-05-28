@@ -1,7 +1,7 @@
 id: "test_network_gen"
 name: "test_network_gen"
 description: "fceri model with network generation"
-tags: ["validation", "test", "network", "gen", "lig", "lyn", "syk", "rec"]
+tags: ["test", "network", "gen", "lig", "lyn", "syk", "rec"]
 category: "validation"
 compatibility:
   bng2_compatible: false

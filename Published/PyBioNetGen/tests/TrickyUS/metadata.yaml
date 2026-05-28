@@ -1,7 +1,7 @@
-id: "TrickyUS"
-name: "TrickyUS"
+id: PyBioNetGen_TrickyUS
+name: "PyBioNetGen Unstructured Boundary State Test"
 description: "An example from a real application"
-tags: ["trickyus", "ag", "r", "h"]
+tags: ["test-case", "boundary-states"]
 category: "validation"
 compatibility:
   bng2_compatible: true

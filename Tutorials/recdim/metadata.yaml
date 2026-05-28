@@ -1,7 +1,7 @@
 id: "rec_dim"
 name: "rec_dim"
 description: "Ligand-receptor binding"
-tags: ["validation", "rec", "dim", "lig", "writemdl", "generate_network", "simulate"]
+tags: ["rec", "dim", "lig", "writemdl"]
 category: "validation"
 compatibility:
   bng2_compatible: false

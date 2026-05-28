@@ -1,7 +1,7 @@
-id: "Barua_2009"
-name: "Barua 2009"
+id: Barua_JAK2_2009
+name: "Barua et al. 2009: JAK2-STAT5 Signaling Model"
 description: "JAK2-SH2B signaling"
-tags: ["published", "barua", "2009", "s", "j"]
+tags: ["jak2", "stat5", "signaling", "2009", "barua"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

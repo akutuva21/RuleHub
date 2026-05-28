@@ -1,7 +1,7 @@
 id: "cBNGL_simple"
 name: "cBNGL simple"
 description: "A simplified signal transduction model including the following processes:"
-tags: ["cbngl", "simple", "l", "r", "tf", "dna", "mrna", "p"]
+tags: ["cbngl", "simple", "tf", "dna", "mrna"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

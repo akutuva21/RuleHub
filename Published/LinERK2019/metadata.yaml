@@ -1,7 +1,7 @@
 id: "Lin_ERK_2019"
 name: "Lin 2019"
 description: "ERK signaling"
-tags: ["published", "literature", "signaling", "lin", "erk", "2019", "egfr", "sos", "ras", "rasgap", "raf", "mek", "ekar3"]
+tags: ["2019", "egfr", "erk", "lin", "linerk", "mek", "raf", "ras", "rasgap", "signaling", "sos"]
 category: "other"
 compatibility:
   bng2_compatible: true

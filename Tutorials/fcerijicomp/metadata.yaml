@@ -1,7 +1,7 @@
 id: "fceri_ji_comp"
 name: "fceri_ji_comp"
 description: "Ligand-receptor binding"
-tags: ["validation", "fceri", "ji", "comp", "lig", "lyn", "syk", "rec"]
+tags: ["fceri", "ji", "comp", "lig", "lyn", "syk", "rec"]
 category: "validation"
 compatibility:
   bng2_compatible: false

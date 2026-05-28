@@ -1,7 +1,7 @@
 id: "AB"
 name: "AB"
 description: "BioNetGen model: AB"
-tags: ["ab", "a", "b", "simulate"]
+tags: ["ab"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: "Alabama"
-name: "Alabama"
+id: Mallela_VaxVariants_Alabama_2022
+name: "Mallela et al. 2022: Covid-19 Vax and Variants - Alabama MSA"
 description: "reporting period (1 d)"
-tags: ["alabama", "fdcs", "counter", "s", "e1", "e2", "e3", "e4", "e5"]
+tags: ["covid-19", "epidemiology", "vaccination", "variants", "alabama", "2022", "mallela"]
 category: "epidemiology"
 compatibility:
   bng2_compatible: true

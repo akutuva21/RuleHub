@@ -1,7 +1,7 @@
 id: "CircadianOscillator"
 name: "CircadianOscillator"
 description: "Circadian rhythm"
-tags: ["published", "tutorial", "native", "circadianoscillator", "a", "r", "pa", "pr", "mrna_a", "mrna_r"]
+tags: ["circadianoscillator", "pa", "pr", "mrna_a", "mrna_r"]
 category: "tutorial"
 compatibility:
   bng2_compatible: false

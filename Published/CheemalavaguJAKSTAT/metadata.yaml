@@ -1,7 +1,7 @@
-id: "Cheemalavagu_JAK_STAT"
-name: "Cheemalavagu 2024"
+id: Cheemalavagu_JAKSTAT_2024
+name: "Cheemalavagu et al. 2024: JAK-STAT Signaling Model"
 description: "JAK-STAT signaling"
-tags: ["published", "literature", "signaling", "cheemalavagu", "jak", "stat", "l1", "il6r", "gp130", "l2", "il10r1", "il10r2", "jak1", "jak2"]
+tags: ["jak-stat", "signaling", "2024", "cheemalavagu"]
 category: "other"
 compatibility:
   bng2_compatible: true

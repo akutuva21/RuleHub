@@ -1,7 +1,7 @@
 id: "polymer"
 name: "polymer"
 description: "Polymerization model"
-tags: ["published", "tutorials", "nfsim", "polymer", "a", "b", "c", "simulate_nf"]
+tags: ["tutorials", "nfsim", "polymer", "simulate_nf"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

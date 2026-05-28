@@ -1,7 +1,7 @@
-id: "extra_CaMKII_Holo"
-name: "Ordyan 2020: extra CaMKII holo"
+id: Ordyan_extraCaMKIIHolo_2020
+name: "Ordyan et al. 2020: CaMKII Holoenzyme Extra Subunits Model"
 description: "Extra CaMKII holo (supplement)"
-tags: ["published", "neuroscience", "extra", "camkii", "holo", "t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"]
+tags: ["camkii", "holoenzyme", "neuroscience", "2020", "ordyan"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

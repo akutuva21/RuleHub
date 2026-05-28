@@ -1,7 +1,7 @@
-id: "wnt"
-name: "Wnt Signaling"
+id: Lee_Wnt_2003
+name: "Lee et al. 2003: Wnt/Beta-Catenin Signaling Pathway"
 description: "Wnt signaling"
-tags: ["published", "wnt", "dsh", "axc", "frz", "lrp5", "bcat"]
+tags: ["wnt", "beta-catenin", "axin-degradation", "dishevelled-activation", "2003", "lee"]
 category: "regulation"
 compatibility:
   bng2_compatible: false

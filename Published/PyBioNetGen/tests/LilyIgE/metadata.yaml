@@ -1,7 +1,7 @@
-id: "LilyIgE"
-name: "LilyIgE"
+id: PyBioNetGen_LilyIgE
+name: "PyBioNetGen Lily IgE Receptor Test Model"
 description: "An example from a real application"
-tags: ["lilyige", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+tags: ["test-case", "fceri", "immune-signaling"]
 category: "validation"
 compatibility:
   bng2_compatible: true

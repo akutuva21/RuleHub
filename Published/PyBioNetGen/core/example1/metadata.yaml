@@ -1,7 +1,7 @@
-id: "example1"
-name: "example1"
+id: PyBioNetGen_Example1
+name: "PyBioNetGen Core: Example 1 EGFR Model"
 description: "Filename: example1.bngl"
-tags: ["example1", "egf", "egfr", "pre1_dose", "pre2_time", "pre3_dose"]
+tags: ["egfr", "signaling", "example-model"]
 category: "other"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
 id: "test_sat"
 name: "test_sat"
 description: "Kinetic constants"
-tags: ["validation", "test", "sat", "e", "s", "p", "generate_network"]
+tags: ["test", "sat"]
 category: "validation"
 compatibility:
   bng2_compatible: true

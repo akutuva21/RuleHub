@@ -1,7 +1,7 @@
-id: "tlbr"
-name: "TLBR Tutorial"
+id: Goldstein_TLBR_1984
+name: "Goldstein et al. 1984: Trivalent Ligand Bivalent Receptor (TLBR) Model"
 description: "Ligand binding"
-tags: ["published", "immunology", "tlbr", "l", "r", "simulate_rm"]
+tags: ["tlbr", "polymerization", "ligand-receptor", "bivalent-receptor", "trivalent-ligand", "1984", "goldstein"]
 category: "immunology"
 compatibility:
   bng2_compatible: false

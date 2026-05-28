@@ -1,7 +1,7 @@
-id: "Mukhopadhyay_2013"
-name: "Mukhopadhyay 2013"
+id: Mukhopadhyay_TCR_2013
+name: "Mukhopadhyay et al. 2013: T Cell Receptor Phosphorylation Model"
 description: "FceRI signaling"
-tags: ["published", "immunology", "mukhopadhyay", "2013", "s", "e", "f", "z"]
+tags: ["tcr", "phosphorylation", "immune-signaling", "2013", "mukhopadhyay"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

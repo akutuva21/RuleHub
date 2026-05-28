@@ -1,7 +1,7 @@
-id: "egfr"
-name: "egfr"
+id: PyBioNetGen_EGFR_Model
+name: "PyBioNetGen Core: Canonical EGFR Signaling Model"
 description: "Blinov et al. 2006. Biosystems, 83:136"
-tags: ["egfr", "egf", "grb2", "shc", "sos"]
+tags: ["egfr", "signaling", "receptor-activation"]
 category: "other"
 compatibility:
   bng2_compatible: true

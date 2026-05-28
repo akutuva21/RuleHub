@@ -1,7 +1,7 @@
 id: "polymer_draft"
 name: "polymer draft"
 description: "Polymerization (draft)"
-tags: ["published", "tutorials", "nfsim", "polymer", "draft", "a", "b", "c", "simulate_nf"]
+tags: ["tutorials", "nfsim", "polymer", "draft", "simulate_nf"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

@@ -1,7 +1,7 @@
-id: 07_egg_egg
-name: 07-egg
+id: Mitra_EggOscillator_2019
+name: "Mitra et al. 2019: Egg Activation Calcium Oscillator"
 description: BNGL model: egg
-tags: ["a0", "a1", "a2", "b1", "b2", "c0", "c1", "c2", "d1", "d2", "period", "t", "species"]
+tags: ["calcium-oscillator", "egg-activation", "oscillations", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

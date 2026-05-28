@@ -1,7 +1,7 @@
-id: "receptor"
-name: "receptor"
+id: PyBioNetGen_Core_Receptor
+name: "PyBioNetGen Core: Simple Ligand-Receptor Binding"
 description: "A simple model of ligand/receptor binding and receptor phosphorylation."
-tags: ["receptor", "l", "r", "func"]
+tags: ["ligand-receptor", "binding-kinetics"]
 category: "other"
 compatibility:
   bng2_compatible: true

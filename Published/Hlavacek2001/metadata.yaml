@@ -1,7 +1,7 @@
-id: "Hlavacek_2001"
-name: "Hlavacek 2001"
+id: Hlavacek_Proofreading_2001
+name: "Hlavacek et al. 2001: Kinetic Proofreading Model"
 description: "Kinetic proofreading"
-tags: ["published", "physics", "hlavacek", "2001"]
+tags: ["kinetic-proofreading", "ligand-discrimination", "2001", "hlavacek"]
 category: "physics"
 compatibility:
   bng2_compatible: true

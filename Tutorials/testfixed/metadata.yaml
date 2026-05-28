@@ -1,7 +1,7 @@
 id: "test_fixed"
 name: "test_fixed"
 description: "# actions ##"
-tags: ["validation", "test", "fixed", "a", "b", "generate_network", "simulate"]
+tags: ["test", "fixed"]
 category: "validation"
 compatibility:
   bng2_compatible: true

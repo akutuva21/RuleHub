@@ -1,7 +1,7 @@
-id: 20_raf_constraint4_RAFi
-name: 20-raf-constraint4
+id: Mitra_RafConstraint4_2019
+name: "Mitra et al. 2019: Raf Signaling Constraints (Version 4)"
 description: BNGL model: RAFi
-tags: ["k1", "k2", "k3", "k5", "kf1", "kf2", "kf3", "kf4", "kf5", "kf6", "rtot", "ifree", "species"]
+tags: ["raf", "constraints", "activity-constraints", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

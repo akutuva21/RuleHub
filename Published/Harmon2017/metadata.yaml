@@ -1,7 +1,7 @@
-id: "Harmon_2017"
-name: "Harmon 2017"
+id: Harmon_Antigen_2017
+name: "Harmon et al. 2017: Antigen Recognition Feedback Model"
 description: "Antigen pulses"
-tags: ["published", "immunology", "harmon", "2017"]
+tags: ["antigen-recognition", "immune-signaling", "2017", "harmon"]
 category: "immunology"
 compatibility:
   bng2_compatible: true

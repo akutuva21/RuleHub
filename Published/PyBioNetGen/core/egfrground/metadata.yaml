@@ -1,7 +1,7 @@
-id: "egfr_ground"
-name: "egfr ground"
+id: PyBioNetGen_EGFR_Ground
+name: "PyBioNetGen Core: Canonical EGFR Ground Truth Reference"
 description: "Blinov et al. 2006. Biosystems, 83:136"
-tags: ["egfr", "ground", "egf", "grb2", "shc", "sos"]
+tags: ["egfr", "signaling", "reference-standard"]
 category: "other"
 compatibility:
   bng2_compatible: true

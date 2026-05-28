@@ -1,7 +1,7 @@
-id: 15_igf1r_IGF1R_fit_all
-name: 15-igf1r
+id: Mitra_IGF1R_2019
+name: "Mitra et al. 2019: IGF1R (Insulin-like Growth Factor) Signaling"
 description: Author: William S. Hlavacek
-tags: ["dilution", "a1_permpers", "a2_permpers", "molecules"]
+tags: ["igf1r", "receptor-activation", "phosphorylation", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

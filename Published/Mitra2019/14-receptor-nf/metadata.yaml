@@ -1,7 +1,7 @@
-id: 14_receptor_nf_receptor_nf
-name: of ligand/receptor binding and receptor phosphorylation.
+id: Mitra_SimpleReceptor_NF_2019
+name: "Mitra et al. 2019: Simple Receptor Network-Free Binding"
 description: A simple model of ligand/receptor binding and receptor phosphorylation.
-tags: ["molecules", "species"]
+tags: ["ligand-receptor", "binding", "nfsim", "network-free", "2019", "mitra"]
 category: other
 compatibility:
   bng2_compatible: true

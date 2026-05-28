@@ -1,7 +1,7 @@
-id: "model_tofit"
-name: "model tofit"
+id: PyBioNetGen_Model_ToFit
+name: "PyBioNetGen Core: Mast Cell Degranulation for Fitting"
 description: "A model of IgE receptor signaling"
-tags: ["model", "tofit", "ag", "r", "syk", "ship1", "x", "pip3", "h"]
+tags: ["fceri", "degranulation", "parameter-fitting"]
 category: "other"
 compatibility:
   bng2_compatible: true

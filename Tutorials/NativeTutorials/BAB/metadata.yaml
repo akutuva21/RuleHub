@@ -1,7 +1,7 @@
 id: "BAB"
 name: "BAB"
 description: "Simple binding model with a bivalent A molecule that has two identical sites"
-tags: ["bab", "a", "b", "simulate"]
+tags: ["bab"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

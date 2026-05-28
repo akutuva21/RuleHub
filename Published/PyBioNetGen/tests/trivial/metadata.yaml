@@ -1,7 +1,7 @@
-id: "trivial"
-name: "trivial"
+id: PyBioNetGen_Trivial
+name: "PyBioNetGen Trivial Decay Reaction Test"
 description: "A trivial model file for testing MCMC distributions."
-tags: ["trivial", "q", "r", "output", "generate_network", "simulate"]
+tags: ["test-case", "decay-kinetics"]
 category: "validation"
 compatibility:
   bng2_compatible: true

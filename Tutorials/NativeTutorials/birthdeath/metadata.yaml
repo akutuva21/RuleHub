@@ -1,7 +1,7 @@
 id: "birth-death"
 name: "Birth-Death"
 description: "Stochastic process"
-tags: ["published", "tutorial", "native", "birth", "death", "a", "generate_network", "saveconcentrations", "simulate"]
+tags: ["birth", "death", "saveconcentrations"]
 category: "tutorial"
 compatibility:
   bng2_compatible: true

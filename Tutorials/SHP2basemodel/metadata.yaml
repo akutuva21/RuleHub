@@ -1,7 +1,7 @@
 id: "SHP2_base_model"
 name: "SHP2_base_model"
 description: "Base model of Shp2 regulation"
-tags: ["validation", "shp2", "base", "model", "r", "s", "exclude_reactants"]
+tags: ["shp2", "base", "exclude_reactants"]
 category: "validation"
 compatibility:
   bng2_compatible: true

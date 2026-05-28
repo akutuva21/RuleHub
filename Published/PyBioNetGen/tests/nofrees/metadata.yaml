@@ -1,7 +1,7 @@
-id: "no_frees"
-name: "no frees"
+id: PyBioNetGen_NoFrees
+name: "PyBioNetGen No Free Constraints Verification"
 description: "Original values used to generate parabola.exp"
-tags: ["no", "frees", "counter", "y", "generate_network", "simulate"]
+tags: ["test-case", "constraints"]
 category: "validation"
 compatibility:
   bng2_compatible: true

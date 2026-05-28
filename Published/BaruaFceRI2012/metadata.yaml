@@ -1,7 +1,7 @@
-id: "BaruaFceRI_2012"
-name: "BaruaFceRI 2012"
+id: Barua_FceRI_2012
+name: "Barua et al. 2012: FceRI Signaling Model"
 description: "FcÃƒÅ½Ã‚ÂµRI signaling"
-tags: ["published", "immunology", "baruafceri", "2012", "r_o", "rdimer_o", "l_o", "t_o", "l", "fcr", "lyn", "syk"]
+tags: ["fceri", "immune-signaling", "mast-cell", "2012", "barua"]
 category: "immunology"
 compatibility:
   bng2_compatible: false

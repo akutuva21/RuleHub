@@ -1,7 +1,7 @@
-id: "polynomial"
-name: "polynomial"
+id: PyBioNetGen_Polynomial_T6
+name: "PyBioNetGen Polynomial Trajectory Test (T6-check)"
 description: "Implementation of the parabola from the Mitra constrained optimization manuscript Fig. 1"
-tags: ["polynomial", "counter", "y1", "y2", "generate_network", "simulate", "setparameter", "resetconcentrations"]
+tags: ["test-case", "mathematical-model"]
 category: "validation"
 compatibility:
   bng2_compatible: true

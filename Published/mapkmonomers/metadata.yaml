@@ -1,7 +1,7 @@
-id: "mapk-monomers"
-name: "MAPK Monomers"
+id: MAPK_Monomers_Model
+name: "MAPK Cascades with Raf Monomers"
 description: "MAPK cascade"
-tags: ["published", "mapk", "monomers", "ste5", "ste11", "ste7", "fus3"]
+tags: ["mapk-pathway", "kinase-cascade", "raf-monomers", "phosphorylation"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

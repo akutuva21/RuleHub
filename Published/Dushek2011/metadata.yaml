@@ -1,7 +1,7 @@
-id: "Dushek_2011"
-name: "Dushek 2011"
+id: Dushek_TCR_2011
+name: "Dushek et al. 2011: T Cell Receptor Kinase Kinase Cascade"
 description: "TCR signaling"
-tags: ["published", "dushek", "2011", "s"]
+tags: ["tcr", "phosphorylation", "immune-signaling", "2011", "dushek"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

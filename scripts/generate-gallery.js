@@ -106,23 +106,28 @@ function parseYamlSimple(content) {
   return result;
 }
 
-function extractModelId(metadataFile, metadata) {
+function extractModelIds(metadataFile, metadata) {
   const modelDir = path.dirname(metadataFile);
   const bnglFiles = fs.readdirSync(modelDir, { withFileTypes: true })
     .filter(e => e.isFile() && e.name.endsWith('.bngl'))
-    .map(e => e.name);
+    .map(e => e.name)
+    .sort();
 
   const isCollection = Boolean(metadata.collection);
 
   if (isCollection) {
-    return metadata.id;
+    return [metadata.id || (bnglFiles.length >= 1 ? path.basename(bnglFiles[0], '.bngl') : null)].filter(Boolean);
   }
 
-  if (bnglFiles.length >= 1) {
-    return metadata.id || path.basename(bnglFiles[0], '.bngl');
+  if (bnglFiles.length === 1) {
+    return [metadata.id || path.basename(bnglFiles[0], '.bngl')].filter(Boolean);
   }
 
-  return null;
+  if (bnglFiles.length > 1) {
+    return bnglFiles.map(file => path.basename(file, '.bngl'));
+  }
+
+  return [];
 }
 
 async function main() {
@@ -146,28 +151,52 @@ async function main() {
       const content = fs.readFileSync(metadataFile, 'utf8');
       const metadata = parseMetadataYaml(content);
 
-      const modelId = extractModelId(metadataFile, metadata);
-      if (!modelId) continue;
+      const modelIds = extractModelIds(metadataFile, metadata);
+      if (modelIds.length === 0) continue;
 
       const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
       if (tags.includes('published') || metadata.source?.origin === 'published') {
-        publishedModelIds.add(modelId);
+        for (const modelId of modelIds) {
+          publishedModelIds.add(modelId);
+        }
       }
 
-      const galleryCategories = metadata.playground?.gallery_categories 
+      let galleryCategories = metadata.playground?.gallery_categories 
         || (metadata.playground?.gallery_category 
             ? [metadata.playground.gallery_category] 
             : []);
+      
+      // Filter out invalid categories first so they trigger the fallback logic
+      galleryCategories = galleryCategories.filter(cat => categoryIds.has(cat));
+
+      if (galleryCategories.length === 0) {
+        const relPath = path.relative(root, metadataFile).replace(/\\/g, '/');
+        if (metadata.source?.origin === 'test-case' || metadata.category === 'validation' || relPath.includes('tests/')) {
+          galleryCategories = ['test-models'];
+        } else if (metadata.source?.origin === 'tutorial' || relPath.startsWith('Tutorials/') || relPath.includes('/Tutorials/')) {
+          if (relPath.startsWith('Tutorials/NativeTutorials/') || relPath.includes('/NativeTutorials/')) {
+            galleryCategories = ['native-tutorials'];
+          } else {
+            galleryCategories = ['tutorials'];
+          }
+        } else if (metadata.source?.origin === 'published' || relPath.startsWith('Published/') || relPath.includes('/Published/')) {
+          galleryCategories = ['published-models'];
+        } else {
+          galleryCategories = ['test-models'];
+        }
+      }
+
       if (galleryCategories.length > 0) {
-        const validCategories = galleryCategories.filter(cat => categoryIds.has(cat));
-        if (validCategories.length > 0) {
-          assignments[modelId] = validCategories;
+        for (const modelId of modelIds) {
+          assignments[modelId] = galleryCategories;
         }
       }
 
       const sortPriority = metadata.playground?.sort_priority;
       if (sortPriority !== undefined && sortPriority !== null) {
-        sortOverrides[modelId] = sortPriority;
+        for (const modelId of modelIds) {
+          sortOverrides[modelId] = sortPriority;
+        }
       }
     } catch (err) {
       console.warn(`Warning: Failed to process ${metadataFile}: ${err.message}`);
@@ -231,5 +260,5 @@ if (require.main === module) {
 module.exports = {
   parseArgs,
   loadGalleryCategories,
-  extractModelId,
+  extractModelIds,
 };

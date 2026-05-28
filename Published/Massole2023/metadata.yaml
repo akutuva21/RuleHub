@@ -1,7 +1,7 @@
-id: "Massole_2023"
-name: "Massole 2023"
+id: Massole_developmental_2023
+name: "Massole et al. 2023: Notch-Delta Lateral Inhibition Dynamics"
 description: "Epo receptor signaling"
-tags: ["published", "massole", "2023"]
+tags: ["notch-delta", "lateral-inhibition", "developmental", "2023", "massole"]
 category: "signaling"
 compatibility:
   bng2_compatible: true

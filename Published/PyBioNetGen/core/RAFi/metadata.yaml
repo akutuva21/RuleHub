@@ -1,7 +1,7 @@
-id: "RAFi"
-name: "RAFi"
+id: PyBioNetGen_Core_RAFi
+name: "PyBioNetGen Core: Raf Inhibitor Model"
 description: "BioNetGen model: RAFi"
-tags: ["rafi", "r", "i", "ybar", "activity"]
+tags: ["rafi", "raf-kinase", "enzyme-inhibition"]
 category: "other"
 compatibility:
   bng2_compatible: true

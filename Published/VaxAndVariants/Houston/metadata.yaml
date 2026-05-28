@@ -1,7 +1,7 @@
-id: "Houston"
-name: "Houston"
+id: Mallela_VaxVariants_Houston_2022
+name: "Mallela et al. 2022: Covid-19 Vax and Variants - Houston MSA"
 description: "- This model is intended to be consistent with the compartmental model"
-tags: ["houston", "counter", "fdcs", "s", "sv", "e", "a", "i", "v"]
+tags: ["covid-19", "epidemiology", "vaccination", "variants", "houston", "2022", "mallela"]
 category: "epidemiology"
 compatibility:
   bng2_compatible: true

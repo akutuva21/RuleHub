@@ -1,7 +1,7 @@
-id: "Barua_2007"
-name: "Barua 2007"
+id: Barua_EGFR_2007
+name: "Barua et al. 2007: EGFR Signaling Model"
 description: "Model from Haugh (2006)"
-tags: ["published", "barua", "2007", "version", "r", "s"]
+tags: ["egfr", "signaling", "2007", "barua"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

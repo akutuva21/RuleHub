@@ -1,7 +1,7 @@
-id: "Kesseler_2013"
-name: "Kesseler 2013"
+id: Kesseler_CellCycle_2013
+name: "Kesseler et al. 2013: Cell Cycle Regulation Model"
 description: "G2/Mitosis transition"
-tags: ["published", "kesseler", "2013", "mpf", "cdc25", "wee1", "myt1", "pin1", "pp2a", "prox", "e33"]
+tags: ["cell-cycle", "mitosis", "cdc25", "wee1", "2013", "kesseler"]
 category: "signaling"
 compatibility:
   bng2_compatible: false

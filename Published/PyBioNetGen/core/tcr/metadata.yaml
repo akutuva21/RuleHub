@@ -1,7 +1,7 @@
-id: "tcr"
-name: "tcr"
+id: PyBioNetGen_Core_TCR
+name: "PyBioNetGen Core: T Cell Receptor Activation"
 description: "A model of T cell receptor signaling"
-tags: ["tcr", "lig1", "lig2", "lig3", "cd28", "lck", "itk", "zap70"]
+tags: ["tcr", "immune-signaling", "phosphorylation"]
 category: "other"
 compatibility:
   bng2_compatible: true

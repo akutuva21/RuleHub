@@ -1,7 +1,7 @@
-id: 12_TCR_tcr
-name: of T cell receptor signaling
+id: Mitra_TCR_2019
+name: "Mitra et al. 2019: T Cell Receptor (TCR) Signaling"
 description: A model of T cell receptor signaling
-tags: ["immunology"]
+tags: ["tcr", "t-cell", "immune-signaling", "2019", "mitra"]
 category: immunology
 compatibility:
   bng2_compatible: true

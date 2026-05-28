@@ -1,7 +1,7 @@
-id: "bng_error"
-name: "bng error"
+id: PyBioNetGen_BNG_Error
+name: "PyBioNetGen BNG Error Triggering Test"
 description: "Original values used to generate parabola.exp"
-tags: ["bng", "error", "counter", "y", "generate_network", "simulate"]
+tags: ["test-case", "error-handling"]
 category: "validation"
 compatibility:
   bng2_compatible: true

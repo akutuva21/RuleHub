@@ -1,7 +1,7 @@
-id: "Lang_2024"
-name: "Lang 2024"
+id: Lang_CellCycle_2024
+name: "Lang et al. 2024: Cyclin A-CDK2 Cell Cycle Control"
 description: "Cell cycle regulation"
-tags: ["published", "lang", "2024", "e2f", "rb1", "ppp2r2b", "ccnb_promoter", "ccna", "ccna_promoter", "foxm1_promoter", "ensa_arpp19"]
+tags: ["cell-cycle", "cyclin-a", "cdk2", "2024", "lang"]
 category: "signaling"
 compatibility:
   bng2_compatible: true
