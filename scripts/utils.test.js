@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { listModelFiles, parseScalar } = require('./utils.js');
+const { listModelFiles, listModelFilesAsync, parseScalar } = require('./utils.js');
 
 test('utils.js', async (t) => {
   let tmpDir;
@@ -73,12 +73,41 @@ test('utils.js', async (t) => {
   });
 
   await t.test('parseScalar handles array string elements with embedded commas (edge cases)', () => {
-    // Current behavior of the script splits by comma before replacing quotes
-    // so `["a, b"]` is split into `"a` and ` b"`. But `replace(/^"|"$/g, '')` applies
-    // to `"a` (removes `\"`) and `b"` (removes `\"`), returning `['a', 'b']`.
     assert.deepStrictEqual(parseScalar('["a, b"]'), ['a', 'b']);
     assert.deepStrictEqual(parseScalar('["a", \'b\']'), ['a', "'b'"]);
     assert.deepStrictEqual(parseScalar('[ "a, b" , "c" ]'), ['a', 'b', 'c']);
+  });
+
+  await t.test('listModelFilesAsync returns only .bngl files in alphabetical order', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model2.bngl'), 'content');
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
+    fs.writeFileSync(path.join(tmpDir, 'model3.bngl'), 'content');
+
+    const files = await listModelFilesAsync(tmpDir);
+    assert.deepStrictEqual(files, ['model1.bngl', 'model2.bngl', 'model3.bngl']);
+  });
+
+  await t.test('listModelFilesAsync ignores directories even if named with .bngl extension', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
+    fs.mkdirSync(path.join(tmpDir, 'dir.bngl'));
+    fs.mkdirSync(path.join(tmpDir, 'other-dir'));
+
+    const files = await listModelFilesAsync(tmpDir);
+    assert.deepStrictEqual(files, ['model1.bngl']);
+  });
+
+  await t.test('listModelFilesAsync ignores files with other extensions', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
+    fs.writeFileSync(path.join(tmpDir, 'data.txt'), 'content');
+    fs.writeFileSync(path.join(tmpDir, 'model2.xml'), 'content');
+
+    const files = await listModelFilesAsync(tmpDir);
+    assert.deepStrictEqual(files, ['model1.bngl']);
+  });
+
+  await t.test('listModelFilesAsync returns empty array for empty directory', async () => {
+    const files = await listModelFilesAsync(tmpDir);
+    assert.deepStrictEqual(files, []);
   });
 });
 
