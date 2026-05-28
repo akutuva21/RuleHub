@@ -3,7 +3,8 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, parseMetadataYaml, listMetadataFiles } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs } = require('./generate-manifest.js');
+const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
   let tmpDir;
@@ -66,7 +67,7 @@ test('listMetadataFiles', async (t) => {
 });
 
 test('buildEntry', async (t) => {
-  await t.test('handles a single model with full metadata', () => {
+  await t.test('handles a single model with full metadata', async () => {
     const root = '/path/to/root';
     const metadataFile = '/path/to/root/Published/ModelA/metadata.yaml';
     const modelFile = 'model_a.bngl';
@@ -83,7 +84,7 @@ test('buildEntry', async (t) => {
       playground: { visible: true },
     };
 
-    const entry = buildEntry(root, metadata, metadataFile, modelFile, isCollection);
+    const entry = await buildEntry(root, metadata, metadataFile, modelFile, isCollection, false, [modelFile]);
 
     assert.strictEqual(entry.id, 'model_a');
     assert.strictEqual(entry.name, 'Model A');
@@ -93,16 +94,20 @@ test('buildEntry', async (t) => {
     assert.strictEqual(entry.file, 'model_a.bngl');
     assert.deepStrictEqual(entry.tags, ['test', 'model']);
     assert.strictEqual(entry.category, 'validation');
-    assert.strictEqual(entry.bng2_compatible, true);
+    assert.strictEqual(entry.compatibility.bng2, true);
     assert.strictEqual(entry.origin, 'published');
     assert.strictEqual(entry.visible, true);
     assert.strictEqual(entry.collectionId, null);
   });
 
-  await t.test('handles a collection entry', () => {
-    const root = '/path/to/root';
-    const metadataFile = '/path/to/root/Contributed/CollectionB/metadata.yaml';
+  await t.test('handles a collection entry', async () => {
+    // Create a temporary directory since listModelFilesAsync will read it
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'buildEntry-test-'));
+    const metadataFile = path.join(tmpDir, 'metadata.yaml');
     const modelFile = 'variant_1.bngl';
+    fs.writeFileSync(path.join(tmpDir, 'variant_1.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'variant_2.bngl'), '');
+
     const isCollection = true;
 
     const metadata = {
@@ -111,14 +116,17 @@ test('buildEntry', async (t) => {
       collection: { type: 'parameter-fit-variants' }
     };
 
-    const entry = buildEntry(root, metadata, metadataFile, modelFile, isCollection);
+    const entry = await buildEntry(tmpDir, metadata, metadataFile, modelFile, isCollection, false, [modelFile, 'variant_2.bngl']);
 
-    assert.strictEqual(entry.id, 'variant_1');
-    assert.strictEqual(entry.name, 'Collection B - variant_1');
+    assert.strictEqual(entry.id, 'collection_b');
+    assert.strictEqual(entry.name, 'Collection B');
     assert.strictEqual(entry.collectionId, 'collection_b');
+    assert.strictEqual(entry.collection.variants.length, 2);
+
+    fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  await t.test('handles missing metadata with appropriate fallbacks', () => {
+  await t.test('handles missing metadata with appropriate fallbacks', async () => {
     const root = '/path/to/root';
     const metadataFile = '/path/to/root/Tutorials/ModelC/metadata.yaml';
     const modelFile = 'model_c.bngl';
@@ -126,20 +134,20 @@ test('buildEntry', async (t) => {
 
     const metadata = {};
 
-    const entry = buildEntry(root, metadata, metadataFile, modelFile, isCollection);
+    const entry = await buildEntry(root, metadata, metadataFile, modelFile, isCollection, false, [modelFile]);
 
     assert.strictEqual(entry.id, 'model_c');
     assert.strictEqual(entry.name, 'model_c');
     assert.strictEqual(entry.description, '');
     assert.deepStrictEqual(entry.tags, []);
     assert.strictEqual(entry.category, 'other');
-    assert.strictEqual(entry.bng2_compatible, false);
+    assert.strictEqual(entry.compatibility.bng2, false);
     assert.strictEqual(entry.origin, 'other');
     assert.strictEqual(entry.visible, false);
     assert.strictEqual(entry.collectionId, null);
   });
 
-  await t.test('handles partial compatibility and playground metadata', () => {
+  await t.test('handles partial compatibility and playground metadata', async () => {
     const root = '/path/to/root';
     const metadataFile = '/path/to/root/Tutorials/ModelD/metadata.yaml';
     const modelFile = 'model_d.bngl';
@@ -150,9 +158,9 @@ test('buildEntry', async (t) => {
         playground: {}
     };
 
-    const entry = buildEntry(root, metadata, metadataFile, modelFile, isCollection);
+    const entry = await buildEntry(root, metadata, metadataFile, modelFile, isCollection, false, [modelFile]);
 
-    assert.strictEqual(entry.bng2_compatible, false);
+    assert.strictEqual(entry.compatibility.bng2, false);
     assert.strictEqual(entry.visible, false);
   });
 });
