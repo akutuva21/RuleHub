@@ -101,7 +101,7 @@ async function validateMetadataFile(metadataFile, errors) {
   const readmePath = path.join(modelDir, 'README.md');
 
   if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1')) {
-    // Only warn about missing README for non-generated subdirectories
+    errors.push(`${metadataFile}: missing README.md`);
   }
   if (modelFiles.length === 0) {
     errors.push(`${metadataFile}: no .bngl files found alongside metadata.yaml`);
@@ -162,6 +162,14 @@ async function validateMetadataFile(metadataFile, errors) {
     }
     if (Number.isInteger(metadata.collection.count) && metadata.collection.count !== modelFiles.length) {
       errors.push(`${metadataFile}: collection.count=${metadata.collection.count} but found ${modelFiles.length} model files`);
+    }
+  }
+  // If multiple model files exist but no collection and no explicit primary model,
+  // that's an error: either provide a collection or a primary model file.
+  if (!metadata.collection && modelFiles.length > 1) {
+    const primary = metadata.id && modelFiles.some(f => path.basename(f, '.bngl') === metadata.id);
+    if (!primary) {
+      errors.push(`${metadataFile}: multiple .bngl files require either a collection section or a primary model file`);
     }
   }
 }

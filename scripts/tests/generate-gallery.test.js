@@ -68,12 +68,20 @@ playground:
       }
     }
 
-    assert.ok(warnings.some(msg => msg.includes('Failed to process') && msg.includes(badPath)), 'Should log a warning for unreadable metadata');
+    if (process.platform !== 'win32') {
+      assert.ok(warnings.some(msg => msg.includes('Failed to process') && msg.includes(badPath)), 'Should log a warning for unreadable metadata');
 
-    const result = JSON.parse(fs.readFileSync(outPath, 'utf8'));
+      const result = JSON.parse(fs.readFileSync(outPath, 'utf8'));
 
-    assert.strictEqual(typeof result.assignments, 'object');
-    assert.ok('modelA' in result.assignments, 'Valid modelA should be processed');
-    assert.strictEqual(result.assignments['modelB'], undefined, 'Unreadable modelB should not be processed');
+      assert.strictEqual(typeof result.assignments, 'object');
+      assert.ok('modelA' in result.assignments, 'Valid modelA should be processed');
+      assert.strictEqual(result.assignments['modelB'], undefined, 'Unreadable modelB should not be processed');
+    } else {
+      // On Windows chmod 0 may not make a file unreadable; at minimum
+      // ensure valid modelA is processed and output exists.
+      const result = JSON.parse(fs.readFileSync(outPath, 'utf8'));
+      assert.strictEqual(typeof result.assignments, 'object');
+      assert.ok('modelA' in result.assignments, 'Valid modelA should be processed');
+    }
   });
 });
