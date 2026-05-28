@@ -392,7 +392,6 @@ async function main() {
 
     if (dryRun) {
       console.log(`  [DRY RUN] Would create: ${metadataPath}`);
-      console.log(yamlContent);
     } else {
       fs.writeFileSync(metadataPath, yamlContent);
       console.log(`  Created: ${metadataPath}`);
