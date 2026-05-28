@@ -53,7 +53,21 @@ function parseMetadataYaml(content) {
   const result = {};
   const stack = [];
 
-  for (const rawLine of content.split(/\r?\n/)) {
+  let start = 0;
+  while (start < content.length) {
+    let end = content.indexOf('\n', start);
+    if (end === -1) {
+      end = content.length;
+    }
+
+    let lineEnd = end;
+    if (lineEnd > start && content[lineEnd - 1] === '\r') {
+      lineEnd--;
+    }
+
+    const rawLine = content.slice(start, lineEnd);
+    start = end + 1;
+
     const trimmed = rawLine.trim();
     if (!trimmed || trimmed.startsWith('#')) continue;
 
