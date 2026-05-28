@@ -350,7 +350,7 @@ function formatYaml(obj, indent = 0) {
           }
         }
       }
-    } else if (typeof value === 'object') {
+    } else if (value !== null && typeof value === 'object') {
       result += `${spaces}${key}:\n${formatYaml(value, indent + 1)}`;
     } else if (typeof value === 'boolean') {
       result += `${spaces}${key}: ${value}\n`;
@@ -365,7 +365,7 @@ function formatYaml(obj, indent = 0) {
 }
 
 function formatYamlValue(value, indent = 0) {
-  if (typeof value === 'object') {
+  if (value !== null && typeof value === 'object') {
     const spaces = '  '.repeat(indent);
     let result = '';
     const entries = Object.entries(value);
@@ -444,4 +444,5 @@ module.exports = {
   generateMetadata,
   findBnglFiles,
   formatYaml,
+  formatYamlValue,
 };
