@@ -20,7 +20,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABC",
@@ -44,7 +47,10 @@
       "metabolism",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABC_scan",
@@ -69,7 +75,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ABC_ssa",
@@ -93,7 +102,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABp",
@@ -117,7 +129,10 @@
       "metabolism",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABp_approx",
@@ -141,7 +156,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "akt-signaling",
@@ -171,7 +189,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "allosteric-activation",
@@ -200,7 +221,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ampk-signaling",
@@ -230,7 +254,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "An_TLR4_2009",
@@ -257,7 +284,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "apoptosis-cascade",
@@ -290,7 +320,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "auto-activation-loop",
@@ -320,7 +353,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "autophagy-regulation",
@@ -350,7 +386,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "BAB",
@@ -373,7 +412,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "BAB_coop",
@@ -397,7 +439,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "BAB_scan",
@@ -422,7 +467,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_bcat_2013",
@@ -447,7 +495,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_BCR_2012",
@@ -474,7 +525,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_EGFR_2007",
@@ -500,7 +554,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_FceRI_2012",
@@ -527,7 +584,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_JAK2_2009",
@@ -554,7 +614,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "bcr-signaling",
@@ -585,7 +648,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "beta-adrenergic-response",
@@ -617,7 +683,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "birth-death",
@@ -643,7 +712,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "bistable-toggle-switch",
@@ -674,7 +746,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "BLBR",
@@ -698,7 +773,10 @@
     "gallery": [
       "tutorial"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Blinov_egfr_2006",
@@ -726,7 +804,10 @@
     "gallery": [
       "cell-cycle"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Blinov_egfr_NF_2006",
@@ -754,7 +835,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Blinov_ran_2006",
@@ -781,7 +865,10 @@
     "gallery": [
       "cell-cycle"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "blood-coagulation-thrombin",
@@ -813,7 +900,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "bmp-signaling",
@@ -844,7 +934,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "brusselator-oscillator",
@@ -873,7 +966,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "calcineurin-nfat-pathway",
@@ -903,7 +999,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "calcium-spike-signaling",
@@ -933,7 +1032,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "CaOscillate_Func",
@@ -958,7 +1060,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "CaOscillate_Sat",
@@ -986,7 +1091,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "caspase-activation-loop",
@@ -1017,7 +1125,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "catalysis",
@@ -1043,7 +1154,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cBNGL_simple",
@@ -1070,7 +1184,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cd40-signaling",
@@ -1101,7 +1218,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cell-cycle-checkpoint",
@@ -1133,7 +1253,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chattaraj_nephrin_2021",
@@ -1161,7 +1284,10 @@
     "gallery": [
       "neuroscience"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "checkpoint-kinase-signaling",
@@ -1194,7 +1320,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Cheemalavagu_JAKSTAT_2024",
@@ -1220,7 +1349,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "chemistry",
@@ -1244,7 +1376,10 @@
     "gallery": [
       "tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "chemotaxis-signal-transduction",
@@ -1275,7 +1410,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chylek_FceRI_2014",
@@ -1302,7 +1440,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chylek_library",
@@ -1329,7 +1470,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chylek_TCR_2014",
@@ -1356,7 +1500,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "circadian-oscillator",
@@ -1386,7 +1533,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "CircadianOscillator",
@@ -1414,7 +1564,10 @@
       "cell-cycle",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "clock-bmal1-gene-circuit",
@@ -1444,7 +1597,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_endocytosis",
@@ -1471,7 +1627,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_membrane_bound",
@@ -1500,7 +1659,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_nested_transport",
@@ -1528,7 +1690,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_nuclear_transport",
@@ -1556,7 +1721,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_organelle_exchange",
@@ -1584,7 +1752,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "competitive-enzyme-inhibition",
@@ -1614,7 +1785,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "complement-activation-cascade",
@@ -1645,7 +1819,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ComplexDegradation",
@@ -1668,7 +1845,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "contact-inhibition-hippo-yap",
@@ -1697,7 +1877,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "continue",
@@ -1721,7 +1904,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cooperative-binding",
@@ -1748,7 +1934,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Creamer_2012",
@@ -1779,7 +1968,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cs_diffie_hellman",
@@ -1809,7 +2001,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_hash_function",
@@ -1843,7 +2038,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cs_huffman",
@@ -1872,7 +2070,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_monte_carlo_pi",
@@ -1903,7 +2104,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_pagerank",
@@ -1930,7 +2134,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_pid_controller",
@@ -1961,7 +2168,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cs_regex_nfa",
@@ -1992,7 +2202,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dembo_blbr_1978",
@@ -2019,7 +2232,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "dna-damage-repair",
@@ -2049,7 +2265,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "dna-methylation-dynamics",
@@ -2079,7 +2298,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dolan_Insulin_2015_Dolan_2015",
@@ -2105,7 +2327,10 @@
     "gallery": [
       "metabolism"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dolan_Insulin_2015_Dolan2015",
@@ -2131,7 +2356,10 @@
     "gallery": [
       "metabolism"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "dr5-apoptosis-signaling",
@@ -2162,7 +2390,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dreisigmeyer_LacOperon_2008",
@@ -2189,7 +2420,10 @@
     "gallery": [
       "gene-expression"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "dual-site-phosphorylation",
@@ -2217,7 +2451,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Dushek_TCR_2011",
@@ -2244,7 +2481,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dushek_TCR_2014",
@@ -2271,7 +2511,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "e2f-rb-cell-cycle-switch",
@@ -2303,7 +2546,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_coevolution_host_parasite",
@@ -2330,7 +2576,10 @@
       "ecology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_food_web_chaos_3sp",
@@ -2363,7 +2612,10 @@
       "ecology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_lotka_volterra_grid",
@@ -2392,7 +2644,10 @@
       "ecology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_mutualism_obligate",
@@ -2420,7 +2675,10 @@
       "ecology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_rock_paper_scissors_spatial",
@@ -2450,7 +2708,10 @@
       "ecology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_net",
@@ -2478,7 +2739,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_net_red",
@@ -2507,7 +2771,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_path",
@@ -2532,7 +2799,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_simple",
@@ -2559,7 +2829,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "egfr-signaling-pathway",
@@ -2588,7 +2861,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "eif2a-stress-response",
@@ -2616,7 +2892,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "endosomal-sorting-rab",
@@ -2646,7 +2925,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_allostery_mwc",
@@ -2673,7 +2955,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_catalysis_mm",
@@ -2701,7 +2986,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_cooperativity_adh",
@@ -2728,7 +3016,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_example1",
@@ -2752,7 +3043,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_linear_chain",
@@ -2779,7 +3073,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_transport_pump",
@@ -2809,7 +3106,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "er-stress-response",
@@ -2838,7 +3138,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Erdem_InsR_2021",
@@ -2864,7 +3167,10 @@
     "gallery": [
       "metabolism"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "erk-nuclear-translocation",
@@ -2893,7 +3199,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "example1",
@@ -2916,7 +3225,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Faeder_egfr_2009",
@@ -2945,7 +3257,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Faeder_egfr_compart_2009",
@@ -2973,7 +3288,10 @@
     "gallery": [
       "signaling"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Faeder_FceRI_2003_Faeder_2003",
@@ -3000,7 +3318,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Faeder_FceRI_2003_fceri_ji",
@@ -3027,7 +3348,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Faeder_FceRI_Fyn_2003",
@@ -3055,7 +3379,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "FceRI_ji",
@@ -3083,7 +3410,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "fceri_ji_comp",
@@ -3112,7 +3442,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "FceRI_viz",
@@ -3143,7 +3476,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_functional_rates_volume",
@@ -3172,7 +3508,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_global_functions_scan",
@@ -3201,7 +3540,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_local_functions_explicit",
@@ -3232,7 +3574,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_symmetry_factors_cyclic",
@@ -3261,7 +3606,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_synthesis_degradation_ss",
@@ -3290,7 +3638,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "fgf-signaling-pathway",
@@ -3321,7 +3672,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Gardner_Toggle_2000",
@@ -3348,7 +3702,10 @@
     "gallery": [
       "synthetic-biology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "gas6-axl-signaling",
@@ -3377,7 +3734,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "gene-expression-toggle",
@@ -3404,7 +3764,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "genetic_bistability_energy",
@@ -3433,7 +3796,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_dna_replication_stochastic",
@@ -3462,7 +3828,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_goodwin_oscillator",
@@ -3491,7 +3860,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_translation_kinetics",
@@ -3519,7 +3891,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_turing_pattern_1d",
@@ -3547,7 +3922,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "GK",
@@ -3571,7 +3949,10 @@
       "metabolism",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "glioblastoma-egfrviii-signaling",
@@ -3601,7 +3982,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "glycolysis-branch-point",
@@ -3630,7 +4014,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "gm_game_of_life",
@@ -3657,7 +4044,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "gm_ray_marcher",
@@ -3690,7 +4080,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Goldstein_blbr_1980",
@@ -3717,7 +4110,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Goldstein_TLBR_1984",
@@ -3746,7 +4142,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "gpcr-desensitization-arrestin",
@@ -3773,7 +4172,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Harmon_Antigen_2017",
@@ -3799,7 +4201,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hat_wip1_2016",
@@ -3828,7 +4233,10 @@
       "cell-cycle",
       "multistage"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Haugh2b",
@@ -3853,7 +4261,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "hedgehog-signaling-pathway",
@@ -3884,7 +4295,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "heise",
@@ -3907,7 +4321,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "hematopoietic-growth-factor",
@@ -3936,7 +4353,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "hif1a_degradation_loop",
@@ -3964,7 +4384,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "HIV_Dynamics_pt303",
@@ -3990,7 +4413,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "HIV_Dynamics_pt403",
@@ -4016,7 +4442,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "HIV_Dynamics_pt409",
@@ -4042,7 +4471,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Egg_2018",
@@ -4066,7 +4498,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Elephant_2018_elephant_EFA",
@@ -4090,7 +4525,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Elephant_2018_elephant_fit",
@@ -4114,7 +4552,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Proofreading_2001",
@@ -4140,7 +4581,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_after_bunching",
@@ -4164,7 +4608,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_after_decoupling",
@@ -4188,7 +4635,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_after_scaling",
@@ -4212,7 +4662,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_before_bunching",
@@ -4236,7 +4689,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_before_decoupling",
@@ -4260,7 +4716,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_before_scaling",
@@ -4284,7 +4743,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_check_scaling",
@@ -4308,7 +4770,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Steric_1999",
@@ -4334,7 +4799,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "hypoxia-response-signaling",
@@ -4363,7 +4831,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "il1b-signaling",
@@ -4391,7 +4862,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "il6-jak-stat-pathway",
@@ -4420,7 +4894,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "immune-synapse-formation",
@@ -4450,7 +4927,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "inflammasome-activation",
@@ -4479,7 +4959,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "inositol-phosphate-metabolism",
@@ -4510,7 +4993,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "insulin-glucose-homeostasis",
@@ -4539,7 +5025,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "interferon-signaling",
@@ -4568,7 +5057,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ire1a-xbp1-er-stress",
@@ -4598,7 +5090,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "issue_198_short",
@@ -4623,7 +5118,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "jak-stat-cytokine-signaling",
@@ -4651,7 +5149,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "JaruszewiczBlonska_NFkB_2023",
@@ -4678,7 +5179,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "jnk-mapk-signaling",
@@ -4706,7 +5210,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Jung_CaMKII_2017",
@@ -4733,7 +5240,10 @@
     "gallery": [
       "neuroscience"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kesseler_CellCycle_2013",
@@ -4761,7 +5271,10 @@
     "gallery": [
       "cell-cycle"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Kiefhaber_emodel",
@@ -4784,7 +5297,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "kir-channel-regulation",
@@ -4813,7 +5329,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kocieniewski_published_2012",
@@ -4840,7 +5359,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Korwek_InnateImmunity_2023",
@@ -4869,7 +5391,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Korwek_ViralSensing_2023",
@@ -4898,7 +5423,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kozer_egfr_2013",
@@ -4925,7 +5453,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kozer_egfr_2014",
@@ -4952,7 +5483,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "l-type-calcium-channel-dynamics",
@@ -4984,7 +5518,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "lac-operon-regulation",
@@ -5016,7 +5553,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lang_CellCycle_2024",
@@ -5043,7 +5583,10 @@
     "gallery": [
       "cell-cycle"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lee_Wnt_2003",
@@ -5071,7 +5614,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Ligon_egfr_2014",
@@ -5098,7 +5644,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lin_ERK_2019",
@@ -5132,7 +5681,10 @@
     "gallery": [
       "developmental"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_Prion_2019",
@@ -5160,7 +5712,10 @@
     "gallery": [
       "neuroscience"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_ScalingBench_2019_ERK_model",
@@ -5185,7 +5740,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_ScalingBench_2019_prion_model",
@@ -5210,7 +5768,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_ScalingBench_2019_TCR_model",
@@ -5235,7 +5796,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_TCR_2019",
@@ -5270,7 +5834,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "lipid-mediated-pip3-signaling",
@@ -5300,7 +5867,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lisman",
@@ -5325,7 +5895,10 @@
       "neuroscience",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lisman_bifurcate",
@@ -5350,7 +5923,10 @@
       "neuroscience",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "localfunc",
@@ -5375,7 +5951,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "LR",
@@ -5398,7 +5977,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LR_comp",
@@ -5422,7 +6004,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LRR",
@@ -5445,7 +6030,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LRR_comp",
@@ -5469,7 +6057,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LV",
@@ -5494,7 +6085,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "LV_comp",
@@ -5519,7 +6113,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Macken_physics_1982",
@@ -5545,7 +6142,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_Cities_2021",
@@ -5572,7 +6172,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": "Mallela_Cities_2021"
+    "collectionId": "Mallela_Cities_2021",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_COVID_2021",
@@ -5599,7 +6202,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": "Mallela_COVID_2021"
+    "collectionId": "Mallela_COVID_2021",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_MSAs_2022",
@@ -5626,7 +6232,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": "Mallela_MSAs_2022"
+    "collectionId": "Mallela_MSAs_2022",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Alabama_2022",
@@ -5655,7 +6264,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Dallas_2022",
@@ -5684,7 +6296,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Houston_2022",
@@ -5713,7 +6328,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_MyrtleBeach_2022",
@@ -5742,7 +6360,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_NYC_2022",
@@ -5771,7 +6392,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Phoenix_2022",
@@ -5800,7 +6424,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "MAPK_Dimers_Model",
@@ -5826,7 +6453,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "MAPK_Monomers_Model",
@@ -5852,7 +6482,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mapk-signaling-cascade",
@@ -5882,7 +6515,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Massole_developmental_2023",
@@ -5909,7 +6545,10 @@
     "gallery": [
       "developmental"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "McMillan_TNF_2021",
@@ -5936,7 +6575,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mertins_cancer_2023",
@@ -5963,7 +6605,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "meta_formal_game_theory",
@@ -5994,7 +6639,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "meta_formal_molecular_clock",
@@ -6024,7 +6672,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "meta_formal_petri_net",
@@ -6054,7 +6705,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "michaelis-menten-kinetics",
@@ -6086,7 +6740,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "michment",
@@ -6109,7 +6766,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "michment_cont",
@@ -6136,7 +6796,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Miller_MEK_2025",
@@ -6163,7 +6826,10 @@
     "gallery": [
       "signaling"
     ],
-    "collectionId": "Miller_MEK_2025"
+    "collectionId": "Miller_MEK_2025",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Miller_NavajoNation_2022",
@@ -6190,7 +6856,10 @@
     "gallery": [
       "epidemiology"
     ],
-    "collectionId": "Miller_NavajoNation_2022"
+    "collectionId": "Miller_NavajoNation_2022",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Degranulation_2019",
@@ -6216,7 +6885,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_2019",
@@ -6241,7 +6913,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_2019_egfr",
@@ -6266,7 +6941,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_2019_egfr_ground",
@@ -6291,7 +6969,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_NF_2019",
@@ -6317,7 +6998,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_ODE_2019",
@@ -6343,7 +7027,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_SSA_2019_egfr",
@@ -6369,7 +7056,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_SSA_2019_egfr_ground",
@@ -6395,7 +7085,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EggOscillator_2019",
@@ -6420,7 +7113,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_ElephantFitting_2019",
@@ -6445,7 +7141,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_FceRI_gamma2_2019",
@@ -6470,7 +7169,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_IGF1R_2019",
@@ -6495,7 +7197,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_JNK_2019",
@@ -6520,7 +7225,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_JobScheduling_2019_jobs_ground",
@@ -6545,7 +7253,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_JobScheduling_2019_jobs_tofit",
@@ -6570,7 +7281,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_2019",
@@ -6634,7 +7348,10 @@
       "methods": []
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P16_2019",
@@ -6658,7 +7375,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P16_3cat_2019",
@@ -6682,7 +7402,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P32_2019",
@@ -6706,7 +7429,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P32_3cat_2019",
@@ -6730,7 +7456,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P4_2019",
@@ -6754,7 +7483,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P4_3cat_2019",
@@ -6778,7 +7510,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P64_2019",
@@ -6802,7 +7537,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P64_3cat_2019",
@@ -6826,7 +7564,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P8_2019",
@@ -6850,7 +7591,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P8_3cat_2019",
@@ -6874,7 +7618,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_Quant_2019",
@@ -6899,7 +7646,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_2019_Scaff-22_ground",
@@ -6924,7 +7674,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_2019_Scaff-22_tofit",
@@ -6949,7 +7702,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_Ensemble_2019_ensemble_tofit",
@@ -6974,7 +7730,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_Ensemble_2019_machine_tofit",
@@ -6999,7 +7758,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_mon1ccz1_ox",
@@ -7068,7 +7830,10 @@
       "methods": []
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_rab5_ox",
@@ -7137,7 +7902,10 @@
       "methods": []
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_rab7_ox",
@@ -7206,7 +7974,10 @@
       "methods": []
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_wt",
@@ -7275,7 +8046,10 @@
       "methods": []
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_mon1ccz1_ox",
@@ -7302,7 +8076,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_rab5_ox",
@@ -7329,7 +8106,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_rab7_ox",
@@ -7356,7 +8136,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_wt",
@@ -7383,7 +8166,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_RafConstraint_2019",
@@ -7408,7 +8194,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_RafConstraint4_2019",
@@ -7433,7 +8222,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_SimpleReceptor_2019_example5_starting_point",
@@ -7458,7 +8250,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_SimpleReceptor_2019_receptor",
@@ -7483,7 +8278,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_SimpleReceptor_NF_2019",
@@ -7509,7 +8307,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_TCR_2019",
@@ -7534,7 +8335,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_TCRSensitivity_2019",
@@ -7559,7 +8363,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_ThreeStepCascade_2019_m1",
@@ -7584,7 +8391,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_ThreeStepCascade_2019_m1_ground",
@@ -7609,7 +8419,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_TLBR_2019",
@@ -7634,7 +8447,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ml_gradient_descent",
@@ -7665,7 +8481,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ml_hopfield",
@@ -7695,7 +8514,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ml_kmeans",
@@ -7724,7 +8546,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ml_q_learning",
@@ -7755,7 +8580,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ml_svm",
@@ -7785,7 +8613,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Motivating_example",
@@ -7813,7 +8644,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Motivating_example_cBNGL",
@@ -7842,7 +8676,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "motor",
@@ -7866,7 +8703,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_arithmetic_compiler",
@@ -7895,7 +8735,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_bngl_interpreter",
@@ -7926,7 +8769,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_music_sequencer",
@@ -7960,7 +8806,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "mt_pascal_triangle",
@@ -7987,7 +8836,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_quine",
@@ -8014,7 +8866,10 @@
       "cs",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mtor-signaling",
@@ -8043,7 +8898,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "mtorc2-signaling",
@@ -8073,7 +8931,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mukhopadhyay_TCR_2013",
@@ -8100,7 +8961,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mwc",
@@ -8124,7 +8988,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "myogenic-differentiation",
@@ -8152,7 +9019,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Nag_cancer_2009",
@@ -8179,7 +9049,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "negative-feedback-loop",
@@ -8207,7 +9080,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "neurotransmitter-release",
@@ -8236,7 +9112,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "nfkb",
@@ -8265,7 +9144,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfkb_illustrating_protocols",
@@ -8296,7 +9178,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfkb-feedback",
@@ -8323,7 +9208,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "nfsim_aggregation_gelation",
@@ -8349,7 +9237,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_coarse_graining",
@@ -8375,7 +9266,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_dynamic_compartments",
@@ -8403,7 +9297,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_hybrid_particle_field",
@@ -8429,7 +9326,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_ring_closure_polymer",
@@ -8458,7 +9358,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nn_xor",
@@ -8490,7 +9393,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "no-cgmp-signaling",
@@ -8518,7 +9424,10 @@
       "metabolism",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Nosbisch_cancer_2022",
@@ -8545,7 +9454,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Notch_Signaling_Pathway",
@@ -8571,7 +9483,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "notch-delta-lateral-inhibition",
@@ -8600,7 +9515,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ordyan_CaMKIIholo_2020",
@@ -8625,7 +9543,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ordyan_extraCaMKIIHolo_2020",
@@ -8652,7 +9573,10 @@
     "gallery": [
       "signaling"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ordyan_mCaMKIICaSpike_2020",
@@ -8679,7 +9603,10 @@
     "gallery": [
       "signaling"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "organelle_transport",
@@ -8703,7 +9630,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "organelle_transport_struct",
@@ -8728,7 +9658,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "oxidative-stress-response",
@@ -8757,7 +9690,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "p38-mapk-signaling",
@@ -8786,7 +9722,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "p53-mdm2-oscillator",
@@ -8813,7 +9752,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "parp1-mediated-dna-repair",
@@ -8843,7 +9785,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Pekalski_published_2013",
@@ -8870,7 +9815,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ph_lorenz_attractor",
@@ -8901,7 +9849,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ph_nbody_gravity",
@@ -8929,7 +9880,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ph_schrodinger",
@@ -8955,7 +9909,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ph_wave_equation",
@@ -8982,7 +9939,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "phosphorelay-chain",
@@ -9009,7 +9969,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "platelet-activation",
@@ -9038,7 +10001,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polymer",
@@ -9064,7 +10030,10 @@
     "gallery": [
       "tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polymer_draft",
@@ -9091,7 +10060,10 @@
     "gallery": [
       "tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polymer_fixed",
@@ -9115,7 +10087,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polynomial",
@@ -9138,7 +10113,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Posner_blbr_1995",
@@ -9165,7 +10143,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Posner_blbr_2004",
@@ -9192,7 +10173,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "predator-prey-dynamics",
@@ -9217,7 +10201,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "process_actin_treadmilling",
@@ -9244,7 +10231,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_autophagy_flux",
@@ -9274,7 +10264,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_cell_adhesion_strength",
@@ -9304,7 +10297,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_kinetic_proofreading_tcr",
@@ -9331,7 +10327,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_quorum_sensing_switch",
@@ -9361,7 +10360,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Actions_Syntax",
@@ -9386,7 +10388,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_BNG_Error",
@@ -9410,7 +10415,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Parabola",
@@ -9434,7 +10442,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Parabola_Demo",
@@ -9458,7 +10469,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Parabola_Ground",
@@ -9482,7 +10496,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Polynomial",
@@ -9506,7 +10523,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Polynomial_Ground",
@@ -9530,7 +10550,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_RAFi",
@@ -9555,7 +10578,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_RAFi_Ground",
@@ -9580,7 +10606,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Receptor",
@@ -9604,7 +10633,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Receptor_NF",
@@ -9629,7 +10661,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_TCR",
@@ -9654,7 +10689,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_TLBR",
@@ -9679,7 +10717,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Degranulation_Model",
@@ -9705,7 +10746,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_Ground",
@@ -9730,7 +10774,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_Model",
@@ -9755,7 +10802,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_NF",
@@ -9781,7 +10831,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_ODE",
@@ -9806,7 +10859,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_ODE_Pub",
@@ -9831,7 +10887,10 @@
     "gallery": [
       "cancer"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Egg",
@@ -9855,7 +10914,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_ErrNoFrees",
@@ -9879,7 +10941,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Example1",
@@ -9904,7 +10969,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Example2_Start",
@@ -9930,7 +10998,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_FceRI_Gamma2",
@@ -9955,7 +11026,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_FceRI_Gamma2_Ground",
@@ -9980,7 +11054,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_FreeMissing",
@@ -10004,7 +11081,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_IGF1R_Activation",
@@ -10029,7 +11109,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_LilyIgE",
@@ -10054,7 +11137,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Model",
@@ -10079,7 +11165,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Model_aMCMC",
@@ -10104,7 +11193,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Model_ToFit",
@@ -10129,7 +11221,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NFmodel",
@@ -10153,7 +11248,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NoFrees",
@@ -10177,7 +11275,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NoGenerateNetwork",
@@ -10201,7 +11302,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NoSuffix",
@@ -10225,7 +11329,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola",
@@ -10249,7 +11356,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola_Files",
@@ -10273,7 +11383,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola_Special",
@@ -10297,7 +11410,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola2",
@@ -10321,7 +11437,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_ParamsEverywhere",
@@ -10345,7 +11464,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Polynomial_T6",
@@ -10369,7 +11491,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple",
@@ -10393,7 +11518,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_AddActions",
@@ -10417,7 +11545,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_Answer",
@@ -10441,7 +11572,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_GenOnly",
@@ -10465,7 +11599,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_NF_Seed",
@@ -10490,7 +11627,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_NoGen",
@@ -10514,7 +11654,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Tricky",
@@ -10538,7 +11681,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_TrickyUS",
@@ -10562,7 +11708,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Trivial",
@@ -10586,7 +11735,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBNF_fitting_setup_190127_CHO_EGFR_forBNF",
@@ -10609,7 +11761,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "quasi_equilibrium",
@@ -10635,7 +11790,10 @@
       "tutorials",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "quorum-sensing-circuit",
@@ -10664,7 +11822,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "rab-gtpase-cycle",
@@ -10692,7 +11853,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ran_NuclearTransport",
@@ -10718,7 +11882,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Ran_NuclearTransport_Draft",
@@ -10744,7 +11911,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "rankl-rank-signaling",
@@ -10773,7 +11943,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ras-gef-gap-cycle",
@@ -10804,7 +11977,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "rec_dim",
@@ -10830,7 +12006,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "rec_dim_comp",
@@ -10857,7 +12036,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "receptor_nf",
@@ -10881,7 +12063,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Repressilator",
@@ -10914,7 +12099,10 @@
       "synbio",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "repressilator-oscillator",
@@ -10946,7 +12134,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "retinoic-acid-signaling",
@@ -10976,7 +12167,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "rho-gtpase-actin-cytoskeleton",
@@ -11006,7 +12200,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_EGFR_best-fit",
@@ -11031,7 +12228,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_EGFR_Epigen",
@@ -11056,7 +12256,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_EGFR_sensitivity",
@@ -11081,7 +12284,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_HA_EGFR_L858R",
@@ -11106,7 +12312,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_HeLa",
@@ -11131,7 +12340,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_HMEC",
@@ -11156,7 +12368,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_MCF10A",
@@ -11181,7 +12396,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "SHP2_base_model",
@@ -11206,7 +12424,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "shp2-phosphatase-regulation",
@@ -11234,7 +12455,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "signal-amplification-cascade",
@@ -11263,7 +12487,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "simple",
@@ -11289,7 +12516,10 @@
     "gallery": [
       "tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "simple_nfsim_test",
@@ -11314,7 +12544,10 @@
     "gallery": [
       "other"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "simple_sbml_import",
@@ -11340,7 +12573,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "simple_system",
@@ -11364,7 +12600,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "simple-dimerization",
@@ -11392,7 +12631,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "SIR",
@@ -11417,7 +12659,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sir-epidemic-model",
@@ -11447,7 +12692,10 @@
       "tutorials",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "smad-tgf-beta-signaling",
@@ -11478,7 +12726,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sonic-hedgehog-gradient",
@@ -11507,7 +12758,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "sp_fourier_synthesizer",
@@ -11540,7 +12794,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sp_image_convolution",
@@ -11569,7 +12826,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sp_kalman_filter",
@@ -11601,7 +12861,10 @@
       "ml-signal",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "stat3-mediated-transcription",
@@ -11629,7 +12892,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "stress-response-adaptation",
@@ -11657,7 +12923,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Suderman_2013",
@@ -11688,7 +12957,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "synaptic-plasticity-ltp",
@@ -11720,7 +12992,10 @@
       "neuroscience",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "synbio_band_pass_filter",
@@ -11751,7 +13026,10 @@
       "synbio",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_counter_molecular",
@@ -11779,7 +13057,10 @@
       "synbio",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_edge_detector",
@@ -11808,7 +13089,10 @@
       "synbio",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_logic_gates_enzymatic",
@@ -11841,7 +13125,10 @@
       "synbio",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_oscillator_synchronization",
@@ -11870,7 +13157,10 @@
       "synbio",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "t-cell-activation",
@@ -11899,7 +13189,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "test_ANG_synthesis_simple",
@@ -11927,7 +13220,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_fixed",
@@ -11951,7 +13247,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_MM",
@@ -11975,7 +13274,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_mratio",
@@ -12002,7 +13304,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_network_gen",
@@ -12031,7 +13336,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_sat",
@@ -12055,7 +13363,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_cBNGL_simple",
@@ -12083,7 +13394,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_complex",
@@ -12111,7 +13425,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_complex_0_cBNGL",
@@ -12140,7 +13457,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_complex_source_cBNGL",
@@ -12170,7 +13490,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_simple",
@@ -12197,7 +13520,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example1_fit",
@@ -12222,7 +13548,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example2_fit",
@@ -12247,7 +13576,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example3_fit",
@@ -12272,7 +13604,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example4_fit",
@@ -12297,7 +13632,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example5_fit",
@@ -12322,7 +13660,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example5_ground_truth",
@@ -12347,7 +13688,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example6_ground_truth",
@@ -12372,7 +13716,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_Example1_2016",
@@ -12397,7 +13744,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_Example2_2016",
@@ -12422,7 +13772,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Thomas_Example3_2016",
@@ -12447,7 +13800,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Thomas_Example4_2016",
@@ -12471,7 +13827,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Thomas_Example5_2016",
@@ -12495,7 +13854,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_Example6_2016",
@@ -12519,7 +13881,10 @@
       ]
     },
     "gallery": [],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "tlmr",
@@ -12542,7 +13907,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "tlr3-dsrna-sensing",
@@ -12571,7 +13939,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "tnf-induced-apoptosis",
@@ -12601,7 +13972,10 @@
       "cell-cycle",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "toggle",
@@ -12627,7 +14001,10 @@
       "synbio",
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "toy-jim",
@@ -12651,7 +14028,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "toy1",
@@ -12676,7 +14056,10 @@
     "gallery": [
       "tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "toy2",
@@ -12700,7 +14083,10 @@
     "gallery": [
       "tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "translateSBML",
@@ -12723,7 +14109,10 @@
     "gallery": [
       "tutorial"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "two-component-system",
@@ -12751,7 +14140,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "univ_synth",
@@ -12775,7 +14167,10 @@
     "gallery": [
       "validation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "vegf-angiogenesis",
@@ -12804,7 +14199,10 @@
       "cancer",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Vilar_Circadian_2002",
@@ -12829,7 +14227,10 @@
     "gallery": [
       "cell-cycle"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Vilar_Circadian_2002b",
@@ -12854,7 +14255,10 @@
     "gallery": [
       "cell-cycle"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Vilar_Circadian_2002c",
@@ -12879,7 +14283,10 @@
     "gallery": [
       "regulation"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "viral-sensing-innate-immunity",
@@ -12911,7 +14318,10 @@
       "immunology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "visualize",
@@ -12932,7 +14342,10 @@
     "gallery": [
       "native-tutorials"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "wacky_alchemy_stone",
@@ -12960,7 +14373,10 @@
       "synbio",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_black_hole",
@@ -12989,7 +14405,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_bouncing_ball",
@@ -13017,7 +14436,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_traffic_jam_asep",
@@ -13048,7 +14470,10 @@
       "physics",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_zombie_infection",
@@ -13075,7 +14500,10 @@
       "ecology",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wnt-beta-catenin-signaling",
@@ -13107,7 +14535,10 @@
       "developmental",
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "wound-healing-pdgf-signaling",
@@ -13136,7 +14567,10 @@
     "gallery": [
       "test-models"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Yang_tlbr_2008",
@@ -13160,7 +14594,10 @@
     "gallery": [
       "physics"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ZAP70_immunology_2021",
@@ -13190,7 +14627,10 @@
     "gallery": [
       "immunology"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Zhang_developmental_2021",
@@ -13217,7 +14657,10 @@
     "gallery": [
       "developmental"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Zhang_developmental_2023",
@@ -13244,6 +14687,9 @@
     "gallery": [
       "developmental"
     ],
-    "collectionId": null
+    "collectionId": null,
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   }
 ]
