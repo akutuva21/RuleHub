@@ -21,16 +21,23 @@ function parseArgs(argv) {
   return { input, root, dryRun };
 }
 
-function findAllMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
-
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      findAllMetadataFiles(fullPath, results);
-    } else if (entry.name === 'metadata.yaml') {
-      results.push(fullPath);
+async function findAllMetadataFiles(dir) {
+  let results = [];
+  try {
+    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+    const promises = entries.map(async entry => {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        const subResults = await findAllMetadataFiles(fullPath);
+        results.push(...subResults);
+      } else if (entry.name === 'metadata.yaml') {
+        results.push(fullPath);
+      }
+    });
+    await Promise.all(promises);
+  } catch (error) {
+    if (error.code !== 'ENOENT') {
+      throw error;
     }
   }
   return results;
@@ -118,9 +125,10 @@ async function main(argv = process.argv.slice(2)) {
   }));
 
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
-  const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => 
-    findAllMetadataFiles(path.join(root, searchRoot))
+  const metadataFileArrays = await Promise.all(
+    SEARCH_ROOTS.map(searchRoot => findAllMetadataFiles(path.join(root, searchRoot)))
   );
+  const metadataFiles = metadataFileArrays.flat();
   
   const updatePromises = metadataFiles.map(filePath =>
     updateMetadataFile(filePath, assignments, compiledAssignments, dryRun)
