@@ -24,7 +24,10 @@
     "file": "AB.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABC",
@@ -52,7 +55,10 @@
     "file": "ABC.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABC_scan",
@@ -81,7 +87,10 @@
     "file": "ABC_scan.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ABC_ssa",
@@ -109,7 +118,10 @@
     "file": "ABC_ssa.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABp",
@@ -137,7 +149,10 @@
     "file": "ABp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ABp_approx",
@@ -165,7 +180,10 @@
     "file": "ABp_approx.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "akt-signaling",
@@ -199,7 +217,10 @@
     "file": "akt-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "allosteric-activation",
@@ -232,7 +253,10 @@
     "file": "allosteric-activation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ampk-signaling",
@@ -266,7 +290,10 @@
     "file": "ampk-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "An_TLR4_2009",
@@ -297,7 +324,10 @@
     "file": "An_2009.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "apoptosis-cascade",
@@ -334,7 +364,10 @@
     "file": "apoptosis-cascade.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "auto-activation-loop",
@@ -368,7 +401,10 @@
     "file": "auto-activation-loop.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "autophagy-regulation",
@@ -402,7 +438,10 @@
     "file": "autophagy-regulation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "BAB",
@@ -429,7 +468,10 @@
     "file": "BAB.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "BAB_coop",
@@ -457,7 +499,10 @@
     "file": "BAB_coop.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "BAB_scan",
@@ -486,7 +531,10 @@
     "file": "BAB_scan.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_bcat_2013",
@@ -515,7 +563,10 @@
     "file": "Barua_2013.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_BCR_2012",
@@ -546,7 +597,10 @@
     "file": "BaruaBCR_2012.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_EGFR_2007",
@@ -576,7 +630,10 @@
     "file": "Barua_2007.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_FceRI_2012",
@@ -607,7 +664,10 @@
     "file": "BaruaFceRI_2012.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Barua_JAK2_2009",
@@ -638,7 +698,10 @@
     "file": "Barua_2009.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "bcr-signaling",
@@ -673,7 +736,10 @@
     "file": "bcr-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "beta-adrenergic-response",
@@ -709,7 +775,10 @@
     "file": "beta-adrenergic-response.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "birth-death",
@@ -739,7 +808,10 @@
     "file": "birth-death.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "bistable-toggle-switch",
@@ -774,7 +846,10 @@
     "file": "bistable-toggle-switch.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "BLBR",
@@ -802,7 +877,10 @@
     "file": "BLBR.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Blinov_egfr_2006",
@@ -834,7 +912,10 @@
     "file": "Blinov_2006.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Blinov_egfr_NF_2006",
@@ -866,7 +947,10 @@
     "file": "Blinov_egfr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Blinov_ran_2006",
@@ -897,7 +981,10 @@
     "file": "Blinov_ran.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "blood-coagulation-thrombin",
@@ -933,7 +1020,10 @@
     "file": "blood-coagulation-thrombin.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "bmp-signaling",
@@ -968,7 +1058,10 @@
     "file": "bmp-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "brusselator-oscillator",
@@ -1001,7 +1094,10 @@
     "file": "brusselator-oscillator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "calcineurin-nfat-pathway",
@@ -1035,7 +1131,10 @@
     "file": "calcineurin-nfat-pathway.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "calcium-spike-signaling",
@@ -1069,7 +1168,10 @@
     "file": "calcium-spike-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "CaOscillate_Func",
@@ -1098,7 +1200,10 @@
     "file": "CaOscillate_Func.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "CaOscillate_Sat",
@@ -1130,7 +1235,10 @@
     "file": "CaOscillate_Sat.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "caspase-activation-loop",
@@ -1165,7 +1273,10 @@
     "file": "caspase-activation-loop.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "catalysis",
@@ -1195,7 +1306,10 @@
     "file": "catalysis.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cBNGL_simple",
@@ -1226,7 +1340,10 @@
     "file": "cBNGL_simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cd40-signaling",
@@ -1261,7 +1378,10 @@
     "file": "cd40-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cell-cycle-checkpoint",
@@ -1297,7 +1417,10 @@
     "file": "cell-cycle-checkpoint.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chattaraj_nephrin_2021",
@@ -1329,7 +1452,10 @@
     "file": "Chattaraj_2021.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "checkpoint-kinase-signaling",
@@ -1366,7 +1492,10 @@
     "file": "checkpoint-kinase-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Cheemalavagu_JAKSTAT_2024",
@@ -1396,7 +1525,10 @@
     "file": "Cheemalavagu_JAK_STAT.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "chemistry",
@@ -1424,7 +1556,10 @@
     "file": "chemistry.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "chemotaxis-signal-transduction",
@@ -1459,7 +1594,10 @@
     "file": "chemotaxis-signal-transduction.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chylek_FceRI_2014",
@@ -1490,7 +1628,10 @@
     "file": "ChylekFceRI_2014.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chylek_library",
@@ -1521,7 +1662,10 @@
     "file": "Chylek_library.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Chylek_TCR_2014",
@@ -1552,7 +1696,10 @@
     "file": "ChylekTCR_2014.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "circadian-oscillator",
@@ -1586,7 +1733,10 @@
     "file": "circadian-oscillator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "CircadianOscillator",
@@ -1618,7 +1768,10 @@
     "file": "CircadianOscillator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "clock-bmal1-gene-circuit",
@@ -1652,7 +1805,10 @@
     "file": "clock-bmal1-gene-circuit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_endocytosis",
@@ -1683,7 +1839,10 @@
     "file": "compartment_endocytosis.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_membrane_bound",
@@ -1716,7 +1875,10 @@
     "file": "compartment_membrane_bound.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_nested_transport",
@@ -1748,7 +1910,10 @@
     "file": "compartment_nested_transport.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_nuclear_transport",
@@ -1780,7 +1945,10 @@
     "file": "compartment_nuclear_transport.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "compartment_organelle_exchange",
@@ -1812,7 +1980,10 @@
     "file": "compartment_organelle_exchange.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "competitive-enzyme-inhibition",
@@ -1846,7 +2017,10 @@
     "file": "competitive-enzyme-inhibition.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "complement-activation-cascade",
@@ -1881,7 +2055,10 @@
     "file": "complement-activation-cascade.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ComplexDegradation",
@@ -1908,7 +2085,10 @@
     "file": "ComplexDegradation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "contact-inhibition-hippo-yap",
@@ -1941,7 +2121,10 @@
     "file": "contact-inhibition-hippo-yap.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "continue",
@@ -1969,7 +2152,10 @@
     "file": "continue.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cooperative-binding",
@@ -2000,7 +2186,10 @@
     "file": "cooperative-binding.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Creamer_2012",
@@ -2035,7 +2224,10 @@
     "file": "Creamer_2012.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cs_diffie_hellman",
@@ -2069,7 +2261,10 @@
     "file": "cs_diffie_hellman.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_hash_function",
@@ -2107,7 +2302,10 @@
     "file": "cs_hash_function.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cs_huffman",
@@ -2140,7 +2338,10 @@
     "file": "cs_huffman.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_monte_carlo_pi",
@@ -2175,7 +2376,10 @@
     "file": "cs_monte_carlo_pi.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_pagerank",
@@ -2206,7 +2410,10 @@
     "file": "cs_pagerank.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "cs_pid_controller",
@@ -2241,7 +2448,10 @@
     "file": "cs_pid_controller.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "cs_regex_nfa",
@@ -2276,7 +2486,10 @@
     "file": "cs_regex_nfa.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dembo_blbr_1978",
@@ -2307,7 +2520,10 @@
     "file": "blbr_dembo1978.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "dna-damage-repair",
@@ -2341,7 +2557,10 @@
     "file": "dna-damage-repair.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "dna-methylation-dynamics",
@@ -2375,7 +2594,10 @@
     "file": "dna-methylation-dynamics.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dolan_Insulin_2015_Dolan_2015",
@@ -2405,7 +2627,10 @@
     "file": "Dolan_2015.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dolan_Insulin_2015_Dolan2015",
@@ -2435,7 +2660,10 @@
     "file": "Dolan2015.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "dr5-apoptosis-signaling",
@@ -2470,7 +2698,10 @@
     "file": "dr5-apoptosis-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dreisigmeyer_LacOperon_2008",
@@ -2501,7 +2732,10 @@
     "file": "lac_operon_dreisigmeyer2008.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "dual-site-phosphorylation",
@@ -2533,7 +2767,10 @@
     "file": "dual-site-phosphorylation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Dushek_TCR_2011",
@@ -2564,7 +2801,10 @@
     "file": "Dushek_2011.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Dushek_TCR_2014",
@@ -2595,7 +2835,10 @@
     "file": "Dushek_2014.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "e2f-rb-cell-cycle-switch",
@@ -2631,7 +2874,10 @@
     "file": "e2f-rb-cell-cycle-switch.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_coevolution_host_parasite",
@@ -2662,7 +2908,10 @@
     "file": "eco_coevolution_host_parasite.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_food_web_chaos_3sp",
@@ -2699,7 +2948,10 @@
     "file": "eco_food_web_chaos_3sp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_lotka_volterra_grid",
@@ -2732,7 +2984,10 @@
     "file": "eco_lotka_volterra_grid.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_mutualism_obligate",
@@ -2764,7 +3019,10 @@
     "file": "eco_mutualism_obligate.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "eco_rock_paper_scissors_spatial",
@@ -2798,7 +3056,10 @@
     "file": "eco_rock_paper_scissors_spatial.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_net",
@@ -2830,7 +3091,10 @@
     "file": "egfr_net.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_net_red",
@@ -2863,7 +3127,10 @@
     "file": "egfr_net_red.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_path",
@@ -2892,7 +3159,10 @@
     "file": "egfr_path.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "egfr_simple",
@@ -2923,7 +3193,10 @@
     "file": "egfr_simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "egfr-signaling-pathway",
@@ -2956,7 +3229,10 @@
     "file": "egfr-signaling-pathway.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "eif2a-stress-response",
@@ -2988,7 +3264,10 @@
     "file": "eif2a-stress-response.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "endosomal-sorting-rab",
@@ -3022,7 +3301,10 @@
     "file": "endosomal-sorting-rab.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_allostery_mwc",
@@ -3053,7 +3335,10 @@
     "file": "energy_allostery_mwc.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_catalysis_mm",
@@ -3085,7 +3370,10 @@
     "file": "energy_catalysis_mm.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_cooperativity_adh",
@@ -3116,7 +3404,10 @@
     "file": "energy_cooperativity_adh.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_example1",
@@ -3144,7 +3435,10 @@
     "file": "energy_example1.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_linear_chain",
@@ -3175,7 +3469,10 @@
     "file": "energy_linear_chain.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "energy_transport_pump",
@@ -3209,7 +3506,10 @@
     "file": "energy_transport_pump.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "er-stress-response",
@@ -3242,7 +3542,10 @@
     "file": "er-stress-response.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Erdem_InsR_2021",
@@ -3272,7 +3575,10 @@
     "file": "Erdem_2021.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "erk-nuclear-translocation",
@@ -3305,7 +3611,10 @@
     "file": "erk-nuclear-translocation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "example1",
@@ -3332,7 +3641,10 @@
     "file": "example1.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Faeder_egfr_2009",
@@ -3365,7 +3677,10 @@
     "file": "Rule_based_egfr_tutorial.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Faeder_egfr_compart_2009",
@@ -3397,7 +3712,10 @@
     "file": "Rule_based_egfr_compart.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Faeder_FceRI_2003_Faeder_2003",
@@ -3428,7 +3746,10 @@
     "file": "Faeder_2003.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Faeder_FceRI_2003_fceri_ji",
@@ -3459,7 +3780,10 @@
     "file": "fceri_ji.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Faeder_FceRI_Fyn_2003",
@@ -3491,7 +3815,10 @@
     "file": "fceri_fyn.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "FceRI_ji",
@@ -3523,7 +3850,10 @@
     "file": "FceRI_ji.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "fceri_ji_comp",
@@ -3556,7 +3886,10 @@
     "file": "fceri_ji_comp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "FceRI_viz",
@@ -3591,7 +3924,10 @@
     "file": "FceRI_viz.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_functional_rates_volume",
@@ -3624,7 +3960,10 @@
     "file": "feature_functional_rates_volume.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_global_functions_scan",
@@ -3657,7 +3996,10 @@
     "file": "feature_global_functions_scan.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_local_functions_explicit",
@@ -3692,7 +4034,10 @@
     "file": "feature_local_functions_explicit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_symmetry_factors_cyclic",
@@ -3725,7 +4070,10 @@
     "file": "feature_symmetry_factors_cyclic.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "feature_synthesis_degradation_ss",
@@ -3758,7 +4106,10 @@
     "file": "feature_synthesis_degradation_ss.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "fgf-signaling-pathway",
@@ -3793,7 +4144,10 @@
     "file": "fgf-signaling-pathway.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Gardner_Toggle_2000",
@@ -3824,7 +4178,10 @@
     "file": "genetic_switch_gardner2000.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "gas6-axl-signaling",
@@ -3857,7 +4214,10 @@
     "file": "gas6-axl-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "gene-expression-toggle",
@@ -3888,7 +4248,10 @@
     "file": "gene-expression-toggle.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "genetic_bistability_energy",
@@ -3921,7 +4284,10 @@
     "file": "genetic_bistability_energy.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_dna_replication_stochastic",
@@ -3954,7 +4320,10 @@
     "file": "genetic_dna_replication_stochastic.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_goodwin_oscillator",
@@ -3987,7 +4356,10 @@
     "file": "genetic_goodwin_oscillator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_translation_kinetics",
@@ -4019,7 +4391,10 @@
     "file": "genetic_translation_kinetics.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "genetic_turing_pattern_1d",
@@ -4051,7 +4426,10 @@
     "file": "genetic_turing_pattern_1d.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "GK",
@@ -4079,7 +4457,10 @@
     "file": "GK.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "glioblastoma-egfrviii-signaling",
@@ -4113,7 +4494,10 @@
     "file": "glioblastoma-egfrviii-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "glycolysis-branch-point",
@@ -4146,7 +4530,10 @@
     "file": "glycolysis-branch-point.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "gm_game_of_life",
@@ -4177,7 +4564,10 @@
     "file": "gm_game_of_life.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "gm_ray_marcher",
@@ -4214,7 +4604,10 @@
     "file": "gm_ray_marcher.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Goldstein_blbr_1980",
@@ -4245,7 +4638,10 @@
     "file": "blbr_heterogeneity_goldstein1980.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Goldstein_TLBR_1984",
@@ -4278,7 +4674,10 @@
     "file": "tlbr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "gpcr-desensitization-arrestin",
@@ -4309,7 +4708,10 @@
     "file": "gpcr-desensitization-arrestin.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Harmon_Antigen_2017",
@@ -4339,7 +4741,10 @@
     "file": "antigen_pulses_harmon2017.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hat_wip1_2016",
@@ -4372,7 +4777,10 @@
     "file": "Hat_2016.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Haugh2b",
@@ -4401,7 +4809,10 @@
     "file": "Haugh2b.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "hedgehog-signaling-pathway",
@@ -4436,7 +4847,10 @@
     "file": "hedgehog-signaling-pathway.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "heise",
@@ -4463,7 +4877,10 @@
     "file": "heise.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "hematopoietic-growth-factor",
@@ -4496,7 +4913,10 @@
     "file": "hematopoietic-growth-factor.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "hif1a_degradation_loop",
@@ -4528,7 +4948,10 @@
     "file": "hif1a_degradation_loop.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "HIV_Dynamics_pt303",
@@ -4558,7 +4981,10 @@
     "file": "pt303.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "HIV_Dynamics_pt403",
@@ -4588,7 +5014,10 @@
     "file": "pt403.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "HIV_Dynamics_pt409",
@@ -4618,7 +5047,10 @@
     "file": "pt409.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Egg_2018",
@@ -4646,7 +5078,10 @@
     "file": "egg.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Elephant_2018_elephant_EFA",
@@ -4674,7 +5109,10 @@
     "file": "elephant_EFA.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Elephant_2018_elephant_fit",
@@ -4702,7 +5140,10 @@
     "file": "elephant_fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Proofreading_2001",
@@ -4732,7 +5173,10 @@
     "file": "kinetic_proofreading_hlavacek2001.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_after_bunching",
@@ -4760,7 +5204,10 @@
     "file": "after_bunching.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_after_decoupling",
@@ -4788,7 +5235,10 @@
     "file": "after_decoupling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_after_scaling",
@@ -4816,7 +5266,10 @@
     "file": "after_scaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_before_bunching",
@@ -4844,7 +5297,10 @@
     "file": "before_bunching.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_before_decoupling",
@@ -4872,7 +5328,10 @@
     "file": "before_decoupling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_before_scaling",
@@ -4900,7 +5359,10 @@
     "file": "before_scaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Restructuration_2018_check_scaling",
@@ -4928,7 +5390,10 @@
     "file": "check_scaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Hlavacek_Steric_1999",
@@ -4958,7 +5423,10 @@
     "file": "steric_effects_hlavacek1999.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "hypoxia-response-signaling",
@@ -4991,7 +5459,10 @@
     "file": "hypoxia-response-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "il1b-signaling",
@@ -5023,7 +5494,10 @@
     "file": "il1b-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "il6-jak-stat-pathway",
@@ -5056,7 +5530,10 @@
     "file": "il6-jak-stat-pathway.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "immune-synapse-formation",
@@ -5090,7 +5567,10 @@
     "file": "immune-synapse-formation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "inflammasome-activation",
@@ -5123,7 +5603,10 @@
     "file": "inflammasome-activation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "inositol-phosphate-metabolism",
@@ -5158,7 +5641,10 @@
     "file": "inositol-phosphate-metabolism.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "insulin-glucose-homeostasis",
@@ -5191,7 +5677,10 @@
     "file": "insulin-glucose-homeostasis.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "interferon-signaling",
@@ -5224,7 +5713,10 @@
     "file": "interferon-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ire1a-xbp1-er-stress",
@@ -5258,7 +5750,10 @@
     "file": "ire1a-xbp1-er-stress.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "issue_198_short",
@@ -5287,7 +5782,10 @@
     "file": "issue_198_short.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "jak-stat-cytokine-signaling",
@@ -5319,7 +5817,10 @@
     "file": "jak-stat-cytokine-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "JaruszewiczBlonska_NFkB_2023",
@@ -5350,7 +5851,10 @@
     "file": "Jaruszewicz-Blonska_2023.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "jnk-mapk-signaling",
@@ -5382,7 +5886,10 @@
     "file": "jnk-mapk-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Jung_CaMKII_2017",
@@ -5413,7 +5920,10 @@
     "file": "Jung_2017.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kesseler_CellCycle_2013",
@@ -5445,7 +5955,10 @@
     "file": "Kesseler_2013.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Kiefhaber_emodel",
@@ -5472,7 +5985,10 @@
     "file": "Kiefhaber_emodel.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "kir-channel-regulation",
@@ -5505,7 +6021,10 @@
     "file": "kir-channel-regulation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kocieniewski_published_2012",
@@ -5536,7 +6055,10 @@
     "file": "Kocieniewski_2012.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Korwek_InnateImmunity_2023",
@@ -5569,7 +6091,10 @@
     "file": "innate_immunity.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Korwek_ViralSensing_2023",
@@ -5602,7 +6127,10 @@
     "file": "Korwek_2023.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kozer_egfr_2013",
@@ -5633,7 +6161,10 @@
     "file": "Kozer_2013.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Kozer_egfr_2014",
@@ -5664,7 +6195,10 @@
     "file": "Kozer_2014.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "l-type-calcium-channel-dynamics",
@@ -5700,7 +6234,10 @@
     "file": "l-type-calcium-channel-dynamics.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "lac-operon-regulation",
@@ -5736,7 +6273,10 @@
     "file": "lac-operon-regulation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lang_CellCycle_2024",
@@ -5767,7 +6307,10 @@
     "file": "Lang_2024.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lee_Wnt_2003",
@@ -5799,7 +6342,10 @@
     "file": "wnt.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Ligon_egfr_2014",
@@ -5830,7 +6376,10 @@
     "file": "Ligon_2014.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lin_ERK_2019",
@@ -5868,7 +6417,10 @@
     "file": "Lin_ERK_2019.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_Prion_2019",
@@ -5900,7 +6452,10 @@
     "file": "Lin_Prion_2019.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_ScalingBench_2019_ERK_model",
@@ -5929,7 +6484,10 @@
     "file": "ERK_model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_ScalingBench_2019_prion_model",
@@ -5958,7 +6516,10 @@
     "file": "prion_model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_ScalingBench_2019_TCR_model",
@@ -5987,7 +6548,10 @@
     "file": "TCR_model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Lin_TCR_2019",
@@ -6026,7 +6590,10 @@
     "file": "Lin_TCR_2019.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "lipid-mediated-pip3-signaling",
@@ -6060,7 +6627,10 @@
     "file": "lipid-mediated-pip3-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lisman",
@@ -6089,7 +6659,10 @@
     "file": "Lisman.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Lisman_bifurcate",
@@ -6118,7 +6691,10 @@
     "file": "Lisman_bifurcate.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "localfunc",
@@ -6147,7 +6723,10 @@
     "file": "localfunc.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "LR",
@@ -6174,7 +6753,10 @@
     "file": "LR.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LR_comp",
@@ -6202,7 +6784,10 @@
     "file": "LR_comp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LRR",
@@ -6229,7 +6814,10 @@
     "file": "LRR.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LRR_comp",
@@ -6257,7 +6845,10 @@
     "file": "LRR_comp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "LV",
@@ -6286,7 +6877,10 @@
     "file": "LV.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "LV_comp",
@@ -6315,7 +6909,10 @@
     "file": "LV_comp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Macken_physics_1982",
@@ -6345,7 +6942,10 @@
     "file": "tlbr_solution_macken1982.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_Cities_2021",
@@ -6443,7 +7043,10 @@
       ]
     },
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_COVID_2021",
@@ -6681,7 +7284,10 @@
       ]
     },
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_MSAs_2022",
@@ -7843,7 +8449,10 @@
       ]
     },
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Alabama_2022",
@@ -7876,7 +8485,10 @@
     "file": "Alabama.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Dallas_2022",
@@ -7909,7 +8521,10 @@
     "file": "Dallas.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Houston_2022",
@@ -7942,7 +8557,10 @@
     "file": "Houston.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_MyrtleBeach_2022",
@@ -7975,7 +8593,10 @@
     "file": "Myrtle_Beach-Conway-North_Myrtle_Beach_SC-NC.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_NYC_2022",
@@ -8008,7 +8629,10 @@
     "file": "NYC.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mallela_VaxVariants_Phoenix_2022",
@@ -8041,7 +8665,10 @@
     "file": "Phoenix.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "MAPK_Dimers_Model",
@@ -8071,7 +8698,10 @@
     "file": "mapk-dimers.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "MAPK_Monomers_Model",
@@ -8101,7 +8731,10 @@
     "file": "mapk-monomers.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mapk-signaling-cascade",
@@ -8135,7 +8768,10 @@
     "file": "mapk-signaling-cascade.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Massole_developmental_2023",
@@ -8166,7 +8802,10 @@
     "file": "Massole_2023.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "McMillan_TNF_2021",
@@ -8197,7 +8836,10 @@
     "file": "McMillan_2021.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mertins_cancer_2023",
@@ -8228,7 +8870,10 @@
     "file": "Mertins_2023.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "meta_formal_game_theory",
@@ -8263,7 +8908,10 @@
     "file": "meta_formal_game_theory.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "meta_formal_molecular_clock",
@@ -8297,7 +8945,10 @@
     "file": "meta_formal_molecular_clock.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "meta_formal_petri_net",
@@ -8331,7 +8982,10 @@
     "file": "meta_formal_petri_net.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "michaelis-menten-kinetics",
@@ -8367,7 +9021,10 @@
     "file": "michaelis-menten-kinetics.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "michment",
@@ -8394,7 +9051,10 @@
     "file": "michment.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "michment_cont",
@@ -8425,7 +9085,10 @@
     "file": "michment_cont.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Miller_MEK_2025",
@@ -8503,7 +9166,10 @@
       ]
     },
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Miller_NavajoNation_2022",
@@ -8561,7 +9227,10 @@
       ]
     },
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Degranulation_2019",
@@ -8591,7 +9260,10 @@
     "file": "model_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_2019",
@@ -8620,7 +9292,10 @@
     "file": "egfr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_2019_egfr",
@@ -8649,7 +9324,10 @@
     "file": "egfr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_2019_egfr_ground",
@@ -8678,7 +9356,10 @@
     "file": "egfr_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_NF_2019",
@@ -8708,7 +9389,10 @@
     "file": "egfr_nf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_ODE_2019",
@@ -8738,7 +9422,10 @@
     "file": "egfr_ode.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_SSA_2019_egfr",
@@ -8768,7 +9455,10 @@
     "file": "egfr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EGFR_SSA_2019_egfr_ground",
@@ -8798,7 +9488,10 @@
     "file": "egfr_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_EggOscillator_2019",
@@ -8827,7 +9520,10 @@
     "file": "egg.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_ElephantFitting_2019",
@@ -8856,7 +9552,10 @@
     "file": "elephant.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_FceRI_gamma2_2019",
@@ -8885,7 +9584,10 @@
     "file": "fceri_gamma2.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_IGF1R_2019",
@@ -8914,7 +9616,10 @@
     "file": "IGF1R_fit_all.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_JNK_2019",
@@ -8943,7 +9648,10 @@
     "file": "JNKmodel_180724_bnf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_JobScheduling_2019_jobs_ground",
@@ -8972,7 +9680,10 @@
     "file": "jobs_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_JobScheduling_2019_jobs_tofit",
@@ -9001,7 +9712,10 @@
     "file": "jobs_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_2019",
@@ -9069,7 +9783,10 @@
     "file": "model_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P16_2019",
@@ -9097,7 +9814,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P16_3cat_2019",
@@ -9125,7 +9845,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P32_2019",
@@ -9153,7 +9876,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P32_3cat_2019",
@@ -9181,7 +9907,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P4_2019",
@@ -9209,7 +9938,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P4_3cat_2019",
@@ -9237,7 +9969,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P64_2019",
@@ -9265,7 +10000,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P64_3cat_2019",
@@ -9293,7 +10031,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P8_2019",
@@ -9321,7 +10062,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_P8_3cat_2019",
@@ -9349,7 +10093,10 @@
     "file": "model0_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Likelihood_Quant_2019",
@@ -9378,7 +10125,10 @@
     "file": "model_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_2019_Scaff-22_ground",
@@ -9407,7 +10157,10 @@
     "file": "Scaff-22_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_2019_Scaff-22_tofit",
@@ -9436,7 +10189,10 @@
     "file": "Scaff-22_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_Ensemble_2019_ensemble_tofit",
@@ -9465,7 +10221,10 @@
     "file": "ensemble_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_MAPK_Ensemble_2019_machine_tofit",
@@ -9494,7 +10253,10 @@
     "file": "machine_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_mon1ccz1_ox",
@@ -9567,7 +10329,10 @@
     "file": "rab_mon1ccz1_ox.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_rab5_ox",
@@ -9640,7 +10405,10 @@
     "file": "rab_rab5_ox.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_rab7_ox",
@@ -9713,7 +10481,10 @@
     "file": "rab_rab7_ox.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_2019_rab_wt",
@@ -9786,7 +10557,10 @@
     "file": "rab_wt.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_mon1ccz1_ox",
@@ -9817,7 +10591,10 @@
     "file": "rab_mon1ccz1_ox.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_rab5_ox",
@@ -9848,7 +10625,10 @@
     "file": "rab_rab5_ox.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_rab7_ox",
@@ -9879,7 +10659,10 @@
     "file": "rab_rab7_ox.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_Rab_wt_pybnf_2019_rab_wt",
@@ -9910,7 +10693,10 @@
     "file": "rab_wt.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_RafConstraint_2019",
@@ -9939,7 +10725,10 @@
     "file": "RAFi.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_RafConstraint4_2019",
@@ -9968,7 +10757,10 @@
     "file": "RAFi.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_SimpleReceptor_2019_example5_starting_point",
@@ -9997,7 +10789,10 @@
     "file": "example5_starting_point.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_SimpleReceptor_2019_receptor",
@@ -10026,7 +10821,10 @@
     "file": "receptor.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_SimpleReceptor_NF_2019",
@@ -10056,7 +10854,10 @@
     "file": "receptor_nf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_TCR_2019",
@@ -10085,7 +10886,10 @@
     "file": "tcr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_TCRSensitivity_2019",
@@ -10114,7 +10918,10 @@
     "file": "tcr_sens_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Mitra_ThreeStepCascade_2019_m1",
@@ -10143,7 +10950,10 @@
     "file": "m1.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_ThreeStepCascade_2019_m1_ground",
@@ -10172,7 +10982,10 @@
     "file": "m1_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mitra_TLBR_2019",
@@ -10201,7 +11014,10 @@
     "file": "tlbr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ml_gradient_descent",
@@ -10236,7 +11052,10 @@
     "file": "ml_gradient_descent.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ml_hopfield",
@@ -10270,7 +11089,10 @@
     "file": "ml_hopfield.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ml_kmeans",
@@ -10303,7 +11125,10 @@
     "file": "ml_kmeans.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ml_q_learning",
@@ -10338,7 +11163,10 @@
     "file": "ml_q_learning.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ml_svm",
@@ -10372,7 +11200,10 @@
     "file": "ml_svm.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Motivating_example",
@@ -10404,7 +11235,10 @@
     "file": "Motivating_example.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Motivating_example_cBNGL",
@@ -10437,7 +11271,10 @@
     "file": "Motivating_example_cBNGL.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "motor",
@@ -10465,7 +11302,10 @@
     "file": "motor.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_arithmetic_compiler",
@@ -10498,7 +11338,10 @@
     "file": "mt_arithmetic_compiler.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_bngl_interpreter",
@@ -10533,7 +11376,10 @@
     "file": "mt_bngl_interpreter.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_music_sequencer",
@@ -10571,7 +11417,10 @@
     "file": "mt_music_sequencer.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "mt_pascal_triangle",
@@ -10602,7 +11451,10 @@
     "file": "mt_pascal_triangle.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mt_quine",
@@ -10633,7 +11485,10 @@
     "file": "mt_quine.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mtor-signaling",
@@ -10666,7 +11521,10 @@
     "file": "mtor-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "mtorc2-signaling",
@@ -10700,7 +11558,10 @@
     "file": "mtorc2-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Mukhopadhyay_TCR_2013",
@@ -10731,7 +11592,10 @@
     "file": "Mukhopadhyay_2013.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "mwc",
@@ -10759,7 +11623,10 @@
     "file": "mwc.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "myogenic-differentiation",
@@ -10791,7 +11658,10 @@
     "file": "myogenic-differentiation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Nag_cancer_2009",
@@ -10822,7 +11692,10 @@
     "file": "Nag_2009.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "negative-feedback-loop",
@@ -10854,7 +11727,10 @@
     "file": "negative-feedback-loop.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "neurotransmitter-release",
@@ -10887,7 +11763,10 @@
     "file": "neurotransmitter-release.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "nfkb",
@@ -10920,7 +11799,10 @@
     "file": "nfkb.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfkb_illustrating_protocols",
@@ -10955,7 +11837,10 @@
     "file": "nfkb_illustrating_protocols.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfkb-feedback",
@@ -10986,7 +11871,10 @@
     "file": "nfkb-feedback.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "nfsim_aggregation_gelation",
@@ -11016,7 +11904,10 @@
     "file": "nfsim_aggregation_gelation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_coarse_graining",
@@ -11046,7 +11937,10 @@
     "file": "nfsim_coarse_graining.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_dynamic_compartments",
@@ -11078,7 +11972,10 @@
     "file": "nfsim_dynamic_compartments.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_hybrid_particle_field",
@@ -11108,7 +12005,10 @@
     "file": "nfsim_hybrid_particle_field.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nfsim_ring_closure_polymer",
@@ -11141,7 +12041,10 @@
     "file": "nfsim_ring_closure_polymer.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "nn_xor",
@@ -11177,7 +12080,10 @@
     "file": "nn_xor.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "no-cgmp-signaling",
@@ -11209,7 +12115,10 @@
     "file": "no-cgmp-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Nosbisch_cancer_2022",
@@ -11240,7 +12149,10 @@
     "file": "Nosbisch_2022.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Notch_Signaling_Pathway",
@@ -11270,7 +12182,10 @@
     "file": "notch.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "notch-delta-lateral-inhibition",
@@ -11303,7 +12218,10 @@
     "file": "notch-delta-lateral-inhibition.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ordyan_CaMKIIholo_2020",
@@ -11332,7 +12250,10 @@
     "file": "CaMKII_holo.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ordyan_extraCaMKIIHolo_2020",
@@ -11363,7 +12284,10 @@
     "file": "extra_CaMKII_Holo.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ordyan_mCaMKIICaSpike_2020",
@@ -11394,7 +12318,10 @@
     "file": "mCaMKII_Ca_Spike.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "organelle_transport",
@@ -11422,7 +12349,10 @@
     "file": "organelle_transport.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "organelle_transport_struct",
@@ -11451,7 +12381,10 @@
     "file": "organelle_transport_struct.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "oxidative-stress-response",
@@ -11484,7 +12417,10 @@
     "file": "oxidative-stress-response.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "p38-mapk-signaling",
@@ -11517,7 +12453,10 @@
     "file": "p38-mapk-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "p53-mdm2-oscillator",
@@ -11548,7 +12487,10 @@
     "file": "p53-mdm2-oscillator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "parp1-mediated-dna-repair",
@@ -11582,7 +12524,10 @@
     "file": "parp1-mediated-dna-repair.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Pekalski_published_2013",
@@ -11613,7 +12558,10 @@
     "file": "Pekalski_2013.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ph_lorenz_attractor",
@@ -11648,7 +12596,10 @@
     "file": "ph_lorenz_attractor.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "ph_nbody_gravity",
@@ -11680,7 +12631,10 @@
     "file": "ph_nbody_gravity.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ph_schrodinger",
@@ -11710,7 +12664,10 @@
     "file": "ph_schrodinger.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ph_wave_equation",
@@ -11741,7 +12698,10 @@
     "file": "ph_wave_equation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "phosphorelay-chain",
@@ -11772,7 +12732,10 @@
     "file": "phosphorelay-chain.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "platelet-activation",
@@ -11805,7 +12768,10 @@
     "file": "platelet-activation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polymer",
@@ -11835,7 +12801,10 @@
     "file": "polymer.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polymer_draft",
@@ -11866,7 +12835,10 @@
     "file": "polymer_draft.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polymer_fixed",
@@ -11894,7 +12866,10 @@
     "file": "polymer_fixed.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "polynomial",
@@ -11921,7 +12896,10 @@
     "file": "polynomial.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Posner_blbr_1995",
@@ -11952,7 +12930,10 @@
     "file": "blbr_rings_posner1995.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Posner_blbr_2004",
@@ -11983,7 +12964,10 @@
     "file": "blbr_cooperativity_posner2004.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "predator-prey-dynamics",
@@ -12012,7 +12996,10 @@
     "file": "predator-prey-dynamics.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "process_actin_treadmilling",
@@ -12043,7 +13030,10 @@
     "file": "process_actin_treadmilling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_autophagy_flux",
@@ -12077,7 +13067,10 @@
     "file": "process_autophagy_flux.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_cell_adhesion_strength",
@@ -12111,7 +13104,10 @@
     "file": "process_cell_adhesion_strength.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_kinetic_proofreading_tcr",
@@ -12142,7 +13138,10 @@
     "file": "process_kinetic_proofreading_tcr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "process_quorum_sensing_switch",
@@ -12176,7 +13175,10 @@
     "file": "process_quorum_sensing_switch.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Actions_Syntax",
@@ -12205,7 +13207,10 @@
     "file": "actions_syntax.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_BNG_Error",
@@ -12233,7 +13238,10 @@
     "file": "bng_error.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Parabola",
@@ -12261,7 +13269,10 @@
     "file": "parabola.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Parabola_Demo",
@@ -12289,7 +13300,10 @@
     "file": "parabola.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Parabola_Ground",
@@ -12317,7 +13331,10 @@
     "file": "parabola_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Polynomial",
@@ -12345,7 +13362,10 @@
     "file": "polynomial.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Polynomial_Ground",
@@ -12373,7 +13393,10 @@
     "file": "polynomial_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_RAFi",
@@ -12402,7 +13425,10 @@
     "file": "RAFi.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_RAFi_Ground",
@@ -12431,7 +13457,10 @@
     "file": "RAFi_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Receptor",
@@ -12459,7 +13488,10 @@
     "file": "receptor.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_Receptor_NF",
@@ -12488,7 +13520,10 @@
     "file": "receptor_nf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_TCR",
@@ -12517,7 +13552,10 @@
     "file": "tcr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Core_TLBR",
@@ -12546,7 +13584,10 @@
     "file": "tlbr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Degranulation_Model",
@@ -12576,7 +13617,10 @@
     "file": "degranulation_model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_Ground",
@@ -12605,7 +13649,10 @@
     "file": "egfr_ground.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_Model",
@@ -12634,7 +13681,10 @@
     "file": "egfr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_NF",
@@ -12664,7 +13714,10 @@
     "file": "egfr_nf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_ODE",
@@ -12693,7 +13746,10 @@
     "file": "egfr_ode.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_EGFR_ODE_Pub",
@@ -12722,7 +13778,10 @@
     "file": "egfr_ode.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Egg",
@@ -12750,7 +13809,10 @@
     "file": "egg.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_ErrNoFrees",
@@ -12778,7 +13840,10 @@
     "file": "ErrNoFrees.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Example1",
@@ -12807,7 +13872,10 @@
     "file": "example1.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Example2_Start",
@@ -12837,7 +13905,10 @@
     "file": "example2_starting_point.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_FceRI_Gamma2",
@@ -12866,7 +13937,10 @@
     "file": "fceri_gamma2.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_FceRI_Gamma2_Ground",
@@ -12895,7 +13969,10 @@
     "file": "fceri_gamma2_ground_truth.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_FreeMissing",
@@ -12923,7 +14000,10 @@
     "file": "free_missing.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_IGF1R_Activation",
@@ -12952,7 +14032,10 @@
     "file": "IGF1R_Model_receptor_activation_bnf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_LilyIgE",
@@ -12981,7 +14064,10 @@
     "file": "LilyIgE.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Model",
@@ -13010,7 +14096,10 @@
     "file": "model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Model_aMCMC",
@@ -13039,7 +14128,10 @@
     "file": "model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Model_ToFit",
@@ -13068,7 +14160,10 @@
     "file": "model_tofit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NFmodel",
@@ -13096,7 +14191,10 @@
     "file": "NFmodel.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NoFrees",
@@ -13124,7 +14222,10 @@
     "file": "no_frees.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NoGenerateNetwork",
@@ -13152,7 +14253,10 @@
     "file": "no_generate_network.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_NoSuffix",
@@ -13180,7 +14284,10 @@
     "file": "no_suffix.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola",
@@ -13208,7 +14315,10 @@
     "file": "parabola.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola_Files",
@@ -13236,7 +14346,10 @@
     "file": "parabola.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola_Special",
@@ -13264,7 +14377,10 @@
     "file": "parabola.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Parabola2",
@@ -13292,7 +14408,10 @@
     "file": "parabola2.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_ParamsEverywhere",
@@ -13320,7 +14439,10 @@
     "file": "ParamsEverywhere.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Polynomial_T6",
@@ -13348,7 +14470,10 @@
     "file": "polynomial.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple",
@@ -13376,7 +14501,10 @@
     "file": "Simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_AddActions",
@@ -13404,7 +14532,10 @@
     "file": "Simple_AddActions.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_Answer",
@@ -13432,7 +14563,10 @@
     "file": "Simple_Answer.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_GenOnly",
@@ -13460,7 +14594,10 @@
     "file": "Simple_GenOnly.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_NF_Seed",
@@ -13489,7 +14626,10 @@
     "file": "simple_nf_seed.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Simple_NoGen",
@@ -13517,7 +14657,10 @@
     "file": "Simple_nogen.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Tricky",
@@ -13545,7 +14688,10 @@
     "file": "Tricky.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_TrickyUS",
@@ -13573,7 +14719,10 @@
     "file": "TrickyUS.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBioNetGen_Trivial",
@@ -13601,7 +14750,10 @@
     "file": "trivial.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "PyBNF_fitting_setup_190127_CHO_EGFR_forBNF",
@@ -13628,7 +14780,10 @@
     "file": "190127_CHO_EGFR_forBNF.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "quasi_equilibrium",
@@ -13658,7 +14813,10 @@
     "file": "quasi_equilibrium.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "quorum-sensing-circuit",
@@ -13691,7 +14849,10 @@
     "file": "quorum-sensing-circuit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "rab-gtpase-cycle",
@@ -13723,7 +14884,10 @@
     "file": "rab-gtpase-cycle.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Ran_NuclearTransport",
@@ -13753,7 +14917,10 @@
     "file": "Rule_based_Ran_transport.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Ran_NuclearTransport_Draft",
@@ -13783,7 +14950,10 @@
     "file": "Rule_based_Ran_transport_draft.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "rankl-rank-signaling",
@@ -13816,7 +14986,10 @@
     "file": "rankl-rank-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ras-gef-gap-cycle",
@@ -13851,7 +15024,10 @@
     "file": "ras-gef-gap-cycle.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "rec_dim",
@@ -13881,7 +15057,10 @@
     "file": "rec_dim.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "rec_dim_comp",
@@ -13912,7 +15091,10 @@
     "file": "rec_dim_comp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "receptor_nf",
@@ -13940,7 +15122,10 @@
     "file": "receptor_nf.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Repressilator",
@@ -13977,7 +15162,10 @@
     "file": "Repressilator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "repressilator-oscillator",
@@ -14013,7 +15201,10 @@
     "file": "repressilator-oscillator.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "retinoic-acid-signaling",
@@ -14047,7 +15238,10 @@
     "file": "retinoic-acid-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "rho-gtpase-actin-cytoskeleton",
@@ -14081,7 +15275,10 @@
     "file": "rho-gtpase-actin-cytoskeleton.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_EGFR_best-fit",
@@ -14110,7 +15307,10 @@
     "file": "190127_CHO_EGFR_best-fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_EGFR_Epigen",
@@ -14139,7 +15339,10 @@
     "file": "190127_CHO_EGFR_Epigen.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_EGFR_sensitivity",
@@ -14168,7 +15371,10 @@
     "file": "190127_CHO_EGFR_sensitivity.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_CHO_HA_EGFR_L858R",
@@ -14197,7 +15403,10 @@
     "file": "190127_CHO_HA_EGFR_L858R.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_HeLa",
@@ -14226,7 +15435,10 @@
     "file": "190127_HeLa.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_HMEC",
@@ -14255,7 +15467,10 @@
     "file": "190127_HMEC.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Salazar_Cavazos_egfr_2019_190127_MCF10A",
@@ -14284,7 +15499,10 @@
     "file": "190127_MCF10A.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "SHP2_base_model",
@@ -14313,7 +15531,10 @@
     "file": "SHP2_base_model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "shp2-phosphatase-regulation",
@@ -14345,7 +15566,10 @@
     "file": "shp2-phosphatase-regulation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "signal-amplification-cascade",
@@ -14378,7 +15602,10 @@
     "file": "signal-amplification-cascade.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "simple",
@@ -14408,7 +15635,10 @@
     "file": "simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "simple_nfsim_test",
@@ -14437,7 +15667,10 @@
     "file": "simple_nfsim_test.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "simple_sbml_import",
@@ -14467,7 +15700,10 @@
     "file": "simple_sbml_import.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "simple_system",
@@ -14495,7 +15731,10 @@
     "file": "simple_system.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "simple-dimerization",
@@ -14527,7 +15766,10 @@
     "file": "simple-dimerization.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "SIR",
@@ -14556,7 +15798,10 @@
     "file": "SIR.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sir-epidemic-model",
@@ -14590,7 +15835,10 @@
     "file": "sir-epidemic-model.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "smad-tgf-beta-signaling",
@@ -14625,7 +15873,10 @@
     "file": "smad-tgf-beta-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sonic-hedgehog-gradient",
@@ -14658,7 +15909,10 @@
     "file": "sonic-hedgehog-gradient.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "sp_fourier_synthesizer",
@@ -14695,7 +15949,10 @@
     "file": "sp_fourier_synthesizer.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sp_image_convolution",
@@ -14728,7 +15985,10 @@
     "file": "sp_image_convolution.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "sp_kalman_filter",
@@ -14764,7 +16024,10 @@
     "file": "sp_kalman_filter.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "stat3-mediated-transcription",
@@ -14796,7 +16059,10 @@
     "file": "stat3-mediated-transcription.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "stress-response-adaptation",
@@ -14828,7 +16094,10 @@
     "file": "stress-response-adaptation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Suderman_2013",
@@ -14863,7 +16132,10 @@
     "file": "Suderman_2013.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "synaptic-plasticity-ltp",
@@ -14899,7 +16171,10 @@
     "file": "synaptic-plasticity-ltp.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "synbio_band_pass_filter",
@@ -14934,7 +16209,10 @@
     "file": "synbio_band_pass_filter.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_counter_molecular",
@@ -14966,7 +16244,10 @@
     "file": "synbio_counter_molecular.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_edge_detector",
@@ -14999,7 +16280,10 @@
     "file": "synbio_edge_detector.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_logic_gates_enzymatic",
@@ -15036,7 +16320,10 @@
     "file": "synbio_logic_gates_enzymatic.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "synbio_oscillator_synchronization",
@@ -15069,7 +16356,10 @@
     "file": "synbio_oscillator_synchronization.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "t-cell-activation",
@@ -15102,7 +16392,10 @@
     "file": "t-cell-activation.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "test_ANG_synthesis_simple",
@@ -15134,7 +16427,10 @@
     "file": "test_ANG_synthesis_simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_fixed",
@@ -15162,7 +16458,10 @@
     "file": "test_fixed.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_MM",
@@ -15190,7 +16489,10 @@
     "file": "test_MM.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_mratio",
@@ -15221,7 +16523,10 @@
     "file": "test_mratio.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_network_gen",
@@ -15254,7 +16559,10 @@
     "file": "test_network_gen.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_sat",
@@ -15282,7 +16590,10 @@
     "file": "test_sat.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_cBNGL_simple",
@@ -15314,7 +16625,10 @@
     "file": "test_synthesis_cBNGL_simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_complex",
@@ -15346,7 +16660,10 @@
     "file": "test_synthesis_complex.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_complex_0_cBNGL",
@@ -15379,7 +16696,10 @@
     "file": "test_synthesis_complex_0_cBNGL.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_complex_source_cBNGL",
@@ -15413,7 +16733,10 @@
     "file": "test_synthesis_complex_source_cBNGL.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "test_synthesis_simple",
@@ -15444,7 +16767,10 @@
     "file": "test_synthesis_simple.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example1_fit",
@@ -15473,7 +16799,10 @@
     "file": "example1_fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example2_fit",
@@ -15502,7 +16831,10 @@
     "file": "example2_fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example3_fit",
@@ -15531,7 +16863,10 @@
     "file": "example3_fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example4_fit",
@@ -15560,7 +16895,10 @@
     "file": "example4_fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example5_fit",
@@ -15589,7 +16927,10 @@
     "file": "example5_fit.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example5_ground_truth",
@@ -15618,7 +16959,10 @@
     "file": "example5_ground_truth.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_egfr_2016_example6_ground_truth",
@@ -15647,7 +16991,10 @@
     "file": "example6_ground_truth.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_Example1_2016",
@@ -15676,7 +17023,10 @@
     "file": "example1.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_Example2_2016",
@@ -15705,7 +17055,10 @@
     "file": "example2.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Thomas_Example3_2016",
@@ -15734,7 +17087,10 @@
     "file": "example3.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Thomas_Example4_2016",
@@ -15762,7 +17118,10 @@
     "file": "example4.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Thomas_Example5_2016",
@@ -15790,7 +17149,10 @@
     "file": "example5.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Thomas_Example6_2016",
@@ -15818,7 +17180,10 @@
     "file": "example6.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "tlmr",
@@ -15845,7 +17210,10 @@
     "file": "tlmr.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "tlr3-dsrna-sensing",
@@ -15878,7 +17246,10 @@
     "file": "tlr3-dsrna-sensing.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "tnf-induced-apoptosis",
@@ -15912,7 +17283,10 @@
     "file": "tnf-induced-apoptosis.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "toggle",
@@ -15942,7 +17316,10 @@
     "file": "toggle.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "toy-jim",
@@ -15970,7 +17347,10 @@
     "file": "toy-jim.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "toy1",
@@ -15999,7 +17379,10 @@
     "file": "toy1.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "toy2",
@@ -16027,7 +17410,10 @@
     "file": "toy2.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "translateSBML",
@@ -16054,7 +17440,10 @@
     "file": "translateSBML.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "two-component-system",
@@ -16086,7 +17475,10 @@
     "file": "two-component-system.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "univ_synth",
@@ -16114,7 +17506,10 @@
     "file": "univ_synth.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "vegf-angiogenesis",
@@ -16147,7 +17542,10 @@
     "file": "vegf-angiogenesis.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Vilar_Circadian_2002",
@@ -16176,7 +17574,10 @@
     "file": "vilar_2002.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Vilar_Circadian_2002b",
@@ -16205,7 +17606,10 @@
     "file": "vilar_2002b.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Vilar_Circadian_2002c",
@@ -16234,7 +17638,10 @@
     "file": "vilar_2002c.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "viral-sensing-innate-immunity",
@@ -16270,7 +17677,10 @@
     "file": "viral-sensing-innate-immunity.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "visualize",
@@ -16295,7 +17705,10 @@
     "file": "visualize.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "wacky_alchemy_stone",
@@ -16327,7 +17740,10 @@
     "file": "wacky_alchemy_stone.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_black_hole",
@@ -16360,7 +17776,10 @@
     "file": "wacky_black_hole.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_bouncing_ball",
@@ -16392,7 +17811,10 @@
     "file": "wacky_bouncing_ball.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_traffic_jam_asep",
@@ -16427,7 +17849,10 @@
     "file": "wacky_traffic_jam_asep.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wacky_zombie_infection",
@@ -16458,7 +17883,10 @@
     "file": "wacky_zombie_infection.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "wnt-beta-catenin-signaling",
@@ -16494,7 +17922,10 @@
     "file": "wnt-beta-catenin-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "wound-healing-pdgf-signaling",
@@ -16527,7 +17958,10 @@
     "file": "wound-healing-pdgf-signaling.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Yang_tlbr_2008",
@@ -16555,7 +17989,10 @@
     "file": "tlbr_yang2008.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "ZAP70_immunology_2021",
@@ -16589,7 +18026,10 @@
     "file": "Model_ZAP.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": true,
+    "excluded": false
   },
   {
     "id": "Zhang_developmental_2021",
@@ -16620,7 +18060,10 @@
     "file": "Zhang_2021.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   },
   {
     "id": "Zhang_developmental_2023",
@@ -16651,6 +18094,9 @@
     "file": "Zhang_2023.bngl",
     "collectionId": null,
     "featured": false,
-    "difficulty": "advanced"
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
   }
 ]
