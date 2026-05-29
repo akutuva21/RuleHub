@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated": "2026-05-03T22:49:19.469Z",
+  "generated": "2026-05-28T14:08:56.714Z",
   "categories": [
     {
       "id": "cancer",
@@ -100,67 +100,25 @@
     }
   ],
   "assignments": {
-    "02_egfr_egfr": [
+    "190127_CHO_EGFR_Epigen": [
       "published-models"
     ],
-    "03_fcerig_fceri_gamma2": [
+    "190127_CHO_EGFR_best-fit": [
       "published-models"
     ],
-    "04_egfrnf_egfr_nf": [
+    "190127_CHO_EGFR_sensitivity": [
       "published-models"
     ],
-    "05_threestep_m1": [
+    "190127_CHO_HA_EGFR_L858R": [
       "published-models"
     ],
-    "06_degranulation_model_tofit": [
+    "190127_HMEC": [
       "published-models"
     ],
-    "07_egg_egg": [
+    "190127_HeLa": [
       "published-models"
     ],
-    "10_egfr_egfr_ode": [
-      "published-models"
-    ],
-    "11_TLBR_tlbr": [
-      "published-models"
-    ],
-    "12_TCR_tcr": [
-      "published-models"
-    ],
-    "13_receptor_example5_starting_point": [
-      "published-models"
-    ],
-    "14_receptor_nf_receptor_nf": [
-      "published-models"
-    ],
-    "15_igf1r_IGF1R_fit_all": [
-      "published-models"
-    ],
-    "17_egfr_ssa_egfr": [
-      "published-models"
-    ],
-    "18_mapk_Scaff_22_ground": [
-      "published-models"
-    ],
-    "19_raf_constraint_RAFi": [
-      "published-models"
-    ],
-    "20_raf_constraint4_RAFi": [
-      "published-models"
-    ],
-    "24_jnk_JNKmodel_180724_bnf": [
-      "published-models"
-    ],
-    "26_tcr_sens_tcr_sens_tofit": [
-      "published-models"
-    ],
-    "28_mapk_ensemble_tofit": [
-      "published-models"
-    ],
-    "30_jobs_jobs_ground": [
-      "published-models"
-    ],
-    "31_elephant_elephant": [
+    "190127_MCF10A": [
       "published-models"
     ],
     "AB": [
@@ -183,10 +141,7 @@
     "ABp_approx": [
       "native-tutorials"
     ],
-    "Alabama": [
-      "published-models"
-    ],
-    "An_2009": [
+    "An_TLR4_2009": [
       "immunology",
       "published-models"
     ],
@@ -199,53 +154,59 @@
     "BAB_scan": [
       "native-tutorials"
     ],
-    "BaruaBCR_2012": [
+    "BLBR": [
+      "native-tutorials"
+    ],
+    "Barua_BCR_2012": [
       "immunology",
       "published-models"
     ],
-    "BaruaFceRI_2012": [
+    "Barua_EGFR_2007": [
+      "cancer",
+      "published-models"
+    ],
+    "Barua_FceRI_2012": [
       "immunology",
       "published-models"
     ],
-    "Barua_2007": [
+    "Barua_JAK2_2009": [
       "cancer",
       "published-models"
     ],
-    "Barua_2009": [
-      "cancer",
+    "Barua_bcat_2013": [
       "published-models"
     ],
-    "Barua_2013": [
-      "published-models"
-    ],
-    "Blinov_2006": [
+    "Blinov_egfr_2006": [
       "cell-cycle",
       "published-models"
     ],
-    "Blinov_egfr": [
+    "Blinov_egfr_NF_2006": [
       "cancer",
       "published-models"
     ],
-    "Blinov_ran": [
+    "Blinov_ran_2006": [
       "cell-cycle",
       "published-models"
     ],
-    "CaMKII_holo": [
-      "published-models"
+    "CaOscillate_Func": [
+      "test-models"
     ],
-    "Chattaraj_2021": [
+    "CaOscillate_Sat": [
+      "test-models"
+    ],
+    "Chattaraj_nephrin_2021": [
       "neuroscience",
       "published-models"
     ],
-    "Cheemalavagu_JAK_STAT": [
+    "Cheemalavagu_JAKSTAT_2024": [
       "immunology",
       "published-models"
     ],
-    "ChylekFceRI_2014": [
+    "Chylek_FceRI_2014": [
       "immunology",
       "published-models"
     ],
-    "ChylekTCR_2014": [
+    "Chylek_TCR_2014": [
       "immunology",
       "published-models"
     ],
@@ -254,39 +215,41 @@
     ],
     "CircadianOscillator": [
       "cell-cycle",
-      "native-tutorials",
-      "published-models"
+      "native-tutorials"
     ],
     "ComplexDegradation": [
-      "native-tutorials",
-      "published-models"
+      "native-tutorials"
     ],
     "Creamer_2012": [
       "native-tutorials"
     ],
-    "Dallas": [
+    "Dembo_blbr_1978": [
+      "physics",
       "published-models"
     ],
-    "Dembo_1978": [
-      "physics",
+    "Dolan2015": [
+      "metabolism",
       "published-models"
     ],
     "Dolan_2015": [
       "metabolism",
       "published-models"
     ],
-    "Dreisigmeyer_2008": [
+    "Dreisigmeyer_LacOperon_2008": [
       "published-models"
     ],
-    "Dushek_2011": [
+    "Dushek_TCR_2011": [
       "immunology",
       "published-models"
     ],
-    "Dushek_2014": [
+    "Dushek_TCR_2014": [
       "immunology",
       "published-models"
     ],
-    "Erdem_2021": [
+    "ERK_model": [
+      "published-models"
+    ],
+    "Erdem_InsR_2021": [
       "metabolism",
       "published-models"
     ],
@@ -294,76 +257,100 @@
       "immunology",
       "published-models"
     ],
+    "Faeder_FceRI_Fyn_2003": [
+      "immunology",
+      "published-models"
+    ],
+    "Faeder_egfr_2009": [
+      "cancer",
+      "published-models"
+    ],
+    "Faeder_egfr_compart_2009": [
+      "published-models"
+    ],
     "FceRI_ji": [
       "native-tutorials"
     ],
     "FceRI_viz": [
-      "native-tutorials",
-      "published-models"
+      "native-tutorials"
     ],
     "GK": [
       "metabolism",
       "native-tutorials"
     ],
-    "Gardner_2000": [
+    "Gardner_Toggle_2000": [
       "published-models"
     ],
-    "Goldstein_1980": [
-      "physics",
-      "published-models"
-    ],
-    "Harmon_2017": [
+    "Goldstein_TLBR_1984": [
       "immunology",
       "published-models"
     ],
-    "Hat_2016": [
+    "Goldstein_blbr_1980": [
+      "physics",
+      "published-models"
+    ],
+    "HIV_Dynamics_pt303": [
+      "published-models"
+    ],
+    "HIV_Dynamics_pt403": [
+      "published-models"
+    ],
+    "HIV_Dynamics_pt409": [
+      "published-models"
+    ],
+    "Harmon_Antigen_2017": [
+      "immunology",
+      "published-models"
+    ],
+    "Hat_wip1_2016": [
       "cell-cycle",
       "multistage",
       "published-models"
     ],
-    "Hlavacek2018Egg_egg": [
+    "Haugh2b": [
+      "test-models"
+    ],
+    "Hlavacek_Egg_2018": [
       "published-models"
     ],
-    "Hlavacek2018Elephant_elephant_EFA": [
-      "published-models"
-    ],
-    "Hlavacek2018Restructuration_after_bunching": [
-      "published-models"
-    ],
-    "Hlavacek_1999": [
+    "Hlavacek_Proofreading_2001": [
       "physics",
       "published-models"
     ],
-    "Hlavacek_2001": [
+    "Hlavacek_Steric_1999": [
       "physics",
       "published-models"
     ],
-    "Houston": [
-      "published-models"
-    ],
-    "IGF1R_Model_receptor_activation_bnf": [
-      "published-models"
-    ],
-    "Jaruszewicz-Blonska_2023": [
+    "JaruszewiczBlonska_NFkB_2023": [
       "immunology",
       "published-models"
     ],
-    "Jung_2017": [
+    "Jung_CaMKII_2017": [
       "neuroscience",
       "published-models"
     ],
-    "Kesseler_2013": [
+    "Kesseler_CellCycle_2013": [
       "cell-cycle",
       "published-models"
     ],
-    "Kocieniewski_2012": [
+    "Kiefhaber_emodel": [
+      "test-models"
+    ],
+    "Kocieniewski_published_2012": [
       "published-models"
     ],
-    "Kozer_2013": [
+    "Korwek_InnateImmunity_2023": [
+      "immunology",
+      "published-models"
+    ],
+    "Korwek_ViralSensing_2023": [
+      "test-models"
+    ],
+    "Kozer_egfr_2013": [
       "cancer",
       "published-models"
     ],
-    "Kozer_2014": [
+    "Kozer_egfr_2014": [
       "cancer",
       "published-models"
     ],
@@ -385,15 +372,15 @@
     "LV_comp": [
       "native-tutorials"
     ],
-    "Lang_2024": [
+    "Lang_CellCycle_2024": [
       "cell-cycle",
       "published-models"
     ],
-    "Ligon_2014": [
-      "cancer",
+    "Lee_Wnt_2003": [
       "published-models"
     ],
-    "Lin2019_ERK_model": [
+    "Ligon_egfr_2014": [
+      "cancer",
       "published-models"
     ],
     "Lin_ERK_2019": [
@@ -416,123 +403,423 @@
       "native-tutorials",
       "neuroscience"
     ],
-    "Macken_1982": [
+    "MAPK_Dimers_Model": [
+      "cancer",
+      "published-models"
+    ],
+    "MAPK_Monomers_Model": [
+      "cancer",
+      "published-models"
+    ],
+    "Macken_physics_1982": [
       "physics",
       "published-models"
     ],
-    "Mallela2021_Cities": [
+    "Mallela_COVID_2021": [
       "published-models"
     ],
-    "Mallela2021_States": [
+    "Mallela_Cities_2021": [
       "published-models"
     ],
-    "Mallela2022_MSAs": [
+    "Mallela_MSAs_2022": [
       "published-models"
     ],
-    "Massole_2023": [
+    "Mallela_VaxVariants_Alabama_2022": [
+      "published-models"
+    ],
+    "Mallela_VaxVariants_Dallas_2022": [
+      "published-models"
+    ],
+    "Mallela_VaxVariants_Houston_2022": [
+      "published-models"
+    ],
+    "Mallela_VaxVariants_MyrtleBeach_2022": [
+      "published-models"
+    ],
+    "Mallela_VaxVariants_NYC_2022": [
+      "published-models"
+    ],
+    "Mallela_VaxVariants_Phoenix_2022": [
+      "published-models"
+    ],
+    "Massole_developmental_2023": [
       "developmental",
       "published-models"
     ],
-    "McMillan_2021": [
+    "McMillan_TNF_2021": [
       "immunology",
       "published-models"
     ],
-    "Mertins_2023": [
+    "Mertins_cancer_2023": [
       "cancer",
       "published-models"
     ],
-    "Miller2022_NavajoNation": [
+    "Miller_MEK_2025": [
       "published-models"
     ],
-    "Miller2025_MEK": [
+    "Miller_NavajoNation_2022": [
       "published-models"
     ],
-    "Mitra2019_02_egfr_bnf1_InputFiles_egfr": [
+    "Mitra_Degranulation_2019": [
       "published-models"
     ],
-    "Model_ZAP": [
+    "Mitra_EGFR_2019": [
+      "published-models"
+    ],
+    "Mitra_EGFR_NF_2019": [
+      "published-models"
+    ],
+    "Mitra_EGFR_ODE_2019": [
+      "published-models"
+    ],
+    "Mitra_EggOscillator_2019": [
+      "published-models"
+    ],
+    "Mitra_ElephantFitting_2019": [
+      "published-models"
+    ],
+    "Mitra_FceRI_gamma2_2019": [
+      "published-models"
+    ],
+    "Mitra_IGF1R_2019": [
+      "published-models"
+    ],
+    "Mitra_JNK_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P16_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P16_3cat_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P32_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P32_3cat_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P4_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P4_3cat_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P64_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P64_3cat_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P8_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_P8_3cat_2019": [
+      "published-models"
+    ],
+    "Mitra_Likelihood_Quant_2019": [
+      "published-models"
+    ],
+    "Mitra_RafConstraint4_2019": [
+      "published-models"
+    ],
+    "Mitra_RafConstraint_2019": [
+      "published-models"
+    ],
+    "Mitra_SimpleReceptor_NF_2019": [
+      "published-models"
+    ],
+    "Mitra_TCRSensitivity_2019": [
+      "published-models"
+    ],
+    "Mitra_TCR_2019": [
+      "published-models"
+    ],
+    "Mitra_TLBR_2019": [
+      "published-models"
+    ],
+    "Motivating_example": [
+      "test-models"
+    ],
+    "Motivating_example_cBNGL": [
+      "test-models"
+    ],
+    "Mukhopadhyay_TCR_2013": [
       "immunology",
       "published-models"
     ],
-    "Mukhopadhyay_2013": [
-      "immunology",
-      "published-models"
-    ],
-    "NYC": [
-      "published-models"
-    ],
-    "Nag_2009": [
+    "Nag_cancer_2009": [
       "cancer",
       "published-models"
     ],
-    "Nosbisch_2022": [
+    "Nosbisch_cancer_2022": [
       "cancer",
       "published-models"
     ],
-    "Pekalski_2013": [
+    "Notch_Signaling_Pathway": [
       "published-models"
     ],
-    "Phoenix": [
+    "Ordyan_CaMKIIholo_2020": [
       "published-models"
     ],
-    "Posner_1995": [
+    "Ordyan_extraCaMKIIHolo_2020": [
+      "published-models"
+    ],
+    "Ordyan_mCaMKIICaSpike_2020": [
+      "published-models"
+    ],
+    "Pekalski_published_2013": [
+      "published-models"
+    ],
+    "Posner_blbr_1995": [
       "physics",
       "published-models"
     ],
-    "Posner_2004": [
+    "Posner_blbr_2004": [
       "physics",
       "published-models"
     ],
     "PyBNF_fitting_setup_190127_CHO_EGFR_forBNF": [
       "published-models"
     ],
-    "RAFi": [
+    "PyBioNetGen_Actions_Syntax": [
+      "test-models"
+    ],
+    "PyBioNetGen_BNG_Error": [
+      "test-models"
+    ],
+    "PyBioNetGen_Core_Parabola": [
       "published-models"
     ],
-    "RAFi_ground": [
+    "PyBioNetGen_Core_Parabola_Demo": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_Parabola_Ground": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_Polynomial": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_Polynomial_Ground": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_RAFi": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_RAFi_Ground": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_Receptor": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_Receptor_NF": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_TCR": [
+      "published-models"
+    ],
+    "PyBioNetGen_Core_TLBR": [
+      "immunology",
+      "published-models"
+    ],
+    "PyBioNetGen_Degranulation_Model": [
+      "immunology",
+      "published-models"
+    ],
+    "PyBioNetGen_EGFR_Ground": [
+      "published-models"
+    ],
+    "PyBioNetGen_EGFR_Model": [
+      "published-models"
+    ],
+    "PyBioNetGen_EGFR_NF": [
+      "published-models"
+    ],
+    "PyBioNetGen_EGFR_ODE": [
+      "cancer",
+      "published-models"
+    ],
+    "PyBioNetGen_EGFR_ODE_Pub": [
+      "cancer",
+      "published-models"
+    ],
+    "PyBioNetGen_Egg": [
+      "test-models"
+    ],
+    "PyBioNetGen_ErrNoFrees": [
+      "test-models"
+    ],
+    "PyBioNetGen_Example1": [
+      "published-models"
+    ],
+    "PyBioNetGen_Example2_Start": [
+      "published-models"
+    ],
+    "PyBioNetGen_FceRI_Gamma2": [
+      "published-models"
+    ],
+    "PyBioNetGen_FceRI_Gamma2_Ground": [
+      "published-models"
+    ],
+    "PyBioNetGen_FreeMissing": [
+      "test-models"
+    ],
+    "PyBioNetGen_IGF1R_Activation": [
+      "published-models"
+    ],
+    "PyBioNetGen_LilyIgE": [
+      "test-models"
+    ],
+    "PyBioNetGen_Model": [
+      "published-models"
+    ],
+    "PyBioNetGen_Model_ToFit": [
+      "published-models"
+    ],
+    "PyBioNetGen_Model_aMCMC": [
+      "published-models"
+    ],
+    "PyBioNetGen_NFmodel": [
+      "test-models"
+    ],
+    "PyBioNetGen_NoFrees": [
+      "test-models"
+    ],
+    "PyBioNetGen_NoGenerateNetwork": [
+      "test-models"
+    ],
+    "PyBioNetGen_NoSuffix": [
+      "test-models"
+    ],
+    "PyBioNetGen_Parabola": [
+      "test-models"
+    ],
+    "PyBioNetGen_Parabola2": [
+      "test-models"
+    ],
+    "PyBioNetGen_Parabola_Files": [
+      "test-models"
+    ],
+    "PyBioNetGen_Parabola_Special": [
+      "test-models"
+    ],
+    "PyBioNetGen_ParamsEverywhere": [
+      "test-models"
+    ],
+    "PyBioNetGen_Polynomial_T6": [
+      "test-models"
+    ],
+    "PyBioNetGen_Simple": [
+      "test-models"
+    ],
+    "PyBioNetGen_Simple_AddActions": [
+      "test-models"
+    ],
+    "PyBioNetGen_Simple_Answer": [
+      "test-models"
+    ],
+    "PyBioNetGen_Simple_GenOnly": [
+      "test-models"
+    ],
+    "PyBioNetGen_Simple_NF_Seed": [
+      "test-models"
+    ],
+    "PyBioNetGen_Simple_NoGen": [
+      "test-models"
+    ],
+    "PyBioNetGen_Tricky": [
+      "test-models"
+    ],
+    "PyBioNetGen_TrickyUS": [
+      "test-models"
+    ],
+    "PyBioNetGen_Trivial": [
+      "test-models"
+    ],
+    "Ran_NuclearTransport": [
+      "published-models"
+    ],
+    "Ran_NuclearTransport_Draft": [
       "published-models"
     ],
     "Repressilator": [
       "cell-cycle",
       "native-tutorials",
-      "published-models",
       "synbio"
     ],
-    "Rule_based_Ran_transport": [
-      "published-models"
-    ],
-    "Rule_based_Ran_transport_draft": [
-      "published-models"
-    ],
-    "Rule_based_egfr_compart": [
-      "published-models"
-    ],
-    "Rule_based_egfr_tutorial": [
-      "cancer",
-      "published-models"
+    "SHP2_base_model": [
+      "test-models"
     ],
     "SIR": [
       "native-tutorials"
     ],
-    "Salazar_Cavazos2019_190127_CHO_EGFR_best_fit": [
+    "Scaff-22_ground": [
+      "published-models"
+    ],
+    "Scaff-22_tofit": [
       "published-models"
     ],
     "Suderman_2013": [
       "native-tutorials"
     ],
-    "Thomas2016_example1_fit": [
+    "TCR_model": [
       "published-models"
     ],
-    "Yang_2008": [
+    "Thomas_Example1_2016": [
+      "published-models"
+    ],
+    "Thomas_Example2_2016": [
+      "published-models"
+    ],
+    "Thomas_Example3_2016": [
+      "published-models"
+    ],
+    "Thomas_Example4_2016": [
+      "published-models"
+    ],
+    "Thomas_Example5_2016": [
+      "published-models"
+    ],
+    "Thomas_Example6_2016": [
+      "published-models"
+    ],
+    "Vilar_Circadian_2002": [
+      "cell-cycle",
+      "published-models"
+    ],
+    "Vilar_Circadian_2002b": [
+      "cell-cycle",
+      "published-models"
+    ],
+    "Vilar_Circadian_2002c": [
+      "published-models"
+    ],
+    "Yang_tlbr_2008": [
       "physics",
       "published-models"
     ],
-    "Zhang_2021": [
+    "ZAP70_immunology_2021": [
+      "immunology",
+      "published-models"
+    ],
+    "Zhang_developmental_2021": [
       "developmental",
       "published-models"
     ],
-    "Zhang_2023": [
+    "Zhang_developmental_2023": [
       "developmental",
+      "published-models"
+    ],
+    "after_bunching": [
+      "published-models"
+    ],
+    "after_decoupling": [
+      "published-models"
+    ],
+    "after_scaling": [
       "published-models"
     ],
     "akt-signaling": [
@@ -562,13 +849,21 @@
       "immunology",
       "test-models"
     ],
+    "before_bunching": [
+      "published-models"
+    ],
+    "before_decoupling": [
+      "published-models"
+    ],
+    "before_scaling": [
+      "published-models"
+    ],
     "beta-adrenergic-response": [
       "neuroscience",
       "test-models"
     ],
     "birth-death": [
-      "native-tutorials",
-      "published-models"
+      "native-tutorials"
     ],
     "bistable-toggle-switch": [
       "test-models"
@@ -600,6 +895,9 @@
       "cell-cycle",
       "test-models"
     ],
+    "catalysis": [
+      "test-models"
+    ],
     "cd40-signaling": [
       "immunology",
       "test-models"
@@ -608,12 +906,14 @@
       "cell-cycle",
       "test-models"
     ],
+    "check_scaling": [
+      "published-models"
+    ],
     "checkpoint-kinase-signaling": [
       "cancer",
       "test-models"
     ],
     "chemistry": [
-      "published-models",
       "tutorials"
     ],
     "chemotaxis-signal-transduction": [
@@ -652,6 +952,9 @@
     "contact-inhibition-hippo-yap": [
       "test-models"
     ],
+    "continue": [
+      "test-models"
+    ],
     "cooperative-binding": [
       "test-models"
     ],
@@ -682,10 +985,6 @@
     "cs_regex_nfa": [
       "cs",
       "test-models"
-    ],
-    "degranulation_model": [
-      "immunology",
-      "published-models"
     ],
     "dna-damage-repair": [
       "cancer",
@@ -735,18 +1034,26 @@
     "egfr_ground": [
       "published-models"
     ],
-    "egfr_nf": [
-      "published-models"
+    "egfr_net": [
+      "test-models"
     ],
-    "egfr_ode": [
-      "cancer",
-      "published-models"
+    "egfr_net_red": [
+      "test-models"
+    ],
+    "egfr_path": [
+      "test-models"
     ],
     "egfr_simple": [
       "native-tutorials"
     ],
     "eif2a-stress-response": [
       "test-models"
+    ],
+    "elephant_EFA": [
+      "published-models"
+    ],
+    "elephant_fit": [
+      "published-models"
     ],
     "endosomal-sorting-rab": [
       "test-models"
@@ -760,11 +1067,17 @@
     "energy_cooperativity_adh": [
       "test-models"
     ],
+    "energy_example1": [
+      "test-models"
+    ],
     "energy_linear_chain": [
       "test-models"
     ],
     "energy_transport_pump": [
       "test-models"
+    ],
+    "ensemble_tofit": [
+      "published-models"
     ],
     "er-stress-response": [
       "test-models"
@@ -773,41 +1086,38 @@
       "test-models"
     ],
     "example1": [
+      "test-models"
+    ],
+    "example1_fit": [
       "published-models"
     ],
-    "example1_BNFfiles_example1": [
+    "example2_fit": [
       "published-models"
     ],
-    "example2_BNFfiles_example2": [
+    "example3_fit": [
       "published-models"
     ],
-    "example2_starting_point": [
+    "example4_fit": [
       "published-models"
     ],
-    "example3_BNFfiles_example3": [
+    "example5_fit": [
       "published-models"
     ],
-    "example4_BNFfiles_example4": [
+    "example5_ground_truth": [
       "published-models"
     ],
-    "example5_BNFfiles_example5": [
+    "example5_starting_point": [
       "published-models"
     ],
-    "example6_BNFfiles_example6": [
+    "example6_ground_truth": [
       "published-models"
     ],
-    "extra_CaMKII_Holo": [
-      "published-models"
-    ],
-    "fceri_fyn": [
+    "fceri_ji": [
       "immunology",
       "published-models"
     ],
-    "fceri_gamma2": [
-      "published-models"
-    ],
-    "fceri_gamma2_ground_truth": [
-      "published-models"
+    "fceri_ji_comp": [
+      "test-models"
     ],
     "feature_functional_rates_volume": [
       "test-models"
@@ -870,6 +1180,9 @@
       "developmental",
       "test-models"
     ],
+    "heise": [
+      "test-models"
+    ],
     "hematopoietic-growth-factor": [
       "test-models"
     ],
@@ -894,10 +1207,6 @@
       "immunology",
       "test-models"
     ],
-    "innate_immunity": [
-      "immunology",
-      "published-models"
-    ],
     "inositol-phosphate-metabolism": [
       "neuroscience",
       "test-models"
@@ -913,12 +1222,21 @@
     "ire1a-xbp1-er-stress": [
       "test-models"
     ],
+    "issue_198_short": [
+      "test-models"
+    ],
     "jak-stat-cytokine-signaling": [
       "immunology",
       "test-models"
     ],
     "jnk-mapk-signaling": [
       "test-models"
+    ],
+    "jobs_ground": [
+      "published-models"
+    ],
+    "jobs_tofit": [
+      "published-models"
     ],
     "kir-channel-regulation": [
       "test-models"
@@ -934,15 +1252,16 @@
     "lipid-mediated-pip3-signaling": [
       "test-models"
     ],
-    "mCaMKII_Ca_Spike": [
+    "localfunc": [
+      "test-models"
+    ],
+    "m1": [
       "published-models"
     ],
-    "mapk-dimers": [
-      "cancer",
+    "m1_ground": [
       "published-models"
     ],
-    "mapk-monomers": [
-      "cancer",
+    "machine_tofit": [
       "published-models"
     ],
     "mapk-signaling-cascade": [
@@ -960,6 +1279,12 @@
     ],
     "michaelis-menten-kinetics": [
       "metabolism",
+      "test-models"
+    ],
+    "michment": [
+      "test-models"
+    ],
+    "michment_cont": [
       "test-models"
     ],
     "ml_gradient_descent": [
@@ -982,14 +1307,8 @@
       "ml-signal",
       "test-models"
     ],
-    "model": [
-      "published-models"
-    ],
-    "model_ground": [
-      "published-models"
-    ],
-    "model_tofit": [
-      "published-models"
+    "motor": [
+      "test-models"
     ],
     "mt_arithmetic_compiler": [
       "cs",
@@ -1018,6 +1337,9 @@
     "mtorc2-signaling": [
       "test-models"
     ],
+    "mwc": [
+      "test-models"
+    ],
     "myogenic-differentiation": [
       "developmental",
       "test-models"
@@ -1029,7 +1351,13 @@
       "neuroscience",
       "test-models"
     ],
+    "nfkb": [
+      "test-models"
+    ],
     "nfkb-feedback": [
+      "test-models"
+    ],
+    "nfkb_illustrating_protocols": [
       "test-models"
     ],
     "nfsim_aggregation_gelation": [
@@ -1055,9 +1383,6 @@
       "metabolism",
       "test-models"
     ],
-    "notch": [
-      "published-models"
-    ],
     "notch-delta-lateral-inhibition": [
       "developmental",
       "test-models"
@@ -1078,12 +1403,6 @@
     "p53-mdm2-oscillator": [
       "cell-cycle",
       "test-models"
-    ],
-    "parabola": [
-      "published-models"
-    ],
-    "parabola_ground": [
-      "published-models"
     ],
     "parp1-mediated-dna-repair": [
       "cell-cycle",
@@ -1113,53 +1432,21 @@
       "test-models"
     ],
     "polymer": [
-      "published-models",
       "tutorials"
     ],
     "polymer_draft": [
-      "published-models",
+      "tutorials"
+    ],
+    "polymer_fixed": [
       "tutorials"
     ],
     "polynomial": [
-      "published-models"
-    ],
-    "polynomial_ground": [
-      "published-models"
+      "test-models"
     ],
     "predator-prey-dynamics": [
       "test-models"
     ],
-    "problem16_3cat_model0_tofit": [
-      "published-models"
-    ],
-    "problem16_model0_tofit": [
-      "published-models"
-    ],
-    "problem32_3cat_model0_tofit": [
-      "published-models"
-    ],
-    "problem32_model0_tofit": [
-      "published-models"
-    ],
-    "problem4_3cat_model0_tofit": [
-      "published-models"
-    ],
-    "problem4_model0_tofit": [
-      "published-models"
-    ],
-    "problem64_3cat_model0_tofit": [
-      "published-models"
-    ],
-    "problem64_model0_tofit": [
-      "published-models"
-    ],
-    "problem8_3cat_model0_tofit": [
-      "published-models"
-    ],
-    "problem8_model0_tofit": [
-      "published-models"
-    ],
-    "problem_quant_model_tofit": [
+    "prion_model": [
       "published-models"
     ],
     "process_actin_treadmilling": [
@@ -1177,21 +1464,8 @@
     "process_quorum_sensing_switch": [
       "test-models"
     ],
-    "pt303": [
-      "published-models"
-    ],
-    "pt403": [
-      "published-models"
-    ],
-    "pt409": [
-      "published-models"
-    ],
-    "pybnf_files_rab_mon1ccz1_ox": [
-      "published-models"
-    ],
     "quasi_equilibrium": [
       "native-tutorials",
-      "published-models",
       "tutorials"
     ],
     "quorum-sensing-circuit": [
@@ -1203,6 +1477,15 @@
     "rab_mon1ccz1_ox": [
       "published-models"
     ],
+    "rab_rab5_ox": [
+      "published-models"
+    ],
+    "rab_rab7_ox": [
+      "published-models"
+    ],
+    "rab_wt": [
+      "published-models"
+    ],
     "rankl-rank-signaling": [
       "developmental",
       "test-models"
@@ -1211,11 +1494,17 @@
       "cancer",
       "test-models"
     ],
+    "rec_dim": [
+      "test-models"
+    ],
+    "rec_dim_comp": [
+      "test-models"
+    ],
     "receptor": [
       "published-models"
     ],
     "receptor_nf": [
-      "published-models"
+      "test-models"
     ],
     "repressilator-oscillator": [
       "test-models"
@@ -1234,10 +1523,18 @@
       "test-models"
     ],
     "simple": [
-      "published-models",
       "tutorials"
     ],
     "simple-dimerization": [
+      "test-models"
+    ],
+    "simple_nfsim_test": [
+      "tutorials"
+    ],
+    "simple_sbml_import": [
+      "test-models"
+    ],
+    "simple_system": [
       "test-models"
     ],
     "sir-epidemic-model": [
@@ -1299,12 +1596,41 @@
       "immunology",
       "test-models"
     ],
-    "tcr": [
-      "published-models"
+    "test_ANG_synthesis_simple": [
+      "test-models"
     ],
-    "tlbr": [
-      "immunology",
-      "published-models"
+    "test_MM": [
+      "test-models"
+    ],
+    "test_fixed": [
+      "test-models"
+    ],
+    "test_mratio": [
+      "test-models"
+    ],
+    "test_network_gen": [
+      "test-models"
+    ],
+    "test_sat": [
+      "test-models"
+    ],
+    "test_synthesis_cBNGL_simple": [
+      "test-models"
+    ],
+    "test_synthesis_complex": [
+      "test-models"
+    ],
+    "test_synthesis_complex_0_cBNGL": [
+      "test-models"
+    ],
+    "test_synthesis_complex_source_cBNGL": [
+      "test-models"
+    ],
+    "test_synthesis_simple": [
+      "test-models"
+    ],
+    "tlmr": [
+      "test-models"
     ],
     "tlr3-dsrna-sensing": [
       "immunology",
@@ -1316,42 +1642,36 @@
     ],
     "toggle": [
       "native-tutorials",
-      "published-models",
       "synbio"
     ],
+    "toy-jim": [
+      "test-models"
+    ],
     "toy1": [
-      "published-models",
       "tutorials"
     ],
     "toy2": [
-      "published-models",
       "tutorials"
     ],
+    "translateSBML": [
+      "native-tutorials"
+    ],
     "two-component-system": [
+      "test-models"
+    ],
+    "univ_synth": [
       "test-models"
     ],
     "vegf-angiogenesis": [
       "cancer",
       "test-models"
     ],
-    "vilar_2002": [
-      "cell-cycle",
-      "published-models"
-    ],
-    "vilar_2002b": [
-      "cell-cycle",
-      "published-models"
-    ],
-    "vilar_2002c": [
-      "published-models"
-    ],
     "viral-sensing-innate-immunity": [
       "immunology",
       "test-models"
     ],
     "visualize": [
-      "native-tutorials",
-      "published-models"
+      "native-tutorials"
     ],
     "wacky_alchemy_stone": [
       "synbio",
@@ -1371,9 +1691,6 @@
     "wacky_zombie_infection": [
       "ecology",
       "test-models"
-    ],
-    "wnt": [
-      "published-models"
     ],
     "wnt-beta-catenin-signaling": [
       "developmental",
