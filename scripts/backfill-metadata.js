@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { safeJoin } = require('./utils');
 const path = require('path');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
@@ -28,7 +29,7 @@ async function findBnglFiles(dir, ignoreDirs = DEFAULT_IGNORE_DIRS) {
     const entries = await fs.promises.readdir(dir, { withFileTypes: true });
     
     const promises = entries.map(async (entry) => {
-      const fullPath = path.join(dir, entry.name);
+      const fullPath = safeJoin(dir, entry.name);
 
       if (entry.isDirectory()) {
         if (ignoreDirs.some(ignored => {

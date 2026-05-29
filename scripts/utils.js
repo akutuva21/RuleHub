@@ -1,3 +1,4 @@
+const path = require('path');
 const fs = require('fs');
 
 function listModelFiles(dir) {
@@ -108,7 +109,21 @@ function parseMetadataYaml(content) {
   return result;
 }
 
+
+function safeJoin(base, target) {
+  const joinedPath = path.join(base, target);
+  const resolvedBase = path.resolve(base);
+  const resolvedJoined = path.resolve(joinedPath);
+
+  const basePathWithSep = resolvedBase.endsWith(path.sep) ? resolvedBase : resolvedBase + path.sep;
+  if (!resolvedJoined.startsWith(basePathWithSep) && resolvedJoined !== resolvedBase) {
+    throw new Error(`Path traversal security risk detected: ${target}`);
+  }
+  return joinedPath;
+}
+
 module.exports = {
+  safeJoin,
   listModelFiles,
   listModelFilesAsync,
   parseScalar,
