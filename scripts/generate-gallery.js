@@ -153,7 +153,7 @@ async function main(argv = process.argv.slice(2)) {
 
   for (const metadataFile of metadataFiles) {
     try {
-      const content = fs.readFileSync(metadataFile, 'utf8');
+      const content = await fs.promises.readFile(metadataFile, 'utf8');
       const metadata = parseMetadataYaml(content);
 
       const modelIds = extractModelIds(metadataFile, metadata);
