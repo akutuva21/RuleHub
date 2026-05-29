@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue } = require('./backfill-metadata.js');
+const { parseBngl, generateMetadata, formatYamlValue, inferOrigin } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -234,40 +234,33 @@ test('formatYamlValue', async (t) => {
   await t.test('handles null correctly', () => {
     assert.strictEqual(formatYamlValue(null), 'null\n');
   });
-});
 
-  await t.test('formats numbers correctly', () => {
-    assert.strictEqual(formatYamlValue(42), '42\n');
-    assert.strictEqual(formatYamlValue(3.14), '3.14\n');
-  });
+  await t.test('inferOrigin - infers origin based on path', async (st) => {
+    const cwd = process.cwd();
 
-  await t.test('formats booleans correctly', () => {
-    assert.strictEqual(formatYamlValue(true), 'true\n');
-    assert.strictEqual(formatYamlValue(false), 'false\n');
-  });
+    await st.test('infers published for Published directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Published', 'Model1')), 'published');
+    });
 
-  await t.test('formats flat objects correctly', () => {
-    const obj = { a: 1, b: 'two' };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\nb: two\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  b: two\n');
-  });
+    await st.test('infers ai-generated for Examples with AI prefix', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'AI-Generated-Model')), 'ai-generated');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'aigenerated-Model')), 'ai-generated');
+    });
 
-  await t.test('formats nested objects correctly', () => {
-    const obj = { a: 1, b: { c: 'two' } };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\n\nb:\nc: two\n\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  \n  b:\nc: two\n\n');
-  });
+    await st.test('infers ai-generated for Examples without AI prefix (fallback)', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'Some-Model')), 'ai-generated');
+    });
 
-  await t.test('formats arrays correctly', () => {
-    // Current behavior treats array as object with indices as keys
-    assert.strictEqual(formatYamlValue([1, 2]), '0: 1\n1: 2\n');
-  });
+    await st.test('infers tutorial for Tutorials directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Tutorials', 'Basic')), 'tutorial');
+    });
 
-  await t.test('handles undefined correctly', () => {
-    assert.strictEqual(formatYamlValue(undefined), 'undefined\n');
-  });
+    await st.test('infers contributed when path contains contributed', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'Contributed-Model')), 'contributed');
+    });
 
-  await t.test('handles null correctly', () => {
-    assert.strictEqual(formatYamlValue(null), 'null\n');
+    await st.test('infers test-case for unknown paths', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
+    });
   });
 });

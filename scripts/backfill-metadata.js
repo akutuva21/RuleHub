@@ -448,4 +448,5 @@ module.exports = {
   findBnglFiles,
   formatYaml,
   formatYamlValue,
+  inferOrigin,
 };
