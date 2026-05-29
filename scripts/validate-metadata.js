@@ -50,17 +50,27 @@ const COLLECTION_TYPE_VALUES = new Set([
 const SIMULATION_METHOD_VALUES = new Set(['ode', 'ssa', 'nf']);
 
 
-function listMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory()) {
-      listMetadataFiles(fullPath, results);
-    } else if (entry.isFile() && entry.name === 'metadata.yaml') {
-      results.push(fullPath);
-    }
+async function listMetadataFiles(dir) {
+  let entries;
+  try {
+    entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  } catch (err) {
+    if (err.code === 'ENOENT') return [];
+    throw err;
   }
-  return results;
+
+  const results = await Promise.all(
+    entries.map(async (entry) => {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        return listMetadataFiles(fullPath);
+      } else if (entry.isFile() && entry.name === 'metadata.yaml') {
+        return [fullPath];
+      }
+      return [];
+    })
+  );
+  return results.flat();
 }
 
 function normalizeModelKey(value) {
@@ -168,7 +178,12 @@ async function validateMetadataFile(metadataFile, errors) {
 
 async function main() {
   const root = path.resolve(__dirname, '..');
-  const metadataFiles = SEARCH_ROOTS.flatMap((searchRoot) => listMetadataFiles(path.join(root, searchRoot)));
+
+  const nestedMetadataFiles = await Promise.all(
+    SEARCH_ROOTS.map((searchRoot) => listMetadataFiles(path.join(root, searchRoot)))
+  );
+  const metadataFiles = nestedMetadataFiles.flat();
+
   const errors = [];
 
   await Promise.all(metadataFiles.map((metadataFile) => validateMetadataFile(metadataFile, errors)));
@@ -185,7 +200,10 @@ async function main() {
 }
 
 if (require.main === module) {
-  main();
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 }
 
 module.exports = {
