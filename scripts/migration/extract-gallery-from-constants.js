@@ -28,7 +28,7 @@ function parseSetFromString(content, setName) {
   if (startIdx === -1) return new Set();
   
   const arrayStart = startIdx + searchStr.length;
-  let depth = 0;
+  let depth = 1;
   let arrayEnd = arrayStart;
   
   for (let i = arrayStart; i < content.length; i++) {
@@ -71,7 +71,7 @@ function extractAllModelIds(content) {
     if (startIdx === -1) continue;
     
     const arrayStart = startIdx + searchStr.length;
-    let depth = 0;
+    let depth = 1;
     let arrayEnd = arrayStart;
     
     for (let i = arrayStart; i < content.length; i++) {
@@ -135,7 +135,7 @@ function extractCategoryMappings(content) {
     });
   }
   
-  const native = content.match(/NATIVE_TUTORIALS\.filter\(m => \["([^"]+)"\]/);
+  const native = content.match(/NATIVE_TUTORIALS\.filter\(m => \["([^\]]+)"\]/);
   if (native) {
     const ids = native[1].split(',').map(s => s.trim().replace(/["']/g, ''));
     ids.forEach(id => {
@@ -150,8 +150,8 @@ function extractCategoryMappings(content) {
   return modelIdToCategory;
 }
 
-function main() {
-  const { constantsPath, output } = parseArgs(process.argv.slice(2));
+function main(argv = process.argv.slice(2)) {
+  const { constantsPath, output } = parseArgs(argv);
   
   console.log(`Reading ${constantsPath}...`);
   const content = fs.readFileSync(constantsPath, 'utf8');
@@ -211,4 +211,14 @@ function main() {
   console.log(`  NFsim compatible: ${nfsimCount}`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  parseArgs,
+  parseSetFromString,
+  extractAllModelIds,
+  extractCategoryMappings,
+  main
+};
