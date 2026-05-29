@@ -63,6 +63,7 @@ function extractMetadataFromComments(headerComments, metadata) {
     const nameMatch = comment.match(/(?:model|name)[:\s]+(.+)/i);
     if (nameMatch && !metadata.name) {
       metadata.name = nameMatch[1].trim();
+      continue;
     }
 
     const doiMatch = comment.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i);
@@ -72,7 +73,9 @@ function extractMetadataFromComments(headerComments, metadata) {
   }
 
   const nonParamComments = headerComments.filter(c =>
-    !c.match(/^[a-zA-Z_]\w*\s+changed\s+to/i)
+    !c.match(/^[a-zA-Z_]\w*\s+changed\s+to/i) &&
+    !c.match(/(?:model|name)[:\s]+(.+)/i) &&
+    !c.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i)
   );
   if (nonParamComments.length > 0 && !metadata.description) {
     metadata.description = nonParamComments[0];
@@ -443,6 +446,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  extractMetadataFromComments,
   parseBngl,
   generateMetadata,
   findBnglFiles,

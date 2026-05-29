@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue } = require('./backfill-metadata.js');
+const { parseBngl, generateMetadata, formatYamlValue, extractMetadataFromComments } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -18,7 +18,7 @@ test('backfill-metadata.js', async (t) => {
     }
   });
 
-  await t.test('parseBngl - parses metadata and tags correctly', () => {
+  await t.test('parseBngl - parses metadata and tags correctly', async () => {
     const bnglContent = `
 # name: Test Model
 # doi: 10.1234/test
@@ -63,11 +63,11 @@ end actions
     const filePath = path.join(tmpDir, 'test.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
 
     assert.strictEqual(result.name, 'Test Model');
     assert.strictEqual(result.doi, '10.1234/test');
-    assert.strictEqual(result.description, 'name: Test Model'); // because the parser sets description to the first comment
+    assert.strictEqual(result.description, 'This is a description of the model.'); // because the parser sets description to the first non-assignment comment
     assert.strictEqual(result.uses_compartments, true);
     assert.strictEqual(result.uses_functions, true);
     assert.strictEqual(result.uses_energy, false);
@@ -80,7 +80,7 @@ end actions
     assert.ok(result.tags.includes('molecules'));
   });
 
-  await t.test('parseBngl - handles missing actions, implies nfsim_compatible without generate_network', () => {
+  await t.test('parseBngl - handles missing actions, implies nfsim_compatible without generate_network', async () => {
     const bnglContent = `
 begin model
 begin parameters
@@ -90,7 +90,7 @@ end model
     const filePath = path.join(tmpDir, 'test-no-actions.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
 
     // If there are no actions, it assumes 'ode' by default if length is 0
     // and if there's no generate_network, it marks nfsim_compatible as true
@@ -98,7 +98,7 @@ end model
     assert.strictEqual(result.nfsim_compatible, true);
   });
 
-  await t.test('parseBngl - extracts various simulation methods from actions', () => {
+  await t.test('parseBngl - extracts various simulation methods from actions', async () => {
     const bnglContent = `
 begin model
 end model
@@ -112,7 +112,7 @@ end actions
     const filePath = path.join(tmpDir, 'test-methods.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
 
     assert.ok(result.simulation_methods.includes('nf'));
     assert.ok(result.simulation_methods.includes('ssa'));
@@ -121,7 +121,7 @@ end actions
     assert.strictEqual(result.nfsim_compatible, true); // Since method=>"nf" is present
   });
 
-  await t.test('parseBngl - infers energy / Phi usage', () => {
+  await t.test('parseBngl - infers energy / Phi usage', async () => {
     const bnglContent = `
 begin model
 begin reaction rules
@@ -133,10 +133,10 @@ end model
     const filePath = path.join(tmpDir, 'test-energy.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
-  await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', () => {
+  await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
     // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
     const publishedDir = path.join(tmpDir, 'Published', 'Test_Paper');
@@ -196,78 +196,108 @@ end model
 });
 
 test('formatYamlValue', async (t) => {
-  await t.test('formats strings correctly', () => {
+  await t.test('formats strings correctly', async () => {
     assert.strictEqual(formatYamlValue('hello'), 'hello\n');
     assert.strictEqual(formatYamlValue('world', 2), 'world\n');
   });
 
-  await t.test('formats numbers correctly', () => {
+  await t.test('formats numbers correctly', async () => {
     assert.strictEqual(formatYamlValue(42), '42\n');
     assert.strictEqual(formatYamlValue(3.14), '3.14\n');
   });
 
-  await t.test('formats booleans correctly', () => {
+  await t.test('formats booleans correctly', async () => {
     assert.strictEqual(formatYamlValue(true), 'true\n');
     assert.strictEqual(formatYamlValue(false), 'false\n');
   });
 
-  await t.test('formats flat objects correctly', () => {
+  await t.test('formats flat objects correctly', async () => {
     const obj = { a: 1, b: 'two' };
     assert.strictEqual(formatYamlValue(obj), 'a: 1\nb: two\n');
     assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  b: two\n');
   });
 
-  await t.test('formats nested objects correctly', () => {
+  await t.test('formats nested objects correctly', async () => {
     const obj = { a: 1, b: { c: 'two' } };
     assert.strictEqual(formatYamlValue(obj), 'a: 1\n\nb:\nc: two\n\n');
     assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  \n  b:\nc: two\n\n');
   });
 
-  await t.test('formats arrays correctly', () => {
+  await t.test('formats arrays correctly', async () => {
     assert.strictEqual(formatYamlValue([1, 2]), '0: 1\n1: 2\n');
   });
 
-  await t.test('handles undefined correctly', () => {
+  await t.test('handles undefined correctly', async () => {
     assert.strictEqual(formatYamlValue(undefined), 'undefined\n');
   });
 
-  await t.test('handles null correctly', () => {
+  await t.test('handles null correctly', async () => {
     assert.strictEqual(formatYamlValue(null), 'null\n');
   });
 });
 
-  await t.test('formats numbers correctly', () => {
-    assert.strictEqual(formatYamlValue(42), '42\n');
-    assert.strictEqual(formatYamlValue(3.14), '3.14\n');
+test('extractMetadataFromComments', async (t) => {
+  await t.test('returns early if headerComments is empty', () => {
+    const metadata = { name: '', description: '', doi: '' };
+    extractMetadataFromComments([], metadata);
+    assert.deepStrictEqual(metadata, { name: '', description: '', doi: '' });
   });
 
-  await t.test('formats booleans correctly', () => {
-    assert.strictEqual(formatYamlValue(true), 'true\n');
-    assert.strictEqual(formatYamlValue(false), 'false\n');
+  await t.test('extracts model name from name: or model:', () => {
+    const metadata = { name: '' };
+    extractMetadataFromComments(['name: Test Model Name'], metadata);
+    assert.strictEqual(metadata.name, 'Test Model Name');
+
+    const metadata2 = { name: '' };
+    extractMetadataFromComments(['model: Another Model'], metadata2);
+    assert.strictEqual(metadata2.name, 'Another Model');
   });
 
-  await t.test('formats flat objects correctly', () => {
-    const obj = { a: 1, b: 'two' };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\nb: two\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  b: two\n');
+  await t.test('does not overwrite existing name', () => {
+    const metadata = { name: 'Existing Name' };
+    extractMetadataFromComments(['name: New Name'], metadata);
+    assert.strictEqual(metadata.name, 'Existing Name');
   });
 
-  await t.test('formats nested objects correctly', () => {
-    const obj = { a: 1, b: { c: 'two' } };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\n\nb:\nc: two\n\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  \n  b:\nc: two\n\n');
+  await t.test('extracts DOI correctly', () => {
+    const metadata = { doi: '' };
+    extractMetadataFromComments(['doi: 10.1234/test.doi'], metadata);
+    assert.strictEqual(metadata.doi, '10.1234/test.doi');
+
+    const metadata2 = { doi: '' };
+    extractMetadataFromComments(['DOI: 10.5678/another.doi'], metadata2);
+    assert.strictEqual(metadata2.doi, '10.5678/another.doi');
   });
 
-  await t.test('formats arrays correctly', () => {
-    // Current behavior treats array as object with indices as keys
-    assert.strictEqual(formatYamlValue([1, 2]), '0: 1\n1: 2\n');
+  await t.test('extracts description from first non-parameter comment', () => {
+    const metadata = { description: '' };
+    const comments = [
+      'k1 changed to 2.0',
+      'This is the actual description',
+      'Some other comment'
+    ];
+    extractMetadataFromComments(comments, metadata);
+    assert.strictEqual(metadata.description, 'This is the actual description');
   });
 
-  await t.test('handles undefined correctly', () => {
-    assert.strictEqual(formatYamlValue(undefined), 'undefined\n');
+  await t.test('does not overwrite existing description', () => {
+    const metadata = { description: 'Existing Description' };
+    extractMetadataFromComments(['New Description'], metadata);
+    assert.strictEqual(metadata.description, 'Existing Description');
   });
 
-  await t.test('handles null correctly', () => {
-    assert.strictEqual(formatYamlValue(null), 'null\n');
+  await t.test('extracts everything together', () => {
+    const metadata = { name: '', description: '', doi: '' };
+    const comments = [
+      'model: Full Model',
+      'doi: 10.9999/full',
+      'rate_constant changed to 5',
+      'A description of the full model',
+      'Another note'
+    ];
+    extractMetadataFromComments(comments, metadata);
+    assert.strictEqual(metadata.name, 'Full Model');
+    assert.strictEqual(metadata.doi, '10.9999/full');
+    assert.strictEqual(metadata.description, 'A description of the full model');
   });
 });
