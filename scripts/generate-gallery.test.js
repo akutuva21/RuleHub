@@ -169,21 +169,21 @@ test('loadGalleryCategories', async (t) => {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  await t.test('returns empty categories if gallery-categories.yaml is missing', () => {
+  await t.test('returns empty categories if gallery-categories.yaml is missing', async () => {
     const originalConsoleWarn = console.warn;
     let warningLogged = false;
     console.warn = (msg) => {
       if (msg.includes('gallery-categories.yaml not found')) warningLogged = true;
     };
 
-    const result = loadGalleryCategories(tmpDir);
+    const result = await loadGalleryCategories(tmpDir);
     assert.deepStrictEqual(result, { categories: [] });
     assert.ok(warningLogged, 'Should log a warning');
 
     console.warn = originalConsoleWarn;
   });
 
-  await t.test('loads and parses existing gallery-categories.yaml', () => {
+  await t.test('loads and parses existing gallery-categories.yaml', async () => {
     const yaml = `
 categories:
   - id: mycat
@@ -192,12 +192,35 @@ categories:
 `;
     fs.writeFileSync(path.join(tmpDir, 'gallery-categories.yaml'), yaml);
 
-    const result = loadGalleryCategories(tmpDir);
+    const result = await loadGalleryCategories(tmpDir);
     assert.deepStrictEqual(result, {
       categories: [
         { id: 'mycat', name: 'My Cat', description: '', sortOrder: 1 }
       ]
     });
+  });
+
+  await t.test('handles generic file read errors and falls back to defaults', async () => {
+    const originalConsoleWarn = console.warn;
+    const originalReadFile = fs.promises.readFile;
+    let warningLogged = false;
+
+    console.warn = (msg) => {
+      if (msg.includes('gallery-categories.yaml not found')) warningLogged = true;
+    };
+
+    fs.promises.readFile = async () => {
+      throw new Error('Generic file read error');
+    };
+
+    try {
+      const result = await loadGalleryCategories(tmpDir);
+      assert.deepStrictEqual(result, { categories: [] });
+      assert.ok(warningLogged, 'Should log a warning');
+    } finally {
+      console.warn = originalConsoleWarn;
+      fs.promises.readFile = originalReadFile;
+    }
   });
 });
 
