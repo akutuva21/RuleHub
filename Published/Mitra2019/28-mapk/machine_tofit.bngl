@@ -112,7 +112,6 @@ begin functions
 	# Func4()=octomer / 2
 	# Func5()=hexamer / 2
 	Func6()=0.3 * ( Gpa1_free ^4 / ( Gpa1_free ^4 + 12000^4))
-	#Func7() = export rate # Ryan confirmed bug, actual rate is Func6. 
 end functions
 
 begin reaction rules
