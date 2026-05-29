@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rulehubRoot = 'C:\\Users\\Achyudhan\\OneDrive - University of Pittsburgh\\Desktop\\Achyudhan\\School\\PhD\\Research\\BioNetGen\\RuleHub';
+const rulehubRoot = path.resolve(__dirname, '../../');
 const publishedDir = path.join(rulehubRoot, 'Published');
 
 const ID_MAP = {
