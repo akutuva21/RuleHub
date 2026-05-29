@@ -1,8 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
-const rulehubRoot = 'C:\\Users\\Achyudhan\\OneDrive - University of Pittsburgh\\Desktop\\Achyudhan\\School\\PhD\\Research\\BioNetGen\\RuleHub';
-const publishedDir = path.join(rulehubRoot, 'Published');
+function parseArgs(argv) {
+  const args = {
+    root: 'C:\\Users\\Achyudhan\\OneDrive - University of Pittsburgh\\Desktop\\Achyudhan\\School\\PhD\\Research\\BioNetGen\\RuleHub'
+  };
+
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === '--root' && i + 1 < argv.length) {
+      args.root = argv[++i];
+    }
+  }
+  return args;
+}
 
 const ID_MAP = {
   "An2009": "An_TLR4_2009",
@@ -119,26 +129,37 @@ function updateMetadataId(filePath, newId) {
   return false;
 }
 
-const metadataFiles = listMetadataFiles(publishedDir);
-let count = 0;
+function main(argv = process.argv.slice(2)) {
+  const args = parseArgs(argv);
+  const publishedDir = path.join(args.root, 'Published');
 
-for (const metaFile of metadataFiles) {
-  const relPath = path.relative(publishedDir, path.dirname(metaFile)).replace(/\\/g, '/');
-  
-  // Skip PyBioNetGen internal files
-  if (relPath.startsWith('PyBioNetGen')) {
-    continue;
-  }
-  
-  // Find key in mapping
-  const newId = ID_MAP[relPath];
-  if (newId) {
-    if (updateMetadataId(metaFile, newId)) {
-      count++;
+  const metadataFiles = listMetadataFiles(publishedDir);
+  let count = 0;
+
+  for (const metaFile of metadataFiles) {
+    const relPath = path.relative(publishedDir, path.dirname(metaFile)).replace(/\\/g, '/');
+
+    // Skip PyBioNetGen internal files
+    if (relPath.startsWith('PyBioNetGen')) {
+      continue;
     }
-  } else {
-    console.log(`No explicit mapping for ${relPath}, skipped.`);
+
+    // Find key in mapping
+    const newId = ID_MAP[relPath];
+    if (newId) {
+      if (updateMetadataId(metaFile, newId)) {
+        count++;
+      }
+    } else {
+      console.log(`No explicit mapping for ${relPath}, skipped.`);
+    }
   }
+
+  console.log(`\nSuccessfully updated ${count} metadata files in Published/!`);
 }
 
-console.log(`\nSuccessfully updated ${count} metadata files in Published/!`);
+if (require.main === module) {
+  main();
+}
+
+module.exports = { parseArgs, updateMetadataId, main };
