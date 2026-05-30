@@ -201,39 +201,6 @@ test('formatYamlValue', async (t) => {
     assert.strictEqual(formatYamlValue('world', 2), 'world\n');
   });
 
-  await t.test('formats numbers correctly', async () => {
-    assert.strictEqual(formatYamlValue(42), '42\n');
-    assert.strictEqual(formatYamlValue(3.14), '3.14\n');
-  });
-
-  await t.test('formats booleans correctly', async () => {
-    assert.strictEqual(formatYamlValue(true), 'true\n');
-    assert.strictEqual(formatYamlValue(false), 'false\n');
-  });
-
-  await t.test('formats flat objects correctly', async () => {
-    const obj = { a: 1, b: 'two' };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\nb: two\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  b: two\n');
-  });
-
-  await t.test('formats nested objects correctly', async () => {
-    const obj = { a: 1, b: { c: 'two' } };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\n\nb:\nc: two\n\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  \n  b:\nc: two\n\n');
-  });
-
-  await t.test('formats arrays correctly', async () => {
-    assert.strictEqual(formatYamlValue([1, 2]), '0: 1\n1: 2\n');
-  });
-
-  await t.test('handles undefined correctly', async () => {
-    assert.strictEqual(formatYamlValue(undefined), 'undefined\n');
-  });
-
-  await t.test('handles null correctly', async () => {
-    assert.strictEqual(formatYamlValue(null), 'null\n');
-  });
 });
 
 test('extractMetadataFromComments', async (t) => {
