@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue } = require('./backfill-metadata.js');
+const { parseBngl, generateMetadata, formatYamlValue, inferCategory } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -18,7 +18,7 @@ test('backfill-metadata.js', async (t) => {
     }
   });
 
-  await t.test('parseBngl - parses metadata and tags correctly', () => {
+  await t.test('parseBngl - parses metadata and tags correctly', async () => {
     const bnglContent = `
 # name: Test Model
 # doi: 10.1234/test
@@ -63,7 +63,7 @@ end actions
     const filePath = path.join(tmpDir, 'test.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
 
     assert.strictEqual(result.name, 'Test Model');
     assert.strictEqual(result.doi, '10.1234/test');
@@ -80,7 +80,7 @@ end actions
     assert.ok(result.tags.includes('molecules'));
   });
 
-  await t.test('parseBngl - handles missing actions, implies nfsim_compatible without generate_network', () => {
+  await t.test('parseBngl - handles missing actions, implies nfsim_compatible without generate_network', async () => {
     const bnglContent = `
 begin model
 begin parameters
@@ -90,7 +90,7 @@ end model
     const filePath = path.join(tmpDir, 'test-no-actions.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
 
     // If there are no actions, it assumes 'ode' by default if length is 0
     // and if there's no generate_network, it marks nfsim_compatible as true
@@ -98,7 +98,7 @@ end model
     assert.strictEqual(result.nfsim_compatible, true);
   });
 
-  await t.test('parseBngl - extracts various simulation methods from actions', () => {
+  await t.test('parseBngl - extracts various simulation methods from actions', async () => {
     const bnglContent = `
 begin model
 end model
@@ -112,7 +112,7 @@ end actions
     const filePath = path.join(tmpDir, 'test-methods.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
 
     assert.ok(result.simulation_methods.includes('nf'));
     assert.ok(result.simulation_methods.includes('ssa'));
@@ -121,7 +121,7 @@ end actions
     assert.strictEqual(result.nfsim_compatible, true); // Since method=>"nf" is present
   });
 
-  await t.test('parseBngl - infers energy / Phi usage', () => {
+  await t.test('parseBngl - infers energy / Phi usage', async () => {
     const bnglContent = `
 begin model
 begin reaction rules
@@ -133,7 +133,7 @@ end model
     const filePath = path.join(tmpDir, 'test-energy.bngl');
     fs.writeFileSync(filePath, bnglContent);
 
-    const result = parseBngl(filePath);
+    const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', () => {
@@ -193,6 +193,58 @@ end model
       process.chdir(cwdOrig);
     }
   });
+
+  await t.test('inferCategory - returns appropriate category based on directory path', () => {
+    // We pass absolute paths as inferCategory uses path.relative(process.cwd(), dirPath).
+    // The easiest way is to append paths to the current cwd.
+    const cwd = process.cwd();
+
+    // immunology
+    assert.strictEqual(inferCategory(path.join(cwd, 'foo', 'immune', 'bar')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'tcr_model')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'bcr')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'fceri_pathway')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'cytokine_network')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'innate')), 'immunology');
+
+    // signaling
+    assert.strictEqual(inferCategory(path.join(cwd, 'foo', 'egfr', 'bar')), 'signaling');
+    assert.strictEqual(inferCategory(path.join(cwd, 'mapk')), 'signaling');
+    assert.strictEqual(inferCategory(path.join(cwd, 'ras')), 'signaling');
+    assert.strictEqual(inferCategory(path.join(cwd, 'tumor_model')), 'signaling');
+    assert.strictEqual(inferCategory(path.join(cwd, 'cancer_cells')), 'signaling');
+    assert.strictEqual(inferCategory(path.join(cwd, 'signaling_pathway')), 'signaling');
+
+    // epidemiology
+    assert.strictEqual(inferCategory(path.join(cwd, 'sir_model')), 'epidemiology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'covid19')), 'epidemiology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'epidem')), 'epidemiology');
+
+    // cell-cycle
+    assert.strictEqual(inferCategory(path.join(cwd, 'cell_cycle_model')), 'cell-cycle');
+
+    // metabolism
+    assert.strictEqual(inferCategory(path.join(cwd, 'metabolomics')), 'metabolism');
+
+    // neuroscience
+    assert.strictEqual(inferCategory(path.join(cwd, 'neural_net')), 'neuroscience');
+    assert.strictEqual(inferCategory(path.join(cwd, 'neuron_model')), 'neuroscience');
+    assert.strictEqual(inferCategory(path.join(cwd, 'brain_sim')), 'neuroscience');
+
+    // ecology
+    assert.strictEqual(inferCategory(path.join(cwd, 'ecology_study')), 'ecology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'population_dynamics')), 'ecology');
+
+    // tutorial
+    assert.strictEqual(inferCategory(path.join(cwd, 'tutorial_1')), 'tutorial');
+
+    // validation
+    assert.strictEqual(inferCategory(path.join(cwd, 'test_case')), 'validation');
+
+    // other
+    assert.strictEqual(inferCategory(path.join(cwd, 'unknown_model')), 'other');
+    assert.strictEqual(inferCategory(path.join(cwd, 'random', 'dir')), 'other');
+  });
 });
 
 test('formatYamlValue', async (t) => {
@@ -224,42 +276,6 @@ test('formatYamlValue', async (t) => {
   });
 
   await t.test('formats arrays correctly', () => {
-    assert.strictEqual(formatYamlValue([1, 2]), '0: 1\n1: 2\n');
-  });
-
-  await t.test('handles undefined correctly', () => {
-    assert.strictEqual(formatYamlValue(undefined), 'undefined\n');
-  });
-
-  await t.test('handles null correctly', () => {
-    assert.strictEqual(formatYamlValue(null), 'null\n');
-  });
-});
-
-  await t.test('formats numbers correctly', () => {
-    assert.strictEqual(formatYamlValue(42), '42\n');
-    assert.strictEqual(formatYamlValue(3.14), '3.14\n');
-  });
-
-  await t.test('formats booleans correctly', () => {
-    assert.strictEqual(formatYamlValue(true), 'true\n');
-    assert.strictEqual(formatYamlValue(false), 'false\n');
-  });
-
-  await t.test('formats flat objects correctly', () => {
-    const obj = { a: 1, b: 'two' };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\nb: two\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  b: two\n');
-  });
-
-  await t.test('formats nested objects correctly', () => {
-    const obj = { a: 1, b: { c: 'two' } };
-    assert.strictEqual(formatYamlValue(obj), 'a: 1\n\nb:\nc: two\n\n');
-    assert.strictEqual(formatYamlValue(obj, 1), 'a: 1\n  \n  b:\nc: two\n\n');
-  });
-
-  await t.test('formats arrays correctly', () => {
-    // Current behavior treats array as object with indices as keys
     assert.strictEqual(formatYamlValue([1, 2]), '0: 1\n1: 2\n');
   });
 
