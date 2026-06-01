@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue, inferCategory } = require('./backfill-metadata.js');
+const { parseBngl, generateMetadata, formatYamlValue, inferCategory, inferOrigin } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -285,5 +285,34 @@ test('formatYamlValue', async (t) => {
 
   await t.test('handles null correctly', () => {
     assert.strictEqual(formatYamlValue(null), 'null\n');
+  });
+
+  await t.test('inferOrigin - infers origin based on path', async (st) => {
+    const cwd = process.cwd();
+
+    await st.test('infers published for Published directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Published', 'Model1')), 'published');
+    });
+
+    await st.test('infers ai-generated for Examples with AI prefix', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'AI-Generated-Model')), 'ai-generated');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'aigenerated-Model')), 'ai-generated');
+    });
+
+    await st.test('infers ai-generated for Examples without AI prefix (fallback)', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'Some-Model')), 'ai-generated');
+    });
+
+    await st.test('infers tutorial for Tutorials directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Tutorials', 'Basic')), 'tutorial');
+    });
+
+    await st.test('infers contributed when path contains contributed', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'Contributed-Model')), 'contributed');
+    });
+
+    await st.test('infers test-case for unknown paths', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
+    });
   });
 });

@@ -450,4 +450,5 @@ module.exports = {
   formatYaml,
   formatYamlValue,
   inferCategory,
+  inferOrigin,
 };
