@@ -239,7 +239,7 @@ test('extractModelIds', async (t) => {
     const metadataPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(metadataPath, '');
     const result = extractModelIds(metadataPath, { id: 'coll_1', collection: true });
-    assert.strictEqual(result, 'coll_1');
+    assert.deepStrictEqual(result, ['coll_1']);
   });
 
   await t.test('returns metadata id if it exists and bngl files are present', () => {
@@ -248,7 +248,7 @@ test('extractModelIds', async (t) => {
     fs.writeFileSync(path.join(tmpDir, 'model.bngl'), '');
 
     const result = extractModelIds(metadataPath, { id: 'meta_id' });
-    assert.strictEqual(result, 'meta_id');
+    assert.deepStrictEqual(result, ['meta_id']);
   });
 
   await t.test('returns filename of bngl if no metadata id is present', () => {
@@ -257,13 +257,13 @@ test('extractModelIds', async (t) => {
     fs.writeFileSync(path.join(tmpDir, 'my_model.bngl'), '');
 
     const result = extractModelIds(metadataPath, {});
-    assert.strictEqual(result, 'my_model');
+    assert.deepStrictEqual(result, ['my_model']);
   });
 
-  await t.test('returns null if no bngl files are present (and not a collection)', () => {
+  await t.test('returns empty array if no bngl files are present (and not a collection)', () => {
     const metadataPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(metadataPath, '');
     const result = extractModelIds(metadataPath, { id: 'meta_id' });
-    assert.strictEqual(result, null);
+    assert.deepStrictEqual(result, []);
   });
 });
