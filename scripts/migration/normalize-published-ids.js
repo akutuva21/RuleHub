@@ -2,8 +2,18 @@ const { safeJoin } = require('../utils');
 const fs = require('fs');
 const path = require('path');
 
-const rulehubRoot = path.resolve(__dirname, '../../');
-const publishedDir = path.join(rulehubRoot, 'Published');
+function parseArgs(argv) {
+  const args = {
+    root: path.resolve(__dirname, '../../')
+  };
+
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === '--root' && i + 1 < argv.length) {
+      args.root = argv[++i];
+    }
+  }
+  return args;
+}
 
 const ID_MAP = {
   "An2009": "An_TLR4_2009",
@@ -125,6 +135,9 @@ async function updateMetadataId(filePath, newId) {
 }
 
 async function main(argv = process.argv.slice(2)) {
+  const args = parseArgs(argv);
+  const publishedDir = path.join(args.root, 'Published');
+
   const metadataFiles = await listMetadataFiles(publishedDir);
   let count = 0;
 
@@ -157,4 +170,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { main, listMetadataFiles, updateMetadataId };
+module.exports = { parseArgs, listMetadataFiles, updateMetadataId, main };
