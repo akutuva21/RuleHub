@@ -3,18 +3,18 @@ const fs = require('fs');
 const path = require('path');
 
 const BLACKLIST = new Set([
-  'generate_network', 'simulate', 'simulate_ode', 'simulate_ssa', 'simulate_nf', 'writexml', 
-  'setoption', 'exclude_reactants', 'include_reactants', 'species', 'molecules', 'time', 
-  'counter', 'trash', 'null', 'setparameter', 'resetconcentrations', 'tmax', 't', 
-  'version', 'source', 'origin', 'published', 'literature', 'tofit', 'ground', 'exact', 
-  'fit', 'best_fit', 'bnf', 'bnf1', 'pybnf', 'pybng', 'validation', 'showcase', 'tutorial', 
-  'test-case', 'other', 'signaling', 'immunology', 'cancer', 'metabolism', 'cell-cycle', 
+  'generate_network', 'simulate', 'simulate_ode', 'simulate_ssa', 'simulate_nf', 'writexml',
+  'setoption', 'exclude_reactants', 'include_reactants', 'species', 'molecules', 'time',
+  'counter', 'trash', 'null', 'setparameter', 'resetconcentrations', 'tmax', 't',
+  'version', 'source', 'origin', 'published', 'literature', 'tofit', 'ground', 'exact',
+  'fit', 'best_fit', 'bnf', 'bnf1', 'pybnf', 'pybng', 'validation', 'showcase', 'tutorial',
+  'test-case', 'other', 'signaling', 'immunology', 'cancer', 'metabolism', 'cell-cycle',
   'developmental', 'physics', 'cs', 'ecology', 'synbio'
 ]);
 
 function parseArgs(argv) {
   const args = {
-    root: 'C:\\Users\\Achyudhan\\OneDrive - University of Pittsburgh\\Desktop\\Achyudhan\\School\\PhD\\Research\\BioNetGen\\RuleHub'
+    root: path.resolve(__dirname, '../../')
   };
 
   for (let i = 0; i < argv.length; i++) {
@@ -26,18 +26,24 @@ function parseArgs(argv) {
   return args;
 }
 
-function listMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = safeJoin(dir, entry.name);
-    if (entry.isDirectory()) {
-      listMetadataFiles(fullPath, results);
-    } else if (entry.isFile() && entry.name === 'metadata.yaml') {
-      results.push(fullPath);
-    }
+async function listMetadataFiles(dir) {
+  try {
+    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+    const promises = entries.map(async (entry) => {
+      const fullPath = safeJoin(dir, entry.name);
+      if (entry.isDirectory()) {
+        return listMetadataFiles(fullPath);
+      } else if (entry.isFile() && entry.name === 'metadata.yaml') {
+        return [fullPath];
+      }
+      return [];
+    });
+    const results = await Promise.all(promises);
+    return results.flat();
+  } catch (err) {
+    if (err.code === 'ENOENT') return [];
+    throw err;
   }
-  return results;
 }
 
 function parseMetadataYaml(content) {
@@ -58,12 +64,12 @@ function parseMetadataYaml(content) {
   return metadata;
 }
 
-function main(argv = process.argv.slice(2)) {
+async function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv);
   const rulehubRoot = args.root;
   const publishedDir = path.join(rulehubRoot, 'Published');
 
-  const metadataFiles = listMetadataFiles(publishedDir);
+  const metadataFiles = await listMetadataFiles(publishedDir);
   let count = 0;
 
   for (const metaFile of metadataFiles) {
@@ -74,7 +80,7 @@ function main(argv = process.argv.slice(2)) {
       continue;
     }
 
-    let content = fs.readFileSync(metaFile, 'utf8');
+    let content = await fs.promises.readFile(metaFile, 'utf8');
     let meta = parseMetadataYaml(content);
 
     // 1. Rename McMillan_immunology_2021 to McMillan_TNF_2021
@@ -157,7 +163,7 @@ function main(argv = process.argv.slice(2)) {
       const updatedContent = content.replace(/^tags:\s*\[(.*?)\]\s*$/m, `tags: [${tagsString}]`);
 
       if (content !== updatedContent) {
-        fs.writeFileSync(metaFile, updatedContent, 'utf8');
+        await fs.promises.writeFile(metaFile, updatedContent, 'utf8');
         console.log(`Curated tags in ${metaFile} -> [${tagsString}]`);
         count++;
       }
@@ -166,8 +172,8 @@ function main(argv = process.argv.slice(2)) {
 
   // 5. Update our ID_MAP in normalize-published-ids.js to map McMillan2021 to McMillan_TNF_2021
   const normalizerPath = path.join(rulehubRoot, 'scripts', 'migration', 'normalize-published-ids.js');
-  if (fs.existsSync(normalizerPath)) {
-    let normalizerContent = fs.readFileSync(normalizerPath, 'utf8');
+  try {
+    let normalizerContent = await fs.promises.readFile(normalizerPath, 'utf8');
     normalizerContent = normalizerContent.replace(
       /"McMillan2021": "McMillan_immunology_2021"/,
       '"McMillan2021": "McMillan_TNF_2021"'
@@ -175,20 +181,20 @@ function main(argv = process.argv.slice(2)) {
       /"ModelZAP": "ZAP_immunology_2021"/,
       '"ModelZAP": "ZAP70_immunology_2021"'
     );
-    fs.writeFileSync(normalizerPath, normalizerContent, 'utf8');
+    await fs.promises.writeFile(normalizerPath, normalizerContent, 'utf8');
     console.log('Updated normalize-published-ids.js map values.');
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
   }
 
   console.log(`\nSuccessfully curated tags in ${count} Published metadata files!`);
 }
 
 if (require.main === module) {
-  try {
-    main();
-  } catch (error) {
-    console.error(error);
+  main().catch(error => {
+    console.error('An error occurred:', error);
     process.exit(1);
-  }
+  });
 }
 
 module.exports = {
