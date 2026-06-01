@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue, inferCategory, inferOrigin } = require('./backfill-metadata.js');
+const { parseBngl, generateMetadata, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -67,7 +67,7 @@ end actions
 
     assert.strictEqual(result.name, 'Test Model');
     assert.strictEqual(result.doi, '10.1234/test');
-    assert.strictEqual(result.description, 'name: Test Model'); // because the parser sets description to the first comment
+    assert.strictEqual(result.description, 'This is a description of the model.'); // because the parser sets description to the first non-assignment comment
     assert.strictEqual(result.uses_compartments, true);
     assert.strictEqual(result.uses_functions, true);
     assert.strictEqual(result.uses_energy, false);
@@ -136,7 +136,7 @@ end model
     const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
-  await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', () => {
+  await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
     // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
     const publishedDir = path.join(tmpDir, 'Published', 'Test_Paper');
@@ -248,7 +248,7 @@ end model
 });
 
 test('formatYamlValue', async (t) => {
-  await t.test('formats strings correctly', () => {
+  await t.test('formats strings correctly', async () => {
     assert.strictEqual(formatYamlValue('hello'), 'hello\n');
     assert.strictEqual(formatYamlValue('world', 2), 'world\n');
   });
@@ -314,5 +314,71 @@ test('formatYamlValue', async (t) => {
     await st.test('infers test-case for unknown paths', () => {
       assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
     });
+  });
+});
+
+test('extractMetadataFromComments', async (t) => {
+  await t.test('returns early if headerComments is empty', () => {
+    const metadata = { name: '', description: '', doi: '' };
+    extractMetadataFromComments([], metadata);
+    assert.deepStrictEqual(metadata, { name: '', description: '', doi: '' });
+  });
+
+  await t.test('extracts model name from name: or model:', () => {
+    const metadata = { name: '' };
+    extractMetadataFromComments(['name: Test Model Name'], metadata);
+    assert.strictEqual(metadata.name, 'Test Model Name');
+
+    const metadata2 = { name: '' };
+    extractMetadataFromComments(['model: Another Model'], metadata2);
+    assert.strictEqual(metadata2.name, 'Another Model');
+  });
+
+  await t.test('does not overwrite existing name', () => {
+    const metadata = { name: 'Existing Name' };
+    extractMetadataFromComments(['name: New Name'], metadata);
+    assert.strictEqual(metadata.name, 'Existing Name');
+  });
+
+  await t.test('extracts DOI correctly', () => {
+    const metadata = { doi: '' };
+    extractMetadataFromComments(['doi: 10.1234/test.doi'], metadata);
+    assert.strictEqual(metadata.doi, '10.1234/test.doi');
+
+    const metadata2 = { doi: '' };
+    extractMetadataFromComments(['DOI: 10.5678/another.doi'], metadata2);
+    assert.strictEqual(metadata2.doi, '10.5678/another.doi');
+  });
+
+  await t.test('extracts description from first non-parameter comment', () => {
+    const metadata = { description: '' };
+    const comments = [
+      'k1 changed to 2.0',
+      'This is the actual description',
+      'Some other comment'
+    ];
+    extractMetadataFromComments(comments, metadata);
+    assert.strictEqual(metadata.description, 'This is the actual description');
+  });
+
+  await t.test('does not overwrite existing description', () => {
+    const metadata = { description: 'Existing Description' };
+    extractMetadataFromComments(['New Description'], metadata);
+    assert.strictEqual(metadata.description, 'Existing Description');
+  });
+
+  await t.test('extracts everything together', () => {
+    const metadata = { name: '', description: '', doi: '' };
+    const comments = [
+      'model: Full Model',
+      'doi: 10.9999/full',
+      'rate_constant changed to 5',
+      'A description of the full model',
+      'Another note'
+    ];
+    extractMetadataFromComments(comments, metadata);
+    assert.strictEqual(metadata.name, 'Full Model');
+    assert.strictEqual(metadata.doi, '10.9999/full');
+    assert.strictEqual(metadata.description, 'A description of the full model');
   });
 });
