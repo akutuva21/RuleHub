@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFilesAsync, parseMetadataYaml } = require('./utils');
+const { listModelFilesAsync, parseMetadataYaml , safeJoin} = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const DEFAULT_IGNORE_DIRS = ['fitting', 'BioNetFit_files', 'output_*', 'fit_*', '__pycache__', 'pybnf_files'];
@@ -41,7 +41,7 @@ function listMetadataFiles(dir, results = []) {
 
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
+    const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
       listMetadataFiles(fullPath, results);
       continue;

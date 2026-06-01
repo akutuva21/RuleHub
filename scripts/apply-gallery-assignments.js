@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { safeJoin } = require('./utils');
 const path = require('path');
 
 function parseArgs(argv) {
@@ -26,7 +27,7 @@ function findAllMetadataFiles(dir, results = []) {
 
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
+    const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
       findAllMetadataFiles(fullPath, results);
     } else if (entry.name === 'metadata.yaml') {

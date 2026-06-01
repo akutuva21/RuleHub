@@ -1,3 +1,4 @@
+const { safeJoin } = require('../utils');
 const fs = require('fs');
 const path = require('path');
 
@@ -94,7 +95,7 @@ function listMetadataFiles(dir, results = []) {
   if (!fs.existsSync(dir)) return results;
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
+    const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
       listMetadataFiles(fullPath, results);
     } else if (entry.isFile() && entry.name === 'metadata.yaml') {

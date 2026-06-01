@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { parseMetadataYaml } = require('./utils');
+const { parseMetadataYaml , safeJoin} = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -38,7 +38,7 @@ async function listMetadataFiles(dir) {
   }
 
   const results = await Promise.all(entries.map(async (entry) => {
-    const fullPath = path.join(dir, entry.name);
+    const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
       return listMetadataFiles(fullPath);
     } else if (entry.isFile() && entry.name === 'metadata.yaml') {

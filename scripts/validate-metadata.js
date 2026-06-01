@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFilesAsync, parseScalar, parseMetadataYaml, setNested } = require('./utils');
+const { listModelFilesAsync, parseScalar, parseMetadataYaml, setNested , safeJoin} = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 const CATEGORY_VALUES = new Set([
@@ -53,7 +53,7 @@ const SIMULATION_METHOD_VALUES = new Set(['ode', 'ssa', 'nf']);
 function listMetadataFiles(dir, results = []) {
   if (!fs.existsSync(dir)) return results;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const fullPath = path.join(dir, entry.name);
+    const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
       listMetadataFiles(fullPath, results);
     } else if (entry.isFile() && entry.name === 'metadata.yaml') {
