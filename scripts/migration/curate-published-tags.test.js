@@ -8,7 +8,7 @@ const { parseArgs, listMetadataFiles, parseMetadataYaml, main } = require('./cur
 test('parseArgs', async (t) => {
     await t.test('uses default root when no args provided', () => {
         const args = parseArgs([]);
-        assert.strictEqual(args.root, 'C:\\Users\\Achyudhan\\OneDrive - University of Pittsburgh\\Desktop\\Achyudhan\\School\\PhD\\Research\\BioNetGen\\RuleHub');
+        assert.ok(args.root.endsWith('RuleHub'));
     });
 
     await t.test('parses --root argument', () => {
@@ -61,12 +61,12 @@ id: "test"
 });
 
 test('listMetadataFiles', async (t) => {
-    await t.test('returns empty array for non-existent directory', () => {
-        const results = listMetadataFiles('/non/existent/dir');
+    await t.test('returns empty array for non-existent directory', async () => {
+        const results = await listMetadataFiles('/non/existent/dir');
         assert.deepEqual(results, []);
     });
 
-    await t.test('finds metadata.yaml files in directory tree', () => {
+    await t.test('finds metadata.yaml files in directory tree', async () => {
         const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-'));
         try {
             const dir1 = path.join(tempDir, 'dir1');
@@ -78,7 +78,7 @@ test('listMetadataFiles', async (t) => {
             fs.writeFileSync(path.join(dir2, 'metadata.yaml'), 'id: test2');
             fs.writeFileSync(path.join(dir1, 'other.txt'), 'not a metadata file');
 
-            const results = listMetadataFiles(tempDir);
+            const results = await listMetadataFiles(tempDir);
             assert.strictEqual(results.length, 2);
             assert.ok(results.includes(path.join(dir1, 'metadata.yaml')));
             assert.ok(results.includes(path.join(dir2, 'metadata.yaml')));
@@ -89,7 +89,7 @@ test('listMetadataFiles', async (t) => {
 });
 
 test('main functionality', async (t) => {
-    await t.test('curates tags correctly', () => {
+    await t.test('curates tags correctly', async () => {
         const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-curate-'));
         try {
             // Setup directory structure
@@ -111,7 +111,7 @@ tags: ["generate_network", "my_var_123", "goodtag", "tnf", "cell_cycle"]
             const originalConsoleLog = console.log;
             console.log = () => {}; // Silence output
             try {
-                main(['--root', tempDir]);
+                await main(['--root', tempDir]);
             } finally {
                 console.log = originalConsoleLog;
             }
@@ -151,7 +151,7 @@ tags: ["generate_network", "my_var_123", "goodtag", "tnf", "cell_cycle"]
         }
     });
 
-    await t.test('updates specific model IDs', () => {
+    await t.test('updates specific model IDs', async () => {
         const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-rename-'));
         try {
             // Setup directory structure
@@ -179,7 +179,7 @@ tags: ["generate_network", "my_var_123", "goodtag", "tnf", "cell_cycle"]
             const originalConsoleLog = console.log;
             console.log = () => {}; // Silence output
             try {
-                main(['--root', tempDir]);
+                await main(['--root', tempDir]);
             } finally {
                 console.log = originalConsoleLog;
             }
