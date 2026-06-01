@@ -91,55 +91,70 @@ const ID_MAP = {
   "VaxAndVariants/Phoenix": "VaxAndVariants_Phoenix"
 };
 
-function listMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = safeJoin(dir, entry.name);
-    if (entry.isDirectory()) {
-      listMetadataFiles(fullPath, results);
-    } else if (entry.isFile() && entry.name === 'metadata.yaml') {
-      results.push(fullPath);
-    }
+async function listMetadataFiles(dir, results = []) {
+  try {
+    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+    const promises = entries.map(async entry => {
+      const fullPath = safeJoin(dir, entry.name);
+      if (entry.isDirectory()) {
+        await listMetadataFiles(fullPath, results);
+      } else if (entry.isFile() && entry.name === 'metadata.yaml') {
+        results.push(fullPath);
+      }
+    });
+    await Promise.all(promises);
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
   }
   return results;
 }
 
-function updateMetadataId(filePath, newId) {
-  let content = fs.readFileSync(filePath, 'utf8');
+async function updateMetadataId(filePath, newId) {
+  let content = await fs.promises.readFile(filePath, 'utf8');
   
   // Replace the id property in yaml
   // Match id: "..." or id: '...' or id: ...
   const updatedContent = content.replace(/^id:\s*(["']?)(.*?)\1\s*$/m, `id: "${newId}"`);
   
   if (content !== updatedContent) {
-    fs.writeFileSync(filePath, updatedContent, 'utf8');
+    await fs.promises.writeFile(filePath, updatedContent, 'utf8');
     console.log(`Updated ID in ${filePath} to "${newId}"`);
     return true;
   }
   return false;
 }
 
-const metadataFiles = listMetadataFiles(publishedDir);
-let count = 0;
+async function main(argv = process.argv.slice(2)) {
+  const metadataFiles = await listMetadataFiles(publishedDir);
+  let count = 0;
 
-for (const metaFile of metadataFiles) {
-  const relPath = path.relative(publishedDir, path.dirname(metaFile)).replace(/\\/g, '/');
-  
-  // Skip PyBioNetGen internal files
-  if (relPath.startsWith('PyBioNetGen')) {
-    continue;
-  }
-  
-  // Find key in mapping
-  const newId = ID_MAP[relPath];
-  if (newId) {
-    if (updateMetadataId(metaFile, newId)) {
-      count++;
+  for (const metaFile of metadataFiles) {
+    const relPath = path.relative(publishedDir, path.dirname(metaFile)).replace(/\\/g, '/');
+
+    // Skip PyBioNetGen internal files
+    if (relPath.startsWith('PyBioNetGen')) {
+      continue;
     }
-  } else {
-    console.log(`No explicit mapping for ${relPath}, skipped.`);
+
+    // Find key in mapping
+    const newId = ID_MAP[relPath];
+    if (newId) {
+      if (await updateMetadataId(metaFile, newId)) {
+        count++;
+      }
+    } else {
+      console.log(`No explicit mapping for ${relPath}, skipped.`);
+    }
   }
+
+  console.log(`\nSuccessfully updated ${count} metadata files in Published/!`);
 }
 
-console.log(`\nSuccessfully updated ${count} metadata files in Published/!`);
+if (require.main === module) {
+  main().catch(error => {
+    console.error('An error occurred:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = { main, listMetadataFiles, updateMetadataId };

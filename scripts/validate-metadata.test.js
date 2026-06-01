@@ -308,9 +308,9 @@ test('expectString', async (t) => {
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
@@ -348,17 +348,17 @@ test('normalizeModelKey', async (t) => {
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
@@ -411,49 +411,49 @@ test('setNested', async (t) => {
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
 
 test('listMetadataFiles', async (t) => {
-  await t.test('returns empty array for non-existent directory', () => {
+  await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
-    const result = listMetadataFiles(nonExistentPath);
+    const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
   });
 });
