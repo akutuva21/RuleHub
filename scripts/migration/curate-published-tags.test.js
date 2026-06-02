@@ -8,7 +8,7 @@ const { parseArgs, listMetadataFiles, parseMetadataYaml, main } = require('./cur
 test('parseArgs', async (t) => {
     await t.test('uses default root when no args provided', () => {
         const args = parseArgs([]);
-        assert.ok(args.root.endsWith('RuleHub'));
+        assert.strictEqual(args.root, path.resolve(__dirname, '../../'));
     });
 
     await t.test('parses --root argument', () => {
@@ -57,6 +57,53 @@ id: "test"
 `;
         const result = parseMetadataYaml(yaml);
         assert.deepEqual(result, { id: 'test' });
+    });
+
+    await t.test('handles malformed lines without colons', () => {
+        const yaml = `
+id: "test"
+malformed line here
+title: "Test Model"
+`;
+        const result = parseMetadataYaml(yaml);
+        assert.deepEqual(result, { id: 'test', title: 'Test Model' });
+    });
+
+    await t.test('ignores lines with invalid keys', () => {
+        const yaml = `
+invalid key: "value"
+id: "test"
+`;
+        const result = parseMetadataYaml(yaml);
+        assert.deepEqual(result, { id: 'test' });
+    });
+
+    await t.test('handles multiple colons in the value part', () => {
+        const yaml = `
+url: "https://example.com/test:123"
+description: 'A description: with colon'
+`;
+        const result = parseMetadataYaml(yaml);
+        assert.deepEqual(result, { url: 'https://example.com/test:123', description: 'A description: with colon' });
+    });
+
+    await t.test('handles arrays parsed as strings', () => {
+        const yaml = `
+tags: ["one", "two"]
+categories: ['a', 'b']
+`;
+        const result = parseMetadataYaml(yaml);
+        assert.deepEqual(result, { tags: '["one", "two"]', categories: "['a', 'b']" });
+    });
+
+    await t.test('preserves internal quotes', () => {
+        const yaml = `
+title: "Model's Title"
+desc: 'He said "Hello"'
+mixed: "\\'value\\'"
+`;
+        const result = parseMetadataYaml(yaml);
+        assert.deepEqual(result, { title: "Model's Title", desc: 'He said "Hello"', mixed: "\\'value\\'" });
     });
 });
 
