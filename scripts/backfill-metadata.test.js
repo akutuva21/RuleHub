@@ -245,6 +245,39 @@ end model
     assert.strictEqual(inferCategory(path.join(cwd, 'unknown_model')), 'other');
     assert.strictEqual(inferCategory(path.join(cwd, 'random', 'dir')), 'other');
   });
+
+  await t.test('inferOrigin - infers origin based on path', async (st) => {
+    const cwd = process.cwd();
+
+    await st.test('infers published for Published directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Published', 'Model1')), 'published');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'PUBLISHED', 'Model1')), 'published');
+    });
+
+    await st.test('infers ai-generated for Examples with AI prefix', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'AI-Generated-Model')), 'ai-generated');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'aigenerated-Model')), 'ai-generated');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'EXAMPLES', 'ai-generated-Model')), 'ai-generated');
+    });
+
+    await st.test('infers ai-generated for Examples without AI prefix (fallback)', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'Some-Model')), 'ai-generated');
+    });
+
+    await st.test('infers tutorial for Tutorials directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Tutorials', 'Basic')), 'tutorial');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'TUTORIALS', 'Basic')), 'tutorial');
+    });
+
+    await st.test('infers contributed when path contains contributed', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'Contributed-Model')), 'contributed');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'CONTRIBUTED-Model')), 'contributed');
+    });
+
+    await st.test('infers test-case for unknown paths', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
+    });
+  });
 });
 
 test('formatYamlValue', async (t) => {
@@ -285,35 +318,6 @@ test('formatYamlValue', async (t) => {
 
   await t.test('handles null correctly', () => {
     assert.strictEqual(formatYamlValue(null), 'null\n');
-  });
-
-  await t.test('inferOrigin - infers origin based on path', async (st) => {
-    const cwd = process.cwd();
-
-    await st.test('infers published for Published directory', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Published', 'Model1')), 'published');
-    });
-
-    await st.test('infers ai-generated for Examples with AI prefix', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'AI-Generated-Model')), 'ai-generated');
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'aigenerated-Model')), 'ai-generated');
-    });
-
-    await st.test('infers ai-generated for Examples without AI prefix (fallback)', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'Some-Model')), 'ai-generated');
-    });
-
-    await st.test('infers tutorial for Tutorials directory', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Tutorials', 'Basic')), 'tutorial');
-    });
-
-    await st.test('infers contributed when path contains contributed', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'Contributed-Model')), 'contributed');
-    });
-
-    await st.test('infers test-case for unknown paths', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
-    });
   });
 });
 
