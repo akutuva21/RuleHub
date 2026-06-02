@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { parseScalar, normalizeModelKey } = require('../validate-metadata.js');
+const { parseScalar, normalizeModelKey, expectEnum } = require('../validate-metadata.js');
 
 test('parseScalar', async (t) => {
   await t.test('parses boolean strings', () => {
@@ -62,5 +62,59 @@ test('normalizeModelKey', async (t) => {
     assert.strictEqual(normalizeModelKey(''), '');
     assert.strictEqual(normalizeModelKey(null), ''); // null || '' evaluates to '' -> String('') -> ''
     assert.strictEqual(normalizeModelKey(undefined), ''); // undefined || '' evaluates to '' -> String('') -> ''
+  });
+});
+
+test('expectEnum', async (t) => {
+  const allowed = new Set(['apple', 'banana', 'orange']);
+  const label = 'fruit';
+  const filePath = 'test.yaml';
+
+  await t.test('does not add error for valid value', () => {
+    const errors = [];
+    expectEnum(errors, 'banana', allowed, label, filePath);
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('adds error for invalid string value', () => {
+    const errors = [];
+    expectEnum(errors, 'grape', allowed, label, filePath);
+    assert.strictEqual(errors.length, 1);
+    assert.strictEqual(errors[0], 'test.yaml: invalid fruit ("grape")');
+  });
+
+  await t.test('adds error for non-string values', () => {
+    const errors = [];
+    expectEnum(errors, 123, allowed, label, filePath);
+    assert.strictEqual(errors.length, 1);
+    assert.strictEqual(errors[0], 'test.yaml: invalid fruit (123)');
+  });
+
+  await t.test('adds error for boolean values', () => {
+    const errors = [];
+    expectEnum(errors, true, allowed, label, filePath);
+    assert.strictEqual(errors.length, 1);
+    assert.strictEqual(errors[0], 'test.yaml: invalid fruit (true)');
+  });
+
+  await t.test('adds error for object values', () => {
+    const errors = [];
+    expectEnum(errors, { name: 'apple' }, allowed, label, filePath);
+    assert.strictEqual(errors.length, 1);
+    assert.strictEqual(errors[0], 'test.yaml: invalid fruit ({"name":"apple"})');
+  });
+
+  await t.test('adds error for null value', () => {
+    const errors = [];
+    expectEnum(errors, null, allowed, label, filePath);
+    assert.strictEqual(errors.length, 1);
+    assert.strictEqual(errors[0], 'test.yaml: invalid fruit (null)');
+  });
+
+  await t.test('adds error for undefined value', () => {
+    const errors = [];
+    expectEnum(errors, undefined, allowed, label, filePath);
+    assert.strictEqual(errors.length, 1);
+    assert.strictEqual(errors[0], 'test.yaml: invalid fruit (undefined)');
   });
 });
