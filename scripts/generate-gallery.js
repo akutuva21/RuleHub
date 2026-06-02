@@ -110,9 +110,20 @@ function parseYamlSimple(content) {
   return result;
 }
 
-function extractModelIds(metadataFile, metadata) {
+async function extractModelIds(metadataFile, metadata) {
   const modelDir = path.dirname(metadataFile);
-  const bnglFiles = fs.readdirSync(modelDir, { withFileTypes: true })
+  let entries;
+  try {
+    entries = await fs.promises.readdir(modelDir, { withFileTypes: true });
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      entries = [];
+    } else {
+      throw err;
+    }
+  }
+
+  const bnglFiles = entries
     .filter(e => e.isFile() && e.name.endsWith('.bngl'))
     .map(e => e.name)
     .sort();
@@ -156,7 +167,7 @@ async function main(argv = process.argv.slice(2)) {
       const content = await fs.promises.readFile(metadataFile, 'utf8');
       const metadata = parseMetadataYaml(content);
 
-      const modelIds = extractModelIds(metadataFile, metadata);
+      const modelIds = await extractModelIds(metadataFile, metadata);
       if (modelIds.length === 0) continue;
 
       const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
