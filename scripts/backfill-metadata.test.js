@@ -22,7 +22,7 @@ test('backfill-metadata.js', async (t) => {
     const bnglContent = `
 # name: Test Model
 # doi: 10.1234/test
-# This is a description of the model.
+# description: This is a description of the model.
 # Some other comment
 
 begin model
@@ -322,67 +322,72 @@ test('formatYamlValue', async (t) => {
 });
 
 test('extractMetadataFromComments', async (t) => {
-  await t.test('returns early if headerComments is empty', () => {
-    const metadata = { name: '', description: '', doi: '' };
+  await t.test('does nothing if headerComments is empty', () => {
+    const metadata = { name: '', description: '', doi: '', tags: new Set() };
     extractMetadataFromComments([], metadata);
-    assert.deepStrictEqual(metadata, { name: '', description: '', doi: '' });
+    assert.deepStrictEqual(metadata, { name: '', description: '', doi: '', tags: new Set() });
   });
 
-  await t.test('extracts model name from name: or model:', () => {
-    const metadata = { name: '' };
+  await t.test('extracts model name correctly and overwrites', () => {
+    const metadata = { name: 'Existing Name', description: '', doi: '', tags: new Set() };
     extractMetadataFromComments(['name: Test Model Name'], metadata);
     assert.strictEqual(metadata.name, 'Test Model Name');
-
-    const metadata2 = { name: '' };
-    extractMetadataFromComments(['model: Another Model'], metadata2);
-    assert.strictEqual(metadata2.name, 'Another Model');
   });
 
-  await t.test('does not overwrite existing name', () => {
-    const metadata = { name: 'Existing Name' };
-    extractMetadataFromComments(['name: New Name'], metadata);
-    assert.strictEqual(metadata.name, 'Existing Name');
-  });
-
-  await t.test('extracts DOI correctly', () => {
-    const metadata = { doi: '' };
+  await t.test('extracts DOI correctly and overwrites', () => {
+    const metadata = { name: '', description: '', doi: 'old.doi', tags: new Set() };
     extractMetadataFromComments(['doi: 10.1234/test.doi'], metadata);
     assert.strictEqual(metadata.doi, '10.1234/test.doi');
-
-    const metadata2 = { doi: '' };
-    extractMetadataFromComments(['DOI: 10.5678/another.doi'], metadata2);
-    assert.strictEqual(metadata2.doi, '10.5678/another.doi');
   });
 
-  await t.test('extracts description from first non-parameter comment', () => {
-    const metadata = { description: '' };
-    const comments = [
-      'k1 changed to 2.0',
-      'This is the actual description',
-      'Some other comment'
-    ];
-    extractMetadataFromComments(comments, metadata);
-    assert.strictEqual(metadata.description, 'This is the actual description');
-  });
-
-  await t.test('does not overwrite existing description', () => {
-    const metadata = { description: 'Existing Description' };
-    extractMetadataFromComments(['New Description'], metadata);
+  await t.test('extracts description and does not overwrite existing description', () => {
+    const metadata = { name: '', description: 'Existing Description', doi: '', tags: new Set() };
+    extractMetadataFromComments(['description: New Description'], metadata);
     assert.strictEqual(metadata.description, 'Existing Description');
+
+    const metadata2 = { name: '', description: '', doi: '', tags: new Set() };
+    extractMetadataFromComments(['description: First Description', 'description: Second Description'], metadata2);
+    assert.strictEqual(metadata2.description, 'First Description');
+  });
+
+  await t.test('extracts tags correctly and trims them', () => {
+    const metadata = { name: '', description: '', doi: '', tags: new Set(['existing-tag']) };
+    extractMetadataFromComments(['tags: tag1, tag2 , tag3'], metadata);
+    assert.deepStrictEqual(metadata.tags, new Set(['existing-tag', 'tag1', 'tag2', 'tag3']));
+  });
+
+  await t.test('ignores invalid or unhandled keys', () => {
+    const metadata = { name: 'Init', description: 'Init', doi: 'Init', tags: new Set() };
+    extractMetadataFromComments(['invalid-key: some value', 'unhandled: value'], metadata);
+    assert.strictEqual(metadata.name, 'Init');
+    assert.strictEqual(metadata.description, 'Init');
+    assert.strictEqual(metadata.doi, 'Init');
+    assert.deepStrictEqual(metadata.tags, new Set());
+  });
+
+  await t.test('ignores comments not matching regex', () => {
+    const metadata = { name: '', description: '', doi: '', tags: new Set() };
+    extractMetadataFromComments(['just some regular comment', 'no colon here', 'name : bad format'], metadata);
+    assert.strictEqual(metadata.name, '');
+    assert.strictEqual(metadata.description, '');
+    assert.strictEqual(metadata.doi, '');
+    assert.deepStrictEqual(metadata.tags, new Set());
   });
 
   await t.test('extracts everything together', () => {
-    const metadata = { name: '', description: '', doi: '' };
+    const metadata = { name: '', description: '', doi: '', tags: new Set() };
     const comments = [
-      'model: Full Model',
+      'name: Full Model',
       'doi: 10.9999/full',
-      'rate_constant changed to 5',
-      'A description of the full model',
-      'Another note'
+      'description: A description of the full model',
+      'tags: t1, t2',
+      'ignored: this is ignored',
+      'just some text'
     ];
     extractMetadataFromComments(comments, metadata);
     assert.strictEqual(metadata.name, 'Full Model');
     assert.strictEqual(metadata.doi, '10.9999/full');
     assert.strictEqual(metadata.description, 'A description of the full model');
+    assert.deepStrictEqual(metadata.tags, new Set(['t1', 't2']));
   });
 });
