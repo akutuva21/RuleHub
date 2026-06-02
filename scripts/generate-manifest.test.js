@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, listMetadataFiles, parseArgs, isCollectionEntry, getIgnoreDirs, DEFAULT_IGNORE_DIRS, listModelFilesFiltered } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs, isIgnoredDir, isCollectionEntry, getIgnoreDirs, DEFAULT_IGNORE_DIRS, listModelFilesFiltered } = require('./generate-manifest.js');
 const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
@@ -366,6 +366,28 @@ test('parseArgs', async (t) => {
     assert.strictEqual(result2.root, defaultRoot);
     assert.strictEqual(result2.output, path.join(defaultRoot, 'manifest.json'));
 
+  });
+});
+
+test('isIgnoredDir', async (t) => {
+  await t.test('returns true for exact match', () => {
+    assert.strictEqual(isIgnoredDir('fitting', ['fitting', 'output_*']), true);
+  });
+
+  await t.test('returns false for non-match', () => {
+    assert.strictEqual(isIgnoredDir('data', ['fitting', 'output_*']), false);
+  });
+
+  await t.test('returns true for wildcard match', () => {
+    assert.strictEqual(isIgnoredDir('output_123', ['fitting', 'output_*']), true);
+  });
+
+  await t.test('returns false for partial match without wildcard', () => {
+    assert.strictEqual(isIgnoredDir('fitting_dir', ['fitting', 'output_*']), false);
+  });
+
+  await t.test('returns false for empty ignoreDirs array', () => {
+    assert.strictEqual(isIgnoredDir('fitting', []), false);
   });
 });
 
