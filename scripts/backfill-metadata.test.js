@@ -223,6 +223,14 @@ end model
     // cell-cycle
     assert.strictEqual(inferCategory(path.join(cwd, 'cell_cycle_model')), 'cell-cycle');
 
+    // cell-cycle edge cases (requires both "cell" and "cycle")
+    assert.strictEqual(inferCategory(path.join(cwd, 'cell_only_model')), 'other');
+    assert.strictEqual(inferCategory(path.join(cwd, 'cycle_only_model')), 'other');
+
+    // case insensitivity
+    assert.strictEqual(inferCategory(path.join(cwd, 'IMMUNE_system')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'CELL_CYCLE')), 'cell-cycle');
+
     // metabolism
     assert.strictEqual(inferCategory(path.join(cwd, 'metabolomics')), 'metabolism');
 
