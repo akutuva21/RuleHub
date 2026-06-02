@@ -222,4 +222,5 @@ module.exports = {
   listMetadataFiles,
   isCollectionEntry,
   parseMetadataYaml,
+  listModelFilesFiltered,
 };
