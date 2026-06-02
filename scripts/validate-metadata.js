@@ -212,4 +212,6 @@ module.exports = {
   normalizeModelKey,
   listMetadataFiles,
   expectString,
+  expectEnum,
+  expectBoolean,
 };
