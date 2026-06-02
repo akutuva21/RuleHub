@@ -17,25 +17,25 @@ test('listMetadataFiles', async (t) => {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  await t.test('returns empty array for non-existent directory', () => {
-    const results = listMetadataFiles(path.join(tmpDir, 'non-existent'));
+  await t.test('returns empty array for non-existent directory', async () => {
+    const results = await listMetadataFiles(path.join(tmpDir, 'non-existent'));
     assert.deepStrictEqual(results, []);
   });
 
-  await t.test('returns empty array when no metadata files exist', () => {
+  await t.test('returns empty array when no metadata files exist', async () => {
     fs.writeFileSync(path.join(tmpDir, 'somefile.txt'), '');
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.deepStrictEqual(results, []);
   });
 
-  await t.test('finds metadata.yaml in root directory', () => {
+  await t.test('finds metadata.yaml in root directory', async () => {
     const yamlPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(yamlPath, '');
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.deepStrictEqual(results, [yamlPath]);
   });
 
-  await t.test('finds metadata.yaml in nested directories', () => {
+  await t.test('finds metadata.yaml in nested directories', async () => {
     const dir1 = path.join(tmpDir, 'dir1');
     const dir2 = path.join(tmpDir, 'dir2');
     fs.mkdirSync(dir1);
@@ -47,13 +47,13 @@ test('listMetadataFiles', async (t) => {
     fs.writeFileSync(yaml1, '');
     fs.writeFileSync(yaml2, '');
 
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.strictEqual(results.length, 2);
     assert.ok(results.includes(yaml1));
     assert.ok(results.includes(yaml2));
   });
 
-  await t.test('ignores other files named metadata.yaml if they are directories', () => {
+  await t.test('ignores other files named metadata.yaml if they are directories', async () => {
     const fakeYamlDir = path.join(tmpDir, 'metadata.yaml');
     fs.mkdirSync(fakeYamlDir);
 
@@ -61,7 +61,7 @@ test('listMetadataFiles', async (t) => {
     fs.mkdirSync(path.join(tmpDir, 'dir1'));
     fs.writeFileSync(realYaml, '');
 
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.deepStrictEqual(results, [realYaml]);
   });
 });
