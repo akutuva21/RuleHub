@@ -58,46 +58,34 @@ async function findBnglFiles(dir, ignoreDirs = DEFAULT_IGNORE_DIRS) {
 }
 
 function extractMetadataFromComments(headerComments, metadata) {
-  if (headerComments.length === 0) return;
-
   for (const comment of headerComments) {
-    const nameMatch = comment.match(/(?:model|name)[:\s]+(.+)/i);
-    if (nameMatch && !metadata.name) {
-      metadata.name = nameMatch[1].trim();
-      continue;
+    const match = comment.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
+    if (match) {
+      const key = match[1];
+      const val = match[2].trim();
+      if (key === 'tags') {
+        val.split(',').forEach(tag => metadata.tags.add(tag.trim()));
+      } else if (key === 'description') {
+        if (!metadata.description) metadata.description = val;
+      } else if (key === 'name') {
+        metadata.name = val;
+      } else if (key === 'doi') {
+        metadata.doi = val;
+      }
     }
-
-    const doiMatch = comment.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i);
-    if (doiMatch) {
-      metadata.doi = doiMatch[1].trim();
-    }
-  }
-
-  const nonParamComments = headerComments.filter(c =>
-    !c.match(/^[a-zA-Z_]\w*\s+changed\s+to/i) &&
-    !c.match(/(?:model|name)[:\s]+(.+)/i) &&
-    !c.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i)
-  );
-  if (nonParamComments.length > 0 && !metadata.description) {
-    metadata.description = nonParamComments[0];
   }
 }
 
 function processActionLine(trimmed, metadata) {
-  const nfMatch = trimmed.match(/method\s*=>\s*["']?nf["']?/);
-  const odeMatch = trimmed.match(/method\s*=>\s*["']?ode["']?/);
-  const ssaMatch = trimmed.match(/method\s*=>\s*["']?ssa["']?/);
-  const plaMatch = trimmed.match(/method\s*=>\s*["']?pla["']?/);
-  const hybridMatch = trimmed.match(/method\s*=>\s*["']?hybrid["']?/);
-
-  if (nfMatch) {
-    metadata.simulation_methods.push('nf');
-    metadata.nfsim_compatible = true;
+  const simulateMatch = trimmed.match(/simulate\({(.*)}\)/);
+  if (simulateMatch) {
+    const params = simulateMatch[1];
+    const methodMatch = params.match(/method\s*=>\s*["']?([^"',\s]+)["']?/);
+    if (methodMatch) {
+      metadata.simulation_methods.push(methodMatch[1]);
+      if (methodMatch[1] === 'nf') metadata.nfsim_compatible = true;
+    }
   }
-  if (odeMatch) metadata.simulation_methods.push('ode');
-  if (ssaMatch) metadata.simulation_methods.push('ssa');
-  if (plaMatch) metadata.simulation_methods.push('pla');
-  if (hybridMatch) metadata.simulation_methods.push('hybrid');
 }
 
 function processModelLine(trimmed, metadata, state) {
@@ -456,4 +444,5 @@ module.exports = {
   formatYamlValue,
   inferCategory,
   inferOrigin,
+  processActionLine,
 };
