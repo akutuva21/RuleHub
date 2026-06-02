@@ -449,6 +449,7 @@ if (require.main === module) {
 module.exports = {
   extractMetadataFromComments,
   parseBngl,
+  processModelLine,
   generateMetadata,
   findBnglFiles,
   formatYaml,
