@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
+const { parseBngl, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -277,6 +277,51 @@ end model
     await st.test('infers test-case for unknown paths', () => {
       assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
     });
+  });
+});
+
+test('formatYaml', async (t) => {
+  await t.test('skips undefined and null values', async () => {
+    const obj = { a: 1, b: undefined, c: null, d: 'four' };
+    assert.strictEqual(formatYaml(obj), 'a: 1\nd: four\n');
+  });
+
+  await t.test('formats empty arrays', async () => {
+    const obj = { a: [] };
+    assert.strictEqual(formatYaml(obj), 'a: []\n');
+    assert.strictEqual(formatYaml(obj, 1), '  a: []\n');
+  });
+
+  await t.test('formats arrays of primitives', async () => {
+    const obj = { a: [1, 2, 3], b: ['one', 'two'], c: [true, false] };
+    const expected = 'a: [1, 2, 3]\nb: ["one", "two"]\nc: [true, false]\n';
+    assert.strictEqual(formatYaml(obj), expected);
+  });
+
+  await t.test('formats arrays of objects', async () => {
+    const obj = { a: [{ x: 1 }, { y: 2 }] };
+    const expected = 'a:\n  - x: 1\n  - y: 2\n';
+    assert.strictEqual(formatYaml(obj), expected);
+    const expectedIndented = '  a:\n    - x: 1\n    - y: 2\n';
+    assert.strictEqual(formatYaml(obj, 1), expectedIndented);
+  });
+
+  await t.test('formats mixed arrays', async () => {
+    const obj = { a: [1, { x: 1 }] };
+    const expected = 'a:\n  - 1\n  - x: 1\n';
+    assert.strictEqual(formatYaml(obj), expected);
+  });
+
+  await t.test('formats nested objects', async () => {
+    const obj = { a: { b: 1, c: { d: 2 } } };
+    const expected = 'a:\n  b: 1\n  c:\n    d: 2\n';
+    assert.strictEqual(formatYaml(obj), expected);
+  });
+
+  await t.test('formats basic properties', async () => {
+    const obj = { a: 1, b: true, c: 'string' };
+    const expected = 'a: 1\nb: true\nc: string\n';
+    assert.strictEqual(formatYaml(obj), expected);
   });
 });
 
