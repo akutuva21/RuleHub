@@ -43,21 +43,25 @@ function parseArgs(argv) {
   return { root, output, slim };
 }
 
-function listMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
+async function listMetadataFiles(dir, results = []) {
+  try {
+    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
 
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = safeJoin(dir, entry.name);
-    if (entry.isDirectory()) {
-      listMetadataFiles(fullPath, results);
-      continue;
-    }
-    if (entry.isFile() && entry.name === 'metadata.yaml') {
-      results.push(fullPath);
+    const promises = entries.map(async (entry) => {
+      const fullPath = safeJoin(dir, entry.name);
+      if (entry.isDirectory()) {
+        await listMetadataFiles(fullPath, results);
+      } else if (entry.isFile() && entry.name === 'metadata.yaml') {
+        results.push(fullPath);
+      }
+    });
+
+    await Promise.all(promises);
+  } catch (err) {
+    if (err.code !== 'ENOENT') {
+      throw err;
     }
   }
-
   return results;
 }
 
@@ -185,7 +189,8 @@ function isCollectionEntry(metadata, modelFiles) {
 
 async function main() {
   const { root, output, slim } = parseArgs(process.argv.slice(2));
-  const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
+  const metadataFilesArrays = await Promise.all(SEARCH_ROOTS.map(searchRoot => listMetadataFiles(path.join(root, searchRoot))));
+  const metadataFiles = metadataFilesArrays.flat();
 
   const entryPromises = metadataFiles.map(async (metadataFile) => {
     const content = await fs.promises.readFile(metadataFile, 'utf8');
@@ -224,4 +229,5 @@ module.exports = {
   listMetadataFiles,
   isCollectionEntry,
   parseMetadataYaml,
+  listModelFilesFiltered,
 };
