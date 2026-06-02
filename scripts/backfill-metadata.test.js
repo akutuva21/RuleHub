@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
+const { parseBngl, generateId, generateMetadata, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -136,6 +136,33 @@ end model
     const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
+
+  await t.test('generateId - correctly generates ID based on directory structure', async (st) => {
+    await st.test('handles standard folder names', () => {
+      const dir = path.join(process.cwd(), 'Some_Category', 'My_Model');
+      const id = generateId(dir, 'test_model', 'My_Model');
+      assert.strictEqual(id, 'Some_Category_My_Model_test_model');
+    });
+
+    await st.test('filters out excluded folder names (Published, Examples, Tutorials)', () => {
+      const dir = path.join(process.cwd(), 'Published', 'Cancer_Models', 'My_Model');
+      const id = generateId(dir, 'test_model', 'My_Model');
+      assert.strictEqual(id, 'Cancer_Models_My_Model_test_model');
+    });
+
+    await st.test('falls back to dirName_baseName if all parts are excluded', () => {
+      const dir = path.join(process.cwd(), 'Published');
+      const id = generateId(dir, 'test_model', 'Published');
+      assert.strictEqual(id, 'Published_test_model');
+    });
+
+    await st.test('replaces spaces and dashes with underscores', () => {
+      const dir = path.join(process.cwd(), 'Some-Category', 'My Model');
+      const id = generateId(dir, 'test-model', 'My Model');
+      assert.strictEqual(id, 'Some_Category_My_Model_test_model');
+    });
+  });
+
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
     // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
