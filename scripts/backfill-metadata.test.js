@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
+const { parseBngl, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -296,6 +296,14 @@ end model
     // cell-cycle
     assert.strictEqual(inferCategory(path.join(cwd, 'cell_cycle_model')), 'cell-cycle');
 
+    // cell-cycle edge cases (requires both "cell" and "cycle")
+    assert.strictEqual(inferCategory(path.join(cwd, 'cell_only_model')), 'other');
+    assert.strictEqual(inferCategory(path.join(cwd, 'cycle_only_model')), 'other');
+
+    // case insensitivity
+    assert.strictEqual(inferCategory(path.join(cwd, 'IMMUNE_system')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'CELL_CYCLE')), 'cell-cycle');
+
     // metabolism
     assert.strictEqual(inferCategory(path.join(cwd, 'metabolomics')), 'metabolism');
 
@@ -507,5 +515,49 @@ test('extractMetadataFromComments', async (t) => {
     assert.strictEqual(metadata.doi, '10.9999/full');
     assert.strictEqual(metadata.description, 'A description of the full model');
     assert.deepStrictEqual(metadata.tags, new Set(['t1', 't2']));
+  });
+
+  await t.test('processActionLine', async (st) => {
+    await st.test('parses method correctly with quotes and sets nfsim_compatible for nf', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method=>"nf",t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['nf']);
+      assert.strictEqual(metadata.nfsim_compatible, true);
+    });
+
+    await st.test('parses method with spaces around the operator', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method => "ode", t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ode']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('parses method without quotes', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method=>ode, t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ode']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('parses method with single quotes', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine("simulate({method=>'ssa', t_end=>10})", metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ssa']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('ignores lines without simulate', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('generate_network({overwrite=>1})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, []);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('ignores simulate lines without method', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({t_end=>10, n_steps=>100})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, []);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
   });
 });
