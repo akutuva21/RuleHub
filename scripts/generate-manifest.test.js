@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, listMetadataFiles, parseArgs } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs, listModelFilesFiltered } = require('./generate-manifest.js');
 const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
@@ -354,5 +354,57 @@ test('parseArgs', async (t) => {
     assert.strictEqual(result2.root, defaultRoot);
     assert.strictEqual(result2.output, path.join(defaultRoot, 'manifest.json'));
 
+  });
+});
+
+test('listModelFilesFiltered', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'listModelFilesFiltered-test-'));
+  });
+
+  t.afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  await t.test('returns an empty array for an empty directory', async () => {
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, []);
+  });
+
+  await t.test('matches only .bngl files and ignores other extensions', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'model2.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'data.txt'), '');
+    fs.writeFileSync(path.join(tmpDir, 'script.py'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl', 'model2.bngl']);
+  });
+
+  await t.test('ignores directories, even if they end in .bngl', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    fs.mkdirSync(path.join(tmpDir, 'fake.bngl'));
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl']);
+  });
+
+  await t.test('returns results sorted alphabetically', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'z_model.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'a_model.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'm_model.bngl'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['a_model.bngl', 'm_model.bngl', 'z_model.bngl']);
+  });
+
+  await t.test('throws ENOENT for non-existent directories', async () => {
+    const fakeDir = path.join(tmpDir, 'does-not-exist');
+    await assert.rejects(
+      async () => await listModelFilesFiltered(fakeDir, {}),
+      { code: 'ENOENT' }
+    );
   });
 });
