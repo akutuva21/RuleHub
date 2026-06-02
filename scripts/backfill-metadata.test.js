@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
+const { parseBngl, generateId, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -22,7 +22,7 @@ test('backfill-metadata.js', async (t) => {
     const bnglContent = `
 # name: Test Model
 # doi: 10.1234/test
-# This is a description of the model.
+# description: This is a description of the model.
 # Some other comment
 
 begin model
@@ -136,6 +136,106 @@ end model
     const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
+
+  await t.test('generateId - correctly generates ID based on directory structure', async (st) => {
+    await st.test('handles standard folder names', () => {
+      const dir = path.join(process.cwd(), 'Some_Category', 'My_Model');
+      const id = generateId(dir, 'test_model', 'My_Model');
+      assert.strictEqual(id, 'Some_Category_My_Model_test_model');
+    });
+
+    await st.test('filters out excluded folder names (Published, Examples, Tutorials)', () => {
+      const dir = path.join(process.cwd(), 'Published', 'Cancer_Models', 'My_Model');
+      const id = generateId(dir, 'test_model', 'My_Model');
+      assert.strictEqual(id, 'Cancer_Models_My_Model_test_model');
+    });
+
+    await st.test('falls back to dirName_baseName if all parts are excluded', () => {
+      const dir = path.join(process.cwd(), 'Published');
+      const id = generateId(dir, 'test_model', 'Published');
+      assert.strictEqual(id, 'Published_test_model');
+    });
+
+    await st.test('replaces spaces and dashes with underscores', () => {
+      const dir = path.join(process.cwd(), 'Some-Category', 'My Model');
+      const id = generateId(dir, 'test-model', 'My Model');
+      assert.strictEqual(id, 'Some_Category_My_Model_test_model');
+    });
+  });
+
+  await t.test('processModelLine - mutates state and metadata correctly based on line input', async () => {
+    const metadata = {
+      tags: new Set(),
+      uses_compartments: false,
+      uses_functions: false,
+      uses_energy: false,
+    };
+
+    const state = {
+      inCompartments: false,
+      inFunctions: false,
+    };
+
+    // Test compartments
+    processModelLine('begin compartments', metadata, state);
+    assert.strictEqual(state.inCompartments, true);
+    assert.strictEqual(metadata.uses_compartments, true);
+
+    processModelLine('end compartments', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+
+    // Test functions
+    processModelLine('begin functions', metadata, state);
+    assert.strictEqual(state.inFunctions, true);
+    assert.strictEqual(metadata.uses_functions, true);
+
+    processModelLine('end functions', metadata, state);
+    assert.strictEqual(state.inFunctions, false);
+
+    // Test molecule types ignored
+    processModelLine('begin molecule types', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+    assert.strictEqual(state.inFunctions, false);
+
+    processModelLine('end molecule types', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+    assert.strictEqual(state.inFunctions, false);
+
+    // Test tags extraction
+    processModelLine('MoleculeA ', metadata, state);
+    assert.ok(metadata.tags.has('moleculea'));
+
+    processModelLine('MoleculeB ', metadata, state);
+    assert.ok(metadata.tags.has('moleculeb'));
+
+    // Test tags extraction ignored when in compartments or functions
+    state.inCompartments = true;
+    processModelLine('MoleculeC()', metadata, state);
+    assert.ok(!metadata.tags.has('moleculec'));
+    state.inCompartments = false;
+
+    state.inFunctions = true;
+    processModelLine('MoleculeD()', metadata, state);
+    assert.ok(!metadata.tags.has('moleculed'));
+    state.inFunctions = false;
+
+    // Test tags extraction ignored for assignment lines
+    processModelLine('k1 = 1.0', metadata, state);
+    assert.ok(!metadata.tags.has('k1'));
+
+    processModelLine('A() => B()', metadata, state);
+    assert.ok(!metadata.tags.has('a'));
+
+    // Test energy/Phi usage
+    processModelLine('Arrhenius(Phi)', metadata, state);
+    assert.strictEqual(metadata.uses_energy, true);
+
+    metadata.uses_energy = false; // Reset
+    processModelLine('uses energy', metadata, state);
+    assert.strictEqual(metadata.uses_energy, true);
+  });
+  });
+
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
     // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
@@ -223,6 +323,14 @@ end model
     // cell-cycle
     assert.strictEqual(inferCategory(path.join(cwd, 'cell_cycle_model')), 'cell-cycle');
 
+    // cell-cycle edge cases (requires both "cell" and "cycle")
+    assert.strictEqual(inferCategory(path.join(cwd, 'cell_only_model')), 'other');
+    assert.strictEqual(inferCategory(path.join(cwd, 'cycle_only_model')), 'other');
+
+    // case insensitivity
+    assert.strictEqual(inferCategory(path.join(cwd, 'IMMUNE_system')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'CELL_CYCLE')), 'cell-cycle');
+
     // metabolism
     assert.strictEqual(inferCategory(path.join(cwd, 'metabolomics')), 'metabolism');
 
@@ -244,6 +352,84 @@ end model
     // other
     assert.strictEqual(inferCategory(path.join(cwd, 'unknown_model')), 'other');
     assert.strictEqual(inferCategory(path.join(cwd, 'random', 'dir')), 'other');
+  });
+
+  await t.test('inferOrigin - infers origin based on path', async (st) => {
+    const cwd = process.cwd();
+
+    await st.test('infers published for Published directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Published', 'Model1')), 'published');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'PUBLISHED', 'Model1')), 'published');
+    });
+
+    await st.test('infers ai-generated for Examples with AI prefix', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'AI-Generated-Model')), 'ai-generated');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'aigenerated-Model')), 'ai-generated');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'EXAMPLES', 'ai-generated-Model')), 'ai-generated');
+    });
+
+    await st.test('infers ai-generated for Examples without AI prefix (fallback)', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'Some-Model')), 'ai-generated');
+    });
+
+    await st.test('infers tutorial for Tutorials directory', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Tutorials', 'Basic')), 'tutorial');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'TUTORIALS', 'Basic')), 'tutorial');
+    });
+
+    await st.test('infers contributed when path contains contributed', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'Contributed-Model')), 'contributed');
+      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'CONTRIBUTED-Model')), 'contributed');
+    });
+
+    await st.test('infers test-case for unknown paths', () => {
+      assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
+    });
+  });
+});
+
+test('formatYaml', async (t) => {
+  await t.test('skips undefined and null values', async () => {
+    const obj = { a: 1, b: undefined, c: null, d: 'four' };
+    assert.strictEqual(formatYaml(obj), 'a: 1\nd: four\n');
+  });
+
+  await t.test('formats empty arrays', async () => {
+    const obj = { a: [] };
+    assert.strictEqual(formatYaml(obj), 'a: []\n');
+    assert.strictEqual(formatYaml(obj, 1), '  a: []\n');
+  });
+
+  await t.test('formats arrays of primitives', async () => {
+    const obj = { a: [1, 2, 3], b: ['one', 'two'], c: [true, false] };
+    const expected = 'a: [1, 2, 3]\nb: ["one", "two"]\nc: [true, false]\n';
+    assert.strictEqual(formatYaml(obj), expected);
+  });
+
+  await t.test('formats arrays of objects', async () => {
+    const obj = { a: [{ x: 1 }, { y: 2 }] };
+    const expected = 'a:\n  - x: 1\n  - y: 2\n';
+    assert.strictEqual(formatYaml(obj), expected);
+    const expectedIndented = '  a:\n    - x: 1\n    - y: 2\n';
+    assert.strictEqual(formatYaml(obj, 1), expectedIndented);
+  });
+
+  await t.test('formats mixed arrays', async () => {
+    const obj = { a: [1, { x: 1 }] };
+    const expected = 'a:\n  - 1\n  - x: 1\n';
+    assert.strictEqual(formatYaml(obj), expected);
+  });
+
+  await t.test('formats nested objects', async () => {
+    const obj = { a: { b: 1, c: { d: 2 } } };
+    const expected = 'a:\n  b: 1\n  c:\n    d: 2\n';
+    assert.strictEqual(formatYaml(obj), expected);
+  });
+
+  await t.test('formats basic properties', async () => {
+    const obj = { a: 1, b: true, c: 'string' };
+    const expected = 'a: 1\nb: true\nc: string\n';
+    assert.strictEqual(formatYaml(obj), expected);
   });
 });
 
@@ -286,99 +472,119 @@ test('formatYamlValue', async (t) => {
   await t.test('handles null correctly', () => {
     assert.strictEqual(formatYamlValue(null), 'null\n');
   });
-
-  await t.test('inferOrigin - infers origin based on path', async (st) => {
-    const cwd = process.cwd();
-
-    await st.test('infers published for Published directory', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Published', 'Model1')), 'published');
-    });
-
-    await st.test('infers ai-generated for Examples with AI prefix', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'AI-Generated-Model')), 'ai-generated');
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'aigenerated-Model')), 'ai-generated');
-    });
-
-    await st.test('infers ai-generated for Examples without AI prefix (fallback)', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Examples', 'Some-Model')), 'ai-generated');
-    });
-
-    await st.test('infers tutorial for Tutorials directory', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Tutorials', 'Basic')), 'tutorial');
-    });
-
-    await st.test('infers contributed when path contains contributed', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'SomeDir', 'Contributed-Model')), 'contributed');
-    });
-
-    await st.test('infers test-case for unknown paths', () => {
-      assert.strictEqual(inferOrigin(path.join(cwd, 'Unknown', 'Dir')), 'test-case');
-    });
-  });
 });
 
 test('extractMetadataFromComments', async (t) => {
-  await t.test('returns early if headerComments is empty', () => {
-    const metadata = { name: '', description: '', doi: '' };
+  await t.test('does nothing if headerComments is empty', () => {
+    const metadata = { name: '', description: '', doi: '', tags: new Set() };
     extractMetadataFromComments([], metadata);
-    assert.deepStrictEqual(metadata, { name: '', description: '', doi: '' });
+    assert.deepStrictEqual(metadata, { name: '', description: '', doi: '', tags: new Set() });
   });
 
-  await t.test('extracts model name from name: or model:', () => {
-    const metadata = { name: '' };
+  await t.test('extracts model name correctly and overwrites', () => {
+    const metadata = { name: 'Existing Name', description: '', doi: '', tags: new Set() };
     extractMetadataFromComments(['name: Test Model Name'], metadata);
     assert.strictEqual(metadata.name, 'Test Model Name');
-
-    const metadata2 = { name: '' };
-    extractMetadataFromComments(['model: Another Model'], metadata2);
-    assert.strictEqual(metadata2.name, 'Another Model');
   });
 
-  await t.test('does not overwrite existing name', () => {
-    const metadata = { name: 'Existing Name' };
-    extractMetadataFromComments(['name: New Name'], metadata);
-    assert.strictEqual(metadata.name, 'Existing Name');
-  });
-
-  await t.test('extracts DOI correctly', () => {
-    const metadata = { doi: '' };
+  await t.test('extracts DOI correctly and overwrites', () => {
+    const metadata = { name: '', description: '', doi: 'old.doi', tags: new Set() };
     extractMetadataFromComments(['doi: 10.1234/test.doi'], metadata);
     assert.strictEqual(metadata.doi, '10.1234/test.doi');
-
-    const metadata2 = { doi: '' };
-    extractMetadataFromComments(['DOI: 10.5678/another.doi'], metadata2);
-    assert.strictEqual(metadata2.doi, '10.5678/another.doi');
   });
 
-  await t.test('extracts description from first non-parameter comment', () => {
-    const metadata = { description: '' };
-    const comments = [
-      'k1 changed to 2.0',
-      'This is the actual description',
-      'Some other comment'
-    ];
-    extractMetadataFromComments(comments, metadata);
-    assert.strictEqual(metadata.description, 'This is the actual description');
-  });
-
-  await t.test('does not overwrite existing description', () => {
-    const metadata = { description: 'Existing Description' };
-    extractMetadataFromComments(['New Description'], metadata);
+  await t.test('extracts description and does not overwrite existing description', () => {
+    const metadata = { name: '', description: 'Existing Description', doi: '', tags: new Set() };
+    extractMetadataFromComments(['description: New Description'], metadata);
     assert.strictEqual(metadata.description, 'Existing Description');
+
+    const metadata2 = { name: '', description: '', doi: '', tags: new Set() };
+    extractMetadataFromComments(['description: First Description', 'description: Second Description'], metadata2);
+    assert.strictEqual(metadata2.description, 'First Description');
+  });
+
+  await t.test('extracts tags correctly and trims them', () => {
+    const metadata = { name: '', description: '', doi: '', tags: new Set(['existing-tag']) };
+    extractMetadataFromComments(['tags: tag1, tag2 , tag3'], metadata);
+    assert.deepStrictEqual(metadata.tags, new Set(['existing-tag', 'tag1', 'tag2', 'tag3']));
+  });
+
+  await t.test('ignores invalid or unhandled keys', () => {
+    const metadata = { name: 'Init', description: 'Init', doi: 'Init', tags: new Set() };
+    extractMetadataFromComments(['invalid-key: some value', 'unhandled: value'], metadata);
+    assert.strictEqual(metadata.name, 'Init');
+    assert.strictEqual(metadata.description, 'Init');
+    assert.strictEqual(metadata.doi, 'Init');
+    assert.deepStrictEqual(metadata.tags, new Set());
+  });
+
+  await t.test('ignores comments not matching regex', () => {
+    const metadata = { name: '', description: '', doi: '', tags: new Set() };
+    extractMetadataFromComments(['just some regular comment', 'no colon here', 'name : bad format'], metadata);
+    assert.strictEqual(metadata.name, '');
+    assert.strictEqual(metadata.description, '');
+    assert.strictEqual(metadata.doi, '');
+    assert.deepStrictEqual(metadata.tags, new Set());
   });
 
   await t.test('extracts everything together', () => {
-    const metadata = { name: '', description: '', doi: '' };
+    const metadata = { name: '', description: '', doi: '', tags: new Set() };
     const comments = [
-      'model: Full Model',
+      'name: Full Model',
       'doi: 10.9999/full',
-      'rate_constant changed to 5',
-      'A description of the full model',
-      'Another note'
+      'description: A description of the full model',
+      'tags: t1, t2',
+      'ignored: this is ignored',
+      'just some text'
     ];
     extractMetadataFromComments(comments, metadata);
     assert.strictEqual(metadata.name, 'Full Model');
     assert.strictEqual(metadata.doi, '10.9999/full');
     assert.strictEqual(metadata.description, 'A description of the full model');
+    assert.deepStrictEqual(metadata.tags, new Set(['t1', 't2']));
+  });
+
+  await t.test('processActionLine', async (st) => {
+    await st.test('parses method correctly with quotes and sets nfsim_compatible for nf', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method=>"nf",t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['nf']);
+      assert.strictEqual(metadata.nfsim_compatible, true);
+    });
+
+    await st.test('parses method with spaces around the operator', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method => "ode", t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ode']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('parses method without quotes', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method=>ode, t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ode']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('parses method with single quotes', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine("simulate({method=>'ssa', t_end=>10})", metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ssa']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('ignores lines without simulate', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('generate_network({overwrite=>1})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, []);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('ignores simulate lines without method', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({t_end=>10, n_steps=>100})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, []);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
   });
 });

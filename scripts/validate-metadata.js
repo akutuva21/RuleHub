@@ -213,4 +213,6 @@ module.exports = {
   listMetadataFiles,
   expectString,
   expectArray,
+  expectEnum,
+  expectBoolean,
 };

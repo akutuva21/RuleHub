@@ -33,24 +33,35 @@ function parseArgs(argv) {
       : path.join(root, 'manifest.json');
   }
 
+  const resolvedRoot = path.resolve(root);
+  const resolvedOutput = path.resolve(output);
+  const rootWithSep = resolvedRoot.endsWith(path.sep) ? resolvedRoot : resolvedRoot + path.sep;
+  if (!resolvedOutput.startsWith(rootWithSep) && resolvedOutput !== resolvedRoot) {
+    throw new Error(`Path traversal security risk: output path must be within the root directory`);
+  }
+
   return { root, output, slim };
 }
 
-function listMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
+async function listMetadataFiles(dir, results = []) {
+  try {
+    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
 
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const fullPath = safeJoin(dir, entry.name);
-    if (entry.isDirectory()) {
-      listMetadataFiles(fullPath, results);
-      continue;
-    }
-    if (entry.isFile() && entry.name === 'metadata.yaml') {
-      results.push(fullPath);
+    const promises = entries.map(async (entry) => {
+      const fullPath = safeJoin(dir, entry.name);
+      if (entry.isDirectory()) {
+        await listMetadataFiles(fullPath, results);
+      } else if (entry.isFile() && entry.name === 'metadata.yaml') {
+        results.push(fullPath);
+      }
+    });
+
+    await Promise.all(promises);
+  } catch (err) {
+    if (err.code !== 'ENOENT') {
+      throw err;
     }
   }
-
   return results;
 }
 
@@ -60,15 +71,6 @@ function getIgnoreDirs(metadata) {
     return [...DEFAULT_IGNORE_DIRS, ...auxDirs];
   }
   return DEFAULT_IGNORE_DIRS;
-}
-
-function isIgnoredDir(dirName, ignoreDirs) {
-  return ignoreDirs.some(ignored => {
-    if (ignored.includes('*')) {
-      return dirName.startsWith(ignored.replace('*', ''));
-    }
-    return dirName === ignored;
-  });
 }
 
 async function listModelFilesFiltered(dir, metadata) {
@@ -178,7 +180,8 @@ function isCollectionEntry(metadata, modelFiles) {
 
 async function main() {
   const { root, output, slim } = parseArgs(process.argv.slice(2));
-  const metadataFiles = SEARCH_ROOTS.flatMap(searchRoot => listMetadataFiles(path.join(root, searchRoot)));
+  const metadataFilesArrays = await Promise.all(SEARCH_ROOTS.map(searchRoot => listMetadataFiles(path.join(root, searchRoot))));
+  const metadataFiles = metadataFilesArrays.flat();
 
   const entryPromises = metadataFiles.map(async (metadataFile) => {
     const content = await fs.promises.readFile(metadataFile, 'utf8');
@@ -212,9 +215,12 @@ if (require.main === module) {
 }
 
 module.exports = {
+  getIgnoreDirs,
+  DEFAULT_IGNORE_DIRS,
   parseArgs,
   buildEntry,
   listMetadataFiles,
   isCollectionEntry,
   parseMetadataYaml,
+  listModelFilesFiltered,
 };
