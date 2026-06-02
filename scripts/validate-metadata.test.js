@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml, listMetadataFiles, setNested, expectString, normalizeModelKey } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, normalizeModelKey } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -303,6 +303,44 @@ test('expectString', async (t) => {
   await t.test('does not append error for valid string', () => {
     const errors = [];
     expectString(errors, 'valid string', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+});
+
+test('expectBoolean', async (t) => {
+  await t.test('appends error if value is not a boolean (number)', () => {
+    const errors = [];
+    expectBoolean(errors, 123, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is not a boolean (string)', () => {
+    const errors = [];
+    expectBoolean(errors, 'true', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectBoolean(errors, null, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is undefined', () => {
+    const errors = [];
+    expectBoolean(errors, undefined, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('does not append error for valid boolean true', () => {
+    const errors = [];
+    expectBoolean(errors, true, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('does not append error for valid boolean false', () => {
+    const errors = [];
+    expectBoolean(errors, false, 'label', 'file.txt');
     assert.deepStrictEqual(errors, []);
   });
 });
