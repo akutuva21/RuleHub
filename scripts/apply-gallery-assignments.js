@@ -108,7 +108,8 @@ async function updateMetadataFile(filePath, assignments, compiledAssignments, dr
 async function main(argv = process.argv.slice(2)) {
   const { input, root, dryRun } = parseArgs(argv);
   
-  const assignments = JSON.parse(await fs.promises.readFile(input, 'utf8'));
+  const safeInput = safeJoin(process.cwd(), input);
+  const assignments = JSON.parse(await fs.promises.readFile(safeInput, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
   const compiledAssignments = [];
