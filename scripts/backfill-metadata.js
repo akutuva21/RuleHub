@@ -438,6 +438,7 @@ module.exports = {
   extractMetadataFromComments,
   parseBngl,
   generateId,
+  processModelLine,
   generateMetadata,
   findBnglFiles,
   formatYaml,
