@@ -235,35 +235,35 @@ test('extractModelIds', async (t) => {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  await t.test('returns metadata id if is collection', () => {
+  await t.test('returns metadata id if is collection', async () => {
     const metadataPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(metadataPath, '');
-    const result = extractModelIds(metadataPath, { id: 'coll_1', collection: true });
+    const result = await extractModelIds(metadataPath, { id: 'coll_1', collection: true });
     assert.deepStrictEqual(result, ['coll_1']);
   });
 
-  await t.test('returns metadata id if it exists and bngl files are present', () => {
+  await t.test('returns metadata id if it exists and bngl files are present', async () => {
     const metadataPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(metadataPath, '');
     fs.writeFileSync(path.join(tmpDir, 'model.bngl'), '');
 
-    const result = extractModelIds(metadataPath, { id: 'meta_id' });
+    const result = await extractModelIds(metadataPath, { id: 'meta_id' });
     assert.deepStrictEqual(result, ['meta_id']);
   });
 
-  await t.test('returns filename of bngl if no metadata id is present', () => {
+  await t.test('returns filename of bngl if no metadata id is present', async () => {
     const metadataPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(metadataPath, '');
     fs.writeFileSync(path.join(tmpDir, 'my_model.bngl'), '');
 
-    const result = extractModelIds(metadataPath, {});
+    const result = await extractModelIds(metadataPath, {});
     assert.deepStrictEqual(result, ['my_model']);
   });
 
-  await t.test('returns empty array if no bngl files are present (and not a collection)', () => {
+  await t.test('returns empty array if no bngl files are present (and not a collection)', async () => {
     const metadataPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(metadataPath, '');
-    const result = extractModelIds(metadataPath, { id: 'meta_id' });
+    const result = await extractModelIds(metadataPath, { id: 'meta_id' });
     assert.deepStrictEqual(result, []);
   });
 });

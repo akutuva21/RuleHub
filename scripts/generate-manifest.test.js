@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, listMetadataFiles, parseArgs, isIgnoredDir } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs, isIgnoredDir, isCollectionEntry, getIgnoreDirs, DEFAULT_IGNORE_DIRS, listModelFilesFiltered } = require('./generate-manifest.js');
 const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
@@ -17,25 +17,25 @@ test('listMetadataFiles', async (t) => {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  await t.test('returns empty array for non-existent directory', () => {
-    const results = listMetadataFiles(path.join(tmpDir, 'non-existent'));
+  await t.test('returns empty array for non-existent directory', async () => {
+    const results = await listMetadataFiles(path.join(tmpDir, 'non-existent'));
     assert.deepStrictEqual(results, []);
   });
 
-  await t.test('returns empty array when no metadata files exist', () => {
+  await t.test('returns empty array when no metadata files exist', async () => {
     fs.writeFileSync(path.join(tmpDir, 'somefile.txt'), '');
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.deepStrictEqual(results, []);
   });
 
-  await t.test('finds metadata.yaml in root directory', () => {
+  await t.test('finds metadata.yaml in root directory', async () => {
     const yamlPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(yamlPath, '');
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.deepStrictEqual(results, [yamlPath]);
   });
 
-  await t.test('finds metadata.yaml in nested directories', () => {
+  await t.test('finds metadata.yaml in nested directories', async () => {
     const dir1 = path.join(tmpDir, 'dir1');
     const dir2 = path.join(tmpDir, 'dir2');
     fs.mkdirSync(dir1);
@@ -47,13 +47,13 @@ test('listMetadataFiles', async (t) => {
     fs.writeFileSync(yaml1, '');
     fs.writeFileSync(yaml2, '');
 
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.strictEqual(results.length, 2);
     assert.ok(results.includes(yaml1));
     assert.ok(results.includes(yaml2));
   });
 
-  await t.test('ignores other files named metadata.yaml if they are directories', () => {
+  await t.test('ignores other files named metadata.yaml if they are directories', async () => {
     const fakeYamlDir = path.join(tmpDir, 'metadata.yaml');
     fs.mkdirSync(fakeYamlDir);
 
@@ -61,7 +61,7 @@ test('listMetadataFiles', async (t) => {
     fs.mkdirSync(path.join(tmpDir, 'dir1'));
     fs.writeFileSync(realYaml, '');
 
-    const results = listMetadataFiles(tmpDir);
+    const results = await listMetadataFiles(tmpDir);
     assert.deepStrictEqual(results, [realYaml]);
   });
 });
@@ -181,19 +181,25 @@ test('parseArgs', async (t) => {
   });
 
   await t.test('parses --output argument', () => {
-    const args = parseArgs(['--output', 'custom/output.json']);
     const expectedRoot = path.resolve(__dirname, '..');
-    const expectedOutput = path.resolve('custom/output.json');
+    const outputArg = path.join(expectedRoot, 'custom/output.json');
+    const args = parseArgs(['--output', outputArg]);
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, outputArg);
+  });
+
+  await t.test('parses both --root and --output arguments', () => {
+    const expectedRoot = path.resolve('custom/root');
+    const expectedOutput = path.resolve('custom/root/custom/output.json');
+    const args = parseArgs(['--root', 'custom/root', '--output', expectedOutput]);
     assert.strictEqual(args.root, expectedRoot);
     assert.strictEqual(args.output, expectedOutput);
   });
 
-  await t.test('parses both --root and --output arguments', () => {
-    const args = parseArgs(['--root', 'custom/root', '--output', 'custom/output.json']);
-    const expectedRoot = path.resolve('custom/root');
-    const expectedOutput = path.resolve('custom/output.json');
-    assert.strictEqual(args.root, expectedRoot);
-    assert.strictEqual(args.output, expectedOutput);
+  await t.test('throws an error if output is outside root directory', () => {
+    assert.throws(() => {
+      parseArgs(['--root', '/custom/root', '--output', '/etc/passwd']);
+    }, /Path traversal security risk/);
   });
 
   await t.test('ignores flags at the end of the array', () => {
@@ -331,18 +337,24 @@ test('parseArgs', async (t) => {
   });
 
   await t.test('parses --output argument', () => {
-    const customOutput = path.resolve('/custom/output.json');
-    const result = parseArgs(['--output', '/custom/output.json']);
+    const customOutput = path.join(defaultRoot, 'custom/output.json');
+    const result = parseArgs(['--output', customOutput]);
     assert.strictEqual(result.root, defaultRoot);
     assert.strictEqual(result.output, customOutput);
   });
 
   await t.test('parses both --root and --output arguments', () => {
     const customRoot = path.resolve('/custom/root');
-    const customOutput = path.resolve('/custom/output.json');
-    const result = parseArgs(['--root', '/custom/root', '--output', '/custom/output.json']);
+    const customOutput = path.resolve('/custom/root/output.json');
+    const result = parseArgs(['--root', '/custom/root', '--output', customOutput]);
     assert.strictEqual(result.root, customRoot);
     assert.strictEqual(result.output, customOutput);
+  });
+
+  await t.test('throws an error if output is outside root directory', () => {
+    assert.throws(() => {
+      parseArgs(['--root', '/custom/root', '--output', '/etc/passwd']);
+    }, /Path traversal security risk/);
   });
 
   await t.test('ignores flags missing a subsequent value', () => {
@@ -376,5 +388,112 @@ test('isIgnoredDir', async (t) => {
 
   await t.test('returns false for empty ignoreDirs array', () => {
     assert.strictEqual(isIgnoredDir('fitting', []), false);
+  });
+});
+
+test('isCollectionEntry', async (t) => {
+  await t.test('returns true when metadata has a collection property', () => {
+    const metadata = { collection: { type: 'parameter-fit-variants' } };
+    assert.strictEqual(isCollectionEntry(metadata), true);
+  });
+
+  await t.test('returns false when metadata has no collection property', () => {
+    const metadata = { id: 'model_a' };
+    assert.strictEqual(isCollectionEntry(metadata), false);
+  });
+
+  await t.test('returns false when collection property is null or undefined', () => {
+    const metadataWithNull = { collection: null };
+    const metadataWithUndefined = { collection: undefined };
+    assert.strictEqual(isCollectionEntry(metadataWithNull), false);
+    assert.strictEqual(isCollectionEntry(metadataWithUndefined), false);
+  });
+});
+
+test('getIgnoreDirs', async (t) => {
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata is undefined', () => {
+    const result = getIgnoreDirs(undefined);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata.source is undefined', () => {
+    const metadata = { id: 'model_1' };
+    const result = getIgnoreDirs(metadata);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata.source.aux_dirs is not an array', () => {
+    const metadata = {
+      source: {
+        aux_dirs: 'not_an_array'
+      }
+    };
+    const result = getIgnoreDirs(metadata);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns combined array when metadata.source.aux_dirs is an array', () => {
+    const metadata = {
+      source: {
+        aux_dirs: ['custom_dir_1', 'custom_dir_2']
+      }
+    };
+    const result = getIgnoreDirs(metadata);
+    const expected = [...DEFAULT_IGNORE_DIRS, 'custom_dir_1', 'custom_dir_2'];
+    assert.deepStrictEqual(result, expected);
+  });
+});
+
+test('listModelFilesFiltered', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'listModelFilesFiltered-test-'));
+  });
+
+  t.afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  await t.test('returns an empty array for an empty directory', async () => {
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, []);
+  });
+
+  await t.test('matches only .bngl files and ignores other extensions', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'model2.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'data.txt'), '');
+    fs.writeFileSync(path.join(tmpDir, 'script.py'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl', 'model2.bngl']);
+  });
+
+  await t.test('ignores directories, even if they end in .bngl', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    fs.mkdirSync(path.join(tmpDir, 'fake.bngl'));
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl']);
+  });
+
+  await t.test('returns results sorted alphabetically', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'z_model.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'a_model.bngl'), '');
+    fs.writeFileSync(path.join(tmpDir, 'm_model.bngl'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['a_model.bngl', 'm_model.bngl', 'z_model.bngl']);
+  });
+
+  await t.test('throws ENOENT for non-existent directories', async () => {
+    const fakeDir = path.join(tmpDir, 'does-not-exist');
+    await assert.rejects(
+      async () => await listModelFilesFiltered(fakeDir, {}),
+      { code: 'ENOENT' }
+    );
+  });
+});
   });
 });

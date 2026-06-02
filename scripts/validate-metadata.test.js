@@ -1,6 +1,9 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseMetadataYaml, listMetadataFiles, setNested, expectString, normalizeModelKey } = require('./validate-metadata.js');
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -307,6 +310,44 @@ test('expectString', async (t) => {
   });
 });
 
+test('expectBoolean', async (t) => {
+  await t.test('appends error if value is not a boolean (number)', () => {
+    const errors = [];
+    expectBoolean(errors, 123, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is not a boolean (string)', () => {
+    const errors = [];
+    expectBoolean(errors, 'true', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectBoolean(errors, null, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is undefined', () => {
+    const errors = [];
+    expectBoolean(errors, undefined, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('does not append error for valid boolean true', () => {
+    const errors = [];
+    expectBoolean(errors, true, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('does not append error for valid boolean false', () => {
+    const errors = [];
+    expectBoolean(errors, false, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+});
+
 test('listMetadataFiles', async (t) => {
   await t.test('returns empty array for non-existent directory', async () => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
@@ -455,5 +496,131 @@ test('listMetadataFiles', async (t) => {
     const nonExistentPath = '/path/that/does/not/exist/for/sure/12345';
     const result = await listMetadataFiles(nonExistentPath);
     assert.deepStrictEqual(result, []);
+  });
+});
+
+test('validateMetadataFile', async (t) => {
+  let tempDir;
+
+  t.beforeEach(() => {
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'validate-metadata-test-'));
+  });
+
+  t.afterEach(() => {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  });
+
+  const validYaml = `
+id: my-model
+name: My Model
+description: Valid model
+tags: [tag1]
+category: physics
+compatibility:
+  bng2_compatible: true
+  uses_compartments: false
+  uses_energy: false
+  uses_functions: false
+  nfsim_compatible: false
+source:
+  origin: published
+playground:
+  visible: true
+  featured: false
+  difficulty: beginner
+  `;
+
+  await t.test('validates a correct metadata file', async () => {
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, validYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('reports missing README.md', async () => {
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, validYaml);
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.strictEqual(errors.length, 1);
+    assert.match(errors[0], /missing README\.md/);
+  });
+
+  await t.test('reports missing .bngl files', async () => {
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, validYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.strictEqual(errors.length, 1);
+    assert.match(errors[0], /no \.bngl files found/);
+  });
+
+  await t.test('reports invalid category', async () => {
+    const invalidCategoryYaml = validYaml.replace('category: physics', 'category: not-a-real-category');
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, invalidCategoryYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.strictEqual(errors.length, 1);
+    assert.match(errors[0], /invalid category/);
+  });
+
+  await t.test('reports missing compatibility section', async () => {
+    const noCompatibilityYaml = validYaml.replace(/compatibility:[\s\S]*?source:/, 'source:');
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, noCompatibilityYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.ok(errors.some(e => e.includes('missing compatibility section')));
+  });
+
+  await t.test('reports invalid playground section', async () => {
+    const invalidPlaygroundYaml = validYaml.replace('playground:\n  visible: true', 'playground:\n  visible: "yes"');
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, invalidPlaygroundYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.ok(errors.some(e => e.includes('missing or invalid playground.visible')));
+  });
+
+  await t.test('reports missing source section', async () => {
+    const noSourceYaml = validYaml.replace(/source:[\s\S]*?playground:/, 'playground:');
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, noSourceYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.ok(errors.some(e => e.includes('missing source section')));
+  });
+
+  await t.test('reports collection errors', async () => {
+    const collectionYaml = validYaml + '\ncollection:\n  type: parameter-fit-variants\n  count: 2\n';
+    const metadataFile = path.join(tempDir, 'metadata.yaml');
+    fs.writeFileSync(metadataFile, collectionYaml);
+    fs.writeFileSync(path.join(tempDir, 'README.md'), '# My Model');
+    fs.writeFileSync(path.join(tempDir, 'model.bngl'), 'begin model');
+
+    const errors = [];
+    await validateMetadataFile(metadataFile, errors);
+    assert.ok(errors.some(e => e.includes('but found 1 model files')));
   });
 });
