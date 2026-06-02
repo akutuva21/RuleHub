@@ -137,6 +137,7 @@ async function main(argv = process.argv.slice(2)) {
 
   const results = await Promise.all(updatePromises);
   const updated = results.filter(Boolean).length;
+  console.log(`Updated ${updated} metadata files`);
 }
 
 if (require.main === module) {
