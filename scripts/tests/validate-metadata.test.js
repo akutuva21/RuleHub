@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert');
-const { parseScalar, normalizeModelKey, expectEnum } = require('../validate-metadata.js');
+const { parseScalar, normalizeModelKey, expectArray, expectEnum } = require('../validate-metadata.js');
 
 test('parseScalar', async (t) => {
   await t.test('parses boolean strings', () => {
@@ -65,6 +65,37 @@ test('normalizeModelKey', async (t) => {
   });
 });
 
+test('expectArray', async (t) => {
+  await t.test('does not add error for arrays', () => {
+    const errors = [];
+    expectArray(errors, [], 'labels', 'path/to/file');
+    assert.deepStrictEqual(errors, []);
+
+    expectArray(errors, ['a', 'b'], 'labels', 'path/to/file');
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('adds error for non-arrays', () => {
+    const errors = [];
+    expectArray(errors, 'not an array', 'labels', 'path/to/file');
+    assert.deepStrictEqual(errors, ['path/to/file: missing or invalid labels']);
+
+    expectArray(errors, null, 'tags', 'another/file');
+    assert.deepStrictEqual(errors, [
+      'path/to/file: missing or invalid labels',
+      'another/file: missing or invalid tags'
+    ]);
+
+    const errors2 = [];
+    expectArray(errors2, {}, 'labels', 'path/to/file');
+    expectArray(errors2, undefined, 'labels', 'path/to/file');
+    assert.deepStrictEqual(errors2, [
+      'path/to/file: missing or invalid labels',
+      'path/to/file: missing or invalid labels',
+    ]);
+  });
+});
+
 test('expectEnum', async (t) => {
   const allowed = new Set(['apple', 'banana', 'orange']);
   const label = 'fruit';
@@ -116,5 +147,7 @@ test('expectEnum', async (t) => {
     expectEnum(errors, undefined, allowed, label, filePath);
     assert.strictEqual(errors.length, 1);
     assert.strictEqual(errors[0], 'test.yaml: invalid fruit (undefined)');
+  });
+});
   });
 });
