@@ -66,15 +66,6 @@ function getIgnoreDirs(metadata) {
   return DEFAULT_IGNORE_DIRS;
 }
 
-function isIgnoredDir(dirName, ignoreDirs) {
-  return ignoreDirs.some(ignored => {
-    if (ignored.includes('*')) {
-      return dirName.startsWith(ignored.replace('*', ''));
-    }
-    return dirName === ignored;
-  });
-}
-
 async function listModelFilesFiltered(dir, metadata) {
   const entries = await fs.promises.readdir(dir, { withFileTypes: true });
   
