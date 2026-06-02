@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { updateMetadataFile, parseArgs } = require('./apply-gallery-assignments.js');
+const { updateMetadataFile, parseArgs, findAllMetadataFiles } = require('./apply-gallery-assignments.js');
 
 function compileAssignments(assignments) {
   return Object.entries(assignments).map(([modelId, data]) => ({
@@ -145,6 +145,55 @@ test('parseArgs with all arguments', () => {
   assert.strictEqual(args.input, 'test.json');
   assert.strictEqual(args.root, '/tmp/root');
   assert.strictEqual(args.dryRun, true);
+});
+
+test('findAllMetadataFiles', async (t) => {
+  let tmpDir;
+
+  t.beforeEach(() => {
+    tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'find-metadata-test-'));
+  });
+
+  t.afterEach(() => {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  });
+
+  await t.test('returns empty array if directory does not exist', () => {
+    const nonExistentDir = path.join(tmpDir, 'does-not-exist');
+    const result = findAllMetadataFiles(nonExistentDir);
+    assert.deepStrictEqual(result, []);
+  });
+
+  await t.test('returns empty array if no metadata.yaml files exist', () => {
+    fs.writeFileSync(path.join(tmpDir, 'some-file.txt'), 'hello');
+    const result = findAllMetadataFiles(tmpDir);
+    assert.deepStrictEqual(result, []);
+  });
+
+  await t.test('finds metadata.yaml in the root directory', () => {
+    const yamlPath = path.join(tmpDir, 'metadata.yaml');
+    fs.writeFileSync(yamlPath, 'id: test');
+    const result = findAllMetadataFiles(tmpDir);
+    assert.deepStrictEqual(result, [yamlPath]);
+  });
+
+  await t.test('finds metadata.yaml in nested directories', () => {
+    const subDir1 = path.join(tmpDir, 'sub1');
+    const subDir2 = path.join(subDir1, 'sub2');
+    fs.mkdirSync(subDir2, { recursive: true });
+
+    const yamlPath1 = path.join(tmpDir, 'metadata.yaml');
+    const yamlPath2 = path.join(subDir2, 'metadata.yaml');
+
+    fs.writeFileSync(yamlPath1, 'id: test1');
+    fs.writeFileSync(yamlPath2, 'id: test2');
+    fs.writeFileSync(path.join(subDir1, 'other.yaml'), 'id: ignore');
+
+    const result = findAllMetadataFiles(tmpDir);
+
+    // Sort to make the test deterministic
+    assert.deepStrictEqual(result.sort(), [yamlPath1, yamlPath2].sort());
+  });
 });
 
 test('parseArgs ignoring missing value for --input', () => {
