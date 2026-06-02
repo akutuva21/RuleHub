@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, listMetadataFiles, parseArgs, getIgnoreDirs, DEFAULT_IGNORE_DIRS, listModelFilesFiltered } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs, isCollectionEntry, getIgnoreDirs, DEFAULT_IGNORE_DIRS, listModelFilesFiltered } = require('./generate-manifest.js');
 const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
@@ -366,6 +366,25 @@ test('parseArgs', async (t) => {
     assert.strictEqual(result2.root, defaultRoot);
     assert.strictEqual(result2.output, path.join(defaultRoot, 'manifest.json'));
 
+  });
+});
+
+test('isCollectionEntry', async (t) => {
+  await t.test('returns true when metadata has a collection property', () => {
+    const metadata = { collection: { type: 'parameter-fit-variants' } };
+    assert.strictEqual(isCollectionEntry(metadata), true);
+  });
+
+  await t.test('returns false when metadata has no collection property', () => {
+    const metadata = { id: 'model_a' };
+    assert.strictEqual(isCollectionEntry(metadata), false);
+  });
+
+  await t.test('returns false when collection property is null or undefined', () => {
+    const metadataWithNull = { collection: null };
+    const metadataWithUndefined = { collection: undefined };
+    assert.strictEqual(isCollectionEntry(metadataWithNull), false);
+    assert.strictEqual(isCollectionEntry(metadataWithUndefined), false);
   });
 });
 
