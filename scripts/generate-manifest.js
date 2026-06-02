@@ -3,7 +3,6 @@ const path = require('path');
 const { listModelFilesAsync, parseMetadataYaml , safeJoin} = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
-const DEFAULT_IGNORE_DIRS = ['fitting', 'BioNetFit_files', 'output_*', 'fit_*', '__pycache__', 'pybnf_files'];
 
 function parseArgs(argv) {
   let root = path.resolve(__dirname, '..');
@@ -52,23 +51,6 @@ function listMetadataFiles(dir, results = []) {
   }
 
   return results;
-}
-
-function getIgnoreDirs(metadata) {
-  const auxDirs = metadata?.source?.aux_dirs;
-  if (auxDirs && Array.isArray(auxDirs)) {
-    return [...DEFAULT_IGNORE_DIRS, ...auxDirs];
-  }
-  return DEFAULT_IGNORE_DIRS;
-}
-
-function isIgnoredDir(dirName, ignoreDirs) {
-  return ignoreDirs.some(ignored => {
-    if (ignored.includes('*')) {
-      return dirName.startsWith(ignored.replace('*', ''));
-    }
-    return dirName === ignored;
-  });
 }
 
 async function listModelFilesFiltered(dir, metadata) {
