@@ -118,10 +118,17 @@ async function main(argv = process.argv.slice(2)) {
   const assignments = JSON.parse(await fs.promises.readFile(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
-  const compiledAssignments = Object.entries(assignments).map(([modelId, data]) => ({
-    modelId, data,
-    idPattern: new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm')
-  }));
+  const compiledAssignments = [];
+  for (const [modelId, data] of Object.entries(assignments)) {
+    if (typeof modelId !== 'string' || modelId.length > 100) {
+      console.warn(`Skipping invalid modelId: ${modelId}`);
+      continue;
+    }
+    compiledAssignments.push({
+      modelId, data,
+      idPattern: new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, (match) => '\\' + match)}["']?\\s*$`, 'm')
+    });
+  }
 
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
   const metadataFileArrays = await Promise.all(
