@@ -58,28 +58,21 @@ async function findBnglFiles(dir, ignoreDirs = DEFAULT_IGNORE_DIRS) {
 }
 
 function extractMetadataFromComments(headerComments, metadata) {
-  if (headerComments.length === 0) return;
-
   for (const comment of headerComments) {
-    const nameMatch = comment.match(/(?:model|name)[:\s]+(.+)/i);
-    if (nameMatch && !metadata.name) {
-      metadata.name = nameMatch[1].trim();
-      continue;
+    const match = comment.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
+    if (match) {
+      const key = match[1];
+      const val = match[2].trim();
+      if (key === 'tags') {
+        val.split(',').forEach(tag => metadata.tags.add(tag.trim()));
+      } else if (key === 'description') {
+        if (!metadata.description) metadata.description = val;
+      } else if (key === 'name') {
+        metadata.name = val;
+      } else if (key === 'doi') {
+        metadata.doi = val;
+      }
     }
-
-    const doiMatch = comment.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i);
-    if (doiMatch) {
-      metadata.doi = doiMatch[1].trim();
-    }
-  }
-
-  const nonParamComments = headerComments.filter(c =>
-    !c.match(/^[a-zA-Z_]\w*\s+changed\s+to/i) &&
-    !c.match(/(?:model|name)[:\s]+(.+)/i) &&
-    !c.match(/(?:doi|DOI)[:\s]+(10\.\S+)/i)
-  );
-  if (nonParamComments.length > 0 && !metadata.description) {
-    metadata.description = nonParamComments[0];
   }
 }
 
