@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine } = require('./backfill-metadata.js');
+const { parseBngl, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -136,6 +136,79 @@ end model
     const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
+
+  await t.test('processModelLine - mutates state and metadata correctly based on line input', async () => {
+    const metadata = {
+      tags: new Set(),
+      uses_compartments: false,
+      uses_functions: false,
+      uses_energy: false,
+    };
+
+    const state = {
+      inCompartments: false,
+      inFunctions: false,
+    };
+
+    // Test compartments
+    processModelLine('begin compartments', metadata, state);
+    assert.strictEqual(state.inCompartments, true);
+    assert.strictEqual(metadata.uses_compartments, true);
+
+    processModelLine('end compartments', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+
+    // Test functions
+    processModelLine('begin functions', metadata, state);
+    assert.strictEqual(state.inFunctions, true);
+    assert.strictEqual(metadata.uses_functions, true);
+
+    processModelLine('end functions', metadata, state);
+    assert.strictEqual(state.inFunctions, false);
+
+    // Test molecule types ignored
+    processModelLine('begin molecule types', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+    assert.strictEqual(state.inFunctions, false);
+
+    processModelLine('end molecule types', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+    assert.strictEqual(state.inFunctions, false);
+
+    // Test tags extraction
+    processModelLine('MoleculeA ', metadata, state);
+    assert.ok(metadata.tags.has('moleculea'));
+
+    processModelLine('MoleculeB ', metadata, state);
+    assert.ok(metadata.tags.has('moleculeb'));
+
+    // Test tags extraction ignored when in compartments or functions
+    state.inCompartments = true;
+    processModelLine('MoleculeC()', metadata, state);
+    assert.ok(!metadata.tags.has('moleculec'));
+    state.inCompartments = false;
+
+    state.inFunctions = true;
+    processModelLine('MoleculeD()', metadata, state);
+    assert.ok(!metadata.tags.has('moleculed'));
+    state.inFunctions = false;
+
+    // Test tags extraction ignored for assignment lines
+    processModelLine('k1 = 1.0', metadata, state);
+    assert.ok(!metadata.tags.has('k1'));
+
+    processModelLine('A() => B()', metadata, state);
+    assert.ok(!metadata.tags.has('a'));
+
+    // Test energy/Phi usage
+    processModelLine('Arrhenius(Phi)', metadata, state);
+    assert.strictEqual(metadata.uses_energy, true);
+
+    metadata.uses_energy = false; // Reset
+    processModelLine('uses energy', metadata, state);
+    assert.strictEqual(metadata.uses_energy, true);
+  });
+
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
     // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
