@@ -60,10 +60,8 @@ async function updateMetadataFile(filePath, assignments, compiledAssignments, dr
         const catsStr = JSON.stringify(data.gallery_categories);
         const galleryMatch = content.match(/gallery_categories:\s*(\[\]|["\'][^"\']*["\'])/);
         if (galleryMatch) {
-          if (galleryMatch) {
-            newContent = newContent.replace(/gallery_categories:\s*\[\]/, `gallery_categories: ${catsStr}`);
-            updated = true;
-          }
+          newContent = newContent.replace(/gallery_categories:\s*\[\]/, `gallery_categories: ${catsStr}`);
+          updated = true;
         }
         
         const galleryCatMatch = content.match(/gallery_category:\s*["']([^"\']+)["\']/);
