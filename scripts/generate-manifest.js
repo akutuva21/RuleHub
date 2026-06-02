@@ -32,6 +32,13 @@ function parseArgs(argv) {
       : path.join(root, 'manifest.json');
   }
 
+  const resolvedRoot = path.resolve(root);
+  const resolvedOutput = path.resolve(output);
+  const rootWithSep = resolvedRoot.endsWith(path.sep) ? resolvedRoot : resolvedRoot + path.sep;
+  if (!resolvedOutput.startsWith(rootWithSep) && resolvedOutput !== resolvedRoot) {
+    throw new Error(`Path traversal security risk: output path must be within the root directory`);
+  }
+
   return { root, output, slim };
 }
 
@@ -55,6 +62,14 @@ async function listMetadataFiles(dir, results = []) {
     }
   }
   return results;
+}
+
+function getIgnoreDirs(metadata) {
+  const auxDirs = metadata?.source?.aux_dirs;
+  if (auxDirs && Array.isArray(auxDirs)) {
+    return [...DEFAULT_IGNORE_DIRS, ...auxDirs];
+  }
+  return DEFAULT_IGNORE_DIRS;
 }
 
 async function listModelFilesFiltered(dir, metadata) {
@@ -199,6 +214,8 @@ if (require.main === module) {
 }
 
 module.exports = {
+  getIgnoreDirs,
+  DEFAULT_IGNORE_DIRS,
   parseArgs,
   buildEntry,
   listMetadataFiles,

@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments } = require('./backfill-metadata.js');
+const { parseBngl, generateId, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -136,6 +136,106 @@ end model
     const result = await parseBngl(filePath);
     assert.strictEqual(result.uses_energy, true);
   });
+
+  await t.test('generateId - correctly generates ID based on directory structure', async (st) => {
+    await st.test('handles standard folder names', () => {
+      const dir = path.join(process.cwd(), 'Some_Category', 'My_Model');
+      const id = generateId(dir, 'test_model', 'My_Model');
+      assert.strictEqual(id, 'Some_Category_My_Model_test_model');
+    });
+
+    await st.test('filters out excluded folder names (Published, Examples, Tutorials)', () => {
+      const dir = path.join(process.cwd(), 'Published', 'Cancer_Models', 'My_Model');
+      const id = generateId(dir, 'test_model', 'My_Model');
+      assert.strictEqual(id, 'Cancer_Models_My_Model_test_model');
+    });
+
+    await st.test('falls back to dirName_baseName if all parts are excluded', () => {
+      const dir = path.join(process.cwd(), 'Published');
+      const id = generateId(dir, 'test_model', 'Published');
+      assert.strictEqual(id, 'Published_test_model');
+    });
+
+    await st.test('replaces spaces and dashes with underscores', () => {
+      const dir = path.join(process.cwd(), 'Some-Category', 'My Model');
+      const id = generateId(dir, 'test-model', 'My Model');
+      assert.strictEqual(id, 'Some_Category_My_Model_test_model');
+    });
+  });
+
+  await t.test('processModelLine - mutates state and metadata correctly based on line input', async () => {
+    const metadata = {
+      tags: new Set(),
+      uses_compartments: false,
+      uses_functions: false,
+      uses_energy: false,
+    };
+
+    const state = {
+      inCompartments: false,
+      inFunctions: false,
+    };
+
+    // Test compartments
+    processModelLine('begin compartments', metadata, state);
+    assert.strictEqual(state.inCompartments, true);
+    assert.strictEqual(metadata.uses_compartments, true);
+
+    processModelLine('end compartments', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+
+    // Test functions
+    processModelLine('begin functions', metadata, state);
+    assert.strictEqual(state.inFunctions, true);
+    assert.strictEqual(metadata.uses_functions, true);
+
+    processModelLine('end functions', metadata, state);
+    assert.strictEqual(state.inFunctions, false);
+
+    // Test molecule types ignored
+    processModelLine('begin molecule types', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+    assert.strictEqual(state.inFunctions, false);
+
+    processModelLine('end molecule types', metadata, state);
+    assert.strictEqual(state.inCompartments, false);
+    assert.strictEqual(state.inFunctions, false);
+
+    // Test tags extraction
+    processModelLine('MoleculeA ', metadata, state);
+    assert.ok(metadata.tags.has('moleculea'));
+
+    processModelLine('MoleculeB ', metadata, state);
+    assert.ok(metadata.tags.has('moleculeb'));
+
+    // Test tags extraction ignored when in compartments or functions
+    state.inCompartments = true;
+    processModelLine('MoleculeC()', metadata, state);
+    assert.ok(!metadata.tags.has('moleculec'));
+    state.inCompartments = false;
+
+    state.inFunctions = true;
+    processModelLine('MoleculeD()', metadata, state);
+    assert.ok(!metadata.tags.has('moleculed'));
+    state.inFunctions = false;
+
+    // Test tags extraction ignored for assignment lines
+    processModelLine('k1 = 1.0', metadata, state);
+    assert.ok(!metadata.tags.has('k1'));
+
+    processModelLine('A() => B()', metadata, state);
+    assert.ok(!metadata.tags.has('a'));
+
+    // Test energy/Phi usage
+    processModelLine('Arrhenius(Phi)', metadata, state);
+    assert.strictEqual(metadata.uses_energy, true);
+
+    metadata.uses_energy = false; // Reset
+    processModelLine('uses energy', metadata, state);
+    assert.strictEqual(metadata.uses_energy, true);
+  });
+  });
+
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
     // structure: <tmpDir>/Published/Test_Paper/test_model.bngl
@@ -222,6 +322,14 @@ end model
 
     // cell-cycle
     assert.strictEqual(inferCategory(path.join(cwd, 'cell_cycle_model')), 'cell-cycle');
+
+    // cell-cycle edge cases (requires both "cell" and "cycle")
+    assert.strictEqual(inferCategory(path.join(cwd, 'cell_only_model')), 'other');
+    assert.strictEqual(inferCategory(path.join(cwd, 'cycle_only_model')), 'other');
+
+    // case insensitivity
+    assert.strictEqual(inferCategory(path.join(cwd, 'IMMUNE_system')), 'immunology');
+    assert.strictEqual(inferCategory(path.join(cwd, 'CELL_CYCLE')), 'cell-cycle');
 
     // metabolism
     assert.strictEqual(inferCategory(path.join(cwd, 'metabolomics')), 'metabolism');
@@ -434,5 +542,49 @@ test('extractMetadataFromComments', async (t) => {
     assert.strictEqual(metadata.doi, '10.9999/full');
     assert.strictEqual(metadata.description, 'A description of the full model');
     assert.deepStrictEqual(metadata.tags, new Set(['t1', 't2']));
+  });
+
+  await t.test('processActionLine', async (st) => {
+    await st.test('parses method correctly with quotes and sets nfsim_compatible for nf', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method=>"nf",t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['nf']);
+      assert.strictEqual(metadata.nfsim_compatible, true);
+    });
+
+    await st.test('parses method with spaces around the operator', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method => "ode", t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ode']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('parses method without quotes', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({method=>ode, t_end=>10})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ode']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('parses method with single quotes', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine("simulate({method=>'ssa', t_end=>10})", metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, ['ssa']);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('ignores lines without simulate', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('generate_network({overwrite=>1})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, []);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+
+    await st.test('ignores simulate lines without method', () => {
+      const metadata = { simulation_methods: [], nfsim_compatible: false };
+      processActionLine('simulate({t_end=>10, n_steps=>100})', metadata);
+      assert.deepStrictEqual(metadata.simulation_methods, []);
+      assert.strictEqual(metadata.nfsim_compatible, false);
+    });
   });
 });

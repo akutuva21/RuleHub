@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, listMetadataFiles, parseArgs, listModelFilesFiltered } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs, getIgnoreDirs, DEFAULT_IGNORE_DIRS, listModelFilesFiltered } = require('./generate-manifest.js');
 const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
@@ -181,19 +181,25 @@ test('parseArgs', async (t) => {
   });
 
   await t.test('parses --output argument', () => {
-    const args = parseArgs(['--output', 'custom/output.json']);
     const expectedRoot = path.resolve(__dirname, '..');
-    const expectedOutput = path.resolve('custom/output.json');
+    const outputArg = path.join(expectedRoot, 'custom/output.json');
+    const args = parseArgs(['--output', outputArg]);
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, outputArg);
+  });
+
+  await t.test('parses both --root and --output arguments', () => {
+    const expectedRoot = path.resolve('custom/root');
+    const expectedOutput = path.resolve('custom/root/custom/output.json');
+    const args = parseArgs(['--root', 'custom/root', '--output', expectedOutput]);
     assert.strictEqual(args.root, expectedRoot);
     assert.strictEqual(args.output, expectedOutput);
   });
 
-  await t.test('parses both --root and --output arguments', () => {
-    const args = parseArgs(['--root', 'custom/root', '--output', 'custom/output.json']);
-    const expectedRoot = path.resolve('custom/root');
-    const expectedOutput = path.resolve('custom/output.json');
-    assert.strictEqual(args.root, expectedRoot);
-    assert.strictEqual(args.output, expectedOutput);
+  await t.test('throws an error if output is outside root directory', () => {
+    assert.throws(() => {
+      parseArgs(['--root', '/custom/root', '--output', '/etc/passwd']);
+    }, /Path traversal security risk/);
   });
 
   await t.test('ignores flags at the end of the array', () => {
@@ -331,18 +337,24 @@ test('parseArgs', async (t) => {
   });
 
   await t.test('parses --output argument', () => {
-    const customOutput = path.resolve('/custom/output.json');
-    const result = parseArgs(['--output', '/custom/output.json']);
+    const customOutput = path.join(defaultRoot, 'custom/output.json');
+    const result = parseArgs(['--output', customOutput]);
     assert.strictEqual(result.root, defaultRoot);
     assert.strictEqual(result.output, customOutput);
   });
 
   await t.test('parses both --root and --output arguments', () => {
     const customRoot = path.resolve('/custom/root');
-    const customOutput = path.resolve('/custom/output.json');
-    const result = parseArgs(['--root', '/custom/root', '--output', '/custom/output.json']);
+    const customOutput = path.resolve('/custom/root/output.json');
+    const result = parseArgs(['--root', '/custom/root', '--output', customOutput]);
     assert.strictEqual(result.root, customRoot);
     assert.strictEqual(result.output, customOutput);
+  });
+
+  await t.test('throws an error if output is outside root directory', () => {
+    assert.throws(() => {
+      parseArgs(['--root', '/custom/root', '--output', '/etc/passwd']);
+    }, /Path traversal security risk/);
   });
 
   await t.test('ignores flags missing a subsequent value', () => {
@@ -354,6 +366,40 @@ test('parseArgs', async (t) => {
     assert.strictEqual(result2.root, defaultRoot);
     assert.strictEqual(result2.output, path.join(defaultRoot, 'manifest.json'));
 
+  });
+});
+
+test('getIgnoreDirs', async (t) => {
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata is undefined', () => {
+    const result = getIgnoreDirs(undefined);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata.source is undefined', () => {
+    const metadata = { id: 'model_1' };
+    const result = getIgnoreDirs(metadata);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata.source.aux_dirs is not an array', () => {
+    const metadata = {
+      source: {
+        aux_dirs: 'not_an_array'
+      }
+    };
+    const result = getIgnoreDirs(metadata);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns combined array when metadata.source.aux_dirs is an array', () => {
+    const metadata = {
+      source: {
+        aux_dirs: ['custom_dir_1', 'custom_dir_2']
+      }
+    };
+    const result = getIgnoreDirs(metadata);
+    const expected = [...DEFAULT_IGNORE_DIRS, 'custom_dir_1', 'custom_dir_2'];
+    assert.deepStrictEqual(result, expected);
   });
 });
 
@@ -406,5 +452,7 @@ test('listModelFilesFiltered', async (t) => {
       async () => await listModelFilesFiltered(fakeDir, {}),
       { code: 'ENOENT' }
     );
+  });
+});
   });
 });
