@@ -22,23 +22,16 @@ function parseArgs(argv) {
   return { input, root, dryRun };
 }
 
-async function findAllMetadataFiles(dir) {
-  let results = [];
-  try {
-    const entries = await fs.promises.readdir(dir, { withFileTypes: true });
-    const promises = entries.map(async entry => {
-      const fullPath = safeJoin(dir, entry.name);
-      if (entry.isDirectory()) {
-        const subResults = await findAllMetadataFiles(fullPath);
-        results.push(...subResults);
-      } else if (entry.name === 'metadata.yaml') {
-        results.push(fullPath);
-      }
-    });
-    await Promise.all(promises);
-  } catch (error) {
-    if (error.code !== 'ENOENT') {
-      throw error;
+function findAllMetadataFiles(dir, results = []) {
+  if (!fs.existsSync(dir)) return results;
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = safeJoin(dir, entry.name);
+    if (entry.isDirectory()) {
+      findAllMetadataFiles(fullPath, results);
+    } else if (entry.name === 'metadata.yaml') {
+      results.push(fullPath);
     }
   }
   return results;
@@ -120,14 +113,21 @@ async function main(argv = process.argv.slice(2)) {
   const assignments = JSON.parse(await fs.promises.readFile(input, 'utf8'));
   console.log(`Loaded ${Object.keys(assignments).length} assignments`);
   
-  const compiledAssignments = Object.entries(assignments).map(([modelId, data]) => ({
-    modelId, data,
-    idPattern: new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']?\\s*$`, 'm')
-  }));
+  const compiledAssignments = [];
+  for (const [modelId, data] of Object.entries(assignments)) {
+    if (typeof modelId !== 'string' || modelId.length > 100) {
+      console.warn(`Skipping invalid modelId: ${modelId}`);
+      continue;
+    }
+    compiledAssignments.push({
+      modelId, data,
+      idPattern: new RegExp(`^id:\\s*["']?${modelId.replace(/[.*+?^${}()|[\]\\]/g, (match) => '\\' + match)}["']?\\s*$`, 'm')
+    });
+  }
 
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
-  const metadataFileArrays = await Promise.all(
-    SEARCH_ROOTS.map(searchRoot => findAllMetadataFiles(path.join(root, searchRoot)))
+  const metadataFileArrays = SEARCH_ROOTS.map(searchRoot =>
+    findAllMetadataFiles(path.join(root, searchRoot))
   );
   const metadataFiles = metadataFileArrays.flat();
   
@@ -137,6 +137,7 @@ async function main(argv = process.argv.slice(2)) {
 
   const results = await Promise.all(updatePromises);
   const updated = results.filter(Boolean).length;
+  console.log(`Updated ${updated} metadata files`);
 }
 
 if (require.main === module) {
