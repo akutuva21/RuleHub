@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { buildEntry, listMetadataFiles, parseArgs } = require('./generate-manifest.js');
+const { buildEntry, listMetadataFiles, parseArgs, getIgnoreDirs, DEFAULT_IGNORE_DIRS } = require('./generate-manifest.js');
 const { parseMetadataYaml } = require('./utils.js');
 
 test('listMetadataFiles', async (t) => {
@@ -354,5 +354,39 @@ test('parseArgs', async (t) => {
     assert.strictEqual(result2.root, defaultRoot);
     assert.strictEqual(result2.output, path.join(defaultRoot, 'manifest.json'));
 
+  });
+});
+
+test('getIgnoreDirs', async (t) => {
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata is undefined', () => {
+    const result = getIgnoreDirs(undefined);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata.source is undefined', () => {
+    const metadata = { id: 'model_1' };
+    const result = getIgnoreDirs(metadata);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns DEFAULT_IGNORE_DIRS when metadata.source.aux_dirs is not an array', () => {
+    const metadata = {
+      source: {
+        aux_dirs: 'not_an_array'
+      }
+    };
+    const result = getIgnoreDirs(metadata);
+    assert.deepStrictEqual(result, DEFAULT_IGNORE_DIRS);
+  });
+
+  await t.test('returns combined array when metadata.source.aux_dirs is an array', () => {
+    const metadata = {
+      source: {
+        aux_dirs: ['custom_dir_1', 'custom_dir_2']
+      }
+    };
+    const result = getIgnoreDirs(metadata);
+    const expected = [...DEFAULT_IGNORE_DIRS, 'custom_dir_1', 'custom_dir_2'];
+    assert.deepStrictEqual(result, expected);
   });
 });

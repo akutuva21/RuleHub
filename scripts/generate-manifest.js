@@ -212,6 +212,8 @@ if (require.main === module) {
 }
 
 module.exports = {
+  getIgnoreDirs,
+  DEFAULT_IGNORE_DIRS,
   parseArgs,
   buildEntry,
   listMetadataFiles,
