@@ -181,19 +181,25 @@ test('parseArgs', async (t) => {
   });
 
   await t.test('parses --output argument', () => {
-    const args = parseArgs(['--output', 'custom/output.json']);
     const expectedRoot = path.resolve(__dirname, '..');
-    const expectedOutput = path.resolve('custom/output.json');
+    const outputArg = path.join(expectedRoot, 'custom/output.json');
+    const args = parseArgs(['--output', outputArg]);
+    assert.strictEqual(args.root, expectedRoot);
+    assert.strictEqual(args.output, outputArg);
+  });
+
+  await t.test('parses both --root and --output arguments', () => {
+    const expectedRoot = path.resolve('custom/root');
+    const expectedOutput = path.resolve('custom/root/custom/output.json');
+    const args = parseArgs(['--root', 'custom/root', '--output', expectedOutput]);
     assert.strictEqual(args.root, expectedRoot);
     assert.strictEqual(args.output, expectedOutput);
   });
 
-  await t.test('parses both --root and --output arguments', () => {
-    const args = parseArgs(['--root', 'custom/root', '--output', 'custom/output.json']);
-    const expectedRoot = path.resolve('custom/root');
-    const expectedOutput = path.resolve('custom/output.json');
-    assert.strictEqual(args.root, expectedRoot);
-    assert.strictEqual(args.output, expectedOutput);
+  await t.test('throws an error if output is outside root directory', () => {
+    assert.throws(() => {
+      parseArgs(['--root', '/custom/root', '--output', '/etc/passwd']);
+    }, /Path traversal security risk/);
   });
 
   await t.test('ignores flags at the end of the array', () => {
@@ -331,18 +337,24 @@ test('parseArgs', async (t) => {
   });
 
   await t.test('parses --output argument', () => {
-    const customOutput = path.resolve('/custom/output.json');
-    const result = parseArgs(['--output', '/custom/output.json']);
+    const customOutput = path.join(defaultRoot, 'custom/output.json');
+    const result = parseArgs(['--output', customOutput]);
     assert.strictEqual(result.root, defaultRoot);
     assert.strictEqual(result.output, customOutput);
   });
 
   await t.test('parses both --root and --output arguments', () => {
     const customRoot = path.resolve('/custom/root');
-    const customOutput = path.resolve('/custom/output.json');
-    const result = parseArgs(['--root', '/custom/root', '--output', '/custom/output.json']);
+    const customOutput = path.resolve('/custom/root/output.json');
+    const result = parseArgs(['--root', '/custom/root', '--output', customOutput]);
     assert.strictEqual(result.root, customRoot);
     assert.strictEqual(result.output, customOutput);
+  });
+
+  await t.test('throws an error if output is outside root directory', () => {
+    assert.throws(() => {
+      parseArgs(['--root', '/custom/root', '--output', '/etc/passwd']);
+    }, /Path traversal security risk/);
   });
 
   await t.test('ignores flags missing a subsequent value', () => {

@@ -33,6 +33,13 @@ function parseArgs(argv) {
       : path.join(root, 'manifest.json');
   }
 
+  const resolvedRoot = path.resolve(root);
+  const resolvedOutput = path.resolve(output);
+  const rootWithSep = resolvedRoot.endsWith(path.sep) ? resolvedRoot : resolvedRoot + path.sep;
+  if (!resolvedOutput.startsWith(rootWithSep) && resolvedOutput !== resolvedRoot) {
+    throw new Error(`Path traversal security risk: output path must be within the root directory`);
+  }
+
   return { root, output, slim };
 }
 
