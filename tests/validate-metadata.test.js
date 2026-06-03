@@ -196,20 +196,18 @@ category: "invalid-category"
   });
 });
 
-test('multiple models without collection adds error if no primary model', async () => {
+test('multiple models without collection is allowed', async () => {
   await withTempDir(async (tempDir) => {
     const metadataFile = path.join(tempDir, 'metadata.yaml');
     fs.writeFileSync(metadataFile, VALID_METADATA_YAML); // id: "test-model"
     fs.writeFileSync(path.join(tempDir, 'README.md'), '# Test Model');
-    // none of these match "test-model"
     fs.writeFileSync(path.join(tempDir, 'othermodel1.bngl'), 'begin model\nend model');
     fs.writeFileSync(path.join(tempDir, 'othermodel2.bngl'), 'begin model\nend model');
 
     const errors = [];
     await validateMetadataFile(metadataFile, errors);
 
-    assert.strictEqual(errors.length, 1);
-    assert.match(errors[0], /multiple \.bngl files require either a collection section or a primary model file/);
+    assert.strictEqual(errors.length, 0);
   });
 });
 

@@ -41,16 +41,16 @@ test('parseScalar', async (t) => {
 });
 
 test('normalizeModelKey', async (t) => {
-  await t.test('removes .bngl extension case-insensitively', () => {
-    assert.strictEqual(normalizeModelKey('model.bngl'), 'model');
-    assert.strictEqual(normalizeModelKey('Model.BNGL'), 'model');
-    assert.strictEqual(normalizeModelKey('model.bngl.bngl'), 'modelbngl');
+  await t.test('replaces non-alphanumeric with hyphens', () => {
+    assert.strictEqual(normalizeModelKey('model.bngl'), 'model-bngl');
+    assert.strictEqual(normalizeModelKey('Model.BNGL'), 'model-bngl');
+    assert.strictEqual(normalizeModelKey('model.bngl.bngl'), 'model-bngl-bngl');
   });
 
-  await t.test('removes non-alphanumeric characters', () => {
-    assert.strictEqual(normalizeModelKey('my-model-123'), 'mymodel123');
-    assert.strictEqual(normalizeModelKey('model_name!@#'), 'modelname');
-    assert.strictEqual(normalizeModelKey('Some Model Name'), 'somemodelname');
+  await t.test('collapses non-alphanumeric sequences into single hyphens', () => {
+    assert.strictEqual(normalizeModelKey('my-model-123'), 'my-model-123');
+    assert.strictEqual(normalizeModelKey('model_name!@#'), 'model-name');
+    assert.strictEqual(normalizeModelKey('Some Model Name'), 'some-model-name');
   });
 
   await t.test('converts to lowercase', () => {
