@@ -495,5 +495,3 @@ test('listModelFilesFiltered', async (t) => {
     );
   });
 });
-  });
-});

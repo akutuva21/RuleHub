@@ -64,6 +64,20 @@ async function listMetadataFiles(dir, results = []) {
   return results;
 }
 
+const DEFAULT_IGNORE_DIRS = Object.freeze(['fitting', 'output_*', 'data', 'archive']);
+
+function isIgnoredDir(dirName, ignoreDirs) {
+  return ignoreDirs.some(pattern => {
+    if (pattern === dirName) return true;
+    if (pattern.includes('*')) {
+      const escaped = pattern.replace(/[.+^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp('^' + escaped.replace(/\*/g, '.*') + '$');
+      return regex.test(dirName);
+    }
+    return false;
+  });
+}
+
 function getIgnoreDirs(metadata) {
   const auxDirs = metadata?.source?.aux_dirs;
   if (auxDirs && Array.isArray(auxDirs)) {
