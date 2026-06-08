@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { listModelFiles, listModelFilesAsync, parseScalar } = require('./utils.js');
+const { listModelFiles, parseScalar } = require('./utils.js');
 
 test('utils.js', async (t) => {
   let tmpDir;
@@ -16,38 +16,6 @@ test('utils.js', async (t) => {
     if (tmpDir) {
       fs.rmSync(tmpDir, { recursive: true, force: true });
     }
-  });
-
-  await t.test('listModelFiles returns only .bngl files in alphabetical order', () => {
-    fs.writeFileSync(path.join(tmpDir, 'model2.bngl'), 'content');
-    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
-    fs.writeFileSync(path.join(tmpDir, 'model3.bngl'), 'content');
-
-    const files = listModelFiles(tmpDir);
-    assert.deepStrictEqual(files, ['model1.bngl', 'model2.bngl', 'model3.bngl']);
-  });
-
-  await t.test('listModelFiles ignores directories even if named with .bngl extension', () => {
-    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
-    fs.mkdirSync(path.join(tmpDir, 'dir.bngl'));
-    fs.mkdirSync(path.join(tmpDir, 'other-dir'));
-
-    const files = listModelFiles(tmpDir);
-    assert.deepStrictEqual(files, ['model1.bngl']);
-  });
-
-  await t.test('listModelFiles ignores files with other extensions', () => {
-    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
-    fs.writeFileSync(path.join(tmpDir, 'data.txt'), 'content');
-    fs.writeFileSync(path.join(tmpDir, 'model2.xml'), 'content');
-
-    const files = listModelFiles(tmpDir);
-    assert.deepStrictEqual(files, ['model1.bngl']);
-  });
-
-  await t.test('listModelFiles returns empty array for empty directory', () => {
-    const files = listModelFiles(tmpDir);
-    assert.deepStrictEqual(files, []);
   });
 
   await t.test('parseScalar handles booleans, null, and numbers', () => {
@@ -78,35 +46,35 @@ test('utils.js', async (t) => {
     assert.deepStrictEqual(parseScalar('[ "a, b" , "c" ]'), ['a', 'b', 'c']);
   });
 
-  await t.test('listModelFilesAsync returns only .bngl files in alphabetical order', async () => {
+  await t.test('listModelFiles returns only .bngl files in alphabetical order', async () => {
     fs.writeFileSync(path.join(tmpDir, 'model2.bngl'), 'content');
     fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
     fs.writeFileSync(path.join(tmpDir, 'model3.bngl'), 'content');
 
-    const files = await listModelFilesAsync(tmpDir);
+    const files = await listModelFiles(tmpDir);
     assert.deepStrictEqual(files, ['model1.bngl', 'model2.bngl', 'model3.bngl']);
   });
 
-  await t.test('listModelFilesAsync ignores directories even if named with .bngl extension', async () => {
+  await t.test('listModelFiles ignores directories even if named with .bngl extension', async () => {
     fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
     fs.mkdirSync(path.join(tmpDir, 'dir.bngl'));
     fs.mkdirSync(path.join(tmpDir, 'other-dir'));
 
-    const files = await listModelFilesAsync(tmpDir);
+    const files = await listModelFiles(tmpDir);
     assert.deepStrictEqual(files, ['model1.bngl']);
   });
 
-  await t.test('listModelFilesAsync ignores files with other extensions', async () => {
+  await t.test('listModelFiles ignores files with other extensions', async () => {
     fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), 'content');
     fs.writeFileSync(path.join(tmpDir, 'data.txt'), 'content');
     fs.writeFileSync(path.join(tmpDir, 'model2.xml'), 'content');
 
-    const files = await listModelFilesAsync(tmpDir);
+    const files = await listModelFiles(tmpDir);
     assert.deepStrictEqual(files, ['model1.bngl']);
   });
 
-  await t.test('listModelFilesAsync returns empty array for empty directory', async () => {
-    const files = await listModelFilesAsync(tmpDir);
+  await t.test('listModelFiles returns empty array for empty directory', async () => {
+    const files = await listModelFiles(tmpDir);
     assert.deepStrictEqual(files, []);
   });
 });

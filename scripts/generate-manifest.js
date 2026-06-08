@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { listModelFilesAsync, parseMetadataYaml , safeJoin} = require('./utils');
+const { listModelFiles, parseMetadataYaml , safeJoin} = require('./utils');
 
 const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
 
@@ -148,7 +148,7 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
     if (!slim && metadata.collection) {
       let filesToUse = modelFiles;
       if (fs.existsSync(modelDir)) {
-        filesToUse = await listModelFilesAsync(modelDir);
+        filesToUse = await listModelFiles(modelDir);
       }
 
       const variants = filesToUse.map(file => ({
