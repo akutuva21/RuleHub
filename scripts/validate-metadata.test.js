@@ -361,6 +361,29 @@ test('normalizeModelKey', async (t) => {
     assert.strictEqual(normalizeModelKey(null), '');
     assert.strictEqual(normalizeModelKey(undefined), '');
     assert.strictEqual(normalizeModelKey(''), '');
+    assert.strictEqual(normalizeModelKey(0), '');
+    assert.strictEqual(normalizeModelKey(false), '');
+    assert.strictEqual(normalizeModelKey(NaN), '');
+  });
+
+  await t.test('handles non-string values', () => {
+    assert.strictEqual(normalizeModelKey(123), '123');
+    assert.strictEqual(normalizeModelKey(true), 'true');
+    assert.strictEqual(normalizeModelKey([1, 2]), '1-2');
+    assert.strictEqual(normalizeModelKey({}), 'object-object');
+  });
+
+  await t.test('handles strings with only non-alphanumeric characters', () => {
+    assert.strictEqual(normalizeModelKey('!!!'), '');
+    assert.strictEqual(normalizeModelKey('---'), '');
+    assert.strictEqual(normalizeModelKey('   '), '');
+  });
+
+  await t.test('handles single character strings', () => {
+    assert.strictEqual(normalizeModelKey('a'), 'a');
+    assert.strictEqual(normalizeModelKey('1'), '1');
+    assert.strictEqual(normalizeModelKey('-'), '');
+    assert.strictEqual(normalizeModelKey('_'), '');
   });
 
   await t.test('handles standard strings', () => {
