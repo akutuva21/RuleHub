@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { listModelFiles, listModelFilesAsync, parseScalar } = require('./utils.js');
+const { listModelFiles, listModelFilesAsync, parseScalar, safeJoin } = require('./utils.js');
 
 test('utils.js', async (t) => {
   let tmpDir;
@@ -140,5 +140,19 @@ test('parseScalar', async (t) => {
     assert.strictEqual(parseScalar('1.23'), '1.23');
     assert.strictEqual(parseScalar('-1.23'), '-1.23');
     assert.strictEqual(parseScalar('1e5'), '1e5');
+  });
+});
+
+test('safeJoin', async (t) => {
+  await t.test('joins paths safely without traversal', () => {
+    const joined = safeJoin('/base', 'target');
+    assert.strictEqual(joined, path.join('/base', 'target'));
+  });
+
+  await t.test('throws an error on path traversal attempt', () => {
+    assert.throws(
+      () => safeJoin('/base', '../outside'),
+      /Path traversal security risk detected: \.\.\/outside/
+    );
   });
 });
