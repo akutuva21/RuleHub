@@ -487,6 +487,52 @@ test('listModelFilesFiltered', async (t) => {
     assert.deepStrictEqual(results, ['a_model.bngl', 'm_model.bngl', 'z_model.bngl']);
   });
 
+  await t.test('recursively searches directories', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    const nestedDir = path.join(tmpDir, 'nested');
+    fs.mkdirSync(nestedDir);
+    fs.writeFileSync(path.join(nestedDir, 'model2.bngl'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl', 'nested/model2.bngl']);
+  });
+
+  await t.test('ignores default ignored directories', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    const fittingDir = path.join(tmpDir, 'fitting');
+    fs.mkdirSync(fittingDir);
+    fs.writeFileSync(path.join(fittingDir, 'model2.bngl'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl']);
+  });
+
+  await t.test('ignores aux_dirs from metadata', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    const customIgnoreDir = path.join(tmpDir, 'custom_ignore');
+    fs.mkdirSync(customIgnoreDir);
+    fs.writeFileSync(path.join(customIgnoreDir, 'model2.bngl'), '');
+
+    const metadata = {
+      source: {
+        aux_dirs: ['custom_ignore']
+      }
+    };
+
+    const results = await listModelFilesFiltered(tmpDir, metadata);
+    assert.deepStrictEqual(results, ['model1.bngl']);
+  });
+
+  await t.test('ignores directories with wildcards', async () => {
+    fs.writeFileSync(path.join(tmpDir, 'model1.bngl'), '');
+    const outputDir = path.join(tmpDir, 'output_123');
+    fs.mkdirSync(outputDir);
+    fs.writeFileSync(path.join(outputDir, 'model2.bngl'), '');
+
+    const results = await listModelFilesFiltered(tmpDir, {});
+    assert.deepStrictEqual(results, ['model1.bngl']);
+  });
+
   await t.test('throws ENOENT for non-existent directories', async () => {
     const fakeDir = path.join(tmpDir, 'does-not-exist');
     await assert.rejects(

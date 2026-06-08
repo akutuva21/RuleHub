@@ -87,12 +87,27 @@ function getIgnoreDirs(metadata) {
 }
 
 async function listModelFilesFiltered(dir, metadata) {
-  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
-  
-  return entries
-    .filter(entry => entry.isFile() && entry.name.endsWith('.bngl'))
-    .map(entry => entry.name)
-    .sort();
+  const ignoreDirs = getIgnoreDirs(metadata);
+  const results = [];
+
+  async function walk(currentDir) {
+    const entries = await fs.promises.readdir(currentDir, { withFileTypes: true });
+
+    const promises = entries.map(async (entry) => {
+      if (entry.isDirectory()) {
+        if (!isIgnoredDir(entry.name, ignoreDirs)) {
+          await walk(path.join(currentDir, entry.name));
+        }
+      } else if (entry.isFile() && entry.name.endsWith('.bngl')) {
+        results.push(path.relative(dir, path.join(currentDir, entry.name)).replace(/\\/g, '/'));
+      }
+    });
+
+    await Promise.all(promises);
+  }
+
+  await walk(dir);
+  return results.sort();
 }
 
 async function buildEntry(root, metadata, metadataFile, modelFile, isCollection, slim, modelFiles) {
