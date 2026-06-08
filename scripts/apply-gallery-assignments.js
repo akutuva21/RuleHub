@@ -34,14 +34,18 @@ function parseArgs(argv) {
   return { input, root, dryRun };
 }
 
-function findAllMetadataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
-
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
+async function findAllMetadataFiles(dir, results = []) {
+  let entries;
+  try {
+    entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  } catch (err) {
+    if (err.code === 'ENOENT') return results;
+    throw err;
+  }
   for (const entry of entries) {
     const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
-      findAllMetadataFiles(fullPath, results);
+      await findAllMetadataFiles(fullPath, results);
     } else if (entry.name === 'metadata.yaml') {
       results.push(fullPath);
     }
@@ -137,9 +141,10 @@ async function main(argv = process.argv.slice(2)) {
   }
 
   const SEARCH_ROOTS = ['Published', 'Examples', 'Tutorials'];
-  const metadataFileArrays = SEARCH_ROOTS.map(searchRoot =>
+  const metadataFilePromises = SEARCH_ROOTS.map(searchRoot =>
     findAllMetadataFiles(path.join(root, searchRoot))
   );
+  const metadataFileArrays = await Promise.all(metadataFilePromises);
   const metadataFiles = metadataFileArrays.flat();
   
   const updatePromises = metadataFiles.map(filePath =>

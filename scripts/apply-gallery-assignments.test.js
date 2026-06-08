@@ -158,26 +158,26 @@ test('findAllMetadataFiles', async (t) => {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  await t.test('returns empty array if directory does not exist', () => {
+  await t.test('returns empty array if directory does not exist', async () => {
     const nonExistentDir = path.join(tmpDir, 'does-not-exist');
-    const result = findAllMetadataFiles(nonExistentDir);
+    const result = await findAllMetadataFiles(nonExistentDir);
     assert.deepStrictEqual(result, []);
   });
 
-  await t.test('returns empty array if no metadata.yaml files exist', () => {
+  await t.test('returns empty array if no metadata.yaml files exist', async () => {
     fs.writeFileSync(path.join(tmpDir, 'some-file.txt'), 'hello');
-    const result = findAllMetadataFiles(tmpDir);
+    const result = await findAllMetadataFiles(tmpDir);
     assert.deepStrictEqual(result, []);
   });
 
-  await t.test('finds metadata.yaml in the root directory', () => {
+  await t.test('finds metadata.yaml in the root directory', async () => {
     const yamlPath = path.join(tmpDir, 'metadata.yaml');
     fs.writeFileSync(yamlPath, 'id: test');
-    const result = findAllMetadataFiles(tmpDir);
+    const result = await findAllMetadataFiles(tmpDir);
     assert.deepStrictEqual(result, [yamlPath]);
   });
 
-  await t.test('finds metadata.yaml in nested directories', () => {
+  await t.test('finds metadata.yaml in nested directories', async () => {
     const subDir1 = path.join(tmpDir, 'sub1');
     const subDir2 = path.join(subDir1, 'sub2');
     fs.mkdirSync(subDir2, { recursive: true });
@@ -189,7 +189,7 @@ test('findAllMetadataFiles', async (t) => {
     fs.writeFileSync(yamlPath2, 'id: test2');
     fs.writeFileSync(path.join(subDir1, 'other.yaml'), 'id: ignore');
 
-    const result = findAllMetadataFiles(tmpDir);
+    const result = await findAllMetadataFiles(tmpDir);
 
     // Sort to make the test deterministic
     assert.deepStrictEqual(result.sort(), [yamlPath1, yamlPath2].sort());
