@@ -150,11 +150,11 @@ function extractCategoryMappings(content) {
   return modelIdToCategory;
 }
 
-function main(argv = process.argv.slice(2)) {
+async function main(argv = process.argv.slice(2)) {
   const { constantsPath, output } = parseArgs(argv);
   
   console.log(`Reading ${constantsPath}...`);
-  const content = fs.readFileSync(constantsPath, 'utf8');
+  const content = await fs.promises.readFile(constantsPath, 'utf8');
   
   const bng2Compatible = parseSetFromString(content, 'BNG2_COMPATIBLE_MODELS');
   const bng2Excluded = parseSetFromString(content, 'BNG2_EXCLUDED_MODELS');
@@ -200,7 +200,7 @@ function main(argv = process.argv.slice(2)) {
     }
   }
   
-  fs.writeFileSync(output, JSON.stringify(assignments, null, 2));
+  await fs.promises.writeFile(output, JSON.stringify(assignments, null, 2));
   console.log(`\nExtracted ${Object.keys(assignments).length} model assignments to ${output}`);
   
   const withGallery = Object.values(assignments).filter(a => a.gallery_categories.length > 0).length;
@@ -212,7 +212,7 @@ function main(argv = process.argv.slice(2)) {
 }
 
 if (require.main === module) {
-  main();
+  main().catch(console.error);
 }
 
 module.exports = {
