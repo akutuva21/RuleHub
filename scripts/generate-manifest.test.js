@@ -101,7 +101,7 @@ test('buildEntry', async (t) => {
   });
 
   await t.test('handles a collection entry', async () => {
-    // Create a temporary directory since listModelFilesAsync will read it
+    // Create a temporary directory since listModelFiles will read it
     const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'buildEntry-test-'));
     const metadataFile = path.join(tmpDir, 'metadata.yaml');
     const modelFile = 'variant_1.bngl';
