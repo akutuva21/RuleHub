@@ -149,5 +149,3 @@ test('expectEnum', async (t) => {
     assert.strictEqual(errors[0], 'test.yaml: invalid fruit (undefined)');
   });
 });
-  });
-});
