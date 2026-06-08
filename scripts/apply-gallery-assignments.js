@@ -2,6 +2,18 @@ const fs = require('fs');
 const { safeJoin } = require('./utils');
 const path = require('path');
 
+const GALLERY_CATEGORIES_MATCH = /gallery_categories:\s*(\[\]|["\'][^"\']*["\'])/;
+const GALLERY_CATEGORIES_EMPTY = /gallery_categories:\s*\[\]/;
+const GALLERY_CATEGORY_MATCH = /gallery_category:\s*["']([^"\']+)["\']/;
+const GALLERY_CATEGORY_REPLACE = /gallery_category:\s*["'][^"\']+["\']/;
+const PLAYGROUND_MATCH = /playground:\s*$/m;
+const BNG2_COMPATIBLE_MATCH = /bng2_compatible:\s*(true|false)/;
+const BNG2_COMPATIBLE_REPLACE = /bng2_compatible:\s*false/;
+const NFSIM_COMPATIBLE_MATCH = /nfsim_compatible:\s*(true|false)/;
+const NFSIM_COMPATIBLE_REPLACE = /nfsim_compatible:\s*false/;
+const EXCLUDED_MATCH = /excluded:\s*(true|false)/;
+const EXCLUDED_REPLACE = /excluded:\s*false/;
+
 function parseArgs(argv) {
   let input = 'gallery-assignments.json';
   let root = path.resolve(__dirname, '..');
@@ -51,45 +63,45 @@ async function updateMetadataFile(filePath, assignments, compiledAssignments, dr
     if (idPattern.test(content)) {
       if (data.gallery_categories && data.gallery_categories.length > 0) {
         const catsStr = JSON.stringify(data.gallery_categories);
-        const galleryMatch = content.match(/gallery_categories:\s*(\[\]|["\'][^"\']*["\'])/);
+        const galleryMatch = content.match(GALLERY_CATEGORIES_MATCH);
         if (galleryMatch) {
-          newContent = newContent.replace(/gallery_categories:\s*\[\]/, `gallery_categories: ${catsStr}`);
+          newContent = newContent.replace(GALLERY_CATEGORIES_EMPTY, `gallery_categories: ${catsStr}`);
           updated = true;
         }
         
-        const galleryCatMatch = content.match(/gallery_category:\s*["']([^"\']+)["\']/);
+        const galleryCatMatch = content.match(GALLERY_CATEGORY_MATCH);
         if (galleryCatMatch && !content.includes('gallery_categories:')) {
-          newContent = newContent.replace(/gallery_category:\s*["'][^"\']+["\']/, `gallery_categories: ${catsStr}`);
+          newContent = newContent.replace(GALLERY_CATEGORY_REPLACE, `gallery_categories: ${catsStr}`);
           updated = true;
         }
         
-        const visibleMatch = content.match(/playground:\s*$/m);
+        const visibleMatch = content.match(PLAYGROUND_MATCH);
         if (visibleMatch && !content.includes('visible:')) {
-          newContent = newContent.replace(/playground:\s*$/m, `playground:\n  visible: true`);
+          newContent = newContent.replace(PLAYGROUND_MATCH, `playground:\n  visible: true`);
           updated = true;
         }
       }
       
       if (data.bng2_compatible !== undefined) {
-        const bng2Match = content.match(/bng2_compatible:\s*(true|false)/);
+        const bng2Match = content.match(BNG2_COMPATIBLE_MATCH);
         if (bng2Match && bng2Match[1] === 'false' && data.bng2_compatible) {
-          newContent = newContent.replace(/bng2_compatible:\s*false/, 'bng2_compatible: true');
+          newContent = newContent.replace(BNG2_COMPATIBLE_REPLACE, 'bng2_compatible: true');
           updated = true;
         }
       }
       
       if (data.nfsim_compatible !== undefined) {
-        const nfMatch = content.match(/nfsim_compatible:\s*(true|false)/);
+        const nfMatch = content.match(NFSIM_COMPATIBLE_MATCH);
         if (nfMatch && nfMatch[1] === 'false' && data.nfsim_compatible) {
-          newContent = newContent.replace(/nfsim_compatible:\s*false/, 'nfsim_compatible: true');
+          newContent = newContent.replace(NFSIM_COMPATIBLE_REPLACE, 'nfsim_compatible: true');
           updated = true;
         }
       }
       
       if (data.excluded !== undefined) {
-        const excludedMatch = content.match(/excluded:\s*(true|false)/);
+        const excludedMatch = content.match(EXCLUDED_MATCH);
         if (excludedMatch && excludedMatch[1] === 'false' && data.excluded) {
-          newContent = newContent.replace(/excluded:\s*false/, 'excluded: true');
+          newContent = newContent.replace(EXCLUDED_REPLACE, 'excluded: true');
           updated = true;
         }
       }
