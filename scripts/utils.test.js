@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { listModelFiles, listModelFilesAsync, parseScalar } = require('./utils.js');
+const { listModelFiles, listModelFilesAsync, parseScalar, parseMetadataYaml } = require('./utils.js');
 
 test('utils.js', async (t) => {
   let tmpDir;
@@ -140,5 +140,55 @@ test('parseScalar', async (t) => {
     assert.strictEqual(parseScalar('1.23'), '1.23');
     assert.strictEqual(parseScalar('-1.23'), '-1.23');
     assert.strictEqual(parseScalar('1e5'), '1e5');
+  });
+});
+
+test('parseMetadataYaml', async (t) => {
+  await t.test('parses simple key-value pairs', () => {
+    const content = 'name: Test Model\nversion: 1\nvalid: true';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, { name: 'Test Model', version: 1, valid: true });
+  });
+
+  await t.test('handles nested properties via indentation', () => {
+    const content = 'parent:\n  child1: value1\n  child2: 42';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, { parent: { child1: 'value1', child2: 42 } });
+  });
+
+  await t.test('handles lists under tags', () => {
+    const content = 'tags:\n  - tag1\n  - tag2';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, { tags: ['tag1', 'tag2'] });
+  });
+
+  await t.test('skips empty lines and comments', () => {
+    const content = '\n# This is a comment\n\nname: Model\n\n# Another comment\n';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, { name: 'Model' });
+  });
+
+  await t.test('handles CRLF line endings', () => {
+    const content = 'name: Model\r\nversion: 1\r\n';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, { name: 'Model', version: 1 });
+  });
+
+  await t.test('pops the stack when indent decreases', () => {
+    const content = 'parent1:\n  child1: val1\nparent2:\n  child2: val2';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, { parent1: { child1: 'val1' }, parent2: { child2: 'val2' } });
+  });
+
+  await t.test('handles multiple levels of nesting', () => {
+    const content = 'level1:\n  level2:\n    level3: value\n  level2b: valueb\nlevel1b: value1b';
+    const result = parseMetadataYaml(content);
+    assert.deepEqual(result, {
+      level1: {
+        level2: { level3: 'value' },
+        level2b: 'valueb'
+      },
+      level1b: 'value1b'
+    });
   });
 });
