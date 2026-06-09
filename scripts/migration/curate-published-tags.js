@@ -72,12 +72,12 @@ async function main(argv = process.argv.slice(2)) {
   const metadataFiles = await listMetadataFiles(publishedDir);
   let count = 0;
 
-  for (const metaFile of metadataFiles) {
+  const promises = metadataFiles.map(async (metaFile) => {
     const relPath = path.relative(publishedDir, path.dirname(metaFile)).replace(/\\/g, '/');
 
     // Skip PyBioNetGen internal files
     if (relPath.startsWith('PyBioNetGen')) {
-      continue;
+      return;
     }
 
     let content = await fs.promises.readFile(metaFile, 'utf8');
@@ -168,7 +168,9 @@ async function main(argv = process.argv.slice(2)) {
         count++;
       }
     }
-  }
+  });
+
+  await Promise.all(promises);
 
   // 5. Update our ID_MAP in normalize-published-ids.js to map McMillan2021 to McMillan_TNF_2021
   const normalizerPath = path.join(rulehubRoot, 'scripts', 'migration', 'normalize-published-ids.js');
