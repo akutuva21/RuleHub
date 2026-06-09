@@ -105,24 +105,7 @@ function expectArray(errors, value, label, filePath) {
   }
 }
 
-async function validateMetadataFile(metadataFile, errors) {
-  const metadata = parseMetadataYaml(await fs.promises.readFile(metadataFile, 'utf8'));
-  const modelDir = path.dirname(metadataFile);
-  const modelFiles = await listModelFiles(modelDir);
-  const readmePath = path.join(modelDir, 'README.md');
-  if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1') && !modelDir.includes('Published')) {
-    errors.push(`${metadataFile}: missing README.md`);
-  }
-  if (modelFiles.length === 0) {
-    errors.push(`${metadataFile}: no .bngl files found alongside metadata.yaml`);
-  }
-
-  expectString(errors, metadata.id, 'id', metadataFile);
-  expectString(errors, metadata.name, 'name', metadataFile);
-  expectString(errors, metadata.description, 'description', metadataFile);
-  expectArray(errors, metadata.tags, 'tags', metadataFile);
-  expectEnum(errors, metadata.category, CATEGORY_VALUES, 'category', metadataFile);
-
+function validateCompatibility(metadata, metadataFile, errors) {
   if (!metadata.compatibility || typeof metadata.compatibility !== 'object') {
     errors.push(`${metadataFile}: missing compatibility section`);
   } else {
@@ -142,7 +125,9 @@ async function validateMetadataFile(metadataFile, errors) {
       }
     }
   }
+}
 
+function validateSource(metadata, metadataFile, errors) {
   if (!metadata.source || typeof metadata.source !== 'object') {
     errors.push(`${metadataFile}: missing source section`);
   } else {
@@ -151,7 +136,9 @@ async function validateMetadataFile(metadataFile, errors) {
       errors.push(`${metadataFile}: invalid source.original_repository`);
     }
   }
+}
 
+function validatePlayground(metadata, metadataFile, errors) {
   if (!metadata.playground || typeof metadata.playground !== 'object') {
     errors.push(`${metadataFile}: missing playground section`);
   } else {
@@ -162,7 +149,9 @@ async function validateMetadataFile(metadataFile, errors) {
     expectBoolean(errors, metadata.playground.featured, 'playground.featured', metadataFile);
     expectEnum(errors, metadata.playground.difficulty, DIFFICULTY_VALUES, 'playground.difficulty', metadataFile);
   }
+}
 
+function validateCollection(metadata, metadataFile, errors, modelFiles) {
   if (metadata.collection) {
     expectEnum(errors, metadata.collection.type, COLLECTION_TYPE_VALUES, 'collection.type', metadataFile);
     expectString(errors, metadata.collection.parent_model, 'collection.parent_model', metadataFile);
@@ -174,6 +163,30 @@ async function validateMetadataFile(metadataFile, errors) {
       errors.push(`${metadataFile}: collection.count=${metadata.collection.count} but found ${modelFiles.length} model files`);
     }
   }
+}
+
+async function validateMetadataFile(metadataFile, errors) {
+  const metadata = parseMetadataYaml(await fs.promises.readFile(metadataFile, 'utf8'));
+  const modelDir = path.dirname(metadataFile);
+  const modelFiles = await listModelFiles(modelDir);
+  const readmePath = path.join(modelDir, 'README.md');
+  if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1') && !modelDir.includes('Published')) {
+    errors.push(`${metadataFile}: missing README.md`);
+  }
+  if (modelFiles.length === 0) {
+    errors.push(`${metadataFile}: no .bngl files found alongside metadata.yaml`);
+  }
+
+  expectString(errors, metadata.id, 'id', metadataFile);
+  expectString(errors, metadata.name, 'name', metadataFile);
+  expectString(errors, metadata.description, 'description', metadataFile);
+  expectArray(errors, metadata.tags, 'tags', metadataFile);
+  expectEnum(errors, metadata.category, CATEGORY_VALUES, 'category', metadataFile);
+
+  validateCompatibility(metadata, metadataFile, errors);
+  validateSource(metadata, metadataFile, errors);
+  validatePlayground(metadata, metadataFile, errors);
+  validateCollection(metadata, metadataFile, errors, modelFiles);
 }
 
 async function main() {
