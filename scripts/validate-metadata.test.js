@@ -50,6 +50,18 @@ test('setNested', async (t) => {
     assert.strictEqual({}.polluted, undefined);
     assert.deepEqual(obj, {});
   });
+
+  await t.test('blocks prototype pollution via existing properties on Object.prototype', () => {
+    const obj = {};
+    try {
+      Object.prototype.vulnerableProperty = {};
+      setNested(obj, 'vulnerableProperty.polluted', true);
+      assert.strictEqual({}.vulnerableProperty.polluted, undefined);
+      assert.deepEqual(obj, { vulnerableProperty: { polluted: true } });
+    } finally {
+      delete Object.prototype.vulnerableProperty;
+    }
+  });
 });
 
 
@@ -446,6 +458,12 @@ test('setNested', async (t) => {
     assert.deepEqual(obj, { a: { b: { c: 123 } } });
   });
 
+  await t.test('overrides null value with object', () => {
+    const obj = { a: null };
+    setNested(obj, 'a.b.c', 123);
+    assert.deepEqual(obj, { a: { b: { c: 123 } } });
+  });
+
   await t.test('overrides array value with object', () => {
     const obj = { a: [1, 2, 3] };
     setNested(obj, 'a.b.c', 123);
@@ -471,6 +489,18 @@ test('setNested', async (t) => {
     setNested(obj, 'prototype.polluted', 'yes');
     assert.strictEqual({}.polluted, undefined);
     assert.deepEqual(obj, {});
+  });
+
+  await t.test('prevents prototype pollution via existing properties on Object.prototype', () => {
+    const obj = {};
+    try {
+      Object.prototype.vulnerableProperty = {};
+      setNested(obj, 'vulnerableProperty.polluted', 'yes');
+      assert.strictEqual({}.vulnerableProperty.polluted, undefined);
+      assert.deepEqual(obj, { vulnerableProperty: { polluted: 'yes' } });
+    } finally {
+      delete Object.prototype.vulnerableProperty;
+    }
   });
 });
 
