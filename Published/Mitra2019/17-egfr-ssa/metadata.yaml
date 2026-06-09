@@ -1,4 +1,4 @@
-id: Mitra_EGFR_SSA_2019
+id: "Mitra_egfr_ssa_2019"
 name: "Mitra et al. 2019: EGFR Stochastic (SSA) Model"
 description: EGFR model
 tags: ["egfr", "stochastic", "ssa", "signaling", "2019", "mitra"]

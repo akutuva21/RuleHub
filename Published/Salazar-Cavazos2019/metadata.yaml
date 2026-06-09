@@ -1,4 +1,4 @@
-id: Salazar_Cavazos_egfr_2019
+id: "Salazar_Cavazos_egfr_2019"
 name: "Salazar-Cavazos et al. 2019: Single-Molecule EGFR Phosphorylation Dynamics"
 description: BNGL model: 190127_CHO_EGFR_best-fit
 tags: ["egfr", "single-molecule", "phosphorylation", "2019", "salazar"]

@@ -1,4 +1,4 @@
-id: Kesseler_CellCycle_2013
+id: "Kesseler_CellCycle_2013"
 name: "Kesseler et al. 2013: Cell Cycle Regulation Model"
 description: "G2/Mitosis transition"
 tags: ["cell-cycle", "mitosis", "cdc25", "wee1", "2013", "kesseler"]

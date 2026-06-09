@@ -1,4 +1,4 @@
-id: Harmon_Antigen_2017
+id: "Harmon_Antigen_2017"
 name: "Harmon et al. 2017: Antigen Recognition Feedback Model"
 description: "Antigen pulses"
 tags: ["antigen-recognition", "immune-signaling", "2017", "harmon"]

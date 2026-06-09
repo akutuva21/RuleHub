@@ -1,4 +1,4 @@
-id: Mitra_ThreeStepCascade_2019
+id: "Mitra_threestep_2019"
 name: "Mitra et al. 2019: Three-Step Signaling Cascade"
 description: Toy model of a 3-step signaling cascade
 tags: ["cascade", "kinase", "phosphorylation", "2019", "mitra"]

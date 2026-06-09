@@ -1,4 +1,4 @@
-id: Blinov_ran_2006
+id: "Blinov_ran_2006"
 name: "Blinov et al. 2006: Ran-Mediated Nuclear Transport (NFsim)"
 description: "Ran GTPase cycle"
 tags: ["ran-gtpase", "nuclear-transport", "nfsim", "2006", "blinov"]

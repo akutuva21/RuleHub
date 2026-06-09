@@ -1,4 +1,4 @@
-id: Faeder_egfr_compart_2009
+id: "Rule_based_egfr_compart"
 name: "Faeder et al. 2009: Compartmental Rule-Based EGFR model"
 description: "Compartmental EGFR model"
 tags: ["egfr", "compartments", "receptor-trafficking", "signaling", "2009", "faeder"]

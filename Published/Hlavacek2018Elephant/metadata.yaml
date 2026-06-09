@@ -1,4 +1,4 @@
-id: Hlavacek_Elephant_2018
+id: "Hlavacek_Elephant_2018"
 name: "Hlavacek et al. 2018: Fitting an Elephant with Four Parameters"
 description: BNGL model: elephant_EFA
 tags: ["elephant-fitting", "mathematical-model", "2018", "hlavacek"]
