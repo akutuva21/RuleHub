@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { validateMetadataFile, expectString } = require('../scripts/validate-metadata');
+const { validateMetadataFile, expectString, expectBoolean } = require('../scripts/validate-metadata');
 
 async function withTempDir(testFn) {
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'validate-metadata-test-'));
@@ -263,6 +263,29 @@ test('expectString correctly validates string values', () => {
   for (const input of invalidInputs) {
     errors = [];
     expectString(errors, input, label, filePath);
+    assert.strictEqual(errors.length, 1, `Should add error for ${typeof input} input`);
+    assert.match(errors[0], /test\.yaml: missing or invalid test_label/);
+  }
+});
+
+test('expectBoolean correctly validates boolean values', () => {
+  const label = 'test_label';
+  const filePath = 'test.yaml';
+
+  // Happy paths
+  let errors = [];
+  expectBoolean(errors, true, label, filePath);
+  assert.deepStrictEqual(errors, [], 'Should not add error for true');
+
+  errors = [];
+  expectBoolean(errors, false, label, filePath);
+  assert.deepStrictEqual(errors, [], 'Should not add error for false');
+
+  // Invalid types
+  const invalidInputs = [null, undefined, 123, 'true', 'false', '', {}, []];
+  for (const input of invalidInputs) {
+    errors = [];
+    expectBoolean(errors, input, label, filePath);
     assert.strictEqual(errors.length, 1, `Should add error for ${typeof input} input`);
     assert.match(errors[0], /test\.yaml: missing or invalid test_label/);
   }
