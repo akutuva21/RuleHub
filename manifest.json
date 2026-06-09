@@ -918,7 +918,7 @@
     "excluded": false
   },
   {
-    "id": "Blinov_egfr_NF_2006",
+    "id": "Blinov_egfr_2006",
     "name": "Blinov et al. 2006: EGFR Signaling Pathway (NFsim)",
     "description": "EGFR signaling model",
     "tags": [
@@ -3683,41 +3683,6 @@
     "excluded": false
   },
   {
-    "id": "Faeder_egfr_compart_2009",
-    "name": "Faeder et al. 2009: Compartmental Rule-Based EGFR model",
-    "description": "Compartmental EGFR model",
-    "tags": [
-      "egfr",
-      "compartments",
-      "receptor-trafficking",
-      "signaling",
-      "2009",
-      "faeder"
-    ],
-    "category": "signaling",
-    "origin": "published",
-    "visible": false,
-    "compatibility": {
-      "bng2": false,
-      "nfsim": false,
-      "excluded": false,
-      "methods": [
-        "ode"
-      ]
-    },
-    "gallery": [
-      "signaling"
-    ],
-    "path": "Published/Rulebasedegfrcompart/Rule_based_egfr_compart.bngl",
-    "file": "Rule_based_egfr_compart.bngl",
-    "collectionId": null,
-    "featured": false,
-    "difficulty": "advanced",
-    "bng2_compatible": false,
-    "nfsim_compatible": false,
-    "excluded": false
-  },
-  {
     "id": "Faeder_FceRI_2003_Faeder_2003",
     "name": "Faeder et al. 2003: FceRI Signaling Model (Faeder_2003)",
     "description": "FceRI signaling",
@@ -6097,7 +6062,7 @@
     "excluded": false
   },
   {
-    "id": "Korwek_ViralSensing_2023",
+    "id": "Korwek_published_2023",
     "name": "Korwek et al. 2023: Viral Sensing and Innate Immune Activation",
     "description": "This BioNetGen file features the article:",
     "tags": [
@@ -8599,78 +8564,6 @@
     "excluded": false
   },
   {
-    "id": "Mallela_VaxVariants_NYC_2022",
-    "name": "Mallela et al. 2022: Covid-19 Vax and Variants - New York City MSA",
-    "description": "- This model is intended to be consistent with the compartmental model",
-    "tags": [
-      "covid-19",
-      "epidemiology",
-      "vaccination",
-      "variants",
-      "nyc",
-      "2022",
-      "mallela"
-    ],
-    "category": "epidemiology",
-    "origin": "published",
-    "visible": false,
-    "compatibility": {
-      "bng2": true,
-      "nfsim": false,
-      "excluded": false,
-      "methods": [
-        "ode"
-      ]
-    },
-    "gallery": [
-      "epidemiology"
-    ],
-    "path": "Published/VaxAndVariants/NYC/NYC.bngl",
-    "file": "NYC.bngl",
-    "collectionId": null,
-    "featured": false,
-    "difficulty": "advanced",
-    "bng2_compatible": true,
-    "nfsim_compatible": false,
-    "excluded": false
-  },
-  {
-    "id": "Mallela_VaxVariants_Phoenix_2022",
-    "name": "Mallela et al. 2022: Covid-19 Vax and Variants - Phoenix MSA",
-    "description": "- This model is intended to be consistent with the compartmental model",
-    "tags": [
-      "covid-19",
-      "epidemiology",
-      "vaccination",
-      "variants",
-      "phoenix",
-      "2022",
-      "mallela"
-    ],
-    "category": "epidemiology",
-    "origin": "published",
-    "visible": false,
-    "compatibility": {
-      "bng2": true,
-      "nfsim": false,
-      "excluded": false,
-      "methods": [
-        "ode"
-      ]
-    },
-    "gallery": [
-      "epidemiology"
-    ],
-    "path": "Published/VaxAndVariants/Phoenix/Phoenix.bngl",
-    "file": "Phoenix.bngl",
-    "collectionId": null,
-    "featured": false,
-    "difficulty": "advanced",
-    "bng2_compatible": true,
-    "nfsim_compatible": false,
-    "excluded": false
-  },
-  {
     "id": "MAPK_Dimers_Model",
     "name": "MAPK Cascades with Raf Dimerization",
     "description": "MAPK dimerization",
@@ -9298,7 +9191,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_EGFR_2019_egfr",
+    "id": "Mitra_egfr_2019_egfr",
     "name": "Mitra et al. 2019: EGFR Receptor Signaling (ODE) (egfr)",
     "description": "EGFR model",
     "tags": [
@@ -9330,7 +9223,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_EGFR_2019_egfr_ground",
+    "id": "Mitra_egfr_2019_egfr_ground",
     "name": "Mitra et al. 2019: EGFR Receptor Signaling (ODE) (egfr_ground)",
     "description": "EGFR model",
     "tags": [
@@ -9428,7 +9321,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_EGFR_SSA_2019_egfr",
+    "id": "Mitra_egfr_ssa_2019_egfr",
     "name": "Mitra et al. 2019: EGFR Stochastic (SSA) Model (egfr)",
     "description": "EGFR model",
     "tags": [
@@ -9461,7 +9354,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_EGFR_SSA_2019_egfr_ground",
+    "id": "Mitra_egfr_ssa_2019_egfr_ground",
     "name": "Mitra et al. 2019: EGFR Stochastic (SSA) Model (egfr_ground)",
     "description": "EGFR model",
     "tags": [
@@ -9654,7 +9547,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_JobScheduling_2019_jobs_ground",
+    "id": "Mitra_jobs_2019_jobs_ground",
     "name": "Mitra et al. 2019: Job Scheduling Simulation (jobs_ground)",
     "description": "NFsim simulation of the job market",
     "tags": [
@@ -9686,7 +9579,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_JobScheduling_2019_jobs_tofit",
+    "id": "Mitra_jobs_2019_jobs_tofit",
     "name": "Mitra et al. 2019: Job Scheduling Simulation (jobs_tofit)",
     "description": "NFsim simulation of the job market",
     "tags": [
@@ -9718,7 +9611,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Likelihood_2019",
+    "id": "Mitra_likelihood_2019",
     "name": "Mitra et al. 2019: Likelihood Profiling Analysis Reference",
     "description": "filename: model_ground.bngl",
     "tags": [
@@ -10131,7 +10024,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_MAPK_2019_Scaff-22_ground",
+    "id": "Mitra_mapk_2019_Scaff-22_ground",
     "name": "Mitra et al. 2019: MAPK Pathway Cascade (Scaff-22_ground)",
     "description": "For \"ground truth\" model, use median values such that hierarchy H1 occurs, as shown in Table 3.",
     "tags": [
@@ -10163,7 +10056,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_MAPK_2019_Scaff-22_tofit",
+    "id": "Mitra_mapk_2019_Scaff-22_tofit",
     "name": "Mitra et al. 2019: MAPK Pathway Cascade (Scaff-22_tofit)",
     "description": "For \"ground truth\" model, use median values such that hierarchy H1 occurs, as shown in Table 3.",
     "tags": [
@@ -10195,7 +10088,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_MAPK_Ensemble_2019_ensemble_tofit",
+    "id": "Mitra_mapk_ensemble_2019_ensemble_tofit",
     "name": "Mitra et al. 2019: MAPK Pathway Ensemble Model (ensemble_tofit)",
     "description": "Ensemble model translated into BNGL",
     "tags": [
@@ -10227,7 +10120,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_MAPK_Ensemble_2019_machine_tofit",
+    "id": "Mitra_mapk_ensemble_2019_machine_tofit",
     "name": "Mitra et al. 2019: MAPK Pathway Ensemble Model (machine_tofit)",
     "description": "Ensemble model translated into BNGL",
     "tags": [
@@ -10259,7 +10152,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_2019_rab_mon1ccz1_ox",
+    "id": "Mitra_Rab_2019_rab_mon1ccz1_ox",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (rab_mon1ccz1_ox)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10335,7 +10228,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_2019_rab_rab5_ox",
+    "id": "Mitra_Rab_2019_rab_rab5_ox",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (rab_rab5_ox)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10411,7 +10304,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_2019_rab_rab7_ox",
+    "id": "Mitra_Rab_2019_rab_rab7_ox",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (rab_rab7_ox)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10487,7 +10380,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_2019_rab_wt",
+    "id": "Mitra_Rab_2019_rab_wt",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (rab_wt)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10563,7 +10456,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_pybnf_2019_rab_mon1ccz1_ox",
+    "id": "Mitra_Rab_pybnf_2019_rab_mon1ccz1_ox",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (PyBNF) (rab_mon1ccz1_ox)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10597,7 +10490,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_pybnf_2019_rab_rab5_ox",
+    "id": "Mitra_Rab_pybnf_2019_rab_rab5_ox",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (PyBNF) (rab_rab5_ox)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10631,7 +10524,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_pybnf_2019_rab_rab7_ox",
+    "id": "Mitra_Rab_pybnf_2019_rab_rab7_ox",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (PyBNF) (rab_rab7_ox)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10665,7 +10558,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_Rab_wt_pybnf_2019_rab_wt",
+    "id": "Mitra_Rab_pybnf_2019_rab_wt",
     "name": "Mitra et al. 2019: Rab Cascade - Wild Type (PyBNF) (rab_wt)",
     "description": "filename:rab_mon1ccz1_ox.bngl",
     "tags": [
@@ -10763,7 +10656,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_SimpleReceptor_2019_example5_starting_point",
+    "id": "Mitra_receptor_2019_example5_starting_point",
     "name": "Mitra et al. 2019: Simple Ligand-Receptor Binding (example5_starting_point)",
     "description": "A simple model",
     "tags": [
@@ -10795,7 +10688,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_SimpleReceptor_2019_receptor",
+    "id": "Mitra_receptor_2019_receptor",
     "name": "Mitra et al. 2019: Simple Ligand-Receptor Binding (receptor)",
     "description": "A simple model",
     "tags": [
@@ -10924,7 +10817,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_ThreeStepCascade_2019_m1",
+    "id": "Mitra_threestep_2019_m1",
     "name": "Mitra et al. 2019: Three-Step Signaling Cascade (m1)",
     "description": "Toy model of a 3-step signaling cascade",
     "tags": [
@@ -10956,7 +10849,7 @@
     "excluded": false
   },
   {
-    "id": "Mitra_ThreeStepCascade_2019_m1_ground",
+    "id": "Mitra_threestep_2019_m1_ground",
     "name": "Mitra et al. 2019: Three-Step Signaling Cascade (m1_ground)",
     "description": "Toy model of a 3-step signaling cascade",
     "tags": [
@@ -14890,72 +14783,6 @@
     "excluded": false
   },
   {
-    "id": "Ran_NuclearTransport",
-    "name": "Rule-Based Ran-Mediated Nuclear Transport Model",
-    "description": "Nuclear Ran transport",
-    "tags": [
-      "ran-gtpase",
-      "nuclear-transport",
-      "nuclear-pore-complex",
-      "import-export"
-    ],
-    "category": "regulation",
-    "origin": "published",
-    "visible": false,
-    "compatibility": {
-      "bng2": false,
-      "nfsim": false,
-      "excluded": false,
-      "methods": [
-        "ode"
-      ]
-    },
-    "gallery": [
-      "regulation"
-    ],
-    "path": "Published/RulebasedRantransport/Rule_based_Ran_transport.bngl",
-    "file": "Rule_based_Ran_transport.bngl",
-    "collectionId": null,
-    "featured": false,
-    "difficulty": "advanced",
-    "bng2_compatible": false,
-    "nfsim_compatible": false,
-    "excluded": false
-  },
-  {
-    "id": "Ran_NuclearTransport_Draft",
-    "name": "Rule-Based Ran-Mediated Nuclear Transport Model (Draft)",
-    "description": "Ran transport (draft)",
-    "tags": [
-      "ran-gtpase",
-      "nuclear-transport",
-      "nuclear-pore-complex",
-      "draft-model"
-    ],
-    "category": "regulation",
-    "origin": "published",
-    "visible": false,
-    "compatibility": {
-      "bng2": false,
-      "nfsim": false,
-      "excluded": false,
-      "methods": [
-        "ode"
-      ]
-    },
-    "gallery": [
-      "regulation"
-    ],
-    "path": "Published/RulebasedRantransportdraft/Rule_based_Ran_transport_draft.bngl",
-    "file": "Rule_based_Ran_transport_draft.bngl",
-    "collectionId": null,
-    "featured": false,
-    "difficulty": "advanced",
-    "bng2_compatible": false,
-    "nfsim_compatible": false,
-    "excluded": false
-  },
-  {
     "id": "rankl-rank-signaling",
     "name": "rankl rank signaling",
     "description": "RANKL-RANK-OPG signaling in bone remodeling.",
@@ -15277,6 +15104,107 @@
     "featured": false,
     "difficulty": "advanced",
     "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  {
+    "id": "Rule_based_egfr_compart",
+    "name": "Faeder et al. 2009: Compartmental Rule-Based EGFR model",
+    "description": "Compartmental EGFR model",
+    "tags": [
+      "egfr",
+      "compartments",
+      "receptor-trafficking",
+      "signaling",
+      "2009",
+      "faeder"
+    ],
+    "category": "signaling",
+    "origin": "published",
+    "visible": false,
+    "compatibility": {
+      "bng2": false,
+      "nfsim": false,
+      "excluded": false,
+      "methods": [
+        "ode"
+      ]
+    },
+    "gallery": [
+      "signaling"
+    ],
+    "path": "Published/Rulebasedegfrcompart/Rule_based_egfr_compart.bngl",
+    "file": "Rule_based_egfr_compart.bngl",
+    "collectionId": null,
+    "featured": false,
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  {
+    "id": "Rule_based_Ran_transport",
+    "name": "Rule-Based Ran-Mediated Nuclear Transport Model",
+    "description": "Nuclear Ran transport",
+    "tags": [
+      "ran-gtpase",
+      "nuclear-transport",
+      "nuclear-pore-complex",
+      "import-export"
+    ],
+    "category": "regulation",
+    "origin": "published",
+    "visible": false,
+    "compatibility": {
+      "bng2": false,
+      "nfsim": false,
+      "excluded": false,
+      "methods": [
+        "ode"
+      ]
+    },
+    "gallery": [
+      "regulation"
+    ],
+    "path": "Published/RulebasedRantransport/Rule_based_Ran_transport.bngl",
+    "file": "Rule_based_Ran_transport.bngl",
+    "collectionId": null,
+    "featured": false,
+    "difficulty": "advanced",
+    "bng2_compatible": false,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  {
+    "id": "Rule_based_Ran_transport_draft",
+    "name": "Rule-Based Ran-Mediated Nuclear Transport Model (Draft)",
+    "description": "Ran transport (draft)",
+    "tags": [
+      "ran-gtpase",
+      "nuclear-transport",
+      "nuclear-pore-complex",
+      "draft-model"
+    ],
+    "category": "regulation",
+    "origin": "published",
+    "visible": false,
+    "compatibility": {
+      "bng2": false,
+      "nfsim": false,
+      "excluded": false,
+      "methods": [
+        "ode"
+      ]
+    },
+    "gallery": [
+      "regulation"
+    ],
+    "path": "Published/RulebasedRantransportdraft/Rule_based_Ran_transport_draft.bngl",
+    "file": "Rule_based_Ran_transport_draft.bngl",
+    "collectionId": null,
+    "featured": false,
+    "difficulty": "advanced",
+    "bng2_compatible": false,
     "nfsim_compatible": false,
     "excluded": false
   },
@@ -17507,6 +17435,78 @@
     "collectionId": null,
     "featured": false,
     "difficulty": "intermediate",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  {
+    "id": "VaxAndVariants_NYC",
+    "name": "Mallela et al. 2022: Covid-19 Vax and Variants - New York City MSA",
+    "description": "- This model is intended to be consistent with the compartmental model",
+    "tags": [
+      "covid-19",
+      "epidemiology",
+      "vaccination",
+      "variants",
+      "nyc",
+      "2022",
+      "mallela"
+    ],
+    "category": "epidemiology",
+    "origin": "published",
+    "visible": false,
+    "compatibility": {
+      "bng2": true,
+      "nfsim": false,
+      "excluded": false,
+      "methods": [
+        "ode"
+      ]
+    },
+    "gallery": [
+      "epidemiology"
+    ],
+    "path": "Published/VaxAndVariants/NYC/NYC.bngl",
+    "file": "NYC.bngl",
+    "collectionId": null,
+    "featured": false,
+    "difficulty": "advanced",
+    "bng2_compatible": true,
+    "nfsim_compatible": false,
+    "excluded": false
+  },
+  {
+    "id": "VaxAndVariants_Phoenix",
+    "name": "Mallela et al. 2022: Covid-19 Vax and Variants - Phoenix MSA",
+    "description": "- This model is intended to be consistent with the compartmental model",
+    "tags": [
+      "covid-19",
+      "epidemiology",
+      "vaccination",
+      "variants",
+      "phoenix",
+      "2022",
+      "mallela"
+    ],
+    "category": "epidemiology",
+    "origin": "published",
+    "visible": false,
+    "compatibility": {
+      "bng2": true,
+      "nfsim": false,
+      "excluded": false,
+      "methods": [
+        "ode"
+      ]
+    },
+    "gallery": [
+      "epidemiology"
+    ],
+    "path": "Published/VaxAndVariants/Phoenix/Phoenix.bngl",
+    "file": "Phoenix.bngl",
+    "collectionId": null,
+    "featured": false,
+    "difficulty": "advanced",
     "bng2_compatible": true,
     "nfsim_compatible": false,
     "excluded": false
