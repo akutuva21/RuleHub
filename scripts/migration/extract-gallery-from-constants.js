@@ -113,8 +113,11 @@ function extractCategoryMappings(content) {
     { prefix: 'SYNBIO_MODELS', category: 'synbio' },
   ];
   
+  const escapeRegExp = (string) => string.replace(/[.*+?^${}()|[\]\\]/g, (match) => '\\' + match);
+
   for (const { prefix, category } of simpleCategories) {
-    const regex = new RegExp(`${prefix}\\.filter\\(m => \\[\([^\\]]+\)\\]\\.includes\\(m\\.id\\)\\)`);
+    const escapedPrefix = escapeRegExp(prefix);
+    const regex = new RegExp(`${escapedPrefix}\\.filter\\(m => \\[\([^\\]]+\)\\]\\.includes\\(m\\.id\\)\\)`);
     const match = content.match(regex);
     if (match) {
       const ids = match[1].match(/["']([^"']+)["']/g) || [];
