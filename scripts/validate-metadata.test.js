@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, expectArray, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -275,6 +275,38 @@ tags:
     `;
     const result = parseMetadataYaml(yaml);
     assert.deepEqual(result, { tags: ['one', 'two'] });
+  });
+});
+
+test('expectArray', async (t) => {
+  await t.test('appends error if value is not an array', () => {
+    const errors = [];
+    expectArray(errors, 'not an array', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectArray(errors, null, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is undefined', () => {
+    const errors = [];
+    expectArray(errors, undefined, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('does not append error for empty array', () => {
+    const errors = [];
+    expectArray(errors, [], 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('does not append error for populated array', () => {
+    const errors = [];
+    expectArray(errors, [1, 2, 3], 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
   });
 });
 
