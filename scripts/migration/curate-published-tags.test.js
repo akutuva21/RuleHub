@@ -113,6 +113,23 @@ test('listMetadataFiles', async (t) => {
         assert.deepEqual(results, []);
     });
 
+    await t.test('throws for other errors', async () => {
+        const originalReaddir = fs.promises.readdir;
+        try {
+            fs.promises.readdir = async () => {
+                const err = new Error('Permission denied');
+                err.code = 'EACCES';
+                throw err;
+            };
+            await assert.rejects(
+                async () => { await listMetadataFiles('/some/dir'); },
+                { code: 'EACCES' }
+            );
+        } finally {
+            fs.promises.readdir = originalReaddir;
+        }
+    });
+
     await t.test('finds metadata.yaml files in directory tree', async () => {
         const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-'));
         try {
@@ -193,6 +210,81 @@ tags: ["generate_network", "my_var_123", "goodtag", "tnf", "cell_cycle"]
 
             assert.strictEqual(expectedTagsMatch[1], expectedTags);
 
+        } finally {
+            fs.rmSync(tempDir, { recursive: true, force: true });
+        }
+    });
+
+    await t.test('skips PyBioNetGen internal files', async () => {
+        const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-skip-'));
+        try {
+            const publishedDir = path.join(tempDir, 'Published');
+            const pbnDir = path.join(publishedDir, 'PyBioNetGen', 'model');
+            fs.mkdirSync(publishedDir);
+            fs.mkdirSync(pbnDir, { recursive: true });
+
+            const metaFile = path.join(pbnDir, 'metadata.yaml');
+            const originalContent = `
+id: "test"
+tags: ["generate_network"]
+`;
+            fs.writeFileSync(metaFile, originalContent);
+
+            const originalConsoleLog = console.log;
+            console.log = () => {};
+            try {
+                await main(['--root', tempDir]);
+            } finally {
+                console.log = originalConsoleLog;
+            }
+
+            const updatedContent = fs.readFileSync(metaFile, 'utf8');
+            assert.strictEqual(updatedContent, originalContent, 'Content should not be changed');
+        } finally {
+            fs.rmSync(tempDir, { recursive: true, force: true });
+        }
+    });
+
+    await t.test('removes tags with invalid underscores', async () => {
+        const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-underscore-'));
+        try {
+            const publishedDir = path.join(tempDir, 'Published');
+            const modelDir = path.join(publishedDir, 'ModelAuthor2021');
+            fs.mkdirSync(publishedDir);
+            fs.mkdirSync(modelDir, { recursive: true });
+
+            const metadataContent = `
+id: "test_model"
+tags: ["invalid_tag", "another__bad_tag", "cell_cycle", "goodtag"]
+`;
+            const metaFile = path.join(modelDir, 'metadata.yaml');
+            fs.writeFileSync(metaFile, metadataContent);
+
+            const originalConsoleLog = console.log;
+            console.log = () => {};
+            try {
+                await main(['--root', tempDir]);
+            } finally {
+                console.log = originalConsoleLog;
+            }
+
+            const updatedContent = fs.readFileSync(metaFile, 'utf8');
+
+            const expectedTagsMatch = updatedContent.match(/^tags:\s*\[(.*?)\]\s*$/m);
+            assert.ok(expectedTagsMatch, 'Tags line should exist');
+
+            // "invalid_tag" and "another__bad_tag" should be removed
+            // "cell_cycle" should be kept (it's an okTag)
+            // "goodtag" should be kept
+            // "2021" and "modelauthor" should be added
+            const expectedTags = [
+                '2021',
+                'cell_cycle',
+                'goodtag',
+                'modelauthor'
+            ].map(t => '"' + t + '"').join(', ');
+
+            assert.strictEqual(expectedTagsMatch[1], expectedTags);
         } finally {
             fs.rmSync(tempDir, { recursive: true, force: true });
         }
