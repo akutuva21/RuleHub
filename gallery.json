@@ -177,10 +177,6 @@
       "published-models"
     ],
     "Blinov_egfr_2006": [
-      "cell-cycle",
-      "published-models"
-    ],
-    "Blinov_egfr_NF_2006": [
       "cancer",
       "published-models"
     ],
@@ -265,9 +261,6 @@
       "cancer",
       "published-models"
     ],
-    "Faeder_egfr_compart_2009": [
-      "published-models"
-    ],
     "FceRI_ji": [
       "native-tutorials"
     ],
@@ -343,7 +336,7 @@
       "immunology",
       "published-models"
     ],
-    "Korwek_ViralSensing_2023": [
+    "Korwek_published_2023": [
       "test-models"
     ],
     "Kozer_egfr_2013": [
@@ -436,12 +429,6 @@
     "Mallela_VaxVariants_MyrtleBeach_2022": [
       "published-models"
     ],
-    "Mallela_VaxVariants_NYC_2022": [
-      "published-models"
-    ],
-    "Mallela_VaxVariants_Phoenix_2022": [
-      "published-models"
-    ],
     "Massole_developmental_2023": [
       "developmental",
       "published-models"
@@ -485,9 +472,6 @@
       "published-models"
     ],
     "Mitra_JNK_2019": [
-      "published-models"
-    ],
-    "Mitra_Likelihood_2019": [
       "published-models"
     ],
     "Mitra_Likelihood_P16_2019": [
@@ -539,6 +523,9 @@
       "published-models"
     ],
     "Mitra_TLBR_2019": [
+      "published-models"
+    ],
+    "Mitra_likelihood_2019": [
       "published-models"
     ],
     "Motivating_example": [
@@ -739,16 +726,19 @@
     "PyBioNetGen_Trivial": [
       "test-models"
     ],
-    "Ran_NuclearTransport": [
-      "published-models"
-    ],
-    "Ran_NuclearTransport_Draft": [
-      "published-models"
-    ],
     "Repressilator": [
       "cell-cycle",
       "native-tutorials",
       "synbio"
+    ],
+    "Rule_based_Ran_transport": [
+      "published-models"
+    ],
+    "Rule_based_Ran_transport_draft": [
+      "published-models"
+    ],
+    "Rule_based_egfr_compart": [
+      "published-models"
     ],
     "SHP2_base_model": [
       "test-models"
@@ -784,6 +774,12 @@
       "published-models"
     ],
     "Thomas_Example6_2016": [
+      "published-models"
+    ],
+    "VaxAndVariants_NYC": [
+      "published-models"
+    ],
+    "VaxAndVariants_Phoenix": [
       "published-models"
     ],
     "Vilar_Circadian_2002": [
