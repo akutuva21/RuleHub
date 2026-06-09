@@ -66,26 +66,11 @@ function extractAllModelIds(content) {
   const modelIds = new Set();
   
   for (const arrayName of sourceArrays) {
-    const searchStr = `const ${arrayName}: Example[] = [`;
-    const startIdx = content.indexOf(searchStr);
-    if (startIdx === -1) continue;
+    const regex = new RegExp(`const ${arrayName}:\\s*Example\\[\\]\\s*=\\s*\\[([\\s\\S]*?)\\];`);
+    const arrayMatch = regex.exec(content);
+    if (!arrayMatch) continue;
     
-    const arrayStart = startIdx + searchStr.length;
-    let depth = 1;
-    let arrayEnd = arrayStart;
-    
-    for (let i = arrayStart; i < content.length; i++) {
-      if (content[i] === '[') depth++;
-      if (content[i] === ']') {
-        depth--;
-        if (depth === 0) {
-          arrayEnd = i;
-          break;
-        }
-      }
-    }
-    
-    const block = content.substring(arrayStart, arrayEnd);
+    const block = arrayMatch[1];
     const idPattern = /id:\s*['"]([^'"]+)['"]/g;
     let match;
     while ((match = idPattern.exec(block)) !== null) {
