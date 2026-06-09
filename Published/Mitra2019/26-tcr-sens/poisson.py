@@ -1,7 +1,6 @@
 from pybnf import data
 from scipy.stats import poisson
 import numpy as np
-import sys
 
 def postprocess(simdata):
     exp_values = [0.000,0.291,0.475,0.798,0.929,1.318,1.543,2.136,2.926]
