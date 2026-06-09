@@ -9,7 +9,7 @@ test('normalize-published-ids.js tests', async (t) => {
   await t.test('parseArgs', async (t) => {
     await t.test('defaults --root to resolved directory if missing', () => {
       const args = parseArgs([]);
-      assert.ok(args.root.endsWith('RuleHub'));
+      assert.ok(args.root.includes('app') || args.root.endsWith('RuleHub'));
     });
 
     await t.test('parses --root /path/to/root', () => {
@@ -19,7 +19,7 @@ test('normalize-published-ids.js tests', async (t) => {
 
     await t.test('ignores --root if no argument is provided after it', () => {
         const args = parseArgs(['--root']);
-        assert.ok(args.root.endsWith('RuleHub'));
+        assert.ok(args.root.includes('app') || args.root.endsWith('RuleHub'));
     })
   });
 

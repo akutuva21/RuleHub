@@ -234,7 +234,6 @@ end model
     processModelLine('uses energy', metadata, state);
     assert.strictEqual(metadata.uses_energy, true);
   });
-  });
 
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
     // create fake paths inside tmpDir to test path inferencing
