@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { parseBngl, generateId, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine } = require('./backfill-metadata.js');
+const { parseBngl, generateId, processModelLine, generateMetadata, formatYaml, formatYamlValue, inferCategory, inferOrigin, extractMetadataFromComments, processActionLine, processLine } = require('./backfill-metadata.js');
 
 test('backfill-metadata.js', async (t) => {
   let tmpDir;
@@ -233,7 +233,6 @@ end model
     metadata.uses_energy = false; // Reset
     processModelLine('uses energy', metadata, state);
     assert.strictEqual(metadata.uses_energy, true);
-  });
   });
 
   await t.test('generateMetadata - structures metadata with generated id, category, origin, and compatibility', async () => {
@@ -585,6 +584,73 @@ test('extractMetadataFromComments', async (t) => {
       processActionLine('simulate({t_end=>10, n_steps=>100})', metadata);
       assert.deepStrictEqual(metadata.simulation_methods, []);
       assert.strictEqual(metadata.nfsim_compatible, false);
+    });
+  });
+
+  await t.test('processLine - updates state, metadata, and headerComments correctly', async (st) => {
+    let metadata;
+    let state;
+    let headerComments;
+
+    st.beforeEach(() => {
+      metadata = {
+        tags: new Set(),
+        uses_compartments: false,
+        uses_energy: false,
+        uses_functions: false,
+        simulation_methods: [],
+      };
+      state = {
+        inModel: false,
+        inActions: false,
+        inCompartments: false,
+        inFunctions: false,
+      };
+      headerComments = [];
+    });
+
+    await st.test('extracts top-level header comments', () => {
+      processLine('# name: test', state, metadata, headerComments);
+      assert.deepStrictEqual(headerComments, ['name: test']);
+    });
+
+    await st.test('ignores comments once in model block', () => {
+      state.inModel = true;
+      processLine('# comment', state, metadata, headerComments);
+      assert.deepStrictEqual(headerComments, []);
+    });
+
+    await st.test('ignores comments once in actions block', () => {
+      state.inActions = true;
+      processLine('# comment', state, metadata, headerComments);
+      assert.deepStrictEqual(headerComments, []);
+    });
+
+    await st.test('toggles inModel state', () => {
+      processLine('begin model', state, metadata, headerComments);
+      assert.strictEqual(state.inModel, true);
+      processLine('end model', state, metadata, headerComments);
+      assert.strictEqual(state.inModel, false);
+    });
+
+    await st.test('toggles inActions state', () => {
+      processLine('begin actions', state, metadata, headerComments);
+      assert.strictEqual(state.inActions, true);
+      processLine('end actions', state, metadata, headerComments);
+      assert.strictEqual(state.inActions, false);
+    });
+
+    await st.test('delegates to processModelLine when in model', () => {
+      state.inModel = true;
+      processLine('begin compartments', state, metadata, headerComments);
+      assert.strictEqual(state.inCompartments, true);
+      assert.strictEqual(metadata.uses_compartments, true);
+    });
+
+    await st.test('delegates to processActionLine when in actions', () => {
+      state.inActions = true;
+      processLine('simulate({method=>"nf"})', state, metadata, headerComments);
+      assert.deepStrictEqual(metadata.simulation_methods, ['nf']);
     });
   });
 });
