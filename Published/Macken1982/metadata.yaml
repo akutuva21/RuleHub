@@ -1,4 +1,4 @@
-id: Macken_physics_1982
+id: "Macken_physics_1982"
 name: "Macken et al. 1982: Polymer Chain Reaction Kinetics"
 description: "TLBR solution macken 1982"
 tags: ["polymerization", "mathematical-model", "1982", "macken"]

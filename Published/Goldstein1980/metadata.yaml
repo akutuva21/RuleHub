@@ -1,4 +1,4 @@
-id: Goldstein_blbr_1980
+id: "Goldstein_blbr_1980"
 name: "Goldstein et al. 1980: Bivalent Ligand Bivalent Receptor (BLBR) Model"
 description: "BLBR heterogeneity"
 tags: ["blbr", "ligand-receptor", "binding", "1980", "goldstein"]

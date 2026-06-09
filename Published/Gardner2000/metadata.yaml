@@ -1,4 +1,4 @@
-id: Gardner_Toggle_2000
+id: "Gardner_Toggle_2000"
 name: "Gardner et al. 2000: Synthetic Gene Toggle Switch"
 description: "Genetic toggle switch"
 tags: ["toggle-switch", "synthetic-biology", "gene-regulation", "2000", "gardner"]

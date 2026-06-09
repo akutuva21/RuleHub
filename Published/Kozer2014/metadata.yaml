@@ -1,4 +1,4 @@
-id: Kozer_egfr_2014
+id: "Kozer_egfr_2014"
 name: "Kozer et al. 2014: EGFR Oligomerization Dynamics"
 description: "Grb2-EGFR recruitment"
 tags: ["egfr", "oligomerization", "internalization", "2014", "kozer"]

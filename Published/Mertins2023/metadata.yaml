@@ -1,4 +1,4 @@
-id: Mertins_cancer_2023
+id: "Mertins_cancer_2023"
 name: "Mertins et al. 2023: Apoptotic Signaling Response"
 description: "DNA damage response"
 tags: ["apoptosis", "bax-bclxl", "cancer", "2023", "mertins"]

@@ -1,4 +1,4 @@
-id: Mallela_COVID_2021
+id: "Mallela_COVID_2021"
 name: "Mallela et al. 2021: Covid-19 State-Level Transmission Dynamics"
 description: "Parameter-fit COVID-19 epidemiological models for all 50 US states."
 tags: ["covid-19", "epidemiology", "state-level", "2021", "mallela"]

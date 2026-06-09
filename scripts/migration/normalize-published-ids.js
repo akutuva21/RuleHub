@@ -141,12 +141,12 @@ async function main(argv = process.argv.slice(2)) {
   const metadataFiles = await listMetadataFiles(publishedDir);
   let count = 0;
 
-  for (const metaFile of metadataFiles) {
+  const promises = metadataFiles.map(async (metaFile) => {
     const relPath = path.relative(publishedDir, path.dirname(metaFile)).replace(/\\/g, '/');
 
     // Skip PyBioNetGen internal files
     if (relPath.startsWith('PyBioNetGen')) {
-      continue;
+      return;
     }
 
     // Find key in mapping
@@ -158,7 +158,9 @@ async function main(argv = process.argv.slice(2)) {
     } else {
       console.log(`No explicit mapping for ${relPath}, skipped.`);
     }
-  }
+  });
+
+  await Promise.all(promises);
 
   console.log(`\nSuccessfully updated ${count} metadata files in Published/!`);
 }

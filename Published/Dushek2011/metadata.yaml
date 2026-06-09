@@ -1,4 +1,4 @@
-id: Dushek_TCR_2011
+id: "Dushek_TCR_2011"
 name: "Dushek et al. 2011: T Cell Receptor Kinase Kinase Cascade"
 description: "TCR signaling"
 tags: ["tcr", "phosphorylation", "immune-signaling", "2011", "dushek"]

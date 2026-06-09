@@ -1,4 +1,4 @@
-id: Mallela_VaxVariants_NYC_2022
+id: "VaxAndVariants_NYC"
 name: "Mallela et al. 2022: Covid-19 Vax and Variants - New York City MSA"
 description: "- This model is intended to be consistent with the compartmental model"
 tags: ["covid-19", "epidemiology", "vaccination", "variants", "nyc", "2022", "mallela"]

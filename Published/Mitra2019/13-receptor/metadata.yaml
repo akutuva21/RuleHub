@@ -1,4 +1,4 @@
-id: Mitra_SimpleReceptor_2019
+id: "Mitra_receptor_2019"
 name: "Mitra et al. 2019: Simple Ligand-Receptor Binding"
 description: A simple model
 tags: ["ligand-receptor", "binding", "reversible-reaction", "2019", "mitra"]

@@ -1,4 +1,4 @@
-id: Ran_NuclearTransport_Draft
+id: "Rule_based_Ran_transport_draft"
 name: "Rule-Based Ran-Mediated Nuclear Transport Model (Draft)"
 description: "Ran transport (draft)"
 tags: ["ran-gtpase", "nuclear-transport", "nuclear-pore-complex", "draft-model"]

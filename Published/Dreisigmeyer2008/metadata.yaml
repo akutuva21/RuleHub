@@ -1,4 +1,4 @@
-id: Dreisigmeyer_LacOperon_2008
+id: "Dreisigmeyer_LacOperon_2008"
 name: "Dreisigmeyer et al. 2008: Lac Operon Regulation Model"
 description: "Lac operon"
 tags: ["lac-operon", "gene-expression", "bacterial-regulation", "2008", "dreisigmeyer"]

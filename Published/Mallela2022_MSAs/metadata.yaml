@@ -1,4 +1,4 @@
-id: Mallela_MSAs_2022
+id: "Mallela_MSAs_2022"
 name: "Mallela et al. 2022: Covid-19 MSA-Level Transmission Dynamics"
 description: "Parameter-fit COVID-19 epidemiological models for US metropolitan statistical areas."
 tags: ["covid-19", "epidemiology", "msa-level", "2022", "mallela"]

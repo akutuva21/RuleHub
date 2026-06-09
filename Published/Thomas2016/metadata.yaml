@@ -1,4 +1,4 @@
-id: Thomas_egfr_2016
+id: "Thomas_egfr_2016"
 name: "Thomas et al. 2016: Parameter Fitting of EGFR Signaling"
 description: Filename: example1_starting_point.bngl
 tags: ["egfr", "signaling", "parameter-fitting", "2016", "thomas"]
