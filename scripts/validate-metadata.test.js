@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, expectEnum, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -306,6 +306,40 @@ test('expectString', async (t) => {
   await t.test('does not append error for valid string', () => {
     const errors = [];
     expectString(errors, 'valid string', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+});
+
+test('expectEnum', async (t) => {
+  const allowed = new Set(['a', 'b', 'c']);
+
+  await t.test('appends error if value is not a string (number)', () => {
+    const errors = [];
+    expectEnum(errors, 123, allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label (123)']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectEnum(errors, null, allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label (null)']);
+  });
+
+  await t.test('appends error if value is undefined', () => {
+    const errors = [];
+    expectEnum(errors, undefined, allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label (undefined)']);
+  });
+
+  await t.test('appends error if value is not in allowed set', () => {
+    const errors = [];
+    expectEnum(errors, 'd', allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label ("d")']);
+  });
+
+  await t.test('does not append error for valid value in allowed set', () => {
+    const errors = [];
+    expectEnum(errors, 'a', allowed, 'label', 'file.txt');
     assert.deepStrictEqual(errors, []);
   });
 });
