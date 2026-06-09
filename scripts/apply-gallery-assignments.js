@@ -42,14 +42,14 @@ async function findAllMetadataFiles(dir, results = []) {
     if (err.code === 'ENOENT') return results;
     throw err;
   }
-  for (const entry of entries) {
+  await Promise.all(entries.map(async (entry) => {
     const fullPath = safeJoin(dir, entry.name);
     if (entry.isDirectory()) {
       await findAllMetadataFiles(fullPath, results);
     } else if (entry.name === 'metadata.yaml') {
       results.push(fullPath);
     }
-  }
+  }));
   return results;
 }
 
