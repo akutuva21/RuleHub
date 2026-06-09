@@ -162,61 +162,66 @@ async function main(argv = process.argv.slice(2)) {
   const sortOverrides = {};
   const publishedModelIds = new Set();
 
-  for (const metadataFile of metadataFiles) {
-    try {
-      const content = await fs.promises.readFile(metadataFile, 'utf8');
-      const metadata = parseMetadataYaml(content);
+  const BATCH_SIZE = 50;
+  for (let i = 0; i < metadataFiles.length; i += BATCH_SIZE) {
+    const batch = metadataFiles.slice(i, i + BATCH_SIZE);
 
-      const modelIds = await extractModelIds(metadataFile, metadata);
-      if (modelIds.length === 0) continue;
+    await Promise.all(batch.map(async (metadataFile) => {
+      try {
+        const content = await fs.promises.readFile(metadataFile, 'utf8');
+        const metadata = parseMetadataYaml(content);
 
-      const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
-      if (tags.includes('published') || metadata.source?.origin === 'published') {
-        for (const modelId of modelIds) {
-          publishedModelIds.add(modelId);
-        }
-      }
+        const modelIds = await extractModelIds(metadataFile, metadata);
+        if (modelIds.length === 0) return;
 
-      let galleryCategories = metadata.playground?.gallery_categories 
-        || (metadata.playground?.gallery_category 
-            ? [metadata.playground.gallery_category] 
-            : []);
-      
-      // Filter out invalid categories first so they trigger the fallback logic
-      galleryCategories = galleryCategories.filter(cat => categoryIds.has(cat));
-
-      if (galleryCategories.length === 0) {
-        const relPath = path.relative(root, metadataFile).replace(/\\/g, '/');
-        if (metadata.source?.origin === 'test-case' || metadata.category === 'validation' || relPath.includes('tests/')) {
-          galleryCategories = ['test-models'];
-        } else if (metadata.source?.origin === 'tutorial' || relPath.startsWith('Tutorials/') || relPath.includes('/Tutorials/')) {
-          if (relPath.startsWith('Tutorials/NativeTutorials/') || relPath.includes('/NativeTutorials/')) {
-            galleryCategories = ['native-tutorials'];
-          } else {
-            galleryCategories = ['tutorials'];
+        const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
+        if (tags.includes('published') || metadata.source?.origin === 'published') {
+          for (const modelId of modelIds) {
+            publishedModelIds.add(modelId);
           }
-        } else if (metadata.source?.origin === 'published' || relPath.startsWith('Published/') || relPath.includes('/Published/')) {
-          galleryCategories = ['published-models'];
-        } else {
-          galleryCategories = ['test-models'];
         }
-      }
 
-      if (galleryCategories.length > 0) {
-        for (const modelId of modelIds) {
-          assignments[modelId] = galleryCategories;
-        }
-      }
+        let galleryCategories = metadata.playground?.gallery_categories
+          || (metadata.playground?.gallery_category
+              ? [metadata.playground.gallery_category]
+              : []);
 
-      const sortPriority = metadata.playground?.sort_priority;
-      if (sortPriority !== undefined && sortPriority !== null) {
-        for (const modelId of modelIds) {
-          sortOverrides[modelId] = sortPriority;
+        // Filter out invalid categories first so they trigger the fallback logic
+        galleryCategories = galleryCategories.filter(cat => categoryIds.has(cat));
+
+        if (galleryCategories.length === 0) {
+          const relPath = path.relative(root, metadataFile).replace(/\\/g, '/');
+          if (metadata.source?.origin === 'test-case' || metadata.category === 'validation' || relPath.includes('tests/')) {
+            galleryCategories = ['test-models'];
+          } else if (metadata.source?.origin === 'tutorial' || relPath.startsWith('Tutorials/') || relPath.includes('/Tutorials/')) {
+            if (relPath.startsWith('Tutorials/NativeTutorials/') || relPath.includes('/NativeTutorials/')) {
+              galleryCategories = ['native-tutorials'];
+            } else {
+              galleryCategories = ['tutorials'];
+            }
+          } else if (metadata.source?.origin === 'published' || relPath.startsWith('Published/') || relPath.includes('/Published/')) {
+            galleryCategories = ['published-models'];
+          } else {
+            galleryCategories = ['test-models'];
+          }
         }
+
+        if (galleryCategories.length > 0) {
+          for (const modelId of modelIds) {
+            assignments[modelId] = galleryCategories;
+          }
+        }
+
+        const sortPriority = metadata.playground?.sort_priority;
+        if (sortPriority !== undefined && sortPriority !== null) {
+          for (const modelId of modelIds) {
+            sortOverrides[modelId] = sortPriority;
+          }
+        }
+      } catch (err) {
+        console.warn(`Warning: Failed to process ${metadataFile}: ${err.message}`);
       }
-    } catch (err) {
-      console.warn(`Warning: Failed to process ${metadataFile}: ${err.message}`);
-    }
+    }));
   }
 
   for (const modelId of publishedModelIds) {
