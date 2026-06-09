@@ -137,11 +137,35 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
     gallery,
   };
 
+  addSlimFields(baseEntry, metadata, relativeModelPath, modelFile, slim);
+  await addCollectionFields(baseEntry, metadata, modelDir, modelFiles, isCollection, slim, modelFile);
+
+  // Backwards-compatible top-level compatibility flags
+  baseEntry.bng2_compatible = compatibility.bng2 || false;
+  baseEntry.nfsim_compatible = compatibility.nfsim || false;
+  baseEntry.excluded = compatibility.excluded || false;
+
+  return baseEntry;
+}
+
+function addSlimFields(baseEntry, metadata, relativeModelPath, modelFile, slim) {
   if (!slim) {
     baseEntry.path = relativeModelPath;
     baseEntry.file = modelFile;
-  }
 
+    if (metadata.playground?.featured !== undefined) {
+      baseEntry.featured = metadata.playground.featured;
+    }
+    if (metadata.playground?.difficulty) {
+      baseEntry.difficulty = metadata.playground.difficulty;
+    }
+    if (metadata.citation?.doi) {
+      baseEntry.citation = { doi: metadata.citation.doi };
+    }
+  }
+}
+
+async function addCollectionFields(baseEntry, metadata, modelDir, modelFiles, isCollection, slim, modelFile) {
   if (isCollection) {
     baseEntry.collectionId = metadata.id || null;
     
@@ -166,25 +190,6 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
   } else {
     baseEntry.collectionId = null;
   }
-
-  if (!slim) {
-    if (metadata.playground?.featured !== undefined) {
-      baseEntry.featured = metadata.playground.featured;
-    }
-    if (metadata.playground?.difficulty) {
-      baseEntry.difficulty = metadata.playground.difficulty;
-    }
-    if (metadata.citation?.doi) {
-      baseEntry.citation = { doi: metadata.citation.doi };
-    }
-  }
-
-  // Backwards-compatible top-level compatibility flags
-  baseEntry.bng2_compatible = compatibility.bng2 || false;
-  baseEntry.nfsim_compatible = compatibility.nfsim || false;
-  baseEntry.excluded = compatibility.excluded || false;
-
-  return baseEntry;
 }
 
 function isCollectionEntry(metadata, modelFiles) {
