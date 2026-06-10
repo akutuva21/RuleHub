@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { listModelFiles, parseScalar } = require('./utils.js');
+const { listModelFiles, parseScalar, safeJoin } = require('./utils.js');
 
 test('utils.js', async (t) => {
   let tmpDir;
@@ -108,5 +108,24 @@ test('parseScalar', async (t) => {
     assert.strictEqual(parseScalar('1.23'), '1.23');
     assert.strictEqual(parseScalar('-1.23'), '-1.23');
     assert.strictEqual(parseScalar('1e5'), '1e5');
+  });
+});
+
+test('safeJoin', async (t) => {
+  await t.test('joins valid paths safely', () => {
+    assert.strictEqual(safeJoin('/var/www', 'html'), path.join('/var/www', 'html'));
+    assert.strictEqual(safeJoin('/var/www/', 'html'), path.join('/var/www/', 'html'));
+    assert.strictEqual(safeJoin('var/www', 'html/index.js'), path.join('var/www', 'html/index.js'));
+    assert.strictEqual(safeJoin('/var/www', '.'), path.join('/var/www', '.'));
+    assert.strictEqual(safeJoin('/var/www', ''), path.join('/var/www', ''));
+    assert.strictEqual(safeJoin('/var/www', 'a/b/../c'), path.join('/var/www', 'a/b/../c'));
+  });
+
+  await t.test('throws on path traversal attempts', () => {
+    assert.throws(() => safeJoin('/var/www', '..'), /Path traversal security risk detected/);
+    assert.throws(() => safeJoin('/var/www', '../etc/passwd'), /Path traversal security risk detected/);
+    assert.throws(() => safeJoin('/var/www', '../../etc/passwd'), /Path traversal security risk detected/);
+    assert.throws(() => safeJoin('var/www', '../www2'), /Path traversal security risk detected/);
+    assert.throws(() => safeJoin('/var/www', '/../etc/passwd'), /Path traversal security risk detected/);
   });
 });
