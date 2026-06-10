@@ -129,6 +129,38 @@ function processModelLine(trimmed, metadata, state) {
   }
 }
 
+function processLine(trimmed, state, metadata, headerComments) {
+  if (trimmed.startsWith('#') && !state.inModel && !state.inActions) {
+    headerComments.push(trimmed.slice(1).trim());
+    return;
+  }
+
+  if (trimmed === 'begin model') {
+    state.inModel = true;
+    return;
+  }
+  if (trimmed === 'end model') {
+    state.inModel = false;
+    return;
+  }
+  if (trimmed === 'begin actions') {
+    state.inActions = true;
+    return;
+  }
+  if (trimmed === 'end actions') {
+    state.inActions = false;
+    return;
+  }
+
+  if (state.inModel) {
+    processModelLine(trimmed, metadata, state);
+  }
+
+  if (state.inActions) {
+    processActionLine(trimmed, metadata);
+  }
+}
+
 async function parseBngl(filePath) {
   const content = await fs.promises.readFile(filePath, 'utf8');
   const lines = content.split('\n');
@@ -155,36 +187,7 @@ async function parseBngl(filePath) {
 
   for (const line of lines) {
     const trimmed = line.trim();
-
-    if (trimmed.startsWith('#') && !state.inModel && !state.inActions) {
-      headerComments.push(trimmed.slice(1).trim());
-      continue;
-    }
-
-    if (trimmed === 'begin model') {
-      state.inModel = true;
-      continue;
-    }
-    if (trimmed === 'end model') {
-      state.inModel = false;
-      continue;
-    }
-    if (trimmed === 'begin actions') {
-      state.inActions = true;
-      continue;
-    }
-    if (trimmed === 'end actions') {
-      state.inActions = false;
-      continue;
-    }
-
-    if (state.inModel) {
-      processModelLine(trimmed, metadata, state);
-    }
-
-    if (state.inActions) {
-      processActionLine(trimmed, metadata);
-    }
+    processLine(trimmed, state, metadata, headerComments);
   }
 
   extractMetadataFromComments(headerComments, metadata);
@@ -446,4 +449,5 @@ module.exports = {
   inferCategory,
   inferOrigin,
   processActionLine,
+  processLine,
 };
