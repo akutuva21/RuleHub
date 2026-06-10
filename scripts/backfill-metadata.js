@@ -377,6 +377,35 @@ function formatYamlValue(value, indent = 0) {
   return String(value) + '\n';
 }
 
+async function processFile(bnglFile, dryRun) {
+  const dir = path.dirname(bnglFile);
+  const metadataPath = path.join(dir, 'metadata.yaml');
+
+  try {
+    await fs.promises.access(metadataPath);
+    return { status: 'skipped' };
+  } catch {
+    // File does not exist, proceed
+  }
+
+  console.info(`Processing: ${bnglFile}`);
+
+  const parsed = await parseBngl(bnglFile);
+  const metadata = generateMetadata(bnglFile, parsed);
+
+  const yamlContent = formatYaml(metadata);
+
+  if (dryRun) {
+    console.info(`  [DRY RUN] Would create: ${metadataPath}`);
+    console.info(yamlContent);
+  } else {
+    await fs.promises.writeFile(metadataPath, yamlContent);
+    console.info(`  Created: ${metadataPath}`);
+  }
+
+  return { status: 'created' };
+}
+
 async function main() {
   const { root, dryRun } = parseArgs(process.argv.slice(2));
 
@@ -391,38 +420,15 @@ async function main() {
 
   console.info(`Found ${bnglFiles.length} .bngl files\n`);
 
+  const results = await Promise.all(bnglFiles.map(bnglFile => processFile(bnglFile, dryRun)));
+
   let created = 0;
   let skipped = 0;
 
-  await Promise.all(bnglFiles.map(async (bnglFile) => {
-    const dir = path.dirname(bnglFile);
-    const metadataPath = path.join(dir, 'metadata.yaml');
-
-    try {
-      await fs.promises.access(metadataPath);
-      skipped++;
-      return;
-    } catch {
-      // File does not exist, proceed
-    }
-
-    console.info(`Processing: ${bnglFile}`);
-
-    const parsed = await parseBngl(bnglFile);
-    const metadata = generateMetadata(bnglFile, parsed);
-
-    const yamlContent = formatYaml(metadata);
-
-    if (dryRun) {
-      console.info(`  [DRY RUN] Would create: ${metadataPath}`);
-      console.info(yamlContent);
-    } else {
-      await fs.promises.writeFile(metadataPath, yamlContent);
-      console.info(`  Created: ${metadataPath}`);
-    }
-
-    created++;
-  }));
+  for (const result of results) {
+    if (result.status === 'skipped') skipped++;
+    if (result.status === 'created') created++;
+  }
 
   console.info(`\nSummary:`);
   console.info(`  Total .bngl files: ${bnglFiles.length}`);
@@ -449,5 +455,6 @@ module.exports = {
   inferCategory,
   inferOrigin,
   processActionLine,
+  processFile,
   processLine,
 };
