@@ -179,48 +179,53 @@ async function main(argv = process.argv.slice(2)) {
   const sortOverrides = {};
   const publishedModelIds = new Set();
 
-  for (const metadataFile of metadataFiles) {
-    try {
-      const content = await fs.promises.readFile(metadataFile, 'utf8');
-      const metadata = parseMetadataYaml(content);
+  const BATCH_SIZE = 50;
+  for (let i = 0; i < metadataFiles.length; i += BATCH_SIZE) {
+    const batch = metadataFiles.slice(i, i + BATCH_SIZE);
 
-      const modelIds = await extractModelIds(metadataFile, metadata);
-      if (modelIds.length === 0) continue;
+    await Promise.all(batch.map(async (metadataFile) => {
+      try {
+        const content = await fs.promises.readFile(metadataFile, 'utf8');
+        const metadata = parseMetadataYaml(content);
 
-      const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
-      if (tags.includes('published') || metadata.source?.origin === 'published') {
-        for (const modelId of modelIds) {
-          publishedModelIds.add(modelId);
+        const modelIds = await extractModelIds(metadataFile, metadata);
+        if (modelIds.length === 0) return;
+
+        const tags = Array.isArray(metadata.tags) ? metadata.tags : [];
+        if (tags.includes('published') || metadata.source?.origin === 'published') {
+          for (const modelId of modelIds) {
+            publishedModelIds.add(modelId);
+          }
         }
-      }
 
-      let galleryCategories = metadata.playground?.gallery_categories 
-        || (metadata.playground?.gallery_category 
-            ? [metadata.playground.gallery_category] 
-            : []);
-      
-      // Filter out invalid categories first so they trigger the fallback logic
-      galleryCategories = galleryCategories.filter(cat => categoryIds.has(cat));
+        let galleryCategories = metadata.playground?.gallery_categories 
+          || (metadata.playground?.gallery_category 
+              ? [metadata.playground.gallery_category] 
+              : []);
 
-      if (galleryCategories.length === 0) {
-        galleryCategories = determineFallbackCategories(metadata, root, metadataFile);
-      }
+        // Filter out invalid categories first so they trigger the fallback logic
+        galleryCategories = galleryCategories.filter(cat => categoryIds.has(cat));
 
-      if (galleryCategories.length > 0) {
-        for (const modelId of modelIds) {
-          assignments[modelId] = galleryCategories;
+        if (galleryCategories.length === 0) {
+          galleryCategories = determineFallbackCategories(metadata, root, metadataFile);
         }
-      }
 
-      const sortPriority = metadata.playground?.sort_priority;
-      if (sortPriority !== undefined && sortPriority !== null) {
-        for (const modelId of modelIds) {
-          sortOverrides[modelId] = sortPriority;
+        if (galleryCategories.length > 0) {
+          for (const modelId of modelIds) {
+            assignments[modelId] = galleryCategories;
+          }
         }
+
+        const sortPriority = metadata.playground?.sort_priority;
+        if (sortPriority !== undefined && sortPriority !== null) {
+          for (const modelId of modelIds) {
+            sortOverrides[modelId] = sortPriority;
+          }
+        }
+      } catch (err) {
+        console.warn(`Warning: Failed to process ${metadataFile}: ${err.message}`);
       }
-    } catch (err) {
-      console.warn(`Warning: Failed to process ${metadataFile}: ${err.message}`);
-    }
+    }));
   }
 
   for (const modelId of publishedModelIds) {
