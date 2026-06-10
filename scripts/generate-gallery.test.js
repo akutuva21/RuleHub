@@ -4,7 +4,7 @@ const path = require('path');
 const os = require('os');
 const fs = require('fs');
 const { spawnSync } = require('child_process');
-const { main, parseArgs, loadGalleryCategories, extractModelIds, parseYamlSimple } = require('./generate-gallery.js');
+const { main, parseArgs, loadGalleryCategories, extractModelIds, parseYamlSimple, determineFallbackCategories } = require('./generate-gallery.js');
 
 test('generate-gallery.js handles file read/parse errors', async (t) => {
   let tmpDir;
@@ -45,6 +45,66 @@ test('generate-gallery.js handles file read/parse errors', async (t) => {
 
     const gallery = JSON.parse(fs.readFileSync(outputJsonPath, 'utf8'));
     assert.deepStrictEqual(Object.keys(gallery.assignments).sort(), ['model1', 'model3']);
+  });
+});
+
+test('determineFallbackCategories', async (t) => {
+  const root = '/my/root';
+
+  await t.test('returns test-models for test-case origin', () => {
+    const metadata = { source: { origin: 'test-case' } };
+    const metadataFile = '/my/root/some/path/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['test-models']);
+  });
+
+  await t.test('returns test-models for validation category', () => {
+    const metadata = { category: 'validation' };
+    const metadataFile = '/my/root/some/path/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['test-models']);
+  });
+
+  await t.test('returns test-models for tests/ path', () => {
+    const metadata = {};
+    const metadataFile = '/my/root/tests/model1/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['test-models']);
+  });
+
+  await t.test('returns native-tutorials for tutorial origin and NativeTutorials path', () => {
+    const metadata = { source: { origin: 'tutorial' } };
+    const metadataFile = '/my/root/Tutorials/NativeTutorials/model1/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['native-tutorials']);
+  });
+
+  await t.test('returns tutorials for tutorial origin and regular Tutorials path', () => {
+    const metadata = { source: { origin: 'tutorial' } };
+    const metadataFile = '/my/root/Tutorials/Other/model1/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['tutorials']);
+  });
+
+  await t.test('returns published-models for published origin', () => {
+    const metadata = { source: { origin: 'published' } };
+    const metadataFile = '/my/root/some/path/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['published-models']);
+  });
+
+  await t.test('returns published-models for Published/ path', () => {
+    const metadata = {};
+    const metadataFile = '/my/root/Published/model1/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['published-models']);
+  });
+
+  await t.test('returns test-models as default fallback', () => {
+    const metadata = {};
+    const metadataFile = '/my/root/other/path/metadata.yaml';
+    const result = determineFallbackCategories(metadata, root, metadataFile);
+    assert.deepStrictEqual(result, ['test-models']);
   });
 });
 

@@ -145,6 +145,23 @@ async function extractModelIds(metadataFile, metadata) {
   return [];
 }
 
+function determineFallbackCategories(metadata, root, metadataFile) {
+  const relPath = path.relative(root, metadataFile).replace(/\\/g, '/');
+  if (metadata.source?.origin === 'test-case' || metadata.category === 'validation' || relPath.includes('tests/')) {
+    return ['test-models'];
+  } else if (metadata.source?.origin === 'tutorial' || relPath.startsWith('Tutorials/') || relPath.includes('/Tutorials/')) {
+    if (relPath.startsWith('Tutorials/NativeTutorials/') || relPath.includes('/NativeTutorials/')) {
+      return ['native-tutorials'];
+    } else {
+      return ['tutorials'];
+    }
+  } else if (metadata.source?.origin === 'published' || relPath.startsWith('Published/') || relPath.includes('/Published/')) {
+    return ['published-models'];
+  } else {
+    return ['test-models'];
+  }
+}
+
 async function main(argv = process.argv.slice(2)) {
   const { root, output } = parseArgs(argv);
 
@@ -186,20 +203,7 @@ async function main(argv = process.argv.slice(2)) {
       galleryCategories = galleryCategories.filter(cat => categoryIds.has(cat));
 
       if (galleryCategories.length === 0) {
-        const relPath = path.relative(root, metadataFile).replace(/\\/g, '/');
-        if (metadata.source?.origin === 'test-case' || metadata.category === 'validation' || relPath.includes('tests/')) {
-          galleryCategories = ['test-models'];
-        } else if (metadata.source?.origin === 'tutorial' || relPath.startsWith('Tutorials/') || relPath.includes('/Tutorials/')) {
-          if (relPath.startsWith('Tutorials/NativeTutorials/') || relPath.includes('/NativeTutorials/')) {
-            galleryCategories = ['native-tutorials'];
-          } else {
-            galleryCategories = ['tutorials'];
-          }
-        } else if (metadata.source?.origin === 'published' || relPath.startsWith('Published/') || relPath.includes('/Published/')) {
-          galleryCategories = ['published-models'];
-        } else {
-          galleryCategories = ['test-models'];
-        }
+        galleryCategories = determineFallbackCategories(metadata, root, metadataFile);
       }
 
       if (galleryCategories.length > 0) {
@@ -277,4 +281,5 @@ module.exports = {
   loadGalleryCategories,
   extractModelIds,
   parseYamlSimple,
+  determineFallbackCategories,
 };
