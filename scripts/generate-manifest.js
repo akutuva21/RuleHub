@@ -147,7 +147,8 @@ async function buildEntry(root, metadata, metadataFile, modelFile, isCollection,
     
     if (!slim && metadata.collection) {
       let filesToUse = modelFiles;
-      if (fs.existsSync(modelDir)) {
+      const dirExists = await fs.promises.access(modelDir).then(() => true).catch(() => false);
+      if (dirExists) {
         filesToUse = await listModelFiles(modelDir);
       }
 
