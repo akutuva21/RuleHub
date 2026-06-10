@@ -170,7 +170,8 @@ async function validateMetadataFile(metadataFile, errors) {
   const modelDir = path.dirname(metadataFile);
   const modelFiles = await listModelFiles(modelDir);
   const readmePath = path.join(modelDir, 'README.md');
-  if (!fs.existsSync(readmePath) && !modelDir.includes('bnf1') && !modelDir.includes('Published')) {
+  const readmeExists = await fs.promises.access(readmePath).then(() => true).catch(() => false);
+  if (!readmeExists && !modelDir.includes('bnf1') && !modelDir.includes('Published')) {
     errors.push(`${metadataFile}: missing README.md`);
   }
   if (modelFiles.length === 0) {
