@@ -3,7 +3,7 @@ const assert = require('node:assert');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectBoolean, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
+const { parseMetadataYaml, listMetadataFiles, setNested, expectString, expectArray, expectEnum, expectBoolean, normalizeModelKey, validateMetadataFile } = require('./validate-metadata.js');
 
 test('setNested', async (t) => {
   await t.test('sets a single property', () => {
@@ -297,9 +297,27 @@ test('expectString', async (t) => {
     assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
   });
 
+  await t.test('appends error if value is an object', () => {
+    const errors = [];
+    expectString(errors, {}, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is an array', () => {
+    const errors = [];
+    expectString(errors, [], 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
   await t.test('appends error if value is null', () => {
     const errors = [];
     expectString(errors, null, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is undefined', () => {
+    const errors = [];
+    expectString(errors, undefined, 'label', 'file.txt');
     assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
   });
 
@@ -318,6 +336,73 @@ test('expectString', async (t) => {
   await t.test('does not append error for valid string', () => {
     const errors = [];
     expectString(errors, 'valid string', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+});
+
+
+test('expectArray', async (t) => {
+  await t.test('appends error if value is not an array (string)', () => {
+    const errors = [];
+    expectArray(errors, 'not array', 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is not an array (object)', () => {
+    const errors = [];
+    expectArray(errors, { a: 1 }, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectArray(errors, null, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('appends error if value is undefined', () => {
+    const errors = [];
+    expectArray(errors, undefined, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: missing or invalid label']);
+  });
+
+  await t.test('does not append error for valid array', () => {
+    const errors = [];
+    expectArray(errors, [1, 2, 3], 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+
+  await t.test('does not append error for empty array', () => {
+    const errors = [];
+    expectArray(errors, [], 'label', 'file.txt');
+    assert.deepStrictEqual(errors, []);
+  });
+});
+
+test('expectEnum', async (t) => {
+  const allowed = new Set(['val1', 'val2']);
+
+  await t.test('appends error if value is not a string', () => {
+    const errors = [];
+    expectEnum(errors, 123, allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label (123)']);
+  });
+
+  await t.test('appends error if value is null', () => {
+    const errors = [];
+    expectEnum(errors, null, allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label (null)']);
+  });
+
+  await t.test('appends error if value is not in allowed set', () => {
+    const errors = [];
+    expectEnum(errors, 'invalid', allowed, 'label', 'file.txt');
+    assert.deepStrictEqual(errors, ['file.txt: invalid label ("invalid")']);
+  });
+
+  await t.test('does not append error for valid value in set', () => {
+    const errors = [];
+    expectEnum(errors, 'val1', allowed, 'label', 'file.txt');
     assert.deepStrictEqual(errors, []);
   });
 });
